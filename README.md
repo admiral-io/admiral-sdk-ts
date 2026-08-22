@@ -10,22 +10,6 @@ Built on [ConnectRPC](https://connectrpc.com) — works in both browsers and Nod
 npm install @admiral-io/sdk
 ```
 
-`@admiral-io` packages are published to GitHub Packages rather than the public
-npm registry, so the scope has to be pointed at it and authenticated before that
-install resolves. Add both lines to `~/.npmrc`:
-
-```
-@admiral-io:registry=https://npm.pkg.github.com/
-//npm.pkg.github.com/:_authToken=<TOKEN>
-```
-
-`<TOKEN>` is a GitHub personal access token with `read:packages`, or whatever
-token CI already mints to read the org's private repositories.
-
-Note that an unauthenticated request for a private package returns **404, not
-401** — so a missing or unscoped token looks exactly like a misspelled package
-name.
-
 You also need a Connect transport for your runtime:
 
 ```bash
