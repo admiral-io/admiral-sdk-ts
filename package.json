@@ -1,7 +1,10 @@
 {
   "name": "@admiral-io/sdk",
   "version": "0.0.1",
-  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "private": false,
   "description": "TypeScript client for Admiral API",
   "type": "module",
   "main": "./dist/index.js",
@@ -14,6 +17,10 @@
     "./client": {
       "import": "./dist/client/index.js",
       "types": "./dist/client/index.d.ts"
+    },
+    "./proto/*": {
+      "import": "./dist/proto/*.js",
+      "types": "./dist/proto/*.d.ts"
     }
   },
   "files": [
@@ -22,7 +29,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest"
   },
