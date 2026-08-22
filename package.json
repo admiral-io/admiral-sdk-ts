@@ -2,7 +2,7 @@
   "name": "@admiral-io/sdk",
   "version": "0.0.1",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "private": false,
   "description": "TypeScript client for Admiral API",
