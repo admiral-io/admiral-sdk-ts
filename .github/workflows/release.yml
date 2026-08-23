@@ -53,9 +53,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Upgrade npm for OIDC trusted publishing
-        run: npm install -g npm@latest
       - name: Release
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
