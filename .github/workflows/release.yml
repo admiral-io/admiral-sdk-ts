@@ -11,6 +11,8 @@ on:
       - 'package.json'
       - 'package-lock.json'
       - 'tsconfig.json'
+      - '.releaserc.json'
+      - '.github/workflows/release.yml'
   workflow_dispatch:
 
 permissions:
