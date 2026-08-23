@@ -25,7 +25,7 @@
     ],
     "@semantic-release/changelog",
     "@semantic-release/npm",
-    ["@semantic-release/github", { "failComment": false, "failTitle": false, "labels": false }],
+    ["@semantic-release/github", { "failCommentCondition": false, "labels": false }],
     [
       "@semantic-release/git",
       {
