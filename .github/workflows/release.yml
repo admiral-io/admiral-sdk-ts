@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - 'dev/**'
+      - next
     paths:
       - '**/*.ts'
       - '**/*.js'
