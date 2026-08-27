@@ -1,7 +1,7 @@
 {
   "branches": [
     "master",
-    {"name": "dev/*", "prerelease": "${name.replace(/^dev\\//,'').replace(/[^a-zA-Z0-9]/g,'-')}", "channel": "dev"}
+    { "name": "next", "prerelease": "rc" }
   ],
   "plugins": [
     [
