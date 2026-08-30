@@ -11,8 +11,8 @@ import { file_admiral_api_agent_v1_workloads } from "./workloads_pb.js";
 import type { ActorRef } from "../../../common/v1/actor_pb.js";
 import { file_admiral_common_v1_actor } from "../../../common/v1/actor_pb.js";
 import { file_admiral_common_v1_annotations } from "../../../common/v1/annotations_pb.js";
-import type { AccessToken } from "../../../common/v1/token_pb.js";
-import { file_admiral_common_v1_token } from "../../../common/v1/token_pb.js";
+import type { ApiKey } from "../../../common/v1/apikey_pb.js";
+import { file_admiral_common_v1_apikey } from "../../../common/v1/apikey_pb.js";
 import { file_buf_validate_validate } from "../../../../buf/validate/validate_pb.js";
 import { file_gnostic_openapi_v3_annotations } from "../../../../gnostic/openapi/v3/annotations_pb.js";
 import { file_google_api_annotations } from "../../../../google/api/annotations_pb.js";
@@ -25,7 +25,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/agent/v1/agent.proto.
  */
 export const file_admiral_api_agent_v1_agent: GenFile = /*@__PURE__*/
-  fileDesc("CiBhZG1pcmFsL2FwaS9hZ2VudC92MS9hZ2VudC5wcm90bxIUYWRtaXJhbC5hcGkuYWdlbnQudjEisgQKBUFnZW50EhoKAmlkGAEgASgJQg7gQQO6SAjYAQFyA7ABARIyCgRraW5kGAIgASgOMh8uYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRLaW5kQgPgQQUSOgoEbmFtZRgDIAEoCUIsukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSHQoLZGVzY3JpcHRpb24YBCABKAlCCLpIBXIDGIAIElAKBmxhYmVscxgFIAMoCzInLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhJDCg1oZWFsdGhfc3RhdHVzGAYgASgOMicuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRIZWFsdGhTdGF0dXNCA+BBAxIYCgtjbHVzdGVyX3VpZBgHIAEoCUID4EEDEjQKCmNyZWF0ZWRfYnkYCCABKAsyGy5hZG1pcmFsLmNvbW1vbi52MS5BY3RvclJlZkID4EEDEjMKCmNyZWF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIr4CChJDcmVhdGVBZ2VudFJlcXVlc3QSPAoEa2luZBgBIAEoDjIfLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50S2luZEIN4EECukgHggEEEAEgABI9CgRuYW1lGAIgASgJQi/gQQK6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgDIAEoCUIIukgFcgMYgAgSXQoGbGFiZWxzGAQgAygLMjQuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQWdlbnRSZXF1ZXN0LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlsKE0NyZWF0ZUFnZW50UmVzcG9uc2USKgoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudBIYChBwbGFpbl90ZXh0X3Rva2VuGAIgASgJIjAKD0dldEFnZW50UmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQEiPgoQR2V0QWdlbnRSZXNwb25zZRIqCgVhZ2VudBgBIAEoCzIbLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50Il8KEUxpc3RBZ2VudHNSZXF1ZXN0EhgKBmZpbHRlchgBIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAIgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgDIAEoCSJaChJMaXN0QWdlbnRzUmVzcG9uc2USKwoGYWdlbnRzGAEgAygLMhsuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInwKElVwZGF0ZUFnZW50UmVxdWVzdBI1CgVhZ2VudBgBIAEoCzIbLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50QgngQQK6SAPIAQESLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIkEKE1VwZGF0ZUFnZW50UmVzcG9uc2USKgoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudCIzChJEZWxldGVBZ2VudFJlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBIhUKE0RlbGV0ZUFnZW50UmVzcG9uc2UiiwEKIENsZWFyQWdlbnRJZGVudGl0eUJpbmRpbmdSZXF1ZXN0Eh0KCGFnZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABARIXCgZyZWFzb24YAiABKAlCB7pIBHICEAESLwoMZ3JhY2Vfd2luZG93GAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uImUKIUNsZWFyQWdlbnRJZGVudGl0eUJpbmRpbmdSZXNwb25zZRIQCghhY2NlcHRlZBgBIAEoCBIuCgpleHBpcmVzX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI2ChVHZXRBZ2VudFN0YXR1c1JlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBIpcCChZHZXRBZ2VudFN0YXR1c1Jlc3BvbnNlEj4KDWhlYWx0aF9zdGF0dXMYASABKA4yJy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudEhlYWx0aFN0YXR1cxI/Cgl0ZXJyYWZvcm0YAiABKAsyKi5hZG1pcmFsLmFwaS5hZ2VudC52MS5UZXJyYWZvcm1BZ2VudFN0YXR1c0gAEkEKCmt1YmVybmV0ZXMYAyABKAsyKy5hZG1pcmFsLmFwaS5hZ2VudC52MS5LdWJlcm5ldGVzQWdlbnRTdGF0dXNIABIvCgtyZXBvcnRlZF9hdBgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCAoGc3RhdHVzIqcBChdDcmVhdGVBZ2VudFRva2VuUmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQESPQoEbmFtZRgCIAEoCUIv4EECukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSLgoKZXhwaXJlc19hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiagoYQ3JlYXRlQWdlbnRUb2tlblJlc3BvbnNlEjQKDGFjY2Vzc190b2tlbhgBIAEoCzIeLmFkbWlyYWwuY29tbW9uLnYxLkFjY2Vzc1Rva2VuEhgKEHBsYWluX3RleHRfdG9rZW4YAiABKAkigwEKFkxpc3RBZ2VudFRva2Vuc1JlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEhgKBmZpbHRlchgCIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAMgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgEIAEoCSJpChdMaXN0QWdlbnRUb2tlbnNSZXNwb25zZRI1Cg1hY2Nlc3NfdG9rZW5zGAEgAygLMh4uYWRtaXJhbC5jb21tb24udjEuQWNjZXNzVG9rZW4SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIjUKFEdldEFnZW50VG9rZW5SZXF1ZXN0Eh0KCHRva2VuX2lkGAEgASgJQgvgQQK6SAVyA7ABASJNChVHZXRBZ2VudFRva2VuUmVzcG9uc2USNAoMYWNjZXNzX3Rva2VuGAEgASgLMh4uYWRtaXJhbC5jb21tb24udjEuQWNjZXNzVG9rZW4iOAoXUmV2b2tlQWdlbnRUb2tlblJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBIlAKGFJldm9rZUFnZW50VG9rZW5SZXNwb25zZRI0CgxhY2Nlc3NfdG9rZW4YASABKAsyHi5hZG1pcmFsLmNvbW1vbi52MS5BY2Nlc3NUb2tlbipcCglBZ2VudEtpbmQSGgoWQUdFTlRfS0lORF9VTlNQRUNJRklFRBAAEhgKFEFHRU5UX0tJTkRfVEVSUkFGT1JNEAESGQoVQUdFTlRfS0lORF9LVUJFUk5FVEVTEAIq4AEKEUFnZW50SGVhbHRoU3RhdHVzEiMKH0FHRU5UX0hFQUxUSF9TVEFUVVNfVU5TUEVDSUZJRUQQABIfChtBR0VOVF9IRUFMVEhfU1RBVFVTX1BFTkRJTkcQARIfChtBR0VOVF9IRUFMVEhfU1RBVFVTX0hFQUxUSFkQAhIgChxBR0VOVF9IRUFMVEhfU1RBVFVTX0RFR1JBREVEEAMSHQoZQUdFTlRfSEVBTFRIX1NUQVRVU19FUlJPUhAEEiMKH0FHRU5UX0hFQUxUSF9TVEFUVVNfVU5SRUFDSEFCTEUQBTKMFwoIQWdlbnRBUEkSpgEKC0NyZWF0ZUFnZW50EiguYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQWdlbnRSZXF1ZXN0GikuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQWdlbnRSZXNwb25zZSJCukcZCgZBZ2VudHMSD0NyZWF0ZSBhbiBhZ2VudKKXJA0KC2FnZW50OndyaXRlgtPkkwIPOgEqIgovdjEvYWdlbnRzEqYBCghHZXRBZ2VudBIlLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEFnZW50UmVxdWVzdBomLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEFnZW50UmVzcG9uc2UiS7pHGwoGQWdlbnRzEhFSZXRyaWV2ZSBhbiBhZ2VudKKXJAwKCmFnZW50OnJlYWSC0+STAhcSFS92MS9hZ2VudHMve2FnZW50X2lkfRKbAQoKTGlzdEFnZW50cxInLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RBZ2VudHNSZXF1ZXN0GiguYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdEFnZW50c1Jlc3BvbnNlIjq6RxUKBkFnZW50cxILTGlzdCBhZ2VudHOilyQMCgphZ2VudDpyZWFkgtPkkwIMEgovdjEvYWdlbnRzErEBCgtVcGRhdGVBZ2VudBIoLmFkbWlyYWwuYXBpLmFnZW50LnYxLlVwZGF0ZUFnZW50UmVxdWVzdBopLmFkbWlyYWwuYXBpLmFnZW50LnYxLlVwZGF0ZUFnZW50UmVzcG9uc2UiTbpHGQoGQWdlbnRzEg9VcGRhdGUgYW4gYWdlbnSilyQNCgthZ2VudDp3cml0ZYLT5JMCGjoBKjIVL3YxL2FnZW50cy97YWdlbnQuaWR9Eq4BCgtEZWxldGVBZ2VudBIoLmFkbWlyYWwuYXBpLmFnZW50LnYxLkRlbGV0ZUFnZW50UmVxdWVzdBopLmFkbWlyYWwuYXBpLmFnZW50LnYxLkRlbGV0ZUFnZW50UmVzcG9uc2UiSrpHGQoGQWdlbnRzEg9EZWxldGUgYW4gYWdlbnSilyQNCgthZ2VudDp3cml0ZYLT5JMCFyoVL3YxL2FnZW50cy97YWdlbnRfaWR9EsMBCg5HZXRBZ2VudFN0YXR1cxIrLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEFnZW50U3RhdHVzUmVxdWVzdBosLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEFnZW50U3RhdHVzUmVzcG9uc2UiVrpHHwoGQWdlbnRzEhVSZXRyaWV2ZSBhZ2VudCBzdGF0dXOilyQMCgphZ2VudDpyZWFkgtPkkwIeEhwvdjEvYWdlbnRzL3thZ2VudF9pZH0vc3RhdHVzEoQCChlDbGVhckFnZW50SWRlbnRpdHlCaW5kaW5nEjYuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ2xlYXJBZ2VudElkZW50aXR5QmluZGluZ1JlcXVlc3QaNy5hZG1pcmFsLmFwaS5hZ2VudC52MS5DbGVhckFnZW50SWRlbnRpdHlCaW5kaW5nUmVzcG9uc2UidrpHKwoGQWdlbnRzEiFDbGVhciBhbiBhZ2VudCdzIGlkZW50aXR5IGJpbmRpbmeilyQNCgthZ2VudDp3cml0ZYLT5JMCMToBKiIsL3YxL2FnZW50cy97YWdlbnRfaWR9L2NsZWFyLWlkZW50aXR5LWJpbmRpbmcS0wEKEENyZWF0ZUFnZW50VG9rZW4SLS5hZG1pcmFsLmFwaS5hZ2VudC52MS5DcmVhdGVBZ2VudFRva2VuUmVxdWVzdBouLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNyZWF0ZUFnZW50VG9rZW5SZXNwb25zZSJgukclCgxBZ2VudCBUb2tlbnMSFUNyZWF0ZSBhbiBhZ2VudCB0b2tlbqKXJA0KC2FnZW50OndyaXRlgtPkkwIhOgEqIhwvdjEvYWdlbnRzL3thZ2VudF9pZH0vdG9rZW5zEsgBCg9MaXN0QWdlbnRUb2tlbnMSLC5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QWdlbnRUb2tlbnNSZXF1ZXN0Gi0uYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdEFnZW50VG9rZW5zUmVzcG9uc2UiWLpHIQoMQWdlbnQgVG9rZW5zEhFMaXN0IGFnZW50IHRva2Vuc6KXJAwKCmFnZW50OnJlYWSC0+STAh4SHC92MS9hZ2VudHMve2FnZW50X2lkfS90b2tlbnMSyAEKDUdldEFnZW50VG9rZW4SKi5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFRva2VuUmVxdWVzdBorLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEFnZW50VG9rZW5SZXNwb25zZSJeukcnCgxBZ2VudCBUb2tlbnMSF1JldHJpZXZlIGFuIGFnZW50IHRva2VuopckDAoKYWdlbnQ6cmVhZILT5JMCHhIcL3YxL2FnZW50cy90b2tlbnMve3Rva2VuX2lkfRLaAQoQUmV2b2tlQWdlbnRUb2tlbhItLmFkbWlyYWwuYXBpLmFnZW50LnYxLlJldm9rZUFnZW50VG9rZW5SZXF1ZXN0Gi4uYWRtaXJhbC5hcGkuYWdlbnQudjEuUmV2b2tlQWdlbnRUb2tlblJlc3BvbnNlIme6RyUKDEFnZW50IFRva2VucxIVUmV2b2tlIGFuIGFnZW50IHRva2VuopckDQoLYWdlbnQ6d3JpdGWC0+STAig6ASoiIy92MS9hZ2VudHMvdG9rZW5zL3t0b2tlbl9pZH0vcmV2b2tlErgBCg1MaXN0QWdlbnRKb2JzEiouYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdEFnZW50Sm9ic1JlcXVlc3QaKy5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QWdlbnRKb2JzUmVzcG9uc2UiTrpHGQoGQWdlbnRzEg9MaXN0IGFnZW50IGpvYnOilyQMCgphZ2VudDpyZWFkgtPkkwIcEhovdjEvYWdlbnRzL3thZ2VudF9pZH0vam9icxK8AQoNTGlzdFdvcmtsb2FkcxIqLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RXb3JrbG9hZHNSZXF1ZXN0GisuYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdFdvcmtsb2Fkc1Jlc3BvbnNlIlK6RxgKBkFnZW50cxIOTGlzdCB3b3JrbG9hZHOilyQMCgphZ2VudDpyZWFkgtPkkwIhEh8vdjEvYWdlbnRzL3thZ2VudF9pZH0vd29ya2xvYWRzEskBCgtHZXRXb3JrbG9hZBIoLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldFdvcmtsb2FkUmVxdWVzdBopLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldFdvcmtsb2FkUmVzcG9uc2UiZbpHHQoGQWdlbnRzEhNSZXRyaWV2ZSBhIHdvcmtsb2FkopckDAoKYWdlbnQ6cmVhZILT5JMCLxItL3YxL2FnZW50cy97YWdlbnRfaWR9L3dvcmtsb2Fkcy97d29ya2xvYWRfaWR9Es4BChJMaXN0V29ya2xvYWRFdmVudHMSLy5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0V29ya2xvYWRFdmVudHNSZXF1ZXN0GjAuYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdFdvcmtsb2FkRXZlbnRzUmVzcG9uc2UiVbpHHgoGQWdlbnRzEhRMaXN0IHdvcmtsb2FkIGV2ZW50c6KXJAwKCmFnZW50OnJlYWSC0+STAh4SHC92MS9hZ2VudHMve2FnZW50X2lkfS9ldmVudHNCzwEKGGNvbS5hZG1pcmFsLmFwaS5hZ2VudC52MUIKQWdlbnRQcm90b1ABWjRnby5hZG1pcmFsLmlvL3Nkay9wcm90by9hZG1pcmFsL2FwaS9hZ2VudC92MTthZ2VudHYxogIDQUFBqgIUQWRtaXJhbC5BcGkuQWdlbnQuVjHKAhRBZG1pcmFsXEFwaVxBZ2VudFxWMeICIEFkbWlyYWxcQXBpXEFnZW50XFYxXEdQQk1ldGFkYXRh6gIXQWRtaXJhbDo6QXBpOjpBZ2VudDo6VjFiBnByb3RvMw", [file_admiral_api_agent_v1_jobs, file_admiral_api_agent_v1_workloads, file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_admiral_common_v1_token, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
+  fileDesc("CiBhZG1pcmFsL2FwaS9hZ2VudC92MS9hZ2VudC5wcm90bxIUYWRtaXJhbC5hcGkuYWdlbnQudjEisgQKBUFnZW50EhoKAmlkGAEgASgJQg7gQQO6SAjYAQFyA7ABARIyCgRraW5kGAIgASgOMh8uYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRLaW5kQgPgQQUSOgoEbmFtZRgDIAEoCUIsukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSHQoLZGVzY3JpcHRpb24YBCABKAlCCLpIBXIDGIAIElAKBmxhYmVscxgFIAMoCzInLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhJDCg1oZWFsdGhfc3RhdHVzGAYgASgOMicuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRIZWFsdGhTdGF0dXNCA+BBAxIYCgtjbHVzdGVyX3VpZBgHIAEoCUID4EEDEjQKCmNyZWF0ZWRfYnkYCCABKAsyGy5hZG1pcmFsLmNvbW1vbi52MS5BY3RvclJlZkID4EEDEjMKCmNyZWF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIr4CChJDcmVhdGVBZ2VudFJlcXVlc3QSPAoEa2luZBgBIAEoDjIfLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50S2luZEIN4EECukgHggEEEAEgABI9CgRuYW1lGAIgASgJQi/gQQK6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgDIAEoCUIIukgFcgMYgAgSXQoGbGFiZWxzGAQgAygLMjQuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQWdlbnRSZXF1ZXN0LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlkKE0NyZWF0ZUFnZW50UmVzcG9uc2USKgoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudBIWCg5wbGFpbl90ZXh0X2tleRgCIAEoCSIwCg9HZXRBZ2VudFJlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBIj4KEEdldEFnZW50UmVzcG9uc2USKgoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudCJfChFMaXN0QWdlbnRzUmVxdWVzdBIYCgZmaWx0ZXIYASABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgCIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YAyABKAkiWgoSTGlzdEFnZW50c1Jlc3BvbnNlEisKBmFnZW50cxgBIAMoCzIbLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ8ChJVcGRhdGVBZ2VudFJlcXVlc3QSNQoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudEIJ4EECukgDyAEBEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJBChNVcGRhdGVBZ2VudFJlc3BvbnNlEioKBWFnZW50GAEgASgLMhsuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnQiMwoSRGVsZXRlQWdlbnRSZXF1ZXN0Eh0KCGFnZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABASIVChNEZWxldGVBZ2VudFJlc3BvbnNlIosBCiBDbGVhckFnZW50SWRlbnRpdHlCaW5kaW5nUmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQESFwoGcmVhc29uGAIgASgJQge6SARyAhABEi8KDGdyYWNlX3dpbmRvdxgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJlCiFDbGVhckFnZW50SWRlbnRpdHlCaW5kaW5nUmVzcG9uc2USEAoIYWNjZXB0ZWQYASABKAgSLgoKZXhwaXJlc19hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiNgoVR2V0QWdlbnRTdGF0dXNSZXF1ZXN0Eh0KCGFnZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABASKXAgoWR2V0QWdlbnRTdGF0dXNSZXNwb25zZRI+Cg1oZWFsdGhfc3RhdHVzGAEgASgOMicuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRIZWFsdGhTdGF0dXMSPwoJdGVycmFmb3JtGAIgASgLMiouYWRtaXJhbC5hcGkuYWdlbnQudjEuVGVycmFmb3JtQWdlbnRTdGF0dXNIABJBCgprdWJlcm5ldGVzGAMgASgLMisuYWRtaXJhbC5hcGkuYWdlbnQudjEuS3ViZXJuZXRlc0FnZW50U3RhdHVzSAASLwoLcmVwb3J0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQggKBnN0YXR1cyKjAQoTQ3JlYXRlQXBpS2V5UmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQESPQoEbmFtZRgCIAEoCUIv4EECukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSLgoKZXhwaXJlc19hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiWgoUQ3JlYXRlQXBpS2V5UmVzcG9uc2USKgoHYXBpX2tleRgBIAEoCzIZLmFkbWlyYWwuY29tbW9uLnYxLkFwaUtleRIWCg5wbGFpbl90ZXh0X2tleRgCIAEoCSJ/ChJMaXN0QXBpS2V5c1JlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEhgKBmZpbHRlchgCIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAMgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgEIAEoCSJbChNMaXN0QXBpS2V5c1Jlc3BvbnNlEisKCGFwaV9rZXlzGAEgAygLMhkuYWRtaXJhbC5jb21tb24udjEuQXBpS2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIxChBHZXRBcGlLZXlSZXF1ZXN0Eh0KCHRva2VuX2lkGAEgASgJQgvgQQK6SAVyA7ABASI/ChFHZXRBcGlLZXlSZXNwb25zZRIqCgdhcGlfa2V5GAEgASgLMhkuYWRtaXJhbC5jb21tb24udjEuQXBpS2V5IjQKE1Jldm9rZUFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBIkIKFFJldm9rZUFwaUtleVJlc3BvbnNlEioKB2FwaV9rZXkYASABKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXkqXAoJQWdlbnRLaW5kEhoKFkFHRU5UX0tJTkRfVU5TUEVDSUZJRUQQABIYChRBR0VOVF9LSU5EX1RFUlJBRk9STRABEhkKFUFHRU5UX0tJTkRfS1VCRVJORVRFUxACKuABChFBZ2VudEhlYWx0aFN0YXR1cxIjCh9BR0VOVF9IRUFMVEhfU1RBVFVTX1VOU1BFQ0lGSUVEEAASHwobQUdFTlRfSEVBTFRIX1NUQVRVU19QRU5ESU5HEAESHwobQUdFTlRfSEVBTFRIX1NUQVRVU19IRUFMVEhZEAISIAocQUdFTlRfSEVBTFRIX1NUQVRVU19ERUdSQURFRBADEh0KGUFHRU5UX0hFQUxUSF9TVEFUVVNfRVJST1IQBBIjCh9BR0VOVF9IRUFMVEhfU1RBVFVTX1VOUkVBQ0hBQkxFEAUy3BYKCEFnZW50QVBJEqYBCgtDcmVhdGVBZ2VudBIoLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNyZWF0ZUFnZW50UmVxdWVzdBopLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNyZWF0ZUFnZW50UmVzcG9uc2UiQrpHGQoGQWdlbnRzEg9DcmVhdGUgYW4gYWdlbnSilyQNCgthZ2VudDp3cml0ZYLT5JMCDzoBKiIKL3YxL2FnZW50cxKmAQoIR2V0QWdlbnQSJS5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFJlcXVlc3QaJi5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFJlc3BvbnNlIku6RxsKBkFnZW50cxIRUmV0cmlldmUgYW4gYWdlbnSilyQMCgphZ2VudDpyZWFkgtPkkwIXEhUvdjEvYWdlbnRzL3thZ2VudF9pZH0SmwEKCkxpc3RBZ2VudHMSJy5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QWdlbnRzUmVxdWVzdBooLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RBZ2VudHNSZXNwb25zZSI6ukcVCgZBZ2VudHMSC0xpc3QgYWdlbnRzopckDAoKYWdlbnQ6cmVhZILT5JMCDBIKL3YxL2FnZW50cxKxAQoLVXBkYXRlQWdlbnQSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5VcGRhdGVBZ2VudFJlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5VcGRhdGVBZ2VudFJlc3BvbnNlIk26RxkKBkFnZW50cxIPVXBkYXRlIGFuIGFnZW50opckDQoLYWdlbnQ6d3JpdGWC0+STAho6ASoyFS92MS9hZ2VudHMve2FnZW50LmlkfRKuAQoLRGVsZXRlQWdlbnQSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5EZWxldGVBZ2VudFJlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5EZWxldGVBZ2VudFJlc3BvbnNlIkq6RxkKBkFnZW50cxIPRGVsZXRlIGFuIGFnZW50opckDQoLYWdlbnQ6d3JpdGWC0+STAhcqFS92MS9hZ2VudHMve2FnZW50X2lkfRLDAQoOR2V0QWdlbnRTdGF0dXMSKy5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFN0YXR1c1JlcXVlc3QaLC5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFN0YXR1c1Jlc3BvbnNlIla6Rx8KBkFnZW50cxIVUmV0cmlldmUgYWdlbnQgc3RhdHVzopckDAoKYWdlbnQ6cmVhZILT5JMCHhIcL3YxL2FnZW50cy97YWdlbnRfaWR9L3N0YXR1cxKEAgoZQ2xlYXJBZ2VudElkZW50aXR5QmluZGluZxI2LmFkbWlyYWwuYXBpLmFnZW50LnYxLkNsZWFyQWdlbnRJZGVudGl0eUJpbmRpbmdSZXF1ZXN0GjcuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ2xlYXJBZ2VudElkZW50aXR5QmluZGluZ1Jlc3BvbnNlIna6RysKBkFnZW50cxIhQ2xlYXIgYW4gYWdlbnQncyBpZGVudGl0eSBiaW5kaW5nopckDQoLYWdlbnQ6d3JpdGWC0+STAjE6ASoiLC92MS9hZ2VudHMve2FnZW50X2lkfS9jbGVhci1pZGVudGl0eS1iaW5kaW5nEscBCgxDcmVhdGVBcGlLZXkSKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5DcmVhdGVBcGlLZXlSZXF1ZXN0GiouYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQXBpS2V5UmVzcG9uc2UiYLpHJQoMQWdlbnQgVG9rZW5zEhVDcmVhdGUgYW4gYWdlbnQgdG9rZW6ilyQNCgthZ2VudDp3cml0ZYLT5JMCIToBKiIcL3YxL2FnZW50cy97YWdlbnRfaWR9L3Rva2VucxK8AQoLTGlzdEFwaUtleXMSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QXBpS2V5c1JlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QXBpS2V5c1Jlc3BvbnNlIli6RyEKDEFnZW50IFRva2VucxIRTGlzdCBhZ2VudCB0b2tlbnOilyQMCgphZ2VudDpyZWFkgtPkkwIeEhwvdjEvYWdlbnRzL3thZ2VudF9pZH0vdG9rZW5zErwBCglHZXRBcGlLZXkSJi5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBcGlLZXlSZXF1ZXN0GicuYWRtaXJhbC5hcGkuYWdlbnQudjEuR2V0QXBpS2V5UmVzcG9uc2UiXrpHJwoMQWdlbnQgVG9rZW5zEhdSZXRyaWV2ZSBhbiBhZ2VudCB0b2tlbqKXJAwKCmFnZW50OnJlYWSC0+STAh4SHC92MS9hZ2VudHMvdG9rZW5zL3t0b2tlbl9pZH0SzgEKDFJldm9rZUFwaUtleRIpLmFkbWlyYWwuYXBpLmFnZW50LnYxLlJldm9rZUFwaUtleVJlcXVlc3QaKi5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZXZva2VBcGlLZXlSZXNwb25zZSJnukclCgxBZ2VudCBUb2tlbnMSFVJldm9rZSBhbiBhZ2VudCB0b2tlbqKXJA0KC2FnZW50OndyaXRlgtPkkwIoOgEqIiMvdjEvYWdlbnRzL3Rva2Vucy97dG9rZW5faWR9L3Jldm9rZRK4AQoNTGlzdEFnZW50Sm9icxIqLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RBZ2VudEpvYnNSZXF1ZXN0GisuYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdEFnZW50Sm9ic1Jlc3BvbnNlIk66RxkKBkFnZW50cxIPTGlzdCBhZ2VudCBqb2JzopckDAoKYWdlbnQ6cmVhZILT5JMCHBIaL3YxL2FnZW50cy97YWdlbnRfaWR9L2pvYnMSvAEKDUxpc3RXb3JrbG9hZHMSKi5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0V29ya2xvYWRzUmVxdWVzdBorLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RXb3JrbG9hZHNSZXNwb25zZSJSukcYCgZBZ2VudHMSDkxpc3Qgd29ya2xvYWRzopckDAoKYWdlbnQ6cmVhZILT5JMCIRIfL3YxL2FnZW50cy97YWdlbnRfaWR9L3dvcmtsb2FkcxLJAQoLR2V0V29ya2xvYWQSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRXb3JrbG9hZFJlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRXb3JrbG9hZFJlc3BvbnNlImW6Rx0KBkFnZW50cxITUmV0cmlldmUgYSB3b3JrbG9hZKKXJAwKCmFnZW50OnJlYWSC0+STAi8SLS92MS9hZ2VudHMve2FnZW50X2lkfS93b3JrbG9hZHMve3dvcmtsb2FkX2lkfRLOAQoSTGlzdFdvcmtsb2FkRXZlbnRzEi8uYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdFdvcmtsb2FkRXZlbnRzUmVxdWVzdBowLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RXb3JrbG9hZEV2ZW50c1Jlc3BvbnNlIlW6Rx4KBkFnZW50cxIUTGlzdCB3b3JrbG9hZCBldmVudHOilyQMCgphZ2VudDpyZWFkgtPkkwIeEhwvdjEvYWdlbnRzL3thZ2VudF9pZH0vZXZlbnRzQs8BChhjb20uYWRtaXJhbC5hcGkuYWdlbnQudjFCCkFnZW50UHJvdG9QAVo0Z28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvYWdlbnQvdjE7YWdlbnR2MaICA0FBQaoCFEFkbWlyYWwuQXBpLkFnZW50LlYxygIUQWRtaXJhbFxBcGlcQWdlbnRcVjHiAiBBZG1pcmFsXEFwaVxBZ2VudFxWMVxHUEJNZXRhZGF0YeoCF0FkbWlyYWw6OkFwaTo6QWdlbnQ6OlYxYgZwcm90bzM", [file_admiral_api_agent_v1_jobs, file_admiral_api_agent_v1_workloads, file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_admiral_common_v1_apikey, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
 
 /**
  * Agent represents a registered execution agent within a tenant. The `kind`
@@ -84,7 +84,7 @@ export type Agent = Message<"admiral.api.agent.v1.Agent"> & {
 
   /**
    * (KUBERNETES only) The Kubernetes kube-system namespace UID, bound at agent
-   * registration using a first-write-wins strategy. Used to detect when a token
+   * registration using a first-write-wins strategy. Used to detect when a key
    * is accidentally deployed to a different physical cluster. Empty for TERRAFORM
    * agents.
    *
@@ -93,7 +93,7 @@ export type Agent = Message<"admiral.api.agent.v1.Agent"> & {
   clusterUid: string;
 
   /**
-   * The user or agent who created this agent (server-populated from token).
+   * The user or agent who created this agent (server-populated from key).
    *
    * @generated from field: admiral.common.v1.ActorRef created_by = 8;
    */
@@ -131,7 +131,7 @@ export const AgentSchema: GenMessage<Agent> = /*@__PURE__*/
 export type CreateAgentRequest = Message<"admiral.api.agent.v1.CreateAgentRequest"> & {
   /**
    * The execution plane this agent serves (TERRAFORM or KUBERNETES). Selects the
-   * SAT's auto-assigned scopes and is immutable.
+   * key's auto-assigned scopes and is immutable.
    *
    * @generated from field: admiral.api.agent.v1.AgentKind kind = 1;
    */
@@ -169,7 +169,7 @@ export const CreateAgentRequestSchema: GenMessage<CreateAgentRequest> = /*@__PUR
   messageDesc(file_admiral_api_agent_v1_agent, 1);
 
 /**
- * CreateAgentResponse contains the newly created agent and its initial SAT.
+ * CreateAgentResponse contains the newly created agent and its initial API key.
  *
  * @generated from message admiral.api.agent.v1.CreateAgentResponse
  */
@@ -182,13 +182,13 @@ export type CreateAgentResponse = Message<"admiral.api.agent.v1.CreateAgentRespo
   agent?: Agent | undefined;
 
   /**
-   * The raw Service Access Token secret (e.g., "adms_pL2mN5oQ8rS1..."). Shown
-   * exactly once and cannot be retrieved again. Deploy this token to the agent
-   * binary for authentication. For additional tokens, use CreateAgentToken.
+   * The raw API key secret (e.g., "adms_pL2mN5oQ8rS1..."). Shown exactly once
+   * and cannot be retrieved again. Deploy this key to the agent binary for
+   * authentication. For additional keys, use CreateApiKey.
    *
-   * @generated from field: string plain_text_token = 2;
+   * @generated from field: string plain_text_key = 2;
    */
-  plainTextToken: string;
+  plainTextKey: string;
 };
 
 /**
@@ -372,8 +372,8 @@ export const UpdateAgentResponseSchema: GenMessage<UpdateAgentResponse> = /*@__P
  */
 export type DeleteAgentRequest = Message<"admiral.api.agent.v1.DeleteAgentRequest"> & {
   /**
-   * The unique identifier of the agent to delete (UUID). All associated service
-   * access tokens will be revoked.
+   * The unique identifier of the agent to delete (UUID). All API keys bound to
+   * its service account are revoked.
    *
    * @generated from field: string agent_id = 1;
    */
@@ -542,22 +542,22 @@ export const GetAgentStatusResponseSchema: GenMessage<GetAgentStatusResponse> = 
   messageDesc(file_admiral_api_agent_v1_agent, 14);
 
 /**
- * CreateAgentTokenRequest contains the parameters for creating a new SAT bound to
+ * CreateApiKeyRequest contains the parameters for creating a new API key bound to
  * an agent.
  *
- * @generated from message admiral.api.agent.v1.CreateAgentTokenRequest
+ * @generated from message admiral.api.agent.v1.CreateApiKeyRequest
  */
-export type CreateAgentTokenRequest = Message<"admiral.api.agent.v1.CreateAgentTokenRequest"> & {
+export type CreateApiKeyRequest = Message<"admiral.api.agent.v1.CreateApiKeyRequest"> & {
   /**
-   * The agent to bind this token to (UUID).
+   * The agent to bind this key to (UUID).
    *
    * @generated from field: string agent_id = 1;
    */
   agentId: string;
 
   /**
-   * URL-safe, human-readable identifier for the token (e.g., "prod-agent-key").
-   * Unique within the agent's tokens. Lowercase alphanumeric and hyphens only,
+   * URL-safe, human-readable identifier for the key (e.g., "prod-agent-key").
+   * Unique within the agent's keys. Lowercase alphanumeric and hyphens only,
    * must start with a letter and end with an alphanumeric character (1-63 chars).
    *
    * @generated from field: string name = 2;
@@ -565,7 +565,7 @@ export type CreateAgentTokenRequest = Message<"admiral.api.agent.v1.CreateAgentT
   name: string;
 
   /**
-   * Optional expiration time. If unset, the token does not expire.
+   * Optional expiration time. If unset, the key does not expire.
    *
    * @generated from field: google.protobuf.Timestamp expires_at = 3;
    */
@@ -573,48 +573,48 @@ export type CreateAgentTokenRequest = Message<"admiral.api.agent.v1.CreateAgentT
 };
 
 /**
- * Describes the message admiral.api.agent.v1.CreateAgentTokenRequest.
- * Use `create(CreateAgentTokenRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.CreateApiKeyRequest.
+ * Use `create(CreateApiKeyRequestSchema)` to create a new message.
  */
-export const CreateAgentTokenRequestSchema: GenMessage<CreateAgentTokenRequest> = /*@__PURE__*/
+export const CreateApiKeyRequestSchema: GenMessage<CreateApiKeyRequest> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 15);
 
 /**
- * CreateAgentTokenResponse contains the newly created SAT.
+ * CreateApiKeyResponse contains the newly created API key.
  *
- * @generated from message admiral.api.agent.v1.CreateAgentTokenResponse
+ * @generated from message admiral.api.agent.v1.CreateApiKeyResponse
  */
-export type CreateAgentTokenResponse = Message<"admiral.api.agent.v1.CreateAgentTokenResponse"> & {
+export type CreateApiKeyResponse = Message<"admiral.api.agent.v1.CreateApiKeyResponse"> & {
   /**
-   * The created token metadata. Scopes are auto-assigned from the agent's kind.
+   * The created key metadata. Scopes are auto-assigned from the agent's kind.
    *
-   * @generated from field: admiral.common.v1.AccessToken access_token = 1;
+   * @generated from field: admiral.common.v1.ApiKey api_key = 1;
    */
-  accessToken?: AccessToken | undefined;
+  apiKey?: ApiKey | undefined;
 
   /**
-   * The raw token secret. Shown exactly once and cannot be retrieved again.
+   * The raw secret. Shown exactly once and cannot be retrieved again.
    *
-   * @generated from field: string plain_text_token = 2;
+   * @generated from field: string plain_text_key = 2;
    */
-  plainTextToken: string;
+  plainTextKey: string;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.CreateAgentTokenResponse.
- * Use `create(CreateAgentTokenResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.CreateApiKeyResponse.
+ * Use `create(CreateApiKeyResponseSchema)` to create a new message.
  */
-export const CreateAgentTokenResponseSchema: GenMessage<CreateAgentTokenResponse> = /*@__PURE__*/
+export const CreateApiKeyResponseSchema: GenMessage<CreateApiKeyResponse> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 16);
 
 /**
- * ListAgentTokensRequest contains pagination and filter parameters.
+ * ListApiKeysRequest contains pagination and filter parameters.
  *
- * @generated from message admiral.api.agent.v1.ListAgentTokensRequest
+ * @generated from message admiral.api.agent.v1.ListApiKeysRequest
  */
-export type ListAgentTokensRequest = Message<"admiral.api.agent.v1.ListAgentTokensRequest"> & {
+export type ListApiKeysRequest = Message<"admiral.api.agent.v1.ListApiKeysRequest"> & {
   /**
-   * The agent to list tokens for (UUID).
+   * The agent to list keys for (UUID).
    *
    * @generated from field: string agent_id = 1;
    */
@@ -625,15 +625,15 @@ export type ListAgentTokensRequest = Message<"admiral.api.agent.v1.ListAgentToke
    * API documentation for the full operator and predicate reference).
    *
    * Filterable fields:
-   *   - `name`: filter by token name.
-   *   - `status`: filter by token status (ACTIVE, REVOKED).
+   *   - `name`: filter by key name.
+   *   - `status`: filter by key status (ACTIVE, REVOKED).
    *
    * @generated from field: string filter = 2;
    */
   filter: string;
 
   /**
-   * Maximum number of tokens to return per page. Defaults to 50 when omitted or
+   * Maximum number of keys to return per page. Defaults to 50 when omitted or
    * 0; must not exceed 100.
    *
    * @generated from field: int32 page_size = 3;
@@ -649,24 +649,24 @@ export type ListAgentTokensRequest = Message<"admiral.api.agent.v1.ListAgentToke
 };
 
 /**
- * Describes the message admiral.api.agent.v1.ListAgentTokensRequest.
- * Use `create(ListAgentTokensRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.ListApiKeysRequest.
+ * Use `create(ListApiKeysRequestSchema)` to create a new message.
  */
-export const ListAgentTokensRequestSchema: GenMessage<ListAgentTokensRequest> = /*@__PURE__*/
+export const ListApiKeysRequestSchema: GenMessage<ListApiKeysRequest> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 17);
 
 /**
- * ListAgentTokensResponse contains a page of agent SAT metadata.
+ * ListApiKeysResponse contains a page of agent API key metadata.
  *
- * @generated from message admiral.api.agent.v1.ListAgentTokensResponse
+ * @generated from message admiral.api.agent.v1.ListApiKeysResponse
  */
-export type ListAgentTokensResponse = Message<"admiral.api.agent.v1.ListAgentTokensResponse"> & {
+export type ListApiKeysResponse = Message<"admiral.api.agent.v1.ListApiKeysResponse"> & {
   /**
-   * The list of tokens. Token secrets are never included.
+   * The list of keys. Secrets are never included.
    *
-   * @generated from field: repeated admiral.common.v1.AccessToken access_tokens = 1;
+   * @generated from field: repeated admiral.common.v1.ApiKey api_keys = 1;
    */
-  accessTokens: AccessToken[];
+  apiKeys: ApiKey[];
 
   /**
    * Pagination token for the next page. Empty when there are no more results.
@@ -677,21 +677,21 @@ export type ListAgentTokensResponse = Message<"admiral.api.agent.v1.ListAgentTok
 };
 
 /**
- * Describes the message admiral.api.agent.v1.ListAgentTokensResponse.
- * Use `create(ListAgentTokensResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.ListApiKeysResponse.
+ * Use `create(ListApiKeysResponseSchema)` to create a new message.
  */
-export const ListAgentTokensResponseSchema: GenMessage<ListAgentTokensResponse> = /*@__PURE__*/
+export const ListApiKeysResponseSchema: GenMessage<ListApiKeysResponse> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 18);
 
 /**
- * GetAgentTokenRequest identifies an agent SAT to retrieve. Token IDs are globally
- * unique; the server resolves the parent agent from the token ID.
+ * GetApiKeyRequest identifies an agent API key to retrieve. Key IDs are globally
+ * unique; the server resolves the parent agent from the key ID.
  *
- * @generated from message admiral.api.agent.v1.GetAgentTokenRequest
+ * @generated from message admiral.api.agent.v1.GetApiKeyRequest
  */
-export type GetAgentTokenRequest = Message<"admiral.api.agent.v1.GetAgentTokenRequest"> & {
+export type GetApiKeyRequest = Message<"admiral.api.agent.v1.GetApiKeyRequest"> & {
   /**
-   * The unique identifier of the token (UUID).
+   * The unique identifier of the key (UUID).
    *
    * @generated from field: string token_id = 1;
    */
@@ -699,42 +699,42 @@ export type GetAgentTokenRequest = Message<"admiral.api.agent.v1.GetAgentTokenRe
 };
 
 /**
- * Describes the message admiral.api.agent.v1.GetAgentTokenRequest.
- * Use `create(GetAgentTokenRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.GetApiKeyRequest.
+ * Use `create(GetApiKeyRequestSchema)` to create a new message.
  */
-export const GetAgentTokenRequestSchema: GenMessage<GetAgentTokenRequest> = /*@__PURE__*/
+export const GetApiKeyRequestSchema: GenMessage<GetApiKeyRequest> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 19);
 
 /**
- * GetAgentTokenResponse contains the requested agent SAT metadata.
+ * GetApiKeyResponse contains the requested agent API key metadata.
  *
- * @generated from message admiral.api.agent.v1.GetAgentTokenResponse
+ * @generated from message admiral.api.agent.v1.GetApiKeyResponse
  */
-export type GetAgentTokenResponse = Message<"admiral.api.agent.v1.GetAgentTokenResponse"> & {
+export type GetApiKeyResponse = Message<"admiral.api.agent.v1.GetApiKeyResponse"> & {
   /**
-   * The token metadata. The token secret is never included.
+   * The key metadata. The key secret is never included.
    *
-   * @generated from field: admiral.common.v1.AccessToken access_token = 1;
+   * @generated from field: admiral.common.v1.ApiKey api_key = 1;
    */
-  accessToken?: AccessToken | undefined;
+  apiKey?: ApiKey | undefined;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.GetAgentTokenResponse.
- * Use `create(GetAgentTokenResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.GetApiKeyResponse.
+ * Use `create(GetApiKeyResponseSchema)` to create a new message.
  */
-export const GetAgentTokenResponseSchema: GenMessage<GetAgentTokenResponse> = /*@__PURE__*/
+export const GetApiKeyResponseSchema: GenMessage<GetApiKeyResponse> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 20);
 
 /**
- * RevokeAgentTokenRequest identifies an agent SAT to revoke. Token IDs are
- * globally unique; the server resolves the parent agent from the token ID.
+ * RevokeApiKeyRequest identifies an agent API key to revoke. Key IDs are
+ * globally unique; the server resolves the parent agent from the key ID.
  *
- * @generated from message admiral.api.agent.v1.RevokeAgentTokenRequest
+ * @generated from message admiral.api.agent.v1.RevokeApiKeyRequest
  */
-export type RevokeAgentTokenRequest = Message<"admiral.api.agent.v1.RevokeAgentTokenRequest"> & {
+export type RevokeApiKeyRequest = Message<"admiral.api.agent.v1.RevokeApiKeyRequest"> & {
   /**
-   * The unique identifier of the token to revoke (UUID).
+   * The unique identifier of the key to revoke (UUID).
    *
    * @generated from field: string token_id = 1;
    */
@@ -742,31 +742,31 @@ export type RevokeAgentTokenRequest = Message<"admiral.api.agent.v1.RevokeAgentT
 };
 
 /**
- * Describes the message admiral.api.agent.v1.RevokeAgentTokenRequest.
- * Use `create(RevokeAgentTokenRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.RevokeApiKeyRequest.
+ * Use `create(RevokeApiKeyRequestSchema)` to create a new message.
  */
-export const RevokeAgentTokenRequestSchema: GenMessage<RevokeAgentTokenRequest> = /*@__PURE__*/
+export const RevokeApiKeyRequestSchema: GenMessage<RevokeApiKeyRequest> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 21);
 
 /**
- * RevokeAgentTokenResponse contains the revoked agent SAT metadata.
+ * RevokeApiKeyResponse contains the revoked agent API key metadata.
  *
- * @generated from message admiral.api.agent.v1.RevokeAgentTokenResponse
+ * @generated from message admiral.api.agent.v1.RevokeApiKeyResponse
  */
-export type RevokeAgentTokenResponse = Message<"admiral.api.agent.v1.RevokeAgentTokenResponse"> & {
+export type RevokeApiKeyResponse = Message<"admiral.api.agent.v1.RevokeApiKeyResponse"> & {
   /**
-   * The token metadata with updated status.
+   * The key metadata with updated status.
    *
-   * @generated from field: admiral.common.v1.AccessToken access_token = 1;
+   * @generated from field: admiral.common.v1.ApiKey api_key = 1;
    */
-  accessToken?: AccessToken | undefined;
+  apiKey?: ApiKey | undefined;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.RevokeAgentTokenResponse.
- * Use `create(RevokeAgentTokenResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.RevokeApiKeyResponse.
+ * Use `create(RevokeApiKeyResponseSchema)` to create a new message.
  */
-export const RevokeAgentTokenResponseSchema: GenMessage<RevokeAgentTokenResponse> = /*@__PURE__*/
+export const RevokeApiKeyResponseSchema: GenMessage<RevokeApiKeyResponse> = /*@__PURE__*/
   messageDesc(file_admiral_api_agent_v1_agent, 22);
 
 /**
@@ -868,18 +868,24 @@ export const AgentHealthStatusSchema: GenEnum<AgentHealthStatus> = /*@__PURE__*/
 
 /**
  * AgentAPI is the management surface for execution agents: their lifecycle,
- * their Service Access Tokens, and read-only visibility into the work they
- * have done. It is the human-facing half of the agent contract, called with a
- * PAT from the CLI, Terraform provider, or web app.
+ * their API keys, and read-only visibility into the work they have done. It is
+ * the human-facing half of the agent contract, called with a user's own API key
+ * from the CLI, Terraform provider, or web app.
+ *
+ * An agent's key is bound to the agent's service account
+ * (BINDING_TYPE_SERVICE_ACCOUNT), not to the agent record: an agent HAS a
+ * service account rather than being one, so its credential rotates without
+ * touching the agent.
  *
  * The execution protocol the agents themselves speak lives in AgentRuntimeAPI
- * (runtime.proto). That half is SAT-only, excluded from the public OpenAPI
+ * (runtime.proto). That half is reachable only with a service-account-bound
+ * key, excluded from the public OpenAPI
  * surface, and changes with the agent binaries. Keeping the two apart means the
  * documented management contract is not versioned against the churn of job
  * bundles, hooks, and engines.
  *
  * Both agent kinds are managed here and share one identity, lifecycle, and
- * token model:
+ * key model:
  *
  *   - TERRAFORM agents are the execution plane for infrastructure operations
  *     (plan, apply, destroy) run by a terraform-semantic engine (Terraform or
@@ -889,12 +895,12 @@ export const AgentHealthStatusSchema: GenEnum<AgentHealthStatus> = /*@__PURE__*/
  *     reporting workload telemetry and applying rendered manifest revisions.
  *
  * Administrators create an agent via CreateAgent (passing the kind), which
- * returns a Service Access Token (SAT) for deploying the agent binary. Once the
+ * returns an API key for deploying the agent binary. Once the
  * agent boots and begins reporting through AgentRuntimeAPI, the server
  * transitions its health from PENDING to HEALTHY.
  *
  * Management routes follow /v1/agents/... (plural, with IDs); the runtime
- * protocol uses /v1/agent/... (singular, no ID; derived from the SAT binding).
+ * protocol uses /v1/agent/... (singular, no ID; derived from the key's binding).
  *
  * Message definitions live in companion files: jobs.proto (TERRAFORM execution)
  * and workloads.proto (KUBERNETES telemetry and revision delivery).
@@ -907,14 +913,14 @@ export const AgentAPI: GenService<{
    * Admin CRUD
    * ---------------------------------------------------------------------------
    * CreateAgent creates a new agent record within the caller's tenant and
-   * generates an initial Service Access Token (SAT). The agent starts in PENDING
+   * generates an initial API key. The agent starts in PENDING
    * health status until it begins reporting.
    *
    * The request's `kind` selects the agent's execution plane (TERRAFORM or KUBERNETES)
-   * and determines the SAT's auto-assigned scopes. The kind is immutable.
+   * and determines the key's auto-assigned scopes. The kind is immutable.
    *
-   * The response includes a `plain_text_token`: the raw SAT secret shown
-   * exactly once. Deploy this token to the agent binary for authentication.
+   * The response includes a `plain_text_key`: the raw API key secret shown
+   * exactly once. Deploy this key to the agent binary for authentication.
    *
    * Scope: `agent:write`
    *
@@ -969,7 +975,7 @@ export const AgentAPI: GenService<{
   },
   /**
    * DeleteAgent permanently deletes an agent record and revokes all associated
-   * service access tokens. For TERRAFORM agents, any not-yet-completed jobs assigned
+   * API keys. For TERRAFORM agents, any not-yet-completed jobs assigned
    * to this agent will be failed. This action cannot be undone.
    *
    * Scope: `agent:write`
@@ -1019,68 +1025,68 @@ export const AgentAPI: GenService<{
   },
   /**
    * ---------------------------------------------------------------------------
-   * Agent tokens
+   * API keys
    * ---------------------------------------------------------------------------
-   * CreateAgentToken creates a new Service Access Token (SAT) bound to the
-   * specified agent. Scopes are auto-assigned from the agent's kind and cannot
-   * be overridden. The response includes the raw token secret, shown exactly once.
+   * CreateApiKey creates a new API key bound to the specified agent's service
+   * account. Scopes are auto-assigned from the agent's kind and cannot be
+   * overridden. The response includes the raw secret, shown exactly once.
    *
-   * Use this to create additional SATs for an existing agent (e.g., for
-   * zero-downtime token rotation). The initial SAT is created automatically by
+   * Use this to create additional API keys for an existing agent (e.g., for
+   * zero-downtime key rotation). The initial key is created automatically by
    * CreateAgent.
    *
    * Scope: `agent:write`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.CreateAgentToken
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.CreateApiKey
    */
-  createAgentToken: {
+  createApiKey: {
     methodKind: "unary";
-    input: typeof CreateAgentTokenRequestSchema;
-    output: typeof CreateAgentTokenResponseSchema;
+    input: typeof CreateApiKeyRequestSchema;
+    output: typeof CreateApiKeyResponseSchema;
   },
   /**
-   * ListAgentTokens returns a paginated list of SATs bound to the specified
-   * agent. Token secrets are never included.
+   * ListApiKeys returns a paginated list of API keys bound to the specified
+   * agent. Secrets are never included.
    *
    * Scope: `agent:read`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListAgentTokens
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListApiKeys
    */
-  listAgentTokens: {
+  listApiKeys: {
     methodKind: "unary";
-    input: typeof ListAgentTokensRequestSchema;
-    output: typeof ListAgentTokensResponseSchema;
+    input: typeof ListApiKeysRequestSchema;
+    output: typeof ListApiKeysResponseSchema;
   },
   /**
-   * GetAgentToken retrieves a single SAT by ID. Returns metadata only; the token
-   * secret is never included. Token IDs are globally unique, so no agent scoping
-   * is required in the path; the server resolves the parent agent from the token
+   * GetApiKey retrieves a single API key by ID. Returns metadata only; the key
+   * secret is never included. Key IDs are globally unique, so no agent scoping
+   * is required in the path; the server resolves the parent agent from the key
    * ID. Authorization is enforced via the `agent:read` scope, not by path prefix.
    *
    * Scope: `agent:read`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.GetAgentToken
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.GetApiKey
    */
-  getAgentToken: {
+  getApiKey: {
     methodKind: "unary";
-    input: typeof GetAgentTokenRequestSchema;
-    output: typeof GetAgentTokenResponseSchema;
+    input: typeof GetApiKeyRequestSchema;
+    output: typeof GetApiKeyResponseSchema;
   },
   /**
-   * RevokeAgentToken permanently revokes an SAT bound to this agent. The agent
-   * will receive a 401 on its next request. If this is the only active SAT for
-   * the agent, the agent will become disconnected. Token IDs are globally unique,
+   * RevokeApiKey permanently revokes an API key bound to this agent. The agent
+   * will receive a 401 on its next request. If this is the only active key for
+   * the agent, the agent will become disconnected. Key IDs are globally unique,
    * so no agent scoping is required in the path; authorization is enforced via
    * the `agent:write` scope, not by path prefix.
    *
    * Scope: `agent:write`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.RevokeAgentToken
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.RevokeApiKey
    */
-  revokeAgentToken: {
+  revokeApiKey: {
     methodKind: "unary";
-    input: typeof RevokeAgentTokenRequestSchema;
-    output: typeof RevokeAgentTokenResponseSchema;
+    input: typeof RevokeApiKeyRequestSchema;
+    output: typeof RevokeApiKeyResponseSchema;
   },
   /**
    * ---------------------------------------------------------------------------
