@@ -1,7 +1,6 @@
 {
   "branches": [
-    "master",
-    { "name": "next", "prerelease": "rc" }
+    "master"
   ],
   "plugins": [
     [

@@ -1,6 +1,6 @@
 {
   "name": "@admiral-io/sdk",
-  "version": "1.6.5",
+  "version": "0.0.1",
   "publishConfig": {
     "access": "public"
   },
@@ -49,19 +49,19 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@bufbuild/protobuf": "^2.11.0"
+    "@bufbuild/protobuf": "^2.14.0"
   },
   "peerDependencies": {
-    "@connectrpc/connect": "^2.1.1"
+    "@connectrpc/connect": "^2.1.2"
   },
   "devDependencies": {
-    "@connectrpc/connect": "^2.1.1",
+    "@connectrpc/connect": "^2.1.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^22.0.0",
-    "conventional-changelog-conventionalcommits": "^9.1.0",
-    "semantic-release": "^25.0.3",
+    "@types/node": "^22.20.1",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
+    "semantic-release": "^25.0.9",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.0"
+    "vitest": "^5.0.0"
   }
 }

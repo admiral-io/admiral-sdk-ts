@@ -1,10 +1,20 @@
 name: Release
 
+# Triggered by sync commits pushed from admiral-protos' tag-triggered cascade.
+# semantic-release cuts a release tag (vX.Y.Z) from conventional commits and
+# publishes to npm under the `latest` dist-tag.
+#
+# There is one channel on purpose. A rolling-RC channel existed and was removed
+# (2026-08-30): it derived its version from conventional commits while the
+# release channel derived its own from the shape of the admiral-protos tag, so
+# the two disagreed about the SAME content -- the API-key rename shipped as
+# 1.6.5 on latest while the rc channel called it 2.0.0-rc.1. One honest version
+# beats two that contradict each other.
+
 on:
   push:
     branches:
       - master
-      - next
     paths:
       - '**/*.ts'
       - '**/*.js'
@@ -25,9 +35,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
       - name: Setup Node.js
-        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: 22
           cache: "npm"
@@ -42,11 +52,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: 22
           cache: "npm"
