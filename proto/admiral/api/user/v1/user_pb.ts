@@ -2,8 +2,8 @@
 // @generated from file admiral/api/user/v1/user.proto (package admiral.api.user.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
-import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import { file_admiral_common_v1_annotations } from "../../../common/v1/annotations_pb.js";
 import type { ApiKey } from "../../../common/v1/apikey_pb.js";
 import { file_admiral_common_v1_apikey } from "../../../common/v1/apikey_pb.js";
@@ -19,7 +19,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/user/v1/user.proto.
  */
 export const file_admiral_api_user_v1_user: GenFile = /*@__PURE__*/
-  fileDesc("Ch5hZG1pcmFsL2FwaS91c2VyL3YxL3VzZXIucHJvdG8SE2FkbWlyYWwuYXBpLnVzZXIudjEiyQIKBFVzZXISFAoCaWQYASABKAlCCLpIBXIDsAEBEg0KBWVtYWlsGAIgASgJEhYKDmVtYWlsX3ZlcmlmaWVkGAMgASgIEhkKDGRpc3BsYXlfbmFtZRgEIAEoCUgAiAEBEhcKCmdpdmVuX25hbWUYBSABKAlIAYgBARIYCgtmYW1pbHlfbmFtZRgGIAEoCUgCiAEBEhcKCmF2YXRhcl91cmwYByABKAlIA4gBARIuCgpjcmVhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIPCg1fZGlzcGxheV9uYW1lQg0KC19naXZlbl9uYW1lQg4KDF9mYW1pbHlfbmFtZUINCgtfYXZhdGFyX3VybCIOCgxHZXRNZVJlcXVlc3QiOAoNR2V0TWVSZXNwb25zZRInCgR1c2VyGAEgASgLMhkuYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyIi4KDkdldFVzZXJSZXF1ZXN0EhwKB3VzZXJfaWQYASABKAlCC+BBArpIBXIDsAEBIjoKD0dldFVzZXJSZXNwb25zZRInCgR1c2VyGAEgASgLMhkuYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyIqcBChNDcmVhdGVBcGlLZXlSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBArpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEiEKBnNjb3BlcxgCIAMoCUIRukgOkgELEP8BIgZyBBABGEASLgoKZXhwaXJlc19hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiWgoUQ3JlYXRlQXBpS2V5UmVzcG9uc2USKgoHYXBpX2tleRgBIAEoCzIZLmFkbWlyYWwuY29tbW9uLnYxLkFwaUtleRIWCg5wbGFpbl90ZXh0X2tleRgCIAEoCSJgChJMaXN0QXBpS2V5c1JlcXVlc3QSGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJIlsKE0xpc3RBcGlLZXlzUmVzcG9uc2USKwoIYXBpX2tleXMYASADKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIjEKEEdldEFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBIj8KEUdldEFwaUtleVJlc3BvbnNlEioKB2FwaV9rZXkYASABKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXkioQEKE1VwZGF0ZUFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBEj8KBG5hbWUYAiABKAlCLLpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kSACIAQESIQoGc2NvcGVzGAMgAygJQhG6SA6SAQsQ/wEiBnIEEAEYQEIHCgVfbmFtZSJCChRVcGRhdGVBcGlLZXlSZXNwb25zZRIqCgdhcGlfa2V5GAEgASgLMhkuYWRtaXJhbC5jb21tb24udjEuQXBpS2V5IjQKE1Jldm9rZUFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBIkIKFFJldm9rZUFwaUtleVJlc3BvbnNlEioKB2FwaV9rZXkYASABKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXky1woKB1VzZXJBUEkSjwEKBUdldE1lEiEuYWRtaXJhbC5hcGkudXNlci52MS5HZXRNZVJlcXVlc3QaIi5hZG1pcmFsLmFwaS51c2VyLnYxLkdldE1lUmVzcG9uc2UiP7pHJQoEVXNlchIdUmV0cmlldmUgY3VycmVudCB1c2VyIHByb2ZpbGWilyQAgtPkkwINEgsvdjEvdXNlci9tZRKgAQoHR2V0VXNlchIjLmFkbWlyYWwuYXBpLnVzZXIudjEuR2V0VXNlclJlcXVlc3QaJC5hZG1pcmFsLmFwaS51c2VyLnYxLkdldFVzZXJSZXNwb25zZSJKukcdCgRVc2VyEhVSZXRyaWV2ZSBhIHVzZXIgYnkgSUSilyQLCgl1c2VyOnJlYWSC0+STAhUSEy92MS91c2Vycy97dXNlcl9pZH0SywEKDENyZWF0ZUFwaUtleRIoLmFkbWlyYWwuYXBpLnVzZXIudjEuQ3JlYXRlQXBpS2V5UmVxdWVzdBopLmFkbWlyYWwuYXBpLnVzZXIudjEuQ3JlYXRlQXBpS2V5UmVzcG9uc2UiZrpHOAoWUGVyc29uYWwgQWNjZXNzIFRva2VucxIeQ3JlYXRlIGEgcGVyc29uYWwgYWNjZXNzIHRva2VuopckDQoLdG9rZW46d3JpdGWC0+STAhQ6ASoiDy92MS91c2VyL3Rva2VucxLBAQoLTGlzdEFwaUtleXMSJy5hZG1pcmFsLmFwaS51c2VyLnYxLkxpc3RBcGlLZXlzUmVxdWVzdBooLmFkbWlyYWwuYXBpLnVzZXIudjEuTGlzdEFwaUtleXNSZXNwb25zZSJfukc1ChZQZXJzb25hbCBBY2Nlc3MgVG9rZW5zEhtMaXN0IHBlcnNvbmFsIGFjY2VzcyB0b2tlbnOilyQMCgp0b2tlbjpyZWFkgtPkkwIREg8vdjEvdXNlci90b2tlbnMSywEKCUdldEFwaUtleRIlLmFkbWlyYWwuYXBpLnVzZXIudjEuR2V0QXBpS2V5UmVxdWVzdBomLmFkbWlyYWwuYXBpLnVzZXIudjEuR2V0QXBpS2V5UmVzcG9uc2Uib7pHOgoWUGVyc29uYWwgQWNjZXNzIFRva2VucxIgUmV0cmlldmUgYSBwZXJzb25hbCBhY2Nlc3MgdG9rZW6ilyQMCgp0b2tlbjpyZWFkgtPkkwIcEhovdjEvdXNlci90b2tlbnMve3Rva2VuX2lkfRLWAQoMVXBkYXRlQXBpS2V5EiguYWRtaXJhbC5hcGkudXNlci52MS5VcGRhdGVBcGlLZXlSZXF1ZXN0GikuYWRtaXJhbC5hcGkudXNlci52MS5VcGRhdGVBcGlLZXlSZXNwb25zZSJxukc4ChZQZXJzb25hbCBBY2Nlc3MgVG9rZW5zEh5VcGRhdGUgYSBwZXJzb25hbCBhY2Nlc3MgdG9rZW6ilyQNCgt0b2tlbjp3cml0ZYLT5JMCHzoBKjIaL3YxL3VzZXIvdG9rZW5zL3t0b2tlbl9pZH0S3QEKDFJldm9rZUFwaUtleRIoLmFkbWlyYWwuYXBpLnVzZXIudjEuUmV2b2tlQXBpS2V5UmVxdWVzdBopLmFkbWlyYWwuYXBpLnVzZXIudjEuUmV2b2tlQXBpS2V5UmVzcG9uc2UieLpHOAoWUGVyc29uYWwgQWNjZXNzIFRva2VucxIeUmV2b2tlIGEgcGVyc29uYWwgYWNjZXNzIHRva2VuopckDQoLdG9rZW46d3JpdGWC0+STAiY6ASoiIS92MS91c2VyL3Rva2Vucy97dG9rZW5faWR9L3Jldm9rZULHAQoXY29tLmFkbWlyYWwuYXBpLnVzZXIudjFCCVVzZXJQcm90b1ABWjJnby5hZG1pcmFsLmlvL3Nkay9wcm90by9hZG1pcmFsL2FwaS91c2VyL3YxO3VzZXJ2MaICA0FBVaoCE0FkbWlyYWwuQXBpLlVzZXIuVjHKAhNBZG1pcmFsXEFwaVxVc2VyXFYx4gIfQWRtaXJhbFxBcGlcVXNlclxWMVxHUEJNZXRhZGF0YeoCFkFkbWlyYWw6OkFwaTo6VXNlcjo6VjFiBnByb3RvMw", [file_admiral_common_v1_annotations, file_admiral_common_v1_apikey, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_timestamp]);
+  fileDesc("Ch5hZG1pcmFsL2FwaS91c2VyL3YxL3VzZXIucHJvdG8SE2FkbWlyYWwuYXBpLnVzZXIudjEisQMKBFVzZXISFAoCaWQYASABKAlCCLpIBXIDsAEBEg0KBWVtYWlsGAIgASgJEhYKDmVtYWlsX3ZlcmlmaWVkGAMgASgIEhkKDGRpc3BsYXlfbmFtZRgEIAEoCUgAiAEBEhcKCmdpdmVuX25hbWUYBSABKAlIAYgBARIYCgtmYW1pbHlfbmFtZRgGIAEoCUgCiAEBEhcKCmF2YXRhcl91cmwYByABKAlIA4gBARIuCgpjcmVhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIuCgp1cGRhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgRyb2xlGAogASgOMh0uYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyUm9sZUID4EEDEjQKBnN0YXR1cxgLIAEoDjIfLmFkbWlyYWwuYXBpLnVzZXIudjEuVXNlclN0YXR1c0ID4EEDQg8KDV9kaXNwbGF5X25hbWVCDQoLX2dpdmVuX25hbWVCDgoMX2ZhbWlseV9uYW1lQg0KC19hdmF0YXJfdXJsIg4KDEdldE1lUmVxdWVzdCI4Cg1HZXRNZVJlc3BvbnNlEicKBHVzZXIYASABKAsyGS5hZG1pcmFsLmFwaS51c2VyLnYxLlVzZXIiLgoOR2V0VXNlclJlcXVlc3QSHAoHdXNlcl9pZBgBIAEoCUIL4EECukgFcgOwAQEiOgoPR2V0VXNlclJlc3BvbnNlEicKBHVzZXIYASABKAsyGS5hZG1pcmFsLmFwaS51c2VyLnYxLlVzZXIiXgoQTGlzdFVzZXJzUmVxdWVzdBIYCgZmaWx0ZXIYASABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgCIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YAyABKAkiVgoRTGlzdFVzZXJzUmVzcG9uc2USKAoFdXNlcnMYASADKAsyGS5hZG1pcmFsLmFwaS51c2VyLnYxLlVzZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqcBChNDcmVhdGVBcGlLZXlSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBArpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEiEKBnNjb3BlcxgCIAMoCUIRukgOkgELEP8BIgZyBBABGEASLgoKZXhwaXJlc19hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiWgoUQ3JlYXRlQXBpS2V5UmVzcG9uc2USKgoHYXBpX2tleRgBIAEoCzIZLmFkbWlyYWwuY29tbW9uLnYxLkFwaUtleRIWCg5wbGFpbl90ZXh0X2tleRgCIAEoCSJgChJMaXN0QXBpS2V5c1JlcXVlc3QSGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJIlsKE0xpc3RBcGlLZXlzUmVzcG9uc2USKwoIYXBpX2tleXMYASADKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIjEKEEdldEFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBIj8KEUdldEFwaUtleVJlc3BvbnNlEioKB2FwaV9rZXkYASABKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXkioQEKE1VwZGF0ZUFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBEj8KBG5hbWUYAiABKAlCLLpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kSACIAQESIQoGc2NvcGVzGAMgAygJQhG6SA6SAQsQ/wEiBnIEEAEYQEIHCgVfbmFtZSJCChRVcGRhdGVBcGlLZXlSZXNwb25zZRIqCgdhcGlfa2V5GAEgASgLMhkuYWRtaXJhbC5jb21tb24udjEuQXBpS2V5IjQKE1Jldm9rZUFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBIkIKFFJldm9rZUFwaUtleVJlc3BvbnNlEioKB2FwaV9rZXkYASABKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXkqgAEKCFVzZXJSb2xlEhkKFVVTRVJfUk9MRV9VTlNQRUNJRklFRBAAEhMKD1VTRVJfUk9MRV9PV05FUhABEhMKD1VTRVJfUk9MRV9BRE1JThACEhQKEFVTRVJfUk9MRV9NRU1CRVIQAxIZChVVU0VSX1JPTEVfQVBQX0NSRUFUT1IQBCpcCgpVc2VyU3RhdHVzEhsKF1VTRVJfU1RBVFVTX1VOU1BFQ0lGSUVEEAASFgoSVVNFUl9TVEFUVVNfQUNUSVZFEAESGQoVVVNFUl9TVEFUVVNfU1VTUEVOREVEEAIyhwwKB1VzZXJBUEkSjwEKBUdldE1lEiEuYWRtaXJhbC5hcGkudXNlci52MS5HZXRNZVJlcXVlc3QaIi5hZG1pcmFsLmFwaS51c2VyLnYxLkdldE1lUmVzcG9uc2UiP7pHJQoEVXNlchIdUmV0cmlldmUgY3VycmVudCB1c2VyIHByb2ZpbGWilyQAgtPkkwINEgsvdjEvdXNlci9tZRKgAQoHR2V0VXNlchIjLmFkbWlyYWwuYXBpLnVzZXIudjEuR2V0VXNlclJlcXVlc3QaJC5hZG1pcmFsLmFwaS51c2VyLnYxLkdldFVzZXJSZXNwb25zZSJKukcdCgRVc2VyEhVSZXRyaWV2ZSBhIHVzZXIgYnkgSUSilyQLCgl1c2VyOnJlYWSC0+STAhUSEy92MS91c2Vycy97dXNlcl9pZH0SrQEKCUxpc3RVc2VycxIlLmFkbWlyYWwuYXBpLnVzZXIudjEuTGlzdFVzZXJzUmVxdWVzdBomLmFkbWlyYWwuYXBpLnVzZXIudjEuTGlzdFVzZXJzUmVzcG9uc2UiUbpHLgoEVXNlchImTGlzdCB0aGUgbWVtYmVycyBvZiB0aGUgY3VycmVudCB0ZW5hbnSilyQLCgl1c2VyOnJlYWSC0+STAgsSCS92MS91c2VycxLLAQoMQ3JlYXRlQXBpS2V5EiguYWRtaXJhbC5hcGkudXNlci52MS5DcmVhdGVBcGlLZXlSZXF1ZXN0GikuYWRtaXJhbC5hcGkudXNlci52MS5DcmVhdGVBcGlLZXlSZXNwb25zZSJmukc4ChZQZXJzb25hbCBBY2Nlc3MgVG9rZW5zEh5DcmVhdGUgYSBwZXJzb25hbCBhY2Nlc3MgdG9rZW6ilyQNCgt0b2tlbjp3cml0ZYLT5JMCFDoBKiIPL3YxL3VzZXIvdG9rZW5zEsEBCgtMaXN0QXBpS2V5cxInLmFkbWlyYWwuYXBpLnVzZXIudjEuTGlzdEFwaUtleXNSZXF1ZXN0GiguYWRtaXJhbC5hcGkudXNlci52MS5MaXN0QXBpS2V5c1Jlc3BvbnNlIl+6RzUKFlBlcnNvbmFsIEFjY2VzcyBUb2tlbnMSG0xpc3QgcGVyc29uYWwgYWNjZXNzIHRva2Vuc6KXJAwKCnRva2VuOnJlYWSC0+STAhESDy92MS91c2VyL3Rva2VucxLLAQoJR2V0QXBpS2V5EiUuYWRtaXJhbC5hcGkudXNlci52MS5HZXRBcGlLZXlSZXF1ZXN0GiYuYWRtaXJhbC5hcGkudXNlci52MS5HZXRBcGlLZXlSZXNwb25zZSJvukc6ChZQZXJzb25hbCBBY2Nlc3MgVG9rZW5zEiBSZXRyaWV2ZSBhIHBlcnNvbmFsIGFjY2VzcyB0b2tlbqKXJAwKCnRva2VuOnJlYWSC0+STAhwSGi92MS91c2VyL3Rva2Vucy97dG9rZW5faWR9EtYBCgxVcGRhdGVBcGlLZXkSKC5hZG1pcmFsLmFwaS51c2VyLnYxLlVwZGF0ZUFwaUtleVJlcXVlc3QaKS5hZG1pcmFsLmFwaS51c2VyLnYxLlVwZGF0ZUFwaUtleVJlc3BvbnNlInG6RzgKFlBlcnNvbmFsIEFjY2VzcyBUb2tlbnMSHlVwZGF0ZSBhIHBlcnNvbmFsIGFjY2VzcyB0b2tlbqKXJA0KC3Rva2VuOndyaXRlgtPkkwIfOgEqMhovdjEvdXNlci90b2tlbnMve3Rva2VuX2lkfRLdAQoMUmV2b2tlQXBpS2V5EiguYWRtaXJhbC5hcGkudXNlci52MS5SZXZva2VBcGlLZXlSZXF1ZXN0GikuYWRtaXJhbC5hcGkudXNlci52MS5SZXZva2VBcGlLZXlSZXNwb25zZSJ4ukc4ChZQZXJzb25hbCBBY2Nlc3MgVG9rZW5zEh5SZXZva2UgYSBwZXJzb25hbCBhY2Nlc3MgdG9rZW6ilyQNCgt0b2tlbjp3cml0ZYLT5JMCJjoBKiIhL3YxL3VzZXIvdG9rZW5zL3t0b2tlbl9pZH0vcmV2b2tlQscBChdjb20uYWRtaXJhbC5hcGkudXNlci52MUIJVXNlclByb3RvUAFaMmdvLmFkbWlyYWwuaW8vc2RrL3Byb3RvL2FkbWlyYWwvYXBpL3VzZXIvdjE7dXNlcnYxogIDQUFVqgITQWRtaXJhbC5BcGkuVXNlci5WMcoCE0FkbWlyYWxcQXBpXFVzZXJcVjHiAh9BZG1pcmFsXEFwaVxVc2VyXFYxXEdQQk1ldGFkYXRh6gIWQWRtaXJhbDo6QXBpOjpVc2VyOjpWMWIGcHJvdG8z", [file_admiral_common_v1_annotations, file_admiral_common_v1_apikey, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_timestamp]);
 
 /**
  * User represents a user's profile information.
@@ -89,6 +89,20 @@ export type User = Message<"admiral.api.user.v1.User"> & {
    * @generated from field: google.protobuf.Timestamp updated_at = 9;
    */
   updatedAt?: Timestamp | undefined;
+
+  /**
+   * The user's standing in the tenant.
+   *
+   * @generated from field: admiral.api.user.v1.UserRole role = 10;
+   */
+  role: UserRole;
+
+  /**
+   * Whether the user can currently sign in.
+   *
+   * @generated from field: admiral.api.user.v1.UserStatus status = 11;
+   */
+  status: UserStatus;
 };
 
 /**
@@ -178,6 +192,76 @@ export const GetUserResponseSchema: GenMessage<GetUserResponse> = /*@__PURE__*/
   messageDesc(file_admiral_api_user_v1_user, 4);
 
 /**
+ * ListUsersRequest pages through the members of the caller's tenant. The
+ * tenant is never a parameter: it is the caller's own.
+ *
+ * @generated from message admiral.api.user.v1.ListUsersRequest
+ */
+export type ListUsersRequest = Message<"admiral.api.user.v1.ListUsersRequest"> & {
+  /**
+   * Filter expression to narrow results. Uses the Admiral filter DSL (see the
+   * API documentation for the full operator and predicate reference).
+   *
+   * Filterable fields:
+   *   - `email`: filter by address.
+   *   - `status`: filter by status.
+   *
+   * Example: `field['status'] = 'ACTIVE'`
+   *
+   * @generated from field: string filter = 1;
+   */
+  filter: string;
+
+  /**
+   * Maximum number of users to return per page. Defaults to 50 when omitted
+   * or 0; must not exceed 100.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * Opaque pagination token from a previous response.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
+};
+
+/**
+ * Describes the message admiral.api.user.v1.ListUsersRequest.
+ * Use `create(ListUsersRequestSchema)` to create a new message.
+ */
+export const ListUsersRequestSchema: GenMessage<ListUsersRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_user_v1_user, 5);
+
+/**
+ * ListUsersResponse contains a page of members.
+ *
+ * @generated from message admiral.api.user.v1.ListUsersResponse
+ */
+export type ListUsersResponse = Message<"admiral.api.user.v1.ListUsersResponse"> & {
+  /**
+   * @generated from field: repeated admiral.api.user.v1.User users = 1;
+   */
+  users: User[];
+
+  /**
+   * Pagination token for the next page. Empty when there are no more results.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * Describes the message admiral.api.user.v1.ListUsersResponse.
+ * Use `create(ListUsersResponseSchema)` to create a new message.
+ */
+export const ListUsersResponseSchema: GenMessage<ListUsersResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_user_v1_user, 6);
+
+/**
  * CreateApiKeyRequest contains the parameters for creating a new API key.
  *
  * @generated from message admiral.api.user.v1.CreateApiKeyRequest
@@ -215,7 +299,7 @@ export type CreateApiKeyRequest = Message<"admiral.api.user.v1.CreateApiKeyReque
  * Use `create(CreateApiKeyRequestSchema)` to create a new message.
  */
 export const CreateApiKeyRequestSchema: GenMessage<CreateApiKeyRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 5);
+  messageDesc(file_admiral_api_user_v1_user, 7);
 
 /**
  * CreateApiKeyResponse contains the newly created API key.
@@ -244,7 +328,7 @@ export type CreateApiKeyResponse = Message<"admiral.api.user.v1.CreateApiKeyResp
  * Use `create(CreateApiKeyResponseSchema)` to create a new message.
  */
 export const CreateApiKeyResponseSchema: GenMessage<CreateApiKeyResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 6);
+  messageDesc(file_admiral_api_user_v1_user, 8);
 
 /**
  * ListApiKeysRequest contains pagination and filter parameters.
@@ -287,7 +371,7 @@ export type ListApiKeysRequest = Message<"admiral.api.user.v1.ListApiKeysRequest
  * Use `create(ListApiKeysRequestSchema)` to create a new message.
  */
 export const ListApiKeysRequestSchema: GenMessage<ListApiKeysRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 7);
+  messageDesc(file_admiral_api_user_v1_user, 9);
 
 /**
  * ListApiKeysResponse contains a page of API key metadata.
@@ -315,7 +399,7 @@ export type ListApiKeysResponse = Message<"admiral.api.user.v1.ListApiKeysRespon
  * Use `create(ListApiKeysResponseSchema)` to create a new message.
  */
 export const ListApiKeysResponseSchema: GenMessage<ListApiKeysResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 8);
+  messageDesc(file_admiral_api_user_v1_user, 10);
 
 /**
  * GetApiKeyRequest identifies an API key to retrieve.
@@ -336,7 +420,7 @@ export type GetApiKeyRequest = Message<"admiral.api.user.v1.GetApiKeyRequest"> &
  * Use `create(GetApiKeyRequestSchema)` to create a new message.
  */
 export const GetApiKeyRequestSchema: GenMessage<GetApiKeyRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 9);
+  messageDesc(file_admiral_api_user_v1_user, 11);
 
 /**
  * GetApiKeyResponse contains the requested API key metadata.
@@ -357,7 +441,7 @@ export type GetApiKeyResponse = Message<"admiral.api.user.v1.GetApiKeyResponse">
  * Use `create(GetApiKeyResponseSchema)` to create a new message.
  */
 export const GetApiKeyResponseSchema: GenMessage<GetApiKeyResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 10);
+  messageDesc(file_admiral_api_user_v1_user, 12);
 
 /**
  * UpdateApiKeyRequest contains the fields to update on an API key.
@@ -397,7 +481,7 @@ export type UpdateApiKeyRequest = Message<"admiral.api.user.v1.UpdateApiKeyReque
  * Use `create(UpdateApiKeyRequestSchema)` to create a new message.
  */
 export const UpdateApiKeyRequestSchema: GenMessage<UpdateApiKeyRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 11);
+  messageDesc(file_admiral_api_user_v1_user, 13);
 
 /**
  * UpdateApiKeyResponse contains the updated API key metadata.
@@ -418,7 +502,7 @@ export type UpdateApiKeyResponse = Message<"admiral.api.user.v1.UpdateApiKeyResp
  * Use `create(UpdateApiKeyResponseSchema)` to create a new message.
  */
 export const UpdateApiKeyResponseSchema: GenMessage<UpdateApiKeyResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 12);
+  messageDesc(file_admiral_api_user_v1_user, 14);
 
 /**
  * RevokeApiKeyRequest identifies an API key to revoke.
@@ -439,7 +523,7 @@ export type RevokeApiKeyRequest = Message<"admiral.api.user.v1.RevokeApiKeyReque
  * Use `create(RevokeApiKeyRequestSchema)` to create a new message.
  */
 export const RevokeApiKeyRequestSchema: GenMessage<RevokeApiKeyRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 13);
+  messageDesc(file_admiral_api_user_v1_user, 15);
 
 /**
  * RevokeApiKeyResponse contains the revoked API key metadata.
@@ -460,11 +544,98 @@ export type RevokeApiKeyResponse = Message<"admiral.api.user.v1.RevokeApiKeyResp
  * Use `create(RevokeApiKeyResponseSchema)` to create a new message.
  */
 export const RevokeApiKeyResponseSchema: GenMessage<RevokeApiKeyResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_user_v1_user, 14);
+  messageDesc(file_admiral_api_user_v1_user, 16);
 
 /**
- * UserAPI provides operations for user profile retrieval and management of the
- * caller's own API keys.
+ * UserRole is a member's standing in the tenant. The tiers imply one another
+ * downward: an owner can do everything an administrator can, an administrator
+ * everything a member can.
+ *
+ * @generated from enum admiral.api.user.v1.UserRole
+ */
+export enum UserRole {
+  /**
+   * Default value. Must not be used.
+   *
+   * @generated from enum value: USER_ROLE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Owns the tenant. Exactly one per tenant; ownership moves by transfer, never
+   * by invitation.
+   *
+   * @generated from enum value: USER_ROLE_OWNER = 1;
+   */
+  OWNER = 1,
+
+  /**
+   * Manages members and tenant settings.
+   *
+   * @generated from enum value: USER_ROLE_ADMIN = 2;
+   */
+  ADMIN = 2,
+
+  /**
+   * Ordinary membership.
+   *
+   * @generated from enum value: USER_ROLE_MEMBER = 3;
+   */
+  MEMBER = 3,
+
+  /**
+   * A member who may also create applications. An additive capability rather
+   * than a rung on the tier, reported here as the role the platform holds for
+   * the user.
+   *
+   * @generated from enum value: USER_ROLE_APP_CREATOR = 4;
+   */
+  APP_CREATOR = 4,
+}
+
+/**
+ * Describes the enum admiral.api.user.v1.UserRole.
+ */
+export const UserRoleSchema: GenEnum<UserRole> = /*@__PURE__*/
+  enumDesc(file_admiral_api_user_v1_user, 0);
+
+/**
+ * UserStatus is whether a member can currently sign in.
+ *
+ * @generated from enum admiral.api.user.v1.UserStatus
+ */
+export enum UserStatus {
+  /**
+   * Default value. Must not be used.
+   *
+   * @generated from enum value: USER_STATUS_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Can sign in and act.
+   *
+   * @generated from enum value: USER_STATUS_ACTIVE = 1;
+   */
+  ACTIVE = 1,
+
+  /**
+   * Suspended by an administrator; cannot sign in until reactivated.
+   *
+   * @generated from enum value: USER_STATUS_SUSPENDED = 2;
+   */
+  SUSPENDED = 2,
+}
+
+/**
+ * Describes the enum admiral.api.user.v1.UserStatus.
+ */
+export const UserStatusSchema: GenEnum<UserStatus> = /*@__PURE__*/
+  enumDesc(file_admiral_api_user_v1_user, 1);
+
+/**
+ * UserAPI provides operations for user profile retrieval, the list of a
+ * tenant's members, and management of the caller's own API keys.
  *
  * An API key here is bound to the calling user (BINDING_TYPE_USER) and lets them
  * authenticate from scripts, CI pipelines, and other programmatic contexts. Its
@@ -499,6 +670,20 @@ export const UserAPI: GenService<{
     methodKind: "unary";
     input: typeof GetUserRequestSchema;
     output: typeof GetUserResponseSchema;
+  },
+  /**
+   * ListUsers returns a page of the caller's tenant's members: everyone who
+   * has joined, whatever their role or status. People who have been invited but
+   * have not joined are not users yet; they are listed by InvitationAPI.
+   *
+   * Scope: `user:read`
+   *
+   * @generated from rpc admiral.api.user.v1.UserAPI.ListUsers
+   */
+  listUsers: {
+    methodKind: "unary";
+    input: typeof ListUsersRequestSchema;
+    output: typeof ListUsersResponseSchema;
   },
   /**
    * CreateApiKey creates a new API key for the authenticated user.

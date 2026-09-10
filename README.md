@@ -44,6 +44,7 @@ const client = createClient(transport);
 // await client.credential.methodName({ ... });
 // await client.environment.methodName({ ... });
 // await client.healthcheck.methodName({ ... });
+// await client.invitation.methodName({ ... });
 // await client.run.methodName({ ... });
 // await client.source.methodName({ ... });
 // await client.tenant.methodName({ ... });
@@ -75,6 +76,7 @@ const client = createClient(transport);
 | CredentialAPI | `client.credential` | Credential service |
 | EnvironmentAPI | `client.environment` | Environment service |
 | HealthcheckAPI | `client.healthcheck` | Healthcheck service |
+| InvitationAPI | `client.invitation` | Invitation service |
 | RunAPI | `client.run` | Run service |
 | SourceAPI | `client.source` | Source service |
 | TenantAPI | `client.tenant` | Tenant service |
