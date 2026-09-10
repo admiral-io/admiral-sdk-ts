@@ -50,7 +50,14 @@ jobs:
 
   release:
     needs: build
-    runs-on: blacksmith-4vcpu-ubuntu-2404
+    # GitHub-hosted on purpose. npm publishes with provenance (id-token above),
+    # and the registry verifies the sigstore bundle against the runner that
+    # built it: "Only github-hosted runners are supported when publishing with
+    # provenance." On a Blacksmith runner the publish fails after the tag and
+    # the release commit exist, which is how 1.8.3 and 1.8.4 were tagged and
+    # never published. The build job can stay on Blacksmith; only this job's
+    # runner is checked.
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
         with:
