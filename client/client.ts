@@ -3,12 +3,12 @@ import { createClient as createConnectClient } from "@connectrpc/connect";
 import { AgentAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { AgentRuntimeAPI } from "../proto/admiral/api/agent/v1/runtime_pb.js";
 import { ApplicationAPI } from "../proto/admiral/api/application/v1/application_pb.js";
-import { CatalogAPI } from "../proto/admiral/api/catalog/v1/catalog_pb.js";
 import { ChangeSetAPI } from "../proto/admiral/api/changeset/v1/changeset_pb.js";
 import { CredentialAPI } from "../proto/admiral/api/credential/v1/credential_pb.js";
 import { EnvironmentAPI } from "../proto/admiral/api/environment/v1/environment_pb.js";
 import { HealthcheckAPI } from "../proto/admiral/api/healthcheck/v1/healthcheck_pb.js";
 import { InvitationAPI } from "../proto/admiral/api/invitation/v1/invitation_pb.js";
+import { RegistryAPI } from "../proto/admiral/api/registry/v1/registry_pb.js";
 import { RunAPI } from "../proto/admiral/api/run/v1/run_pb.js";
 import { SourceAPI } from "../proto/admiral/api/source/v1/source_pb.js";
 import { TenantAPI } from "../proto/admiral/api/tenant/v1/tenant_pb.js";
@@ -18,12 +18,12 @@ import { UserAPI } from "../proto/admiral/api/user/v1/user_pb.js";
 type AgentClient = ConnectClient<typeof AgentAPI>;
 type AgentRuntimeClient = ConnectClient<typeof AgentRuntimeAPI>;
 type ApplicationClient = ConnectClient<typeof ApplicationAPI>;
-type CatalogClient = ConnectClient<typeof CatalogAPI>;
 type ChangeSetClient = ConnectClient<typeof ChangeSetAPI>;
 type CredentialClient = ConnectClient<typeof CredentialAPI>;
 type EnvironmentClient = ConnectClient<typeof EnvironmentAPI>;
 type HealthcheckClient = ConnectClient<typeof HealthcheckAPI>;
 type InvitationClient = ConnectClient<typeof InvitationAPI>;
+type RegistryClient = ConnectClient<typeof RegistryAPI>;
 type RunClient = ConnectClient<typeof RunAPI>;
 type SourceClient = ConnectClient<typeof SourceAPI>;
 type TenantClient = ConnectClient<typeof TenantAPI>;
@@ -47,9 +47,6 @@ export interface Client {
   /** Application service client */
   readonly application: ApplicationClient;
 
-  /** Catalog service client */
-  readonly catalog: CatalogClient;
-
   /** ChangeSet service client */
   readonly changeSet: ChangeSetClient;
 
@@ -64,6 +61,9 @@ export interface Client {
 
   /** Invitation service client */
   readonly invitation: InvitationClient;
+
+  /** Registry service client */
+  readonly registry: RegistryClient;
 
   /** Run service client */
   readonly run: RunClient;
@@ -117,12 +117,12 @@ export function createClient(transport: Transport): Client {
   let _agent: AgentClient | undefined;
   let _agentRuntime: AgentRuntimeClient | undefined;
   let _application: ApplicationClient | undefined;
-  let _catalog: CatalogClient | undefined;
   let _changeSet: ChangeSetClient | undefined;
   let _credential: CredentialClient | undefined;
   let _environment: EnvironmentClient | undefined;
   let _healthcheck: HealthcheckClient | undefined;
   let _invitation: InvitationClient | undefined;
+  let _registry: RegistryClient | undefined;
   let _run: RunClient | undefined;
   let _source: SourceClient | undefined;
   let _tenant: TenantClient | undefined;
@@ -150,13 +150,6 @@ export function createClient(transport: Transport): Client {
         _application = createConnectClient(ApplicationAPI, transport);
       }
       return _application;
-    },
-
-    get catalog() {
-      if (!_catalog) {
-        _catalog = createConnectClient(CatalogAPI, transport);
-      }
-      return _catalog;
     },
 
     get changeSet() {
@@ -192,6 +185,13 @@ export function createClient(transport: Transport): Client {
         _invitation = createConnectClient(InvitationAPI, transport);
       }
       return _invitation;
+    },
+
+    get registry() {
+      if (!_registry) {
+        _registry = createConnectClient(RegistryAPI, transport);
+      }
+      return _registry;
     },
 
     get run() {

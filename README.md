@@ -39,12 +39,12 @@ const client = createClient(transport);
 // await client.agent.methodName({ ... });
 // await client.agentRuntime.methodName({ ... });
 // await client.application.methodName({ ... });
-// await client.catalog.methodName({ ... });
 // await client.changeSet.methodName({ ... });
 // await client.credential.methodName({ ... });
 // await client.environment.methodName({ ... });
 // await client.healthcheck.methodName({ ... });
 // await client.invitation.methodName({ ... });
+// await client.registry.methodName({ ... });
 // await client.run.methodName({ ... });
 // await client.source.methodName({ ... });
 // await client.tenant.methodName({ ... });
@@ -71,12 +71,12 @@ const client = createClient(transport);
 | AgentAPI | `client.agent` | Agent service |
 | AgentRuntimeAPI | `client.agentRuntime` | AgentRuntime service |
 | ApplicationAPI | `client.application` | Application service |
-| CatalogAPI | `client.catalog` | Catalog service |
 | ChangeSetAPI | `client.changeSet` | ChangeSet service |
 | CredentialAPI | `client.credential` | Credential service |
 | EnvironmentAPI | `client.environment` | Environment service |
 | HealthcheckAPI | `client.healthcheck` | Healthcheck service |
 | InvitationAPI | `client.invitation` | Invitation service |
+| RegistryAPI | `client.registry` | Registry service |
 | RunAPI | `client.run` | Run service |
 | SourceAPI | `client.source` | Source service |
 | TenantAPI | `client.tenant` | Tenant service |
