@@ -46,7 +46,6 @@ const client = createClient(transport);
 // await client.invitation.methodName({ ... });
 // await client.registry.methodName({ ... });
 // await client.run.methodName({ ... });
-// await client.source.methodName({ ... });
 // await client.tenant.methodName({ ... });
 // await client.user.methodName({ ... });
 ```
@@ -78,7 +77,6 @@ const client = createClient(transport);
 | InvitationAPI | `client.invitation` | Invitation service |
 | RegistryAPI | `client.registry` | Registry service |
 | RunAPI | `client.run` | Run service |
-| SourceAPI | `client.source` | Source service |
 | TenantAPI | `client.tenant` | Tenant service |
 | UserAPI | `client.user` | User service |
 

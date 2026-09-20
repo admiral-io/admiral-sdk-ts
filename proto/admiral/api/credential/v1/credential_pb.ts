@@ -19,25 +19,23 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/credential/v1/credential.proto.
  */
 export const file_admiral_api_credential_v1_credential: GenFile = /*@__PURE__*/
-  fileDesc("CiphZG1pcmFsL2FwaS9jcmVkZW50aWFsL3YxL2NyZWRlbnRpYWwucHJvdG8SGWFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEiPwoKU1NIS2V5QXV0aBIYCgtwcml2YXRlX2tleRgBIAEoCUID4EEEEhcKCnBhc3NwaHJhc2UYAiABKAlCA+BBBCI9CglCYXNpY0F1dGgSGQoIdXNlcm5hbWUYASABKAlCB7pIBHICEAESFQoIcGFzc3dvcmQYAiABKAlCA+BBBCIlCg9CZWFyZXJUb2tlbkF1dGgSEgoFdG9rZW4YASABKAlCA+BBBCLRAQoKQXV0aENvbmZpZxI4Cgdzc2hfa2V5GAEgASgLMiUuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5TU0hLZXlBdXRoSAASOgoKYmFzaWNfYXV0aBgCIAEoCzIkLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQmFzaWNBdXRoSAASQgoMYmVhcmVyX3Rva2VuGAMgASgLMiouYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5CZWFyZXJUb2tlbkF1dGhIAEIJCgd2YXJpYW50IqgECgpDcmVkZW50aWFsEhoKAmlkGAEgASgJQg7gQQO6SAjYAQFyA7ABARI6CgRuYW1lGAIgASgJQiy6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgDIAEoCUIIukgFcgMYgAgSPAoEdHlwZRgEIAEoDjIpLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQ3JlZGVudGlhbFR5cGVCA+BBBRI6CgthdXRoX2NvbmZpZxgFIAEoCzIlLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQXV0aENvbmZpZxJaCgZsYWJlbHMYBiADKAsyMS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWRlbnRpYWwuTGFiZWxzRW50cnlCF7pIFJoBERBAIgZyBBABGD8qBXIDGIACEjQKCmNyZWF0ZWRfYnkYByABKAsyGy5hZG1pcmFsLmNvbW1vbi52MS5BY3RvclJlZkID4EEDEjMKCmNyZWF0ZWRfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpgDChdDcmVhdGVDcmVkZW50aWFsUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQK6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgCIAEoCUIIukgFcgMYgAgSRgoEdHlwZRgDIAEoDjIpLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQ3JlZGVudGlhbFR5cGVCDeBBArpIB4IBBBABIAASPwoLYXV0aF9jb25maWcYBCABKAsyJS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkF1dGhDb25maWdCA+BBAhJnCgZsYWJlbHMYBSADKAsyPi5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWF0ZUNyZWRlbnRpYWxSZXF1ZXN0LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlUKGENyZWF0ZUNyZWRlbnRpYWxSZXNwb25zZRI5CgpjcmVkZW50aWFsGAEgASgLMiUuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5DcmVkZW50aWFsIjoKFEdldENyZWRlbnRpYWxSZXF1ZXN0EiIKDWNyZWRlbnRpYWxfaWQYASABKAlCC+BBArpIBXIDsAEBIlIKFUdldENyZWRlbnRpYWxSZXNwb25zZRI5CgpjcmVkZW50aWFsGAEgASgLMiUuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5DcmVkZW50aWFsImQKFkxpc3RDcmVkZW50aWFsc1JlcXVlc3QSGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJIm4KF0xpc3RDcmVkZW50aWFsc1Jlc3BvbnNlEjoKC2NyZWRlbnRpYWxzGAEgAygLMiUuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5DcmVkZW50aWFsEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKQAQoXVXBkYXRlQ3JlZGVudGlhbFJlcXVlc3QSRAoKY3JlZGVudGlhbBgBIAEoCzIlLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQ3JlZGVudGlhbEIJ4EECukgDyAEBEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJVChhVcGRhdGVDcmVkZW50aWFsUmVzcG9uc2USOQoKY3JlZGVudGlhbBgBIAEoCzIlLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQ3JlZGVudGlhbCI9ChdEZWxldGVDcmVkZW50aWFsUmVxdWVzdBIiCg1jcmVkZW50aWFsX2lkGAEgASgJQgvgQQK6SAVyA7ABASIaChhEZWxldGVDcmVkZW50aWFsUmVzcG9uc2UqkAEKDkNyZWRlbnRpYWxUeXBlEh8KG0NSRURFTlRJQUxfVFlQRV9VTlNQRUNJRklFRBAAEhsKF0NSRURFTlRJQUxfVFlQRV9TU0hfS0VZEAESHgoaQ1JFREVOVElBTF9UWVBFX0JBU0lDX0FVVEgQAhIgChxDUkVERU5USUFMX1RZUEVfQkVBUkVSX1RPS0VOEAMy0AgKDUNyZWRlbnRpYWxBUEkS0gEKEENyZWF0ZUNyZWRlbnRpYWwSMi5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWF0ZUNyZWRlbnRpYWxSZXF1ZXN0GjMuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5DcmVhdGVDcmVkZW50aWFsUmVzcG9uc2UiVbpHIgoLQ3JlZGVudGlhbHMSE0NyZWF0ZSBhIGNyZWRlbnRpYWyilyQSChBjcmVkZW50aWFsOndyaXRlgtPkkwIUOgEqIg8vdjEvY3JlZGVudGlhbHMS1wEKDUdldENyZWRlbnRpYWwSLy5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkdldENyZWRlbnRpYWxSZXF1ZXN0GjAuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5HZXRDcmVkZW50aWFsUmVzcG9uc2UiY7pHJAoLQ3JlZGVudGlhbHMSFVJldHJpZXZlIGEgY3JlZGVudGlhbKKXJBEKD2NyZWRlbnRpYWw6cmVhZILT5JMCIRIfL3YxL2NyZWRlbnRpYWxzL3tjcmVkZW50aWFsX2lkfRLIAQoPTGlzdENyZWRlbnRpYWxzEjEuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5MaXN0Q3JlZGVudGlhbHNSZXF1ZXN0GjIuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5MaXN0Q3JlZGVudGlhbHNSZXNwb25zZSJOukcfCgtDcmVkZW50aWFscxIQTGlzdCBjcmVkZW50aWFsc6KXJBEKD2NyZWRlbnRpYWw6cmVhZILT5JMCERIPL3YxL2NyZWRlbnRpYWxzEuIBChBVcGRhdGVDcmVkZW50aWFsEjIuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5VcGRhdGVDcmVkZW50aWFsUmVxdWVzdBozLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuVXBkYXRlQ3JlZGVudGlhbFJlc3BvbnNlImW6RyIKC0NyZWRlbnRpYWxzEhNVcGRhdGUgYSBjcmVkZW50aWFsopckEgoQY3JlZGVudGlhbDp3cml0ZYLT5JMCJDoBKjIfL3YxL2NyZWRlbnRpYWxzL3tjcmVkZW50aWFsLmlkfRLfAQoQRGVsZXRlQ3JlZGVudGlhbBIyLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuRGVsZXRlQ3JlZGVudGlhbFJlcXVlc3QaMy5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkRlbGV0ZUNyZWRlbnRpYWxSZXNwb25zZSJiukciCgtDcmVkZW50aWFscxITRGVsZXRlIGEgY3JlZGVudGlhbKKXJBIKEGNyZWRlbnRpYWw6d3JpdGWC0+STAiEqHy92MS9jcmVkZW50aWFscy97Y3JlZGVudGlhbF9pZH1C9wEKHWNvbS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxQg9DcmVkZW50aWFsUHJvdG9QAVo+Z28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvY3JlZGVudGlhbC92MTtjcmVkZW50aWFsdjGiAgNBQUOqAhlBZG1pcmFsLkFwaS5DcmVkZW50aWFsLlYxygIZQWRtaXJhbFxBcGlcQ3JlZGVudGlhbFxWMeICJUFkbWlyYWxcQXBpXENyZWRlbnRpYWxcVjFcR1BCTWV0YWRhdGHqAhxBZG1pcmFsOjpBcGk6OkNyZWRlbnRpYWw6OlYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
+  fileDesc("CiphZG1pcmFsL2FwaS9jcmVkZW50aWFsL3YxL2NyZWRlbnRpYWwucHJvdG8SGWFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEiUAoKU1NIS2V5QXV0aBIhCgtwcml2YXRlX2tleRgBIAEoCUIM4EEEukgGcgQYgIABEh8KCnBhc3NwaHJhc2UYAiABKAlCC+BBBLpIBXIDGIAIIkgKCUJhc2ljQXV0aBIcCgh1c2VybmFtZRgBIAEoCUIKukgHcgUQARiAAhIdCghwYXNzd29yZBgCIAEoCUIL4EEEukgFcgMYgCAiLQoPQmVhcmVyVG9rZW5BdXRoEhoKBXRva2VuGAEgASgJQgvgQQS6SAVyAxiAICKOAQoNR2l0SHViQXBwQXV0aBIXCgZhcHBfaWQYASABKANCB7pIBCICIAASIAoPaW5zdGFsbGF0aW9uX2lkGAIgASgDQge6SAQiAiAAEiEKC3ByaXZhdGVfa2V5GAMgASgJQgzgQQS6SAZyBBiAgAESHwoHYXBpX3VybBgEIAEoCUIOukgL2AEBcgYYgASIAQEikQIKCkF1dGhDb25maWcSOAoHc3NoX2tleRgBIAEoCzIlLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuU1NIS2V5QXV0aEgAEjoKCmJhc2ljX2F1dGgYAiABKAsyJC5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkJhc2ljQXV0aEgAEkIKDGJlYXJlcl90b2tlbhgDIAEoCzIqLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQmVhcmVyVG9rZW5BdXRoSAASPgoKZ2l0aHViX2FwcBgEIAEoCzIoLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuR2l0SHViQXBwQXV0aEgAQgkKB3ZhcmlhbnQiswUKCkNyZWRlbnRpYWwSGgoCaWQYASABKAlCDuBBA7pICNgBAXIDsAEBEjoKBG5hbWUYAiABKAlCLLpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEh0KC2Rlc2NyaXB0aW9uGAMgASgJQgi6SAVyAxiACBI8CgR0eXBlGAQgASgOMikuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5DcmVkZW50aWFsVHlwZUID4EEFEj8KC2F1dGhfY29uZmlnGAUgASgLMiUuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5BdXRoQ29uZmlnQgPgQQQSWgoGbGFiZWxzGAYgAygLMjEuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5DcmVkZW50aWFsLkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhI0CgpjcmVhdGVkX2J5GAcgASgLMhsuYWRtaXJhbC5jb21tb24udjEuQWN0b3JSZWZCA+BBAxIzCgpjcmVhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnVwZGF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSgwEKDWFsbG93ZWRfaG9zdHMYCiADKAlCbLpIaZIBZhAgGAEiYHJeGI4CMlleW2EtejAtOV0oW2EtejAtOS1dezAsNjJ9W2EtejAtOV0pPyhcLlthLXowLTldKFthLXowLTktXXswLDYyfVthLXowLTldKT8pKig6WzAtOV17MSw1fSk/JBotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIqQEChdDcmVhdGVDcmVkZW50aWFsUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQK6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgCIAEoCUIIukgFcgMYgAgSRgoEdHlwZRgDIAEoDjIpLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQ3JlZGVudGlhbFR5cGVCDeBBArpIB4IBBBABIAASRQoLYXV0aF9jb25maWcYBCABKAsyJS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkF1dGhDb25maWdCCeBBArpIA8gBARJnCgZsYWJlbHMYBSADKAsyPi5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWF0ZUNyZWRlbnRpYWxSZXF1ZXN0LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhKDAQoNYWxsb3dlZF9ob3N0cxgGIAMoCUJsukhpkgFmECAYASJgcl4YjgIyWV5bYS16MC05XShbYS16MC05LV17MCw2Mn1bYS16MC05XSk/KFwuW2EtejAtOV0oW2EtejAtOS1dezAsNjJ9W2EtejAtOV0pPykqKDpbMC05XXsxLDV9KT8kGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiVQoYQ3JlYXRlQ3JlZGVudGlhbFJlc3BvbnNlEjkKCmNyZWRlbnRpYWwYASABKAsyJS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWRlbnRpYWwiOgoUR2V0Q3JlZGVudGlhbFJlcXVlc3QSIgoNY3JlZGVudGlhbF9pZBgBIAEoCUIL4EECukgFcgOwAQEiUgoVR2V0Q3JlZGVudGlhbFJlc3BvbnNlEjkKCmNyZWRlbnRpYWwYASABKAsyJS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWRlbnRpYWwipwEKFkxpc3RDcmVkZW50aWFsc1JlcXVlc3QSGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJEkEKBHR5cGUYBCABKA4yKS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWRlbnRpYWxUeXBlQgi6SAWCAQIQASJuChdMaXN0Q3JlZGVudGlhbHNSZXNwb25zZRI6CgtjcmVkZW50aWFscxgBIAMoCzIlLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuQ3JlZGVudGlhbBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkikAEKF1VwZGF0ZUNyZWRlbnRpYWxSZXF1ZXN0EkQKCmNyZWRlbnRpYWwYASABKAsyJS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWRlbnRpYWxCCeBBArpIA8gBARIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siVQoYVXBkYXRlQ3JlZGVudGlhbFJlc3BvbnNlEjkKCmNyZWRlbnRpYWwYASABKAsyJS5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWRlbnRpYWwiPQoXRGVsZXRlQ3JlZGVudGlhbFJlcXVlc3QSIgoNY3JlZGVudGlhbF9pZBgBIAEoCUIL4EECukgFcgOwAQEiGgoYRGVsZXRlQ3JlZGVudGlhbFJlc3BvbnNlKrABCg5DcmVkZW50aWFsVHlwZRIfChtDUkVERU5USUFMX1RZUEVfVU5TUEVDSUZJRUQQABIbChdDUkVERU5USUFMX1RZUEVfU1NIX0tFWRABEh4KGkNSRURFTlRJQUxfVFlQRV9CQVNJQ19BVVRIEAISIAocQ1JFREVOVElBTF9UWVBFX0JFQVJFUl9UT0tFThADEh4KGkNSRURFTlRJQUxfVFlQRV9HSVRIVUJfQVBQEAQyywgKDUNyZWRlbnRpYWxBUEkS0gEKEENyZWF0ZUNyZWRlbnRpYWwSMi5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkNyZWF0ZUNyZWRlbnRpYWxSZXF1ZXN0GjMuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5DcmVhdGVDcmVkZW50aWFsUmVzcG9uc2UiVbpHIgoLQ3JlZGVudGlhbHMSE0NyZWF0ZSBhIGNyZWRlbnRpYWyilyQSChBjcmVkZW50aWFsOndyaXRlgtPkkwIUOgEqIg8vdjEvY3JlZGVudGlhbHMS0gEKDUdldENyZWRlbnRpYWwSLy5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkdldENyZWRlbnRpYWxSZXF1ZXN0GjAuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5HZXRDcmVkZW50aWFsUmVzcG9uc2UiXrpHHwoLQ3JlZGVudGlhbHMSEEdldCBhIGNyZWRlbnRpYWyilyQRCg9jcmVkZW50aWFsOnJlYWSC0+STAiESHy92MS9jcmVkZW50aWFscy97Y3JlZGVudGlhbF9pZH0SyAEKD0xpc3RDcmVkZW50aWFscxIxLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuTGlzdENyZWRlbnRpYWxzUmVxdWVzdBoyLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuTGlzdENyZWRlbnRpYWxzUmVzcG9uc2UiTrpHHwoLQ3JlZGVudGlhbHMSEExpc3QgY3JlZGVudGlhbHOilyQRCg9jcmVkZW50aWFsOnJlYWSC0+STAhESDy92MS9jcmVkZW50aWFscxLiAQoQVXBkYXRlQ3JlZGVudGlhbBIyLmFkbWlyYWwuYXBpLmNyZWRlbnRpYWwudjEuVXBkYXRlQ3JlZGVudGlhbFJlcXVlc3QaMy5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLlVwZGF0ZUNyZWRlbnRpYWxSZXNwb25zZSJlukciCgtDcmVkZW50aWFscxITVXBkYXRlIGEgY3JlZGVudGlhbKKXJBIKEGNyZWRlbnRpYWw6d3JpdGWC0+STAiQ6ASoyHy92MS9jcmVkZW50aWFscy97Y3JlZGVudGlhbC5pZH0S3wEKEERlbGV0ZUNyZWRlbnRpYWwSMi5hZG1pcmFsLmFwaS5jcmVkZW50aWFsLnYxLkRlbGV0ZUNyZWRlbnRpYWxSZXF1ZXN0GjMuYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MS5EZWxldGVDcmVkZW50aWFsUmVzcG9uc2UiYrpHIgoLQ3JlZGVudGlhbHMSE0RlbGV0ZSBhIGNyZWRlbnRpYWyilyQSChBjcmVkZW50aWFsOndyaXRlgtPkkwIhKh8vdjEvY3JlZGVudGlhbHMve2NyZWRlbnRpYWxfaWR9QvcBCh1jb20uYWRtaXJhbC5hcGkuY3JlZGVudGlhbC52MUIPQ3JlZGVudGlhbFByb3RvUAFaPmdvLmFkbWlyYWwuaW8vc2RrL3Byb3RvL2FkbWlyYWwvYXBpL2NyZWRlbnRpYWwvdjE7Y3JlZGVudGlhbHYxogIDQUFDqgIZQWRtaXJhbC5BcGkuQ3JlZGVudGlhbC5WMcoCGUFkbWlyYWxcQXBpXENyZWRlbnRpYWxcVjHiAiVBZG1pcmFsXEFwaVxDcmVkZW50aWFsXFYxXEdQQk1ldGFkYXRh6gIcQWRtaXJhbDo6QXBpOjpDcmVkZW50aWFsOjpWMWIGcHJvdG8z", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
 
 /**
- * SSHKeyAuth holds an SSH private key and optional passphrase.
+ * SSHKeyAuth is a PEM-encoded private key and its passphrase, if any.
  *
  * @generated from message admiral.api.credential.v1.SSHKeyAuth
  */
 export type SSHKeyAuth = Message<"admiral.api.credential.v1.SSHKeyAuth"> & {
   /**
-   * PEM-encoded SSH private key.
-   * Write-only: masked in responses.
+   * Write-only.
    *
    * @generated from field: string private_key = 1;
    */
   privateKey: string;
 
   /**
-   * Optional passphrase for the private key.
-   * Write-only: masked in responses.
+   * Write-only.
    *
    * @generated from field: string passphrase = 2;
    */
@@ -52,23 +50,19 @@ export const SSHKeyAuthSchema: GenMessage<SSHKeyAuth> = /*@__PURE__*/
   messageDesc(file_admiral_api_credential_v1_credential, 0);
 
 /**
- * BasicAuth holds HTTP Basic credentials (username + password). Reused across
- * any Source type that accepts HTTP Basic (Helm, OCI, HTTP archive, Git
- * HTTPS).
+ * BasicAuth is a username and password, or a username and a token that the
+ * host takes as a password (a registry-scoped token, an app password).
  *
  * @generated from message admiral.api.credential.v1.BasicAuth
  */
 export type BasicAuth = Message<"admiral.api.credential.v1.BasicAuth"> & {
   /**
-   * Username for authentication.
-   *
    * @generated from field: string username = 1;
    */
   username: string;
 
   /**
-   * Password (or PAT / registry-scoped token / app password).
-   * Write-only: masked in responses.
+   * Write-only.
    *
    * @generated from field: string password = 2;
    */
@@ -83,19 +77,13 @@ export const BasicAuthSchema: GenMessage<BasicAuth> = /*@__PURE__*/
   messageDesc(file_admiral_api_credential_v1_credential, 1);
 
 /**
- * BearerTokenAuth holds a single token value. Presentation is per target
- * protocol:
- *   - Terraform registries, Helm bearer, OCI bearer, HTTP archives:
- *     `Authorization: Bearer <token>`
- *   - Git HTTPS (GitHub PAT, GitLab PAT): HTTP Basic with the token as
- *     password and a dummy username
+ * BearerTokenAuth is one token.
  *
  * @generated from message admiral.api.credential.v1.BearerTokenAuth
  */
 export type BearerTokenAuth = Message<"admiral.api.credential.v1.BearerTokenAuth"> & {
   /**
-   * Token value.
-   * Write-only: masked in responses.
+   * Write-only.
    *
    * @generated from field: string token = 1;
    */
@@ -110,9 +98,51 @@ export const BearerTokenAuthSchema: GenMessage<BearerTokenAuth> = /*@__PURE__*/
   messageDesc(file_admiral_api_credential_v1_credential, 2);
 
 /**
- * AuthConfig is the polymorphic auth configuration attached to a Credential.
- * Exactly one variant is populated, corresponding to the credential's type.
- * Sensitive fields within each variant are write-only.
+ * GitHubAppAuth identifies a GitHub App installation and holds the app's
+ * private key, from which the platform mints installation tokens.
+ *
+ * @generated from message admiral.api.credential.v1.GitHubAppAuth
+ */
+export type GitHubAppAuth = Message<"admiral.api.credential.v1.GitHubAppAuth"> & {
+  /**
+   * The app's numeric id, from the app's settings page.
+   *
+   * @generated from field: int64 app_id = 1;
+   */
+  appId: bigint;
+
+  /**
+   * The installation's numeric id, from the installation's URL.
+   *
+   * @generated from field: int64 installation_id = 2;
+   */
+  installationId: bigint;
+
+  /**
+   * The app's PEM-encoded RSA private key. Write-only.
+   *
+   * @generated from field: string private_key = 3;
+   */
+  privateKey: string;
+
+  /**
+   * The REST API base, for GitHub Enterprise Server:
+   * `https://github.acme.example/api/v3`. Empty is `https://api.github.com`.
+   *
+   * @generated from field: string api_url = 4;
+   */
+  apiUrl: string;
+};
+
+/**
+ * Describes the message admiral.api.credential.v1.GitHubAppAuth.
+ * Use `create(GitHubAppAuthSchema)` to create a new message.
+ */
+export const GitHubAppAuthSchema: GenMessage<GitHubAppAuth> = /*@__PURE__*/
+  messageDesc(file_admiral_api_credential_v1_credential, 3);
+
+/**
+ * AuthConfig is the secret, one variant matching the credential's type.
  *
  * @generated from message admiral.api.credential.v1.AuthConfig
  */
@@ -138,6 +168,12 @@ export type AuthConfig = Message<"admiral.api.credential.v1.AuthConfig"> & {
      */
     value: BearerTokenAuth;
     case: "bearerToken";
+  } | {
+    /**
+     * @generated from field: admiral.api.credential.v1.GitHubAppAuth github_app = 4;
+     */
+    value: GitHubAppAuth;
+    case: "githubApp";
   } | { case: undefined; value?: undefined };
 };
 
@@ -146,45 +182,33 @@ export type AuthConfig = Message<"admiral.api.credential.v1.AuthConfig"> & {
  * Use `create(AuthConfigSchema)` to create a new message.
  */
 export const AuthConfigSchema: GenMessage<AuthConfig> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 3);
+  messageDesc(file_admiral_api_credential_v1_credential, 4);
 
 /**
- * Credential represents stored authentication configuration for accessing an
- * external system. Credentials are tenant-scoped and referenced by sources
- * when fetching artifacts.
- *
- * Sensitive fields within auth_config are write-only: accepted on create and
- * update but never returned in API responses.
+ * Credential is a registered credential's metadata. The secret is set
+ * through `auth_config` and never read back; responses carry it empty.
  *
  * @generated from message admiral.api.credential.v1.Credential
  */
 export type Credential = Message<"admiral.api.credential.v1.Credential"> & {
   /**
-   * Unique identifier for the credential (UUID).
-   *
    * @generated from field: string id = 1;
    */
   id: string;
 
   /**
-   * URL-safe, human-readable identifier (e.g., "github-org", "ecr-prod").
-   * Unique within the tenant. Lowercase alphanumeric and hyphens only, must
-   * start with a letter and end with an alphanumeric character (1-63 chars).
+   * Unique within the tenant.
    *
    * @generated from field: string name = 2;
    */
   name: string;
 
   /**
-   * Optional longer-form description of what this credential is for
-   * (e.g., "Read-only access to the platform team's GitHub org").
-   *
    * @generated from field: string description = 3;
    */
   description: string;
 
   /**
-   * The type of external system and authentication mechanism.
    * Immutable after creation.
    *
    * @generated from field: admiral.api.credential.v1.CredentialType type = 4;
@@ -192,41 +216,42 @@ export type Credential = Message<"admiral.api.credential.v1.Credential"> & {
   type: CredentialType;
 
   /**
-   * Auth material corresponding to `type`. Sensitive fields are write-only
-   * and masked in responses.
+   * Write-only. Empty in every response.
    *
    * @generated from field: admiral.api.credential.v1.AuthConfig auth_config = 5;
    */
   authConfig?: AuthConfig | undefined;
 
   /**
-   * Arbitrary key-value labels for organizing and filtering credentials
-   * (e.g., `{"team": "platform", "environment": "prod"}`).
-   *
    * @generated from field: map<string, string> labels = 6;
    */
   labels: { [key: string]: string };
 
   /**
-   * The user or agent who created this credential (server-populated from token).
-   *
    * @generated from field: admiral.common.v1.ActorRef created_by = 7;
    */
   createdBy?: ActorRef | undefined;
 
   /**
-   * When the credential was created.
-   *
    * @generated from field: google.protobuf.Timestamp created_at = 8;
    */
   createdAt?: Timestamp | undefined;
 
   /**
-   * When the credential was last updated.
-   *
    * @generated from field: google.protobuf.Timestamp updated_at = 9;
    */
   updatedAt?: Timestamp | undefined;
+
+  /**
+   * Hosts this credential may be presented to, as a guard: empty means any
+   * host its type fits; set means the platform refuses to present it
+   * anywhere else, whatever it is attached to. Hostnames, optionally with
+   * a port: `github.acme.example`, `harbor.acme.example:8443`. No scheme,
+   * no path.
+   *
+   * @generated from field: repeated string allowed_hosts = 10;
+   */
+  allowedHosts: string[];
 };
 
 /**
@@ -234,50 +259,41 @@ export type Credential = Message<"admiral.api.credential.v1.Credential"> & {
  * Use `create(CredentialSchema)` to create a new message.
  */
 export const CredentialSchema: GenMessage<Credential> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 4);
+  messageDesc(file_admiral_api_credential_v1_credential, 5);
 
 /**
- * CreateCredentialRequest contains the parameters for creating a new credential.
- *
  * @generated from message admiral.api.credential.v1.CreateCredentialRequest
  */
 export type CreateCredentialRequest = Message<"admiral.api.credential.v1.CreateCredentialRequest"> & {
   /**
-   * URL-safe, human-readable identifier (e.g., "github-org", "ecr-prod").
-   * Unique within the tenant. Lowercase alphanumeric and hyphens only, must
-   * start with a letter and end with an alphanumeric character (1-63 chars).
-   *
    * @generated from field: string name = 1;
    */
   name: string;
 
   /**
-   * Optional description of the credential's purpose.
-   *
    * @generated from field: string description = 2;
    */
   description: string;
 
   /**
-   * The type of external system and authentication mechanism.
-   *
    * @generated from field: admiral.api.credential.v1.CredentialType type = 3;
    */
   type: CredentialType;
 
   /**
-   * Auth material corresponding to `type`.
-   *
    * @generated from field: admiral.api.credential.v1.AuthConfig auth_config = 4;
    */
   authConfig?: AuthConfig | undefined;
 
   /**
-   * Arbitrary key-value labels for organizing and filtering credentials.
-   *
    * @generated from field: map<string, string> labels = 5;
    */
   labels: { [key: string]: string };
+
+  /**
+   * @generated from field: repeated string allowed_hosts = 6;
+   */
+  allowedHosts: string[];
 };
 
 /**
@@ -285,17 +301,13 @@ export type CreateCredentialRequest = Message<"admiral.api.credential.v1.CreateC
  * Use `create(CreateCredentialRequestSchema)` to create a new message.
  */
 export const CreateCredentialRequestSchema: GenMessage<CreateCredentialRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 5);
+  messageDesc(file_admiral_api_credential_v1_credential, 6);
 
 /**
- * CreateCredentialResponse contains the newly created credential.
- *
  * @generated from message admiral.api.credential.v1.CreateCredentialResponse
  */
 export type CreateCredentialResponse = Message<"admiral.api.credential.v1.CreateCredentialResponse"> & {
   /**
-   * The created credential. Auth config sensitive fields are masked.
-   *
    * @generated from field: admiral.api.credential.v1.Credential credential = 1;
    */
   credential?: Credential | undefined;
@@ -306,17 +318,13 @@ export type CreateCredentialResponse = Message<"admiral.api.credential.v1.Create
  * Use `create(CreateCredentialResponseSchema)` to create a new message.
  */
 export const CreateCredentialResponseSchema: GenMessage<CreateCredentialResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 6);
+  messageDesc(file_admiral_api_credential_v1_credential, 7);
 
 /**
- * GetCredentialRequest identifies a credential to retrieve.
- *
  * @generated from message admiral.api.credential.v1.GetCredentialRequest
  */
 export type GetCredentialRequest = Message<"admiral.api.credential.v1.GetCredentialRequest"> & {
   /**
-   * The unique identifier of the credential (UUID).
-   *
    * @generated from field: string credential_id = 1;
    */
   credentialId: string;
@@ -327,17 +335,13 @@ export type GetCredentialRequest = Message<"admiral.api.credential.v1.GetCredent
  * Use `create(GetCredentialRequestSchema)` to create a new message.
  */
 export const GetCredentialRequestSchema: GenMessage<GetCredentialRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 7);
+  messageDesc(file_admiral_api_credential_v1_credential, 8);
 
 /**
- * GetCredentialResponse contains the credential record.
- *
  * @generated from message admiral.api.credential.v1.GetCredentialResponse
  */
 export type GetCredentialResponse = Message<"admiral.api.credential.v1.GetCredentialResponse"> & {
   /**
-   * The retrieved credential. Sensitive fields are masked.
-   *
    * @generated from field: admiral.api.credential.v1.Credential credential = 1;
    */
   credential?: Credential | undefined;
@@ -348,43 +352,35 @@ export type GetCredentialResponse = Message<"admiral.api.credential.v1.GetCreden
  * Use `create(GetCredentialResponseSchema)` to create a new message.
  */
 export const GetCredentialResponseSchema: GenMessage<GetCredentialResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 8);
+  messageDesc(file_admiral_api_credential_v1_credential, 9);
 
 /**
- * ListCredentialsRequest contains pagination and filter parameters.
- *
  * @generated from message admiral.api.credential.v1.ListCredentialsRequest
  */
 export type ListCredentialsRequest = Message<"admiral.api.credential.v1.ListCredentialsRequest"> & {
   /**
-   * Filter expression to narrow results. Uses the Admiral filter DSL (see the
-   * API documentation for the full operator and predicate reference).
-   *
-   * Filterable fields:
-   *   - `name`: filter by credential name.
-   *   - `type`: filter by credential type (SSH_KEY, BASIC_AUTH, BEARER_TOKEN).
-   *   - `labels.key`: filter by label key.
-   *
-   * Example: `field['type'] = 'BEARER_TOKEN'`
+   * Reserved for a filter expression; nothing reads it yet.
    *
    * @generated from field: string filter = 1;
    */
   filter: string;
 
   /**
-   * Maximum number of credentials to return per page. Defaults to 50 when
-   * omitted or 0; must not exceed 100.
-   *
    * @generated from field: int32 page_size = 2;
    */
   pageSize: number;
 
   /**
-   * Opaque pagination token from a previous response.
-   *
    * @generated from field: string page_token = 3;
    */
   pageToken: string;
+
+  /**
+   * Only credentials of this type, when set.
+   *
+   * @generated from field: admiral.api.credential.v1.CredentialType type = 4;
+   */
+  type: CredentialType;
 };
 
 /**
@@ -392,24 +388,18 @@ export type ListCredentialsRequest = Message<"admiral.api.credential.v1.ListCred
  * Use `create(ListCredentialsRequestSchema)` to create a new message.
  */
 export const ListCredentialsRequestSchema: GenMessage<ListCredentialsRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 9);
+  messageDesc(file_admiral_api_credential_v1_credential, 10);
 
 /**
- * ListCredentialsResponse contains a page of credentials.
- *
  * @generated from message admiral.api.credential.v1.ListCredentialsResponse
  */
 export type ListCredentialsResponse = Message<"admiral.api.credential.v1.ListCredentialsResponse"> & {
   /**
-   * The list of credentials. Sensitive fields are masked.
-   *
    * @generated from field: repeated admiral.api.credential.v1.Credential credentials = 1;
    */
   credentials: Credential[];
 
   /**
-   * Pagination token for the next page. Empty when there are no more results.
-   *
    * @generated from field: string next_page_token = 2;
    */
   nextPageToken: string;
@@ -420,29 +410,20 @@ export type ListCredentialsResponse = Message<"admiral.api.credential.v1.ListCre
  * Use `create(ListCredentialsResponseSchema)` to create a new message.
  */
 export const ListCredentialsResponseSchema: GenMessage<ListCredentialsResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 10);
+  messageDesc(file_admiral_api_credential_v1_credential, 11);
 
 /**
- * UpdateCredentialRequest contains the credential fields to update.
- *
  * @generated from message admiral.api.credential.v1.UpdateCredentialRequest
  */
 export type UpdateCredentialRequest = Message<"admiral.api.credential.v1.UpdateCredentialRequest"> & {
   /**
-   * The credential with updated fields.
-   * Only fields specified in `update_mask` are updated.
-   *
-   * When updating auth_config, the entire auth config is replaced.
-   * Omitting auth_config from the update_mask leaves credentials unchanged.
-   *
    * @generated from field: admiral.api.credential.v1.Credential credential = 1;
    */
   credential?: Credential | undefined;
 
   /**
-   * The set of fields to update. Optional; if omitted, all populated fields
-   * are updated. Pass `*` for full replacement. Supported fields: `name`,
-   * `description`, `auth_config`, `labels`.
+   * Paths from `description`, `labels`, `allowed_hosts`, `auth_config`.
+   * Empty means every updatable field the message carries.
    *
    * @generated from field: google.protobuf.FieldMask update_mask = 2;
    */
@@ -454,17 +435,13 @@ export type UpdateCredentialRequest = Message<"admiral.api.credential.v1.UpdateC
  * Use `create(UpdateCredentialRequestSchema)` to create a new message.
  */
 export const UpdateCredentialRequestSchema: GenMessage<UpdateCredentialRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 11);
+  messageDesc(file_admiral_api_credential_v1_credential, 12);
 
 /**
- * UpdateCredentialResponse contains the updated credential.
- *
  * @generated from message admiral.api.credential.v1.UpdateCredentialResponse
  */
 export type UpdateCredentialResponse = Message<"admiral.api.credential.v1.UpdateCredentialResponse"> & {
   /**
-   * The updated credential. Sensitive fields are masked.
-   *
    * @generated from field: admiral.api.credential.v1.Credential credential = 1;
    */
   credential?: Credential | undefined;
@@ -475,18 +452,13 @@ export type UpdateCredentialResponse = Message<"admiral.api.credential.v1.Update
  * Use `create(UpdateCredentialResponseSchema)` to create a new message.
  */
 export const UpdateCredentialResponseSchema: GenMessage<UpdateCredentialResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 12);
+  messageDesc(file_admiral_api_credential_v1_credential, 13);
 
 /**
- * DeleteCredentialRequest identifies a credential to delete.
- *
  * @generated from message admiral.api.credential.v1.DeleteCredentialRequest
  */
 export type DeleteCredentialRequest = Message<"admiral.api.credential.v1.DeleteCredentialRequest"> & {
   /**
-   * The unique identifier of the credential to delete (UUID).
-   * Fails if any sources still reference this credential.
-   *
    * @generated from field: string credential_id = 1;
    */
   credentialId: string;
@@ -497,11 +469,9 @@ export type DeleteCredentialRequest = Message<"admiral.api.credential.v1.DeleteC
  * Use `create(DeleteCredentialRequestSchema)` to create a new message.
  */
 export const DeleteCredentialRequestSchema: GenMessage<DeleteCredentialRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 13);
+  messageDesc(file_admiral_api_credential_v1_credential, 14);
 
 /**
- * DeleteCredentialResponse is empty on success.
- *
  * @generated from message admiral.api.credential.v1.DeleteCredentialResponse
  */
 export type DeleteCredentialResponse = Message<"admiral.api.credential.v1.DeleteCredentialResponse"> & {
@@ -512,50 +482,56 @@ export type DeleteCredentialResponse = Message<"admiral.api.credential.v1.Delete
  * Use `create(DeleteCredentialResponseSchema)` to create a new message.
  */
 export const DeleteCredentialResponseSchema: GenMessage<DeleteCredentialResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_credential_v1_credential, 14);
+  messageDesc(file_admiral_api_credential_v1_credential, 15);
 
 /**
- * CredentialType identifies the shape of the stored auth material (the
- * mechanism), not the system it targets. The target system is determined by
- * the Source that references the credential. One credential can be reused
- * across multiple Sources of different types, provided the Source accepts
- * that credential type (see the Source compatibility matrix).
+ * CredentialType is the protocol family a credential is presented as. Each
+ * fetch takes the families its protocol speaks: a module registry, an
+ * archive and an OCI token take a bearer token; git over https, a Helm
+ * repository and an OCI login take basic auth; git over ssh takes a key.
  *
  * @generated from enum admiral.api.credential.v1.CredentialType
  */
 export enum CredentialType {
   /**
-   * Default value. Must not be used.
-   *
    * @generated from enum value: CREDENTIAL_TYPE_UNSPECIFIED = 0;
    */
   UNSPECIFIED = 0,
 
   /**
-   * SSH private key (with optional passphrase). Used for SSH-protocol Git
-   * sources.
+   * An SSH private key, for git over ssh.
    *
    * @generated from enum value: CREDENTIAL_TYPE_SSH_KEY = 1;
    */
   SSH_KEY = 1,
 
   /**
-   * HTTP Basic auth (username + password). Used for Helm HTTP repos, OCI
-   * registries, authenticated HTTP archives, and Git HTTPS.
+   * A username and password: git over https, a Helm repository, an OCI
+   * registry, an authenticated archive.
    *
    * @generated from enum value: CREDENTIAL_TYPE_BASIC_AUTH = 2;
    */
   BASIC_AUTH = 2,
 
   /**
-   * Single token value. Presented per target protocol: as
-   * `Authorization: Bearer <token>` for Terraform / Helm / OCI bearer-auth
-   * endpoints, or as the HTTP Basic password (with a dummy username) for
-   * Git HTTPS tokens (GitHub PAT, GitLab PAT, Bitbucket app password).
+   * One token. Presented as `Authorization: Bearer` to a module registry,
+   * a Helm repository, an OCI registry or an archive host, and as the
+   * basic-auth password with the `x-access-token` username to git over
+   * https, which is how GitHub and GitLab take a token.
    *
    * @generated from enum value: CREDENTIAL_TYPE_BEARER_TOKEN = 3;
    */
   BEARER_TOKEN = 3,
+
+  /**
+   * A GitHub App installation. Not a secret that is presented: the platform
+   * mints a short-lived installation token from the app's private key at
+   * fetch time and presents that as a bearer token. Works for github.com,
+   * GitHub Enterprise Cloud and GitHub Enterprise Server.
+   *
+   * @generated from enum value: CREDENTIAL_TYPE_GITHUB_APP = 4;
+   */
+  GITHUB_APP = 4,
 }
 
 /**
@@ -565,29 +541,28 @@ export const CredentialTypeSchema: GenEnum<CredentialType> = /*@__PURE__*/
   enumDesc(file_admiral_api_credential_v1_credential, 0);
 
 /**
- * CredentialAPI manages stored credentials for accessing external systems.
+ * CredentialAPI manages the credentials a tenant registers for reaching
+ * external systems at publish time: a git host, a Helm repository, an OCI
+ * registry, a module registry.
  *
- * A credential stores the authentication configuration needed to reach a remote
- * system: a Git host, Helm repository, OCI registry, or Terraform registry.
- * Credentials are tenant-scoped and referenced by sources when fetching
- * artifacts.
+ * A credential is never selected for the caller. A pull-publish names the
+ * credentials it may use, chosen by the user from those whose type its
+ * protocols can present, and the platform presents each only where it fits.
+ * A credential may carry `allowed_hosts`, a guard that restricts where it is
+ * ever presented, whatever it is attached to. Credentials exist for publish
+ * only; nothing on the deploy path reads one.
  *
- * Sensitive fields (tokens, keys, secrets) are write-only: they are accepted on
- * create/update but never returned in API responses. GET and List operations
- * return credential metadata only.
- *
- * Connectivity validation (testing whether the credential can actually reach a
- * remote system) is performed at the Source level, where the credential is
- * paired with a target URL.
+ * Secrets are write-only: accepted on create and update, encrypted at rest,
+ * decrypted only inside a publish, and never returned. Get and List return
+ * metadata only.
  *
  * @generated from service admiral.api.credential.v1.CredentialAPI
  */
 export const CredentialAPI: GenService<{
   /**
-   * CreateCredential creates a new credential within the caller's tenant.
+   * CreateCredential registers a credential within the caller's tenant.
    *
-   * The credential type and auth config must match. For example, a GIT_TOKEN
-   * credential requires a matching auth_config (e.g. BEARER_TOKEN → bearer_token).
+   * The `type` and the populated `auth_config` variant must agree.
    *
    * Scope: `credential:write`
    *
@@ -599,10 +574,8 @@ export const CredentialAPI: GenService<{
     output: typeof CreateCredentialResponseSchema;
   },
   /**
-   * GetCredential retrieves a credential by ID.
-   *
-   * Returns credential metadata only. Sensitive fields are never included
-   * in the response.
+   * GetCredential retrieves a credential's metadata by id. The secret is
+   * never included.
    *
    * Scope: `credential:read`
    *
@@ -614,8 +587,8 @@ export const CredentialAPI: GenService<{
     output: typeof GetCredentialResponseSchema;
   },
   /**
-   * ListCredentials returns a paginated list of credentials within the caller's
-   * tenant. Sensitive fields are never included.
+   * ListCredentials pages through the caller's tenant's credentials.
+   * Secrets are never included.
    *
    * Scope: `credential:read`
    *
@@ -627,12 +600,10 @@ export const CredentialAPI: GenService<{
     output: typeof ListCredentialsResponseSchema;
   },
   /**
-   * UpdateCredential updates a credential's mutable fields.
-   * Use the `update_mask` to specify which fields to update.
-   *
-   * When updating auth_config, the entire auth config is replaced. Partial
-   * updates within the auth config oneof are not supported. Omitting auth_config
-   * from the update_mask leaves credentials unchanged.
+   * UpdateCredential changes a credential's description, labels, allowed
+   * hosts, or secret. The name and type are immutable. A new secret
+   * replaces the old one whole; a rotation is an update with `auth_config`
+   * in the mask.
    *
    * Scope: `credential:write`
    *
@@ -644,9 +615,9 @@ export const CredentialAPI: GenService<{
     output: typeof UpdateCredentialResponseSchema;
   },
   /**
-   * DeleteCredential permanently deletes a credential. Fails if any sources
-   * still reference this credential. Remove or reassign those sources first.
-   * This action cannot be undone.
+   * DeleteCredential removes a credential. A component whose pull-publish
+   * names it keeps the reference; its next pull fails naming the missing
+   * credential until it is attached to another.
    *
    * Scope: `credential:write`
    *

@@ -19,7 +19,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/registry/v1/registry.proto.
  */
 export const file_admiral_api_registry_v1_registry: GenFile = /*@__PURE__*/
-  fileDesc("CiZhZG1pcmFsL2FwaS9yZWdpc3RyeS92MS9yZWdpc3RyeS5wcm90bxIXYWRtaXJhbC5hcGkucmVnaXN0cnkudjEipwMKCUNvbXBvbmVudBIPCgJpZBgBIAEoCUID4EEDEhEKBG5hbWUYAiABKAlCA+BBAxIdCgtkZXNjcmlwdGlvbhgDIAEoCUIIukgFcgMYgAgSVwoGbGFiZWxzGAQgAygLMi4uYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuQ29tcG9uZW50LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhIvCgR0YWdzGAUgAygLMhwuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuVGFnQgPgQQMSNAoKY3JlYXRlZF9ieRgGIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgp1cGRhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi5QQKCFJldmlzaW9uEg8KAmlkGAEgASgJQgPgQQMSGQoMY29tcG9uZW50X2lkGAIgASgJQgPgQQMSEwoGZGlnZXN0GAMgASgJQgPgQQMSOQoEa2luZBgEIAEoDjImLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkNvbXBvbmVudEtpbmRCA+BBAxIXCgpzaXplX2J5dGVzGAUgASgDQgPgQQMSOAoIY29udHJhY3QYBiABKAsyIS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db250cmFjdEID4EEDEjwKCnByb3ZlbmFuY2UYByABKAsyIy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Qcm92ZW5hbmNlQgPgQQMSNwoIZmluZGluZ3MYCCADKAsyIC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5GaW5kaW5nQgPgQQMSPAoGc3RhdHVzGAkgASgOMicuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUmV2aXNpb25TdGF0dXNCA+BBAxI2Cg1kZXByZWNhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEh8KEmRlcHJlY2F0aW9uX3JlYXNvbhgLIAEoCUID4EEDEhEKBHRhZ3MYDCADKAlCA+BBAxI0CgpjcmVhdGVkX2J5GA0gASgLMhsuYWRtaXJhbC5jb21tb24udjEuQWN0b3JSZWZCA+BBAxIzCgpjcmVhdGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIq8BCgNUYWcSEQoEbmFtZRgBIAEoCUID4EEDEhMKBmRpZ2VzdBgCIAEoCUID4EEDEhYKCWltbXV0YWJsZRgDIAEoCEID4EEDEjMKCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJ8CghDb250cmFjdBI2CgZpbnB1dHMYASADKAsyJi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db250cmFjdElucHV0EjgKB291dHB1dHMYAiADKAsyJy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db250cmFjdE91dHB1dCKhAQoNQ29udHJhY3RJbnB1dBIMCgRuYW1lGAEgASgJEgwKBHR5cGUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSEAoIcmVxdWlyZWQYBCABKAgSJwoHZGVmYXVsdBgFIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIRCglzZW5zaXRpdmUYBiABKAgSEQoJZXBoZW1lcmFsGAcgASgIIkYKDkNvbnRyYWN0T3V0cHV0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSEQoJc2Vuc2l0aXZlGAMgASgIIrYBCgpQcm92ZW5hbmNlEjUKBGtpbmQYASABKA4yJy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Qcm92ZW5hbmNlS2luZBILCgN1cmkYAiABKAkSCwoDcmVmGAMgASgJEg4KBmNvbW1pdBgEIAEoCRIMCgRwYXRoGAUgASgJEg0KBWRpcnR5GAYgASgIEioKBHBpbnMYByADKAsyHC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5QaW4iOwoDUGluEg4KBnNvdXJjZRgBIAEoCRISCgpjb25zdHJhaW50GAIgASgJEhAKCHJlc29sdmVkGAMgASgJIoIBCgdGaW5kaW5nEjoKCHNldmVyaXR5GAEgASgOMiguYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuRmluZGluZ1NldmVyaXR5Eg4KBnNvdXJjZRgCIAEoCRIMCgRjb2RlGAMgASgJEg8KB21lc3NhZ2UYBCABKAkSDAoEcGF0aBgFIAEoCSLeAwoXUHVibGlzaENvbXBvbmVudFJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EECukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSNAoEa2luZBgCIAEoDjImLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkNvbXBvbmVudEtpbmQSPwoEdGFncxgDIAMoCUIxukgukgErEBAiJ3IlMiNeW0EtWmEtejAtOV1bQS1aYS16MC05Ll8rLV17MCwxMjd9JBIdCgtkZXNjcmlwdGlvbhgEIAEoCUIIukgFcgMYgAgSZQoGbGFiZWxzGAUgAygLMjwuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUHVibGlzaENvbXBvbmVudFJlcXVlc3QuTGFiZWxzRW50cnlCF7pIFJoBERBAIgZyBBABGD8qBXIDGIACEjcKCnByb3ZlbmFuY2UYBiABKAsyIy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Qcm92ZW5hbmNlEh8KBmJ1bmRsZRgHIAEoDEIP4EECukgJegcQARiAgIAgGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEimQEKGFB1Ymxpc2hDb21wb25lbnRSZXNwb25zZRI1Cgljb21wb25lbnQYASABKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQSMwoIcmV2aXNpb24YAiABKAsyIS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5SZXZpc2lvbhIRCgl1bmNoYW5nZWQYAyABKAgiYwoVTGlzdENvbXBvbmVudHNSZXF1ZXN0EhgKBmZpbHRlchgBIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAIgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgDIAEoCSJpChZMaXN0Q29tcG9uZW50c1Jlc3BvbnNlEjYKCmNvbXBvbmVudHMYASADKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIncKE0dldENvbXBvbmVudFJlcXVlc3QSYAoEbmFtZRgBIAEoCUJS4EECukhMckoQARh/MkReKFthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8vKT9bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JCJNChRHZXRDb21wb25lbnRSZXNwb25zZRI1Cgljb21wb25lbnQYASABKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQiuQEKFlVwZGF0ZUNvbXBvbmVudFJlcXVlc3QSIQoMY29tcG9uZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABARIiCgtkZXNjcmlwdGlvbhgCIAEoCUIIukgFcgMYgAhIAIgBARI9CgZsYWJlbHMYAyABKAsyKC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnRMYWJlbHNIAYgBAUIOCgxfZGVzY3JpcHRpb25CCQoHX2xhYmVscyKfAQoPQ29tcG9uZW50TGFiZWxzEl0KBmxhYmVscxgBIAMoCzI0LmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkNvbXBvbmVudExhYmVscy5MYWJlbHNFbnRyeUIXukgUmgEREEAiBnIEEAEYPyoFcgMYgAIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJQChdVcGRhdGVDb21wb25lbnRSZXNwb25zZRI1Cgljb21wb25lbnQYASABKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQiOwoWRGVsZXRlQ29tcG9uZW50UmVxdWVzdBIhCgxjb21wb25lbnRfaWQYASABKAlCC+BBArpIBXIDsAEBIhkKF0RlbGV0ZUNvbXBvbmVudFJlc3BvbnNlIoUBChRMaXN0UmV2aXNpb25zUmVxdWVzdBIhCgxjb21wb25lbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEhgKBmZpbHRlchgCIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAMgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgEIAEoCSJmChVMaXN0UmV2aXNpb25zUmVzcG9uc2USNAoJcmV2aXNpb25zGAEgAygLMiEuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUmV2aXNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpQBChJHZXRSZXZpc2lvblJlcXVlc3QSIQoMY29tcG9uZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABARJbCglyZWZlcmVuY2UYAiABKAlCSOBBArpIQnJAEAEYgAEyOV4oc2hhMjU2OlswLTlhLWZdezY0fXxbQS1aYS16MC05XVtBLVphLXowLTkuXystXXswLDEyN30pJCJKChNHZXRSZXZpc2lvblJlc3BvbnNlEjMKCHJldmlzaW9uGAEgASgLMiEuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUmV2aXNpb24ijQEKGERlcHJlY2F0ZVJldmlzaW9uUmVxdWVzdBIhCgxjb21wb25lbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEi8KBmRpZ2VzdBgCIAEoCUIf4EECukgZchcyFV5zaGEyNTY6WzAtOWEtZl17NjR9JBIdCgZyZWFzb24YAyABKAlCDeBBArpIB3IFEAEYgAgiUAoZRGVwcmVjYXRlUmV2aXNpb25SZXNwb25zZRIzCghyZXZpc2lvbhgBIAEoCzIhLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlJldmlzaW9uIqUBCg1TZXRUYWdSZXF1ZXN0EiEKDGNvbXBvbmVudF9pZBgBIAEoCUIL4EECukgFcgOwAQESQAoEbmFtZRgCIAEoCUIy4EECukgscioQARiAATIjXltBLVphLXowLTldW0EtWmEtejAtOS5fKy1dezAsMTI3fSQSLwoGZGlnZXN0GAMgASgJQh/gQQK6SBlyFzIVXnNoYTI1NjpbMC05YS1mXXs2NH0kIjsKDlNldFRhZ1Jlc3BvbnNlEikKA3RhZxgBIAEoCzIcLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlRhZyJ3ChBEZWxldGVUYWdSZXF1ZXN0EiEKDGNvbXBvbmVudF9pZBgBIAEoCUIL4EECukgFcgOwAQESQAoEbmFtZRgCIAEoCUIy4EECukgscioQARiAATIjXltBLVphLXowLTldW0EtWmEtejAtOS5fKy1dezAsMTI3fSQiEwoRRGVsZXRlVGFnUmVzcG9uc2UqVwoNQ29tcG9uZW50S2luZBIeChpDT01QT05FTlRfS0lORF9VTlNQRUNJRklFRBAAEg0KCVRFUlJBRk9STRABEggKBEhFTE0QAhINCglNQU5JRkVTVFMQAypQCg5SZXZpc2lvblN0YXR1cxIfChtSRVZJU0lPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABINCglQVUJMSVNIRUQQARIOCgpERVBSRUNBVEVEEAIqagoPRmluZGluZ1NldmVyaXR5EiAKHEZJTkRJTkdfU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIICgRJTkZPEAESBwoDTE9XEAISCgoGTUVESVVNEAMSCAoESElHSBAEEgwKCENSSVRJQ0FMEAUqTwoOUHJvdmVuYW5jZUtpbmQSHwobUFJPVkVOQU5DRV9LSU5EX1VOU1BFQ0lGSUVEEAASCQoFTE9DQUwQARIHCgNHSVQQAhIICgRQVUxMEAMy9BAKC1JlZ2lzdHJ5QVBJEt4BChBQdWJsaXNoQ29tcG9uZW50EjAuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUHVibGlzaENvbXBvbmVudFJlcXVlc3QaMS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5QdWJsaXNoQ29tcG9uZW50UmVzcG9uc2UiZbpHKgoKQ29tcG9uZW50cxIcUHVibGlzaCBhIGNvbXBvbmVudCByZXZpc2lvbqKXJBMKEWNvbXBvbmVudDpwdWJsaXNogtPkkwIbOgEqIhYvdjEvY29tcG9uZW50czpwdWJsaXNoEr0BCg5MaXN0Q29tcG9uZW50cxIuLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkxpc3RDb21wb25lbnRzUmVxdWVzdBovLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkxpc3RDb21wb25lbnRzUmVzcG9uc2UiSrpHHQoKQ29tcG9uZW50cxIPTGlzdCBjb21wb25lbnRzopckEAoOY29tcG9uZW50OnJlYWSC0+STAhASDi92MS9jb21wb25lbnRzEsYBCgxHZXRDb21wb25lbnQSLC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5HZXRDb21wb25lbnRSZXF1ZXN0Gi0uYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuR2V0Q29tcG9uZW50UmVzcG9uc2UiWbpHIgoKQ29tcG9uZW50cxIUUmV0cmlldmUgYSBjb21wb25lbnSilyQQCg5jb21wb25lbnQ6cmVhZILT5JMCGhIYL3YxL2NvbXBvbmVudHMve25hbWU9Kip9EtYBCg9VcGRhdGVDb21wb25lbnQSLy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5VcGRhdGVDb21wb25lbnRSZXF1ZXN0GjAuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuVXBkYXRlQ29tcG9uZW50UmVzcG9uc2UiYLpHIAoKQ29tcG9uZW50cxISVXBkYXRlIGEgY29tcG9uZW50opckEQoPY29tcG9uZW50OndyaXRlgtPkkwIiOgEqMh0vdjEvY29tcG9uZW50cy97Y29tcG9uZW50X2lkfRLTAQoPRGVsZXRlQ29tcG9uZW50Ei8uYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuRGVsZXRlQ29tcG9uZW50UmVxdWVzdBowLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlbGV0ZUNvbXBvbmVudFJlc3BvbnNlIl26RyAKCkNvbXBvbmVudHMSElJldGlyZSBhIGNvbXBvbmVudKKXJBEKD2NvbXBvbmVudDp3cml0ZYLT5JMCHyodL3YxL2NvbXBvbmVudHMve2NvbXBvbmVudF9pZH0S4AEKDUxpc3RSZXZpc2lvbnMSLS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5MaXN0UmV2aXNpb25zUmVxdWVzdBouLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkxpc3RSZXZpc2lvbnNSZXNwb25zZSJwukcqCgpDb21wb25lbnRzEhxMaXN0IGEgY29tcG9uZW50J3MgcmV2aXNpb25zopckEAoOY29tcG9uZW50OnJlYWSC0+STAikSJy92MS9jb21wb25lbnRzL3tjb21wb25lbnRfaWR9L3JldmlzaW9ucxLdAQoLR2V0UmV2aXNpb24SKy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5HZXRSZXZpc2lvblJlcXVlc3QaLC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5HZXRSZXZpc2lvblJlc3BvbnNlInO6RyEKCkNvbXBvbmVudHMSE1JldHJpZXZlIGEgcmV2aXNpb26ilyQQCg5jb21wb25lbnQ6cmVhZILT5JMCNRIzL3YxL2NvbXBvbmVudHMve2NvbXBvbmVudF9pZH0vcmV2aXNpb25zL3tyZWZlcmVuY2V9EvsBChFEZXByZWNhdGVSZXZpc2lvbhIxLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlcHJlY2F0ZVJldmlzaW9uUmVxdWVzdBoyLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlcHJlY2F0ZVJldmlzaW9uUmVzcG9uc2Uif7pHIgoKQ29tcG9uZW50cxIURGVwcmVjYXRlIGEgcmV2aXNpb26ilyQRCg9jb21wb25lbnQ6d3JpdGWC0+STAj86ASoiOi92MS9jb21wb25lbnRzL3tjb21wb25lbnRfaWR9L3JldmlzaW9ucy97ZGlnZXN0fTpkZXByZWNhdGUSwAEKBlNldFRhZxImLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlNldFRhZ1JlcXVlc3QaJy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5TZXRUYWdSZXNwb25zZSJlukcXCgpDb21wb25lbnRzEglTZXQgYSB0YWeilyQTChFjb21wb25lbnQ6cHVibGlzaILT5JMCLjoBKhopL3YxL2NvbXBvbmVudHMve2NvbXBvbmVudF9pZH0vdGFncy97bmFtZX0SxwEKCURlbGV0ZVRhZxIpLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlbGV0ZVRhZ1JlcXVlc3QaKi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5EZWxldGVUYWdSZXNwb25zZSJjukcaCgpDb21wb25lbnRzEgxEZWxldGUgYSB0YWeilyQRCg9jb21wb25lbnQ6d3JpdGWC0+STAisqKS92MS9jb21wb25lbnRzL3tjb21wb25lbnRfaWR9L3RhZ3Mve25hbWV9QucBChtjb20uYWRtaXJhbC5hcGkucmVnaXN0cnkudjFCDVJlZ2lzdHJ5UHJvdG9QAVo6Z28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvcmVnaXN0cnkvdjE7cmVnaXN0cnl2MaICA0FBUqoCF0FkbWlyYWwuQXBpLlJlZ2lzdHJ5LlYxygIXQWRtaXJhbFxBcGlcUmVnaXN0cnlcVjHiAiNBZG1pcmFsXEFwaVxSZWdpc3RyeVxWMVxHUEJNZXRhZGF0YeoCGkFkbWlyYWw6OkFwaTo6UmVnaXN0cnk6OlYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_struct, file_google_protobuf_timestamp]);
+  fileDesc("CiZhZG1pcmFsL2FwaS9yZWdpc3RyeS92MS9yZWdpc3RyeS5wcm90bxIXYWRtaXJhbC5hcGkucmVnaXN0cnkudjEipwMKCUNvbXBvbmVudBIPCgJpZBgBIAEoCUID4EEDEhEKBG5hbWUYAiABKAlCA+BBAxIdCgtkZXNjcmlwdGlvbhgDIAEoCUIIukgFcgMYgAgSVwoGbGFiZWxzGAQgAygLMi4uYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuQ29tcG9uZW50LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhIvCgR0YWdzGAUgAygLMhwuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuVGFnQgPgQQMSNAoKY3JlYXRlZF9ieRgGIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgp1cGRhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi5QQKCFJldmlzaW9uEg8KAmlkGAEgASgJQgPgQQMSGQoMY29tcG9uZW50X2lkGAIgASgJQgPgQQMSEwoGZGlnZXN0GAMgASgJQgPgQQMSOQoEa2luZBgEIAEoDjImLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkNvbXBvbmVudEtpbmRCA+BBAxIXCgpzaXplX2J5dGVzGAUgASgDQgPgQQMSOAoIY29udHJhY3QYBiABKAsyIS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db250cmFjdEID4EEDEjwKCnByb3ZlbmFuY2UYByABKAsyIy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Qcm92ZW5hbmNlQgPgQQMSNwoIZmluZGluZ3MYCCADKAsyIC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5GaW5kaW5nQgPgQQMSPAoGc3RhdHVzGAkgASgOMicuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUmV2aXNpb25TdGF0dXNCA+BBAxI2Cg1kZXByZWNhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEh8KEmRlcHJlY2F0aW9uX3JlYXNvbhgLIAEoCUID4EEDEhEKBHRhZ3MYDCADKAlCA+BBAxI0CgpjcmVhdGVkX2J5GA0gASgLMhsuYWRtaXJhbC5jb21tb24udjEuQWN0b3JSZWZCA+BBAxIzCgpjcmVhdGVkX2F0GA4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIq8BCgNUYWcSEQoEbmFtZRgBIAEoCUID4EEDEhMKBmRpZ2VzdBgCIAEoCUID4EEDEhYKCWltbXV0YWJsZRgDIAEoCEID4EEDEjMKCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJ8CghDb250cmFjdBI2CgZpbnB1dHMYASADKAsyJi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db250cmFjdElucHV0EjgKB291dHB1dHMYAiADKAsyJy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db250cmFjdE91dHB1dCKhAQoNQ29udHJhY3RJbnB1dBIMCgRuYW1lGAEgASgJEgwKBHR5cGUYAiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSEAoIcmVxdWlyZWQYBCABKAgSJwoHZGVmYXVsdBgFIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIRCglzZW5zaXRpdmUYBiABKAgSEQoJZXBoZW1lcmFsGAcgASgIIkYKDkNvbnRyYWN0T3V0cHV0EgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSEQoJc2Vuc2l0aXZlGAMgASgIIrYBCgpQcm92ZW5hbmNlEjUKBGtpbmQYASABKA4yJy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Qcm92ZW5hbmNlS2luZBILCgN1cmkYAiABKAkSCwoDcmVmGAMgASgJEg4KBmNvbW1pdBgEIAEoCRIMCgRwYXRoGAUgASgJEg0KBWRpcnR5GAYgASgIEioKBHBpbnMYByADKAsyHC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5QaW4iOwoDUGluEg4KBnNvdXJjZRgBIAEoCRISCgpjb25zdHJhaW50GAIgASgJEhAKCHJlc29sdmVkGAMgASgJIoIBCgdGaW5kaW5nEjoKCHNldmVyaXR5GAEgASgOMiguYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuRmluZGluZ1NldmVyaXR5Eg4KBnNvdXJjZRgCIAEoCRIMCgRjb2RlGAMgASgJEg8KB21lc3NhZ2UYBCABKAkSDAoEcGF0aBgFIAEoCSLeAwoXUHVibGlzaENvbXBvbmVudFJlcXVlc3QSPQoEbmFtZRgBIAEoCUIv4EECukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSNAoEa2luZBgCIAEoDjImLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkNvbXBvbmVudEtpbmQSPwoEdGFncxgDIAMoCUIxukgukgErEBAiJ3IlMiNeW0EtWmEtejAtOV1bQS1aYS16MC05Ll8rLV17MCwxMjd9JBIdCgtkZXNjcmlwdGlvbhgEIAEoCUIIukgFcgMYgAgSZQoGbGFiZWxzGAUgAygLMjwuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUHVibGlzaENvbXBvbmVudFJlcXVlc3QuTGFiZWxzRW50cnlCF7pIFJoBERBAIgZyBBABGD8qBXIDGIACEjcKCnByb3ZlbmFuY2UYBiABKAsyIy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Qcm92ZW5hbmNlEh8KBmJ1bmRsZRgHIAEoDEIP4EECukgJegcQARiAgIAgGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEimQEKGFB1Ymxpc2hDb21wb25lbnRSZXNwb25zZRI1Cgljb21wb25lbnQYASABKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQSMwoIcmV2aXNpb24YAiABKAsyIS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5SZXZpc2lvbhIRCgl1bmNoYW5nZWQYAyABKAgi6AYKClB1bGxTb3VyY2USQQoJb2NpX2NoYXJ0GAEgASgLMiwuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUHVsbFNvdXJjZS5PQ0lDaGFydEgAEkMKCmhlbG1fY2hhcnQYAiABKAsyLS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5QdWxsU291cmNlLkhlbG1DaGFydEgAEk0KD3JlZ2lzdHJ5X21vZHVsZRgDIAEoCzIyLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlB1bGxTb3VyY2UuUmVnaXN0cnlNb2R1bGVIABI/CghnaXRfdHJlZRgEIAEoCzIrLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlB1bGxTb3VyY2UuR2l0VHJlZUgAEj4KB2FyY2hpdmUYBSABKAsyKy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5QdWxsU291cmNlLkFyY2hpdmVIABp0CghPQ0lDaGFydBIoCglyZWZlcmVuY2UYASABKAlCFeBBArpID3INEAcYgAQ6Bm9jaTovLxI+Cgd2ZXJzaW9uGAIgASgJQi3gQQK6SCdyJTIjXltBLVphLXowLTldW0EtWmEtejAtOS5fKy1dezAsMTI3fSQasAEKCUhlbG1DaGFydBIiCgpyZXBvc2l0b3J5GAEgASgJQg7gQQK6SAhyBhiABIgBARI/CgVjaGFydBgCIAEoCUIw4EECukgqcigYPzIkXlthLXowLTldKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEj4KB3ZlcnNpb24YAyABKAlCLeBBArpIJ3IlMiNeW0EtWmEtejAtOV1bQS1aYS16MC05Ll8rLV17MCwxMjd9JBpLCg5SZWdpc3RyeU1vZHVsZRIeCgdhZGRyZXNzGAEgASgJQg3gQQK6SAdyBRAFGIAEEhkKB3ZlcnNpb24YAiABKAlCCLpIBXIDGIABGloKB0dpdFRyZWUSGwoDdXJsGAEgASgJQg7gQQK6SAhyBhiABIgBARIVCgNyZWYYAiABKAlCCLpIBXIDGIACEhsKBHBhdGgYAyABKAlCDbpICnIIGIAEugECLi4aJgoHQXJjaGl2ZRIbCgN1cmwYASABKAlCDuBBArpICHIGGIAEiAEBQggKBnNvdXJjZSKxAwoUUHVsbENvbXBvbmVudFJlcXVlc3QSOwoEbmFtZRgBIAEoCUItukgqcigYPzIkXihbYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/KT8kEj4KBnNvdXJjZRgCIAEoCzIjLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlB1bGxTb3VyY2VCCeBBArpIA8gBARIpCg5jcmVkZW50aWFsX2lkcxgDIAMoCUIRukgOkgELEBAYASIFcgOwAQESPwoEdGFncxgEIAMoCUIxukgukgErEBAiJ3IlMiNeW0EtWmEtejAtOV1bQS1aYS16MC05Ll8rLV17MCwxMjd9JBIdCgtkZXNjcmlwdGlvbhgFIAEoCUIIukgFcgMYgAgSYgoGbGFiZWxzGAYgAygLMjkuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUHVsbENvbXBvbmVudFJlcXVlc3QuTGFiZWxzRW50cnlCF7pIFJoBERBAIgZyBBABGD8qBXIDGIACGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEilgEKFVB1bGxDb21wb25lbnRSZXNwb25zZRI1Cgljb21wb25lbnQYASABKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQSMwoIcmV2aXNpb24YAiABKAsyIS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5SZXZpc2lvbhIRCgl1bmNoYW5nZWQYAyABKAgiYwoVTGlzdENvbXBvbmVudHNSZXF1ZXN0EhgKBmZpbHRlchgBIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAIgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgDIAEoCSJpChZMaXN0Q29tcG9uZW50c1Jlc3BvbnNlEjYKCmNvbXBvbmVudHMYASADKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIncKE0dldENvbXBvbmVudFJlcXVlc3QSYAoEbmFtZRgBIAEoCUJS4EECukhMckoQARh/MkReKFthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8vKT9bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JCJNChRHZXRDb21wb25lbnRSZXNwb25zZRI1Cgljb21wb25lbnQYASABKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQiuQEKFlVwZGF0ZUNvbXBvbmVudFJlcXVlc3QSIQoMY29tcG9uZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABARIiCgtkZXNjcmlwdGlvbhgCIAEoCUIIukgFcgMYgAhIAIgBARI9CgZsYWJlbHMYAyABKAsyKC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnRMYWJlbHNIAYgBAUIOCgxfZGVzY3JpcHRpb25CCQoHX2xhYmVscyKfAQoPQ29tcG9uZW50TGFiZWxzEl0KBmxhYmVscxgBIAMoCzI0LmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkNvbXBvbmVudExhYmVscy5MYWJlbHNFbnRyeUIXukgUmgEREEAiBnIEEAEYPyoFcgMYgAIaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJQChdVcGRhdGVDb21wb25lbnRSZXNwb25zZRI1Cgljb21wb25lbnQYASABKAsyIi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnQiOwoWRGVsZXRlQ29tcG9uZW50UmVxdWVzdBIhCgxjb21wb25lbnRfaWQYASABKAlCC+BBArpIBXIDsAEBIhkKF0RlbGV0ZUNvbXBvbmVudFJlc3BvbnNlIoUBChRMaXN0UmV2aXNpb25zUmVxdWVzdBIhCgxjb21wb25lbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEhgKBmZpbHRlchgCIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAMgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgEIAEoCSJmChVMaXN0UmV2aXNpb25zUmVzcG9uc2USNAoJcmV2aXNpb25zGAEgAygLMiEuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUmV2aXNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpQBChJHZXRSZXZpc2lvblJlcXVlc3QSIQoMY29tcG9uZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABARJbCglyZWZlcmVuY2UYAiABKAlCSOBBArpIQnJAEAEYgAEyOV4oc2hhMjU2OlswLTlhLWZdezY0fXxbQS1aYS16MC05XVtBLVphLXowLTkuXystXXswLDEyN30pJCJKChNHZXRSZXZpc2lvblJlc3BvbnNlEjMKCHJldmlzaW9uGAEgASgLMiEuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUmV2aXNpb24ijQEKGERlcHJlY2F0ZVJldmlzaW9uUmVxdWVzdBIhCgxjb21wb25lbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEi8KBmRpZ2VzdBgCIAEoCUIf4EECukgZchcyFV5zaGEyNTY6WzAtOWEtZl17NjR9JBIdCgZyZWFzb24YAyABKAlCDeBBArpIB3IFEAEYgAgiUAoZRGVwcmVjYXRlUmV2aXNpb25SZXNwb25zZRIzCghyZXZpc2lvbhgBIAEoCzIhLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlJldmlzaW9uIqUBCg1TZXRUYWdSZXF1ZXN0EiEKDGNvbXBvbmVudF9pZBgBIAEoCUIL4EECukgFcgOwAQESQAoEbmFtZRgCIAEoCUIy4EECukgscioQARiAATIjXltBLVphLXowLTldW0EtWmEtejAtOS5fKy1dezAsMTI3fSQSLwoGZGlnZXN0GAMgASgJQh/gQQK6SBlyFzIVXnNoYTI1NjpbMC05YS1mXXs2NH0kIjsKDlNldFRhZ1Jlc3BvbnNlEikKA3RhZxgBIAEoCzIcLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlRhZyJ3ChBEZWxldGVUYWdSZXF1ZXN0EiEKDGNvbXBvbmVudF9pZBgBIAEoCUIL4EECukgFcgOwAQESQAoEbmFtZRgCIAEoCUIy4EECukgscioQARiAATIjXltBLVphLXowLTldW0EtWmEtejAtOS5fKy1dezAsMTI3fSQiEwoRRGVsZXRlVGFnUmVzcG9uc2UqVwoNQ29tcG9uZW50S2luZBIeChpDT01QT05FTlRfS0lORF9VTlNQRUNJRklFRBAAEg0KCVRFUlJBRk9STRABEggKBEhFTE0QAhINCglNQU5JRkVTVFMQAypQCg5SZXZpc2lvblN0YXR1cxIfChtSRVZJU0lPTl9TVEFUVVNfVU5TUEVDSUZJRUQQABINCglQVUJMSVNIRUQQARIOCgpERVBSRUNBVEVEEAIqagoPRmluZGluZ1NldmVyaXR5EiAKHEZJTkRJTkdfU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIICgRJTkZPEAESBwoDTE9XEAISCgoGTUVESVVNEAMSCAoESElHSBAEEgwKCENSSVRJQ0FMEAUqTwoOUHJvdmVuYW5jZUtpbmQSHwobUFJPVkVOQU5DRV9LSU5EX1VOU1BFQ0lGSUVEEAASCQoFTE9DQUwQARIHCgNHSVQQAhIICgRQVUxMEAMy7RIKC1JlZ2lzdHJ5QVBJEt4BChBQdWJsaXNoQ29tcG9uZW50EjAuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUHVibGlzaENvbXBvbmVudFJlcXVlc3QaMS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5QdWJsaXNoQ29tcG9uZW50UmVzcG9uc2UiZbpHKgoKQ29tcG9uZW50cxIcUHVibGlzaCBhIGNvbXBvbmVudCByZXZpc2lvbqKXJBMKEWNvbXBvbmVudDpwdWJsaXNogtPkkwIbOgEqIhYvdjEvY29tcG9uZW50czpwdWJsaXNoEvYBCg1QdWxsQ29tcG9uZW50Ei0uYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuUHVsbENvbXBvbmVudFJlcXVlc3QaLi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5QdWxsQ29tcG9uZW50UmVzcG9uc2UihQG6R00KCkNvbXBvbmVudHMSP1B1bGwgYW5kIHB1Ymxpc2ggYW4gYXJ0aWZhY3QgZnJvbSBhIHJlZ2lzdHJ5LCByZXBvc2l0b3J5IG9yIFVSTKKXJBMKEWNvbXBvbmVudDpwdWJsaXNogtPkkwIYOgEqIhMvdjEvY29tcG9uZW50czpwdWxsEr0BCg5MaXN0Q29tcG9uZW50cxIuLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkxpc3RDb21wb25lbnRzUmVxdWVzdBovLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkxpc3RDb21wb25lbnRzUmVzcG9uc2UiSrpHHQoKQ29tcG9uZW50cxIPTGlzdCBjb21wb25lbnRzopckEAoOY29tcG9uZW50OnJlYWSC0+STAhASDi92MS9jb21wb25lbnRzEsYBCgxHZXRDb21wb25lbnQSLC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5HZXRDb21wb25lbnRSZXF1ZXN0Gi0uYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuR2V0Q29tcG9uZW50UmVzcG9uc2UiWbpHIgoKQ29tcG9uZW50cxIUUmV0cmlldmUgYSBjb21wb25lbnSilyQQCg5jb21wb25lbnQ6cmVhZILT5JMCGhIYL3YxL2NvbXBvbmVudHMve25hbWU9Kip9EtYBCg9VcGRhdGVDb21wb25lbnQSLy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5VcGRhdGVDb21wb25lbnRSZXF1ZXN0GjAuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuVXBkYXRlQ29tcG9uZW50UmVzcG9uc2UiYLpHIAoKQ29tcG9uZW50cxISVXBkYXRlIGEgY29tcG9uZW50opckEQoPY29tcG9uZW50OndyaXRlgtPkkwIiOgEqMh0vdjEvY29tcG9uZW50cy97Y29tcG9uZW50X2lkfRLTAQoPRGVsZXRlQ29tcG9uZW50Ei8uYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuRGVsZXRlQ29tcG9uZW50UmVxdWVzdBowLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlbGV0ZUNvbXBvbmVudFJlc3BvbnNlIl26RyAKCkNvbXBvbmVudHMSElJldGlyZSBhIGNvbXBvbmVudKKXJBEKD2NvbXBvbmVudDp3cml0ZYLT5JMCHyodL3YxL2NvbXBvbmVudHMve2NvbXBvbmVudF9pZH0S4AEKDUxpc3RSZXZpc2lvbnMSLS5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5MaXN0UmV2aXNpb25zUmVxdWVzdBouLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkxpc3RSZXZpc2lvbnNSZXNwb25zZSJwukcqCgpDb21wb25lbnRzEhxMaXN0IGEgY29tcG9uZW50J3MgcmV2aXNpb25zopckEAoOY29tcG9uZW50OnJlYWSC0+STAikSJy92MS9jb21wb25lbnRzL3tjb21wb25lbnRfaWR9L3JldmlzaW9ucxLdAQoLR2V0UmV2aXNpb24SKy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5HZXRSZXZpc2lvblJlcXVlc3QaLC5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5HZXRSZXZpc2lvblJlc3BvbnNlInO6RyEKCkNvbXBvbmVudHMSE1JldHJpZXZlIGEgcmV2aXNpb26ilyQQCg5jb21wb25lbnQ6cmVhZILT5JMCNRIzL3YxL2NvbXBvbmVudHMve2NvbXBvbmVudF9pZH0vcmV2aXNpb25zL3tyZWZlcmVuY2V9EvsBChFEZXByZWNhdGVSZXZpc2lvbhIxLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlcHJlY2F0ZVJldmlzaW9uUmVxdWVzdBoyLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlcHJlY2F0ZVJldmlzaW9uUmVzcG9uc2Uif7pHIgoKQ29tcG9uZW50cxIURGVwcmVjYXRlIGEgcmV2aXNpb26ilyQRCg9jb21wb25lbnQ6d3JpdGWC0+STAj86ASoiOi92MS9jb21wb25lbnRzL3tjb21wb25lbnRfaWR9L3JldmlzaW9ucy97ZGlnZXN0fTpkZXByZWNhdGUSwAEKBlNldFRhZxImLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLlNldFRhZ1JlcXVlc3QaJy5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5TZXRUYWdSZXNwb25zZSJlukcXCgpDb21wb25lbnRzEglTZXQgYSB0YWeilyQTChFjb21wb25lbnQ6cHVibGlzaILT5JMCLjoBKhopL3YxL2NvbXBvbmVudHMve2NvbXBvbmVudF9pZH0vdGFncy97bmFtZX0SxwEKCURlbGV0ZVRhZxIpLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkRlbGV0ZVRhZ1JlcXVlc3QaKi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5EZWxldGVUYWdSZXNwb25zZSJjukcaCgpDb21wb25lbnRzEgxEZWxldGUgYSB0YWeilyQRCg9jb21wb25lbnQ6d3JpdGWC0+STAisqKS92MS9jb21wb25lbnRzL3tjb21wb25lbnRfaWR9L3RhZ3Mve25hbWV9QucBChtjb20uYWRtaXJhbC5hcGkucmVnaXN0cnkudjFCDVJlZ2lzdHJ5UHJvdG9QAVo6Z28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvcmVnaXN0cnkvdjE7cmVnaXN0cnl2MaICA0FBUqoCF0FkbWlyYWwuQXBpLlJlZ2lzdHJ5LlYxygIXQWRtaXJhbFxBcGlcUmVnaXN0cnlcVjHiAiNBZG1pcmFsXEFwaVxSZWdpc3RyeVxWMVxHUEJNZXRhZGF0YeoCGkFkbWlyYWw6OkFwaTo6UmVnaXN0cnk6OlYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_struct, file_google_protobuf_timestamp]);
 
 /**
  * Component is a registry entry: a name, and the revisions and tags beneath
@@ -604,6 +604,279 @@ export const PublishComponentResponseSchema: GenMessage<PublishComponentResponse
   messageDesc(file_admiral_api_registry_v1_registry, 10);
 
 /**
+ * PullSource names an artifact to pull. One variant. The kind of the
+ * resulting component follows from it: a chart from OCI or a Helm
+ * repository, a module from a module registry, whatever inspection finds in
+ * a git tree or an archive.
+ *
+ * @generated from message admiral.api.registry.v1.PullSource
+ */
+export type PullSource = Message<"admiral.api.registry.v1.PullSource"> & {
+  /**
+   * @generated from oneof admiral.api.registry.v1.PullSource.source
+   */
+  source: {
+    /**
+     * @generated from field: admiral.api.registry.v1.PullSource.OCIChart oci_chart = 1;
+     */
+    value: PullSource_OCIChart;
+    case: "ociChart";
+  } | {
+    /**
+     * @generated from field: admiral.api.registry.v1.PullSource.HelmChart helm_chart = 2;
+     */
+    value: PullSource_HelmChart;
+    case: "helmChart";
+  } | {
+    /**
+     * @generated from field: admiral.api.registry.v1.PullSource.RegistryModule registry_module = 3;
+     */
+    value: PullSource_RegistryModule;
+    case: "registryModule";
+  } | {
+    /**
+     * @generated from field: admiral.api.registry.v1.PullSource.GitTree git_tree = 4;
+     */
+    value: PullSource_GitTree;
+    case: "gitTree";
+  } | {
+    /**
+     * @generated from field: admiral.api.registry.v1.PullSource.Archive archive = 5;
+     */
+    value: PullSource_Archive;
+    case: "archive";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullSource.
+ * Use `create(PullSourceSchema)` to create a new message.
+ */
+export const PullSourceSchema: GenMessage<PullSource> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 11);
+
+/**
+ * A chart in an OCI registry: `oci://ghcr.io/argoproj/argo-helm/argo-cd`
+ * at a version, which is its tag.
+ *
+ * @generated from message admiral.api.registry.v1.PullSource.OCIChart
+ */
+export type PullSource_OCIChart = Message<"admiral.api.registry.v1.PullSource.OCIChart"> & {
+  /**
+   * @generated from field: string reference = 1;
+   */
+  reference: string;
+
+  /**
+   * @generated from field: string version = 2;
+   */
+  version: string;
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullSource.OCIChart.
+ * Use `create(PullSource_OCIChartSchema)` to create a new message.
+ */
+export const PullSource_OCIChartSchema: GenMessage<PullSource_OCIChart> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 11, 0);
+
+/**
+ * A chart in an HTTP repository: the repository URL, the chart's name in
+ * its index, and an exact version.
+ *
+ * @generated from message admiral.api.registry.v1.PullSource.HelmChart
+ */
+export type PullSource_HelmChart = Message<"admiral.api.registry.v1.PullSource.HelmChart"> & {
+  /**
+   * @generated from field: string repository = 1;
+   */
+  repository: string;
+
+  /**
+   * @generated from field: string chart = 2;
+   */
+  chart: string;
+
+  /**
+   * @generated from field: string version = 3;
+   */
+  version: string;
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullSource.HelmChart.
+ * Use `create(PullSource_HelmChartSchema)` to create a new message.
+ */
+export const PullSource_HelmChartSchema: GenMessage<PullSource_HelmChart> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 11, 1);
+
+/**
+ * A module in a module registry: the address as a module call would
+ * write it (`GoogleCloudPlatform/cloud-armor/google`, optionally
+ * host-qualified, optionally `//subdir`) and a version constraint, which
+ * resolves to the newest version satisfying it at pull time, or exactly
+ * one version.
+ *
+ * @generated from message admiral.api.registry.v1.PullSource.RegistryModule
+ */
+export type PullSource_RegistryModule = Message<"admiral.api.registry.v1.PullSource.RegistryModule"> & {
+  /**
+   * @generated from field: string address = 1;
+   */
+  address: string;
+
+  /**
+   * @generated from field: string version = 2;
+   */
+  version: string;
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullSource.RegistryModule.
+ * Use `create(PullSource_RegistryModuleSchema)` to create a new message.
+ */
+export const PullSource_RegistryModuleSchema: GenMessage<PullSource_RegistryModule> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 11, 2);
+
+/**
+ * A git repository at a ref, optionally a directory of it.
+ *
+ * @generated from message admiral.api.registry.v1.PullSource.GitTree
+ */
+export type PullSource_GitTree = Message<"admiral.api.registry.v1.PullSource.GitTree"> & {
+  /**
+   * `https://github.com/acme/infra.git`, `ssh://git@github.com/acme/infra.git`.
+   *
+   * @generated from field: string url = 1;
+   */
+  url: string;
+
+  /**
+   * A branch, tag or commit. Empty is the default branch.
+   *
+   * @generated from field: string ref = 2;
+   */
+  ref: string;
+
+  /**
+   * A directory within the repository. Empty is the root.
+   *
+   * @generated from field: string path = 3;
+   */
+  path: string;
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullSource.GitTree.
+ * Use `create(PullSource_GitTreeSchema)` to create a new message.
+ */
+export const PullSource_GitTreeSchema: GenMessage<PullSource_GitTree> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 11, 3);
+
+/**
+ * An archive at a URL, unpacked by its extension.
+ *
+ * @generated from message admiral.api.registry.v1.PullSource.Archive
+ */
+export type PullSource_Archive = Message<"admiral.api.registry.v1.PullSource.Archive"> & {
+  /**
+   * @generated from field: string url = 1;
+   */
+  url: string;
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullSource.Archive.
+ * Use `create(PullSource_ArchiveSchema)` to create a new message.
+ */
+export const PullSource_ArchiveSchema: GenMessage<PullSource_Archive> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 11, 4);
+
+/**
+ * @generated from message admiral.api.registry.v1.PullComponentRequest
+ */
+export type PullComponentRequest = Message<"admiral.api.registry.v1.PullComponentRequest"> & {
+  /**
+   * Empty means the artifact's own name: the chart's, the module's, the
+   * repository's or directory's. Bare, which resolves to the default
+   * namespace.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * @generated from field: admiral.api.registry.v1.PullSource source = 2;
+   */
+  source?: PullSource | undefined;
+
+  /**
+   * The credentials this pull may present, chosen by the caller. Each is
+   * presented only where its type fits and its `allowed_hosts` permit. A
+   * fetch that reaches a host none of them covers fails naming the host.
+   *
+   * @generated from field: repeated string credential_ids = 3;
+   */
+  credentialIds: string[];
+
+  /**
+   * Tags to set on the resulting revision. A chart's version and a
+   * module's resolved version are applied as tags whether or not named.
+   *
+   * @generated from field: repeated string tags = 4;
+   */
+  tags: string[];
+
+  /**
+   * Applied when the pull creates the component; ignored otherwise.
+   *
+   * @generated from field: string description = 5;
+   */
+  description: string;
+
+  /**
+   * @generated from field: map<string, string> labels = 6;
+   */
+  labels: { [key: string]: string };
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullComponentRequest.
+ * Use `create(PullComponentRequestSchema)` to create a new message.
+ */
+export const PullComponentRequestSchema: GenMessage<PullComponentRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 12);
+
+/**
+ * @generated from message admiral.api.registry.v1.PullComponentResponse
+ */
+export type PullComponentResponse = Message<"admiral.api.registry.v1.PullComponentResponse"> & {
+  /**
+   * @generated from field: admiral.api.registry.v1.Component component = 1;
+   */
+  component?: Component | undefined;
+
+  /**
+   * @generated from field: admiral.api.registry.v1.Revision revision = 2;
+   */
+  revision?: Revision | undefined;
+
+  /**
+   * The resolution was already published under this name; nothing was written.
+   *
+   * @generated from field: bool unchanged = 3;
+   */
+  unchanged: boolean;
+};
+
+/**
+ * Describes the message admiral.api.registry.v1.PullComponentResponse.
+ * Use `create(PullComponentResponseSchema)` to create a new message.
+ */
+export const PullComponentResponseSchema: GenMessage<PullComponentResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_registry_v1_registry, 13);
+
+/**
  * ListComponentsRequest pages through the registry.
  *
  * @generated from message admiral.api.registry.v1.ListComponentsRequest
@@ -645,7 +918,7 @@ export type ListComponentsRequest = Message<"admiral.api.registry.v1.ListCompone
  * Use `create(ListComponentsRequestSchema)` to create a new message.
  */
 export const ListComponentsRequestSchema: GenMessage<ListComponentsRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 11);
+  messageDesc(file_admiral_api_registry_v1_registry, 14);
 
 /**
  * ListComponentsResponse contains a page of components.
@@ -673,7 +946,7 @@ export type ListComponentsResponse = Message<"admiral.api.registry.v1.ListCompon
  * Use `create(ListComponentsResponseSchema)` to create a new message.
  */
 export const ListComponentsResponseSchema: GenMessage<ListComponentsResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 12);
+  messageDesc(file_admiral_api_registry_v1_registry, 15);
 
 /**
  * GetComponentRequest identifies a component by name.
@@ -694,7 +967,7 @@ export type GetComponentRequest = Message<"admiral.api.registry.v1.GetComponentR
  * Use `create(GetComponentRequestSchema)` to create a new message.
  */
 export const GetComponentRequestSchema: GenMessage<GetComponentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 13);
+  messageDesc(file_admiral_api_registry_v1_registry, 16);
 
 /**
  * GetComponentResponse contains the component with its tags.
@@ -713,7 +986,7 @@ export type GetComponentResponse = Message<"admiral.api.registry.v1.GetComponent
  * Use `create(GetComponentResponseSchema)` to create a new message.
  */
 export const GetComponentResponseSchema: GenMessage<GetComponentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 14);
+  messageDesc(file_admiral_api_registry_v1_registry, 17);
 
 /**
  * UpdateComponentRequest carries the fields to change. Omitted fields are
@@ -745,7 +1018,7 @@ export type UpdateComponentRequest = Message<"admiral.api.registry.v1.UpdateComp
  * Use `create(UpdateComponentRequestSchema)` to create a new message.
  */
 export const UpdateComponentRequestSchema: GenMessage<UpdateComponentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 15);
+  messageDesc(file_admiral_api_registry_v1_registry, 18);
 
 /**
  * ComponentLabels wraps a label map so its presence in an update can be told
@@ -765,7 +1038,7 @@ export type ComponentLabels = Message<"admiral.api.registry.v1.ComponentLabels">
  * Use `create(ComponentLabelsSchema)` to create a new message.
  */
 export const ComponentLabelsSchema: GenMessage<ComponentLabels> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 16);
+  messageDesc(file_admiral_api_registry_v1_registry, 19);
 
 /**
  * UpdateComponentResponse contains the updated component.
@@ -784,7 +1057,7 @@ export type UpdateComponentResponse = Message<"admiral.api.registry.v1.UpdateCom
  * Use `create(UpdateComponentResponseSchema)` to create a new message.
  */
 export const UpdateComponentResponseSchema: GenMessage<UpdateComponentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 17);
+  messageDesc(file_admiral_api_registry_v1_registry, 20);
 
 /**
  * DeleteComponentRequest identifies the component to retire.
@@ -803,7 +1076,7 @@ export type DeleteComponentRequest = Message<"admiral.api.registry.v1.DeleteComp
  * Use `create(DeleteComponentRequestSchema)` to create a new message.
  */
 export const DeleteComponentRequestSchema: GenMessage<DeleteComponentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 18);
+  messageDesc(file_admiral_api_registry_v1_registry, 21);
 
 /**
  * DeleteComponentResponse is empty.
@@ -818,7 +1091,7 @@ export type DeleteComponentResponse = Message<"admiral.api.registry.v1.DeleteCom
  * Use `create(DeleteComponentResponseSchema)` to create a new message.
  */
 export const DeleteComponentResponseSchema: GenMessage<DeleteComponentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 19);
+  messageDesc(file_admiral_api_registry_v1_registry, 22);
 
 /**
  * ListRevisionsRequest pages through one component's revisions.
@@ -858,7 +1131,7 @@ export type ListRevisionsRequest = Message<"admiral.api.registry.v1.ListRevision
  * Use `create(ListRevisionsRequestSchema)` to create a new message.
  */
 export const ListRevisionsRequestSchema: GenMessage<ListRevisionsRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 20);
+  messageDesc(file_admiral_api_registry_v1_registry, 23);
 
 /**
  * ListRevisionsResponse contains a page of revisions, newest first.
@@ -882,7 +1155,7 @@ export type ListRevisionsResponse = Message<"admiral.api.registry.v1.ListRevisio
  * Use `create(ListRevisionsResponseSchema)` to create a new message.
  */
 export const ListRevisionsResponseSchema: GenMessage<ListRevisionsResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 21);
+  messageDesc(file_admiral_api_registry_v1_registry, 24);
 
 /**
  * GetRevisionRequest identifies a revision by reference.
@@ -909,7 +1182,7 @@ export type GetRevisionRequest = Message<"admiral.api.registry.v1.GetRevisionReq
  * Use `create(GetRevisionRequestSchema)` to create a new message.
  */
 export const GetRevisionRequestSchema: GenMessage<GetRevisionRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 22);
+  messageDesc(file_admiral_api_registry_v1_registry, 25);
 
 /**
  * GetRevisionResponse contains the revision.
@@ -928,7 +1201,7 @@ export type GetRevisionResponse = Message<"admiral.api.registry.v1.GetRevisionRe
  * Use `create(GetRevisionResponseSchema)` to create a new message.
  */
 export const GetRevisionResponseSchema: GenMessage<GetRevisionResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 23);
+  messageDesc(file_admiral_api_registry_v1_registry, 26);
 
 /**
  * DeprecateRevisionRequest names a revision by digest and says why.
@@ -964,7 +1237,7 @@ export type DeprecateRevisionRequest = Message<"admiral.api.registry.v1.Deprecat
  * Use `create(DeprecateRevisionRequestSchema)` to create a new message.
  */
 export const DeprecateRevisionRequestSchema: GenMessage<DeprecateRevisionRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 24);
+  messageDesc(file_admiral_api_registry_v1_registry, 27);
 
 /**
  * DeprecateRevisionResponse contains the revision with its new status.
@@ -983,7 +1256,7 @@ export type DeprecateRevisionResponse = Message<"admiral.api.registry.v1.Depreca
  * Use `create(DeprecateRevisionResponseSchema)` to create a new message.
  */
 export const DeprecateRevisionResponseSchema: GenMessage<DeprecateRevisionResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 25);
+  messageDesc(file_admiral_api_registry_v1_registry, 28);
 
 /**
  * SetTagRequest points a tag at a revision.
@@ -1014,7 +1287,7 @@ export type SetTagRequest = Message<"admiral.api.registry.v1.SetTagRequest"> & {
  * Use `create(SetTagRequestSchema)` to create a new message.
  */
 export const SetTagRequestSchema: GenMessage<SetTagRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 26);
+  messageDesc(file_admiral_api_registry_v1_registry, 29);
 
 /**
  * SetTagResponse contains the tag as it now stands.
@@ -1033,7 +1306,7 @@ export type SetTagResponse = Message<"admiral.api.registry.v1.SetTagResponse"> &
  * Use `create(SetTagResponseSchema)` to create a new message.
  */
 export const SetTagResponseSchema: GenMessage<SetTagResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 27);
+  messageDesc(file_admiral_api_registry_v1_registry, 30);
 
 /**
  * DeleteTagRequest identifies a floating tag to remove.
@@ -1057,7 +1330,7 @@ export type DeleteTagRequest = Message<"admiral.api.registry.v1.DeleteTagRequest
  * Use `create(DeleteTagRequestSchema)` to create a new message.
  */
 export const DeleteTagRequestSchema: GenMessage<DeleteTagRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 28);
+  messageDesc(file_admiral_api_registry_v1_registry, 31);
 
 /**
  * DeleteTagResponse is empty.
@@ -1072,7 +1345,7 @@ export type DeleteTagResponse = Message<"admiral.api.registry.v1.DeleteTagRespon
  * Use `create(DeleteTagResponseSchema)` to create a new message.
  */
 export const DeleteTagResponseSchema: GenMessage<DeleteTagResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_registry_v1_registry, 29);
+  messageDesc(file_admiral_api_registry_v1_registry, 32);
 
 /**
  * ComponentKind is what a revision's bundle is, detected by inspection at
@@ -1277,6 +1550,25 @@ export const RegistryAPI: GenService<{
     methodKind: "unary";
     input: typeof PublishComponentRequestSchema;
     output: typeof PublishComponentResponseSchema;
+  },
+  /**
+   * PullComponent publishes an artifact the tenant does not own: a chart in
+   * an HTTP repository or an OCI registry, a module in a module registry, a
+   * git repository at a ref, an archive. Admiral fetches it with the
+   * credentials named, closes it over what it reaches, scans it, and
+   * records the revision with provenance saying where it came from. The
+   * bytes are a copy: upstream may move the tag and the revision does not.
+   * The same resolution under the same name is the same revision, returned
+   * with `unchanged` set.
+   *
+   * Scope: `component:publish`
+   *
+   * @generated from rpc admiral.api.registry.v1.RegistryAPI.PullComponent
+   */
+  pullComponent: {
+    methodKind: "unary";
+    input: typeof PullComponentRequestSchema;
+    output: typeof PullComponentResponseSchema;
   },
   /**
    * ListComponents pages through the registry.

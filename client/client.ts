@@ -10,7 +10,6 @@ import { HealthcheckAPI } from "../proto/admiral/api/healthcheck/v1/healthcheck_
 import { InvitationAPI } from "../proto/admiral/api/invitation/v1/invitation_pb.js";
 import { RegistryAPI } from "../proto/admiral/api/registry/v1/registry_pb.js";
 import { RunAPI } from "../proto/admiral/api/run/v1/run_pb.js";
-import { SourceAPI } from "../proto/admiral/api/source/v1/source_pb.js";
 import { TenantAPI } from "../proto/admiral/api/tenant/v1/tenant_pb.js";
 import { UserAPI } from "../proto/admiral/api/user/v1/user_pb.js";
 
@@ -25,7 +24,6 @@ type HealthcheckClient = ConnectClient<typeof HealthcheckAPI>;
 type InvitationClient = ConnectClient<typeof InvitationAPI>;
 type RegistryClient = ConnectClient<typeof RegistryAPI>;
 type RunClient = ConnectClient<typeof RunAPI>;
-type SourceClient = ConnectClient<typeof SourceAPI>;
 type TenantClient = ConnectClient<typeof TenantAPI>;
 type UserClient = ConnectClient<typeof UserAPI>;
 
@@ -67,9 +65,6 @@ export interface Client {
 
   /** Run service client */
   readonly run: RunClient;
-
-  /** Source service client */
-  readonly source: SourceClient;
 
   /** Tenant service client */
   readonly tenant: TenantClient;
@@ -124,7 +119,6 @@ export function createClient(transport: Transport): Client {
   let _invitation: InvitationClient | undefined;
   let _registry: RegistryClient | undefined;
   let _run: RunClient | undefined;
-  let _source: SourceClient | undefined;
   let _tenant: TenantClient | undefined;
   let _user: UserClient | undefined;
 
@@ -199,13 +193,6 @@ export function createClient(transport: Transport): Client {
         _run = createConnectClient(RunAPI, transport);
       }
       return _run;
-    },
-
-    get source() {
-      if (!_source) {
-        _source = createConnectClient(SourceAPI, transport);
-      }
-      return _source;
     },
 
     get tenant() {
