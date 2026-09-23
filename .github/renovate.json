@@ -1,0 +1,5 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabled": false,
+  "description": "Generated SDK — deps come from admiral-protos templates. Renovate updates applied here would be reverted on the next cascade."
+}
