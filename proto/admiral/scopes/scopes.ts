@@ -42,6 +42,8 @@ export const Scopes = {
   AgentWrite: "agent:write",
   AppRead: "app:read",
   AppWrite: "app:write",
+  ChangesetRead: "changeset:read",
+  ChangesetWrite: "changeset:write",
   ComponentPublish: "component:publish",
   ComponentRead: "component:read",
   ComponentWrite: "component:write",
@@ -70,7 +72,8 @@ export interface Group {
 /** Every group, in catalog order. Every scope's prefix has one. */
 export const GROUPS: readonly Group[] = [
   { name: "agent", description: "Execution agents, their tokens, and the jobs and workloads they run." },
-  { name: "app", description: "Applications and their change sets." },
+  { name: "app", description: "Applications." },
+  { name: "changeset", description: "Change sets, their revisions, and the component values they propose." },
   { name: "component", description: "The component registry, where published Terraform modules, Helm charts and manifests live." },
   { name: "credential", description: "Credentials for external systems." },
   { name: "env", description: "Deployment environments and the components in them." },
@@ -141,14 +144,26 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "app:read",
-    description: "Read applications, change sets, and change set diffs.",
+    description: "Read applications.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
     name: "app:write",
-    description: "Create, update, and delete applications; manage change sets and their entries and variables.",
+    description: "Create, update, and delete applications.",
     implies: ["app:read"],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "changeset:read",
+    description: "Read change sets, their revisions and diffs, and the values they propose.",
+    implies: [],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "changeset:write",
+    description: "Create, edit, and discard change sets.",
+    implies: ["changeset:read"],
     assignableTo: ["pat"],
   },
   {
@@ -257,6 +272,7 @@ export const CATALOG: Readonly<Record<string, Scope>> = Object.fromEntries(
 const impliesClosure: Readonly<Record<string, readonly string[]>> = {
   "agent:write": ["agent:read"],
   "app:write": ["app:read"],
+  "changeset:write": ["changeset:read"],
   "component:publish": ["component:read"],
   "component:write": ["component:publish", "component:read"],
   "credential:write": ["credential:read"],
