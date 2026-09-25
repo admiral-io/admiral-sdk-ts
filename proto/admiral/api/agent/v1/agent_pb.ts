@@ -4,116 +4,169 @@
 
 import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { ListAgentJobsRequestSchema, ListAgentJobsResponseSchema, TerraformAgentStatus } from "./jobs_pb.js";
-import { file_admiral_api_agent_v1_jobs } from "./jobs_pb.js";
-import type { GetWorkloadRequestSchema, GetWorkloadResponseSchema, KubernetesAgentStatus, ListWorkloadEventsRequestSchema, ListWorkloadEventsResponseSchema, ListWorkloadsRequestSchema, ListWorkloadsResponseSchema } from "./workloads_pb.js";
-import { file_admiral_api_agent_v1_workloads } from "./workloads_pb.js";
 import type { ActorRef } from "../../../common/v1/actor_pb.js";
 import { file_admiral_common_v1_actor } from "../../../common/v1/actor_pb.js";
 import { file_admiral_common_v1_annotations } from "../../../common/v1/annotations_pb.js";
-import type { ApiKey } from "../../../common/v1/apikey_pb.js";
-import { file_admiral_common_v1_apikey } from "../../../common/v1/apikey_pb.js";
-import { file_buf_validate_validate } from "../../../../buf/validate/validate_pb.js";
 import { file_gnostic_openapi_v3_annotations } from "../../../../gnostic/openapi/v3/annotations_pb.js";
 import { file_google_api_annotations } from "../../../../google/api/annotations_pb.js";
+import { file_buf_validate_validate } from "../../../../buf/validate/validate_pb.js";
 import { file_google_api_field_behavior } from "../../../../google/api/field_behavior_pb.js";
-import type { Duration, FieldMask, Timestamp } from "@bufbuild/protobuf/wkt";
-import { file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { Timestamp } from "@bufbuild/protobuf/wkt";
+import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file admiral/api/agent/v1/agent.proto.
  */
 export const file_admiral_api_agent_v1_agent: GenFile = /*@__PURE__*/
-  fileDesc("CiBhZG1pcmFsL2FwaS9hZ2VudC92MS9hZ2VudC5wcm90bxIUYWRtaXJhbC5hcGkuYWdlbnQudjEisgQKBUFnZW50EhoKAmlkGAEgASgJQg7gQQO6SAjYAQFyA7ABARIyCgRraW5kGAIgASgOMh8uYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRLaW5kQgPgQQUSOgoEbmFtZRgDIAEoCUIsukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSHQoLZGVzY3JpcHRpb24YBCABKAlCCLpIBXIDGIAIElAKBmxhYmVscxgFIAMoCzInLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhJDCg1oZWFsdGhfc3RhdHVzGAYgASgOMicuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRIZWFsdGhTdGF0dXNCA+BBAxIYCgtjbHVzdGVyX3VpZBgHIAEoCUID4EEDEjQKCmNyZWF0ZWRfYnkYCCABKAsyGy5hZG1pcmFsLmNvbW1vbi52MS5BY3RvclJlZkID4EEDEjMKCmNyZWF0ZWRfYXQYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIr4CChJDcmVhdGVBZ2VudFJlcXVlc3QSPAoEa2luZBgBIAEoDjIfLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50S2luZEIN4EECukgHggEEEAEgABI9CgRuYW1lGAIgASgJQi/gQQK6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgDIAEoCUIIukgFcgMYgAgSXQoGbGFiZWxzGAQgAygLMjQuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQWdlbnRSZXF1ZXN0LkxhYmVsc0VudHJ5Qhe6SBSaAREQQCIGcgQQARg/KgVyAxiAAhotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIlkKE0NyZWF0ZUFnZW50UmVzcG9uc2USKgoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudBIWCg5wbGFpbl90ZXh0X2tleRgCIAEoCSIwCg9HZXRBZ2VudFJlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBIj4KEEdldEFnZW50UmVzcG9uc2USKgoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudCJfChFMaXN0QWdlbnRzUmVxdWVzdBIYCgZmaWx0ZXIYASABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgCIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YAyABKAkiWgoSTGlzdEFnZW50c1Jlc3BvbnNlEisKBmFnZW50cxgBIAMoCzIbLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ8ChJVcGRhdGVBZ2VudFJlcXVlc3QSNQoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudEIJ4EECukgDyAEBEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJBChNVcGRhdGVBZ2VudFJlc3BvbnNlEioKBWFnZW50GAEgASgLMhsuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnQiMwoSRGVsZXRlQWdlbnRSZXF1ZXN0Eh0KCGFnZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABASIVChNEZWxldGVBZ2VudFJlc3BvbnNlIosBCiBDbGVhckFnZW50SWRlbnRpdHlCaW5kaW5nUmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQESFwoGcmVhc29uGAIgASgJQge6SARyAhABEi8KDGdyYWNlX3dpbmRvdxgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJlCiFDbGVhckFnZW50SWRlbnRpdHlCaW5kaW5nUmVzcG9uc2USEAoIYWNjZXB0ZWQYASABKAgSLgoKZXhwaXJlc19hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiNgoVR2V0QWdlbnRTdGF0dXNSZXF1ZXN0Eh0KCGFnZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABASKXAgoWR2V0QWdlbnRTdGF0dXNSZXNwb25zZRI+Cg1oZWFsdGhfc3RhdHVzGAEgASgOMicuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRIZWFsdGhTdGF0dXMSPwoJdGVycmFmb3JtGAIgASgLMiouYWRtaXJhbC5hcGkuYWdlbnQudjEuVGVycmFmb3JtQWdlbnRTdGF0dXNIABJBCgprdWJlcm5ldGVzGAMgASgLMisuYWRtaXJhbC5hcGkuYWdlbnQudjEuS3ViZXJuZXRlc0FnZW50U3RhdHVzSAASLwoLcmVwb3J0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQggKBnN0YXR1cyKjAQoTQ3JlYXRlQXBpS2V5UmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQESPQoEbmFtZRgCIAEoCUIv4EECukgpcicQARg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSLgoKZXhwaXJlc19hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiWgoUQ3JlYXRlQXBpS2V5UmVzcG9uc2USKgoHYXBpX2tleRgBIAEoCzIZLmFkbWlyYWwuY29tbW9uLnYxLkFwaUtleRIWCg5wbGFpbl90ZXh0X2tleRgCIAEoCSJ/ChJMaXN0QXBpS2V5c1JlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEhgKBmZpbHRlchgCIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAMgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgEIAEoCSJbChNMaXN0QXBpS2V5c1Jlc3BvbnNlEisKCGFwaV9rZXlzGAEgAygLMhkuYWRtaXJhbC5jb21tb24udjEuQXBpS2V5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIxChBHZXRBcGlLZXlSZXF1ZXN0Eh0KCHRva2VuX2lkGAEgASgJQgvgQQK6SAVyA7ABASI/ChFHZXRBcGlLZXlSZXNwb25zZRIqCgdhcGlfa2V5GAEgASgLMhkuYWRtaXJhbC5jb21tb24udjEuQXBpS2V5IjQKE1Jldm9rZUFwaUtleVJlcXVlc3QSHQoIdG9rZW5faWQYASABKAlCC+BBArpIBXIDsAEBIkIKFFJldm9rZUFwaUtleVJlc3BvbnNlEioKB2FwaV9rZXkYASABKAsyGS5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXkqXAoJQWdlbnRLaW5kEhoKFkFHRU5UX0tJTkRfVU5TUEVDSUZJRUQQABIYChRBR0VOVF9LSU5EX1RFUlJBRk9STRABEhkKFUFHRU5UX0tJTkRfS1VCRVJORVRFUxACKuABChFBZ2VudEhlYWx0aFN0YXR1cxIjCh9BR0VOVF9IRUFMVEhfU1RBVFVTX1VOU1BFQ0lGSUVEEAASHwobQUdFTlRfSEVBTFRIX1NUQVRVU19QRU5ESU5HEAESHwobQUdFTlRfSEVBTFRIX1NUQVRVU19IRUFMVEhZEAISIAocQUdFTlRfSEVBTFRIX1NUQVRVU19ERUdSQURFRBADEh0KGUFHRU5UX0hFQUxUSF9TVEFUVVNfRVJST1IQBBIjCh9BR0VOVF9IRUFMVEhfU1RBVFVTX1VOUkVBQ0hBQkxFEAUy3BYKCEFnZW50QVBJEqYBCgtDcmVhdGVBZ2VudBIoLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNyZWF0ZUFnZW50UmVxdWVzdBopLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNyZWF0ZUFnZW50UmVzcG9uc2UiQrpHGQoGQWdlbnRzEg9DcmVhdGUgYW4gYWdlbnSilyQNCgthZ2VudDp3cml0ZYLT5JMCDzoBKiIKL3YxL2FnZW50cxKmAQoIR2V0QWdlbnQSJS5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFJlcXVlc3QaJi5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFJlc3BvbnNlIku6RxsKBkFnZW50cxIRUmV0cmlldmUgYW4gYWdlbnSilyQMCgphZ2VudDpyZWFkgtPkkwIXEhUvdjEvYWdlbnRzL3thZ2VudF9pZH0SmwEKCkxpc3RBZ2VudHMSJy5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QWdlbnRzUmVxdWVzdBooLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RBZ2VudHNSZXNwb25zZSI6ukcVCgZBZ2VudHMSC0xpc3QgYWdlbnRzopckDAoKYWdlbnQ6cmVhZILT5JMCDBIKL3YxL2FnZW50cxKxAQoLVXBkYXRlQWdlbnQSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5VcGRhdGVBZ2VudFJlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5VcGRhdGVBZ2VudFJlc3BvbnNlIk26RxkKBkFnZW50cxIPVXBkYXRlIGFuIGFnZW50opckDQoLYWdlbnQ6d3JpdGWC0+STAho6ASoyFS92MS9hZ2VudHMve2FnZW50LmlkfRKuAQoLRGVsZXRlQWdlbnQSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5EZWxldGVBZ2VudFJlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5EZWxldGVBZ2VudFJlc3BvbnNlIkq6RxkKBkFnZW50cxIPRGVsZXRlIGFuIGFnZW50opckDQoLYWdlbnQ6d3JpdGWC0+STAhcqFS92MS9hZ2VudHMve2FnZW50X2lkfRLDAQoOR2V0QWdlbnRTdGF0dXMSKy5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFN0YXR1c1JlcXVlc3QaLC5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBZ2VudFN0YXR1c1Jlc3BvbnNlIla6Rx8KBkFnZW50cxIVUmV0cmlldmUgYWdlbnQgc3RhdHVzopckDAoKYWdlbnQ6cmVhZILT5JMCHhIcL3YxL2FnZW50cy97YWdlbnRfaWR9L3N0YXR1cxKEAgoZQ2xlYXJBZ2VudElkZW50aXR5QmluZGluZxI2LmFkbWlyYWwuYXBpLmFnZW50LnYxLkNsZWFyQWdlbnRJZGVudGl0eUJpbmRpbmdSZXF1ZXN0GjcuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ2xlYXJBZ2VudElkZW50aXR5QmluZGluZ1Jlc3BvbnNlIna6RysKBkFnZW50cxIhQ2xlYXIgYW4gYWdlbnQncyBpZGVudGl0eSBiaW5kaW5nopckDQoLYWdlbnQ6d3JpdGWC0+STAjE6ASoiLC92MS9hZ2VudHMve2FnZW50X2lkfS9jbGVhci1pZGVudGl0eS1iaW5kaW5nEscBCgxDcmVhdGVBcGlLZXkSKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5DcmVhdGVBcGlLZXlSZXF1ZXN0GiouYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQXBpS2V5UmVzcG9uc2UiYLpHJQoMQWdlbnQgVG9rZW5zEhVDcmVhdGUgYW4gYWdlbnQgdG9rZW6ilyQNCgthZ2VudDp3cml0ZYLT5JMCIToBKiIcL3YxL2FnZW50cy97YWdlbnRfaWR9L3Rva2VucxK8AQoLTGlzdEFwaUtleXMSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QXBpS2V5c1JlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0QXBpS2V5c1Jlc3BvbnNlIli6RyEKDEFnZW50IFRva2VucxIRTGlzdCBhZ2VudCB0b2tlbnOilyQMCgphZ2VudDpyZWFkgtPkkwIeEhwvdjEvYWdlbnRzL3thZ2VudF9pZH0vdG9rZW5zErwBCglHZXRBcGlLZXkSJi5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRBcGlLZXlSZXF1ZXN0GicuYWRtaXJhbC5hcGkuYWdlbnQudjEuR2V0QXBpS2V5UmVzcG9uc2UiXrpHJwoMQWdlbnQgVG9rZW5zEhdSZXRyaWV2ZSBhbiBhZ2VudCB0b2tlbqKXJAwKCmFnZW50OnJlYWSC0+STAh4SHC92MS9hZ2VudHMvdG9rZW5zL3t0b2tlbl9pZH0SzgEKDFJldm9rZUFwaUtleRIpLmFkbWlyYWwuYXBpLmFnZW50LnYxLlJldm9rZUFwaUtleVJlcXVlc3QaKi5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZXZva2VBcGlLZXlSZXNwb25zZSJnukclCgxBZ2VudCBUb2tlbnMSFVJldm9rZSBhbiBhZ2VudCB0b2tlbqKXJA0KC2FnZW50OndyaXRlgtPkkwIoOgEqIiMvdjEvYWdlbnRzL3Rva2Vucy97dG9rZW5faWR9L3Jldm9rZRK4AQoNTGlzdEFnZW50Sm9icxIqLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RBZ2VudEpvYnNSZXF1ZXN0GisuYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdEFnZW50Sm9ic1Jlc3BvbnNlIk66RxkKBkFnZW50cxIPTGlzdCBhZ2VudCBqb2JzopckDAoKYWdlbnQ6cmVhZILT5JMCHBIaL3YxL2FnZW50cy97YWdlbnRfaWR9L2pvYnMSvAEKDUxpc3RXb3JrbG9hZHMSKi5hZG1pcmFsLmFwaS5hZ2VudC52MS5MaXN0V29ya2xvYWRzUmVxdWVzdBorLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RXb3JrbG9hZHNSZXNwb25zZSJSukcYCgZBZ2VudHMSDkxpc3Qgd29ya2xvYWRzopckDAoKYWdlbnQ6cmVhZILT5JMCIRIfL3YxL2FnZW50cy97YWdlbnRfaWR9L3dvcmtsb2FkcxLJAQoLR2V0V29ya2xvYWQSKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRXb3JrbG9hZFJlcXVlc3QaKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRXb3JrbG9hZFJlc3BvbnNlImW6Rx0KBkFnZW50cxITUmV0cmlldmUgYSB3b3JrbG9hZKKXJAwKCmFnZW50OnJlYWSC0+STAi8SLS92MS9hZ2VudHMve2FnZW50X2lkfS93b3JrbG9hZHMve3dvcmtsb2FkX2lkfRLOAQoSTGlzdFdvcmtsb2FkRXZlbnRzEi8uYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdFdvcmtsb2FkRXZlbnRzUmVxdWVzdBowLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RXb3JrbG9hZEV2ZW50c1Jlc3BvbnNlIlW6Rx4KBkFnZW50cxIUTGlzdCB3b3JrbG9hZCBldmVudHOilyQMCgphZ2VudDpyZWFkgtPkkwIeEhwvdjEvYWdlbnRzL3thZ2VudF9pZH0vZXZlbnRzQs8BChhjb20uYWRtaXJhbC5hcGkuYWdlbnQudjFCCkFnZW50UHJvdG9QAVo0Z28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvYWdlbnQvdjE7YWdlbnR2MaICA0FBQaoCFEFkbWlyYWwuQXBpLkFnZW50LlYxygIUQWRtaXJhbFxBcGlcQWdlbnRcVjHiAiBBZG1pcmFsXEFwaVxBZ2VudFxWMVxHUEJNZXRhZGF0YeoCF0FkbWlyYWw6OkFwaTo6QWdlbnQ6OlYxYgZwcm90bzM", [file_admiral_api_agent_v1_jobs, file_admiral_api_agent_v1_workloads, file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_admiral_common_v1_apikey, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_duration, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
+  fileDesc("CiBhZG1pcmFsL2FwaS9hZ2VudC92MS9hZ2VudC5wcm90bxIUYWRtaXJhbC5hcGkuYWdlbnQudjEitgIKB0NsdXN0ZXISDwoCaWQYASABKAlCA+BBAxIMCgRuYW1lGAIgASgJEjgKBnN0YXR1cxgDIAEoDjIjLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNsdXN0ZXJTdGF0dXNCA+BBAxIXCgppc3N1ZXJfdXJsGAQgASgJQgPgQQMSFAoHa2V5X2lkcxgFIAMoCUID4EEDEjgKD2tleXNfdXBkYXRlZF9hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgpjcmVhdGVkX2J5GAcgASgLMhsuYWRtaXJhbC5jb21tb24udjEuQWN0b3JSZWZCA+BBAxIzCgpjcmVhdGVkX2F0GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDImYKDENsdXN0ZXJUcnVzdBIrCgppc3N1ZXJfdXJsGAEgASgJQhW6SBJyEBiAEDoIaHR0cHM6Ly+IAQFIABIgCglqd2tzX2pzb24YAiABKAlCC7pICHIGEAIYgIAESABCBwoFdHJ1c3QihQMKBUFnZW50Eg8KAmlkGAEgASgJQgPgQQMSFwoKY2x1c3Rlcl9pZBgCIAEoCUID4EEDEgwKBG5hbWUYAyABKAkSFgoJbmFtZXNwYWNlGAQgASgJQgPgQQMSHAoPc2VydmljZV9hY2NvdW50GAUgASgJQgPgQQMSMwoHY2VpbGluZxgGIAEoCzIiLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50Q2VpbGluZxI2CgZoZWFsdGgYByABKA4yIS5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudEhlYWx0aEID4EEDEjYKBnJlcG9ydBgIIAEoCzIhLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50UmVwb3J0QgPgQQMSNAoKY3JlYXRlZF9ieRgJIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyKLAQoMQWdlbnRDZWlsaW5nEiAKGGFsbG93X25hbWVzcGFjZV9jcmVhdGlvbhgBIAEoCBIsChJhbGxvd2VkX25hbWVzcGFjZXMYAiADKAlCELpIDZIBChBAIgZyBBABGD8SKwoRZGVuaWVkX25hbWVzcGFjZXMYAyADKAlCELpIDZIBChBAIgZyBBABGD8i2gEKC0FnZW50UmVwb3J0EhUKDWFnZW50X3ZlcnNpb24YASABKAkSGAoQcHJvdG9jb2xfdmVyc2lvbhgCIAEoBRIUCgxrdWJlX3ZlcnNpb24YAyABKAkSFAoMYXBpX3ZlcnNpb25zGAQgAygJEj0KDGNhcGFiaWxpdGllcxgFIAEoCzInLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50Q2FwYWJpbGl0aWVzEi8KC3JlcG9ydGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKJAQoRQWdlbnRDYXBhYmlsaXRpZXMSHQoVY2FuX2NyZWF0ZV9uYW1lc3BhY2VzGAEgASgIEhsKE3dyaXRhYmxlX25hbWVzcGFjZXMYAiADKAkSFgoOYWxsX25hbWVzcGFjZXMYAyABKAgSIAoYY2FuX3dyaXRlX2NsdXN0ZXJfc2NvcGVkGAQgASgIInoKCkFnZW50R3JhbnQSGQoGdGVuYW50GAEgASgIQge6SARqAggBSAASHAoIZ3JvdXBfaWQYAiABKAlCCLpIBXIDsAEBSAASIgoOYXBwbGljYXRpb25faWQYAyABKAlCCLpIBXIDsAEBSABCDwoGdGFyZ2V0EgW6SAIIASLlAwoDSm9iEgoKAmlkGAEgASgJEisKBGtpbmQYAiABKA4yHS5hZG1pcmFsLmFwaS5hZ2VudC52MS5Kb2JLaW5kEi8KBnN0YXR1cxgDIAEoDjIfLmFkbWlyYWwuYXBpLmFnZW50LnYxLkpvYlN0YXR1cxIQCghhZ2VudF9pZBgEIAEoCRIWCg5lbnZpcm9ubWVudF9pZBgFIAEoCRIVCg1jaGFuZ2Vfc2V0X2lkGAYgASgJEhAKCHJldmlzaW9uGAcgASgFEhcKD2FydGlmYWN0X2RpZ2VzdBgIIAEoCRIPCgdhdHRlbXB0GAkgASgFEjUKC3dhaXRfcmVhc29uGAogASgOMiAuYWRtaXJhbC5hcGkuYWdlbnQudjEuV2FpdFJlYXNvbhIvCgZyZXN1bHQYCyABKAsyHy5hZG1pcmFsLmFwaS5hZ2VudC52MS5Kb2JSZXN1bHQSLgoKY3JlYXRlZF9hdBgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKc3RhcnRlZF9hdBgNIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLZmluaXNoZWRfYXQYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIqcBCglKb2JSZXN1bHQSPQoGc3RhdHVzGAEgASgOMh8uYWRtaXJhbC5hcGkuYWdlbnQudjEuSm9iU3RhdHVzQgy6SAmCAQYYBBgFGAYSDwoHbWVzc2FnZRgCIAEoCRIpCgVzdGVwcxgDIAMoCzIaLmFkbWlyYWwuYXBpLmFnZW50LnYxLlN0ZXASHwoLb3V0cHV0X2pzb24YBCABKAlCCrpIB3IFGICAgAgiZQoEU3RlcBIRCgljb21wb25lbnQYASABKAkSOQoGc3RhdHVzGAIgASgOMh8uYWRtaXJhbC5hcGkuYWdlbnQudjEuSm9iU3RhdHVzQgi6SAWCAQIQARIPCgdtZXNzYWdlGAMgASgJInUKBU9mZmVyEiYKA2pvYhgBIAEoCzIZLmFkbWlyYWwuYXBpLmFnZW50LnYxLkpvYhIPCgdhdHRlbXB0GAIgASgFEhgKC2xlYXNlX3Rva2VuGAMgASgJQgOAAQESGQoRb2ZmZXJfdHRsX3NlY29uZHMYBCABKAUiiAEKFENyZWF0ZUNsdXN0ZXJSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBArpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEjEKBXRydXN0GAIgASgLMiIuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ2x1c3RlclRydXN0IkcKFUNyZWF0ZUNsdXN0ZXJSZXNwb25zZRIuCgdjbHVzdGVyGAEgASgLMh0uYWRtaXJhbC5hcGkuYWdlbnQudjEuQ2x1c3RlciI0ChFHZXRDbHVzdGVyUmVxdWVzdBIfCgpjbHVzdGVyX2lkGAEgASgJQgvgQQK6SAVyA7ABASJEChJHZXRDbHVzdGVyUmVzcG9uc2USLgoHY2x1c3RlchgBIAEoCzIdLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNsdXN0ZXIiRwoTTGlzdENsdXN0ZXJzUmVxdWVzdBIcCglwYWdlX3NpemUYASABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAIgASgJImAKFExpc3RDbHVzdGVyc1Jlc3BvbnNlEi8KCGNsdXN0ZXJzGAEgAygLMh0uYWRtaXJhbC5hcGkuYWdlbnQudjEuQ2x1c3RlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkidwoWU2V0Q2x1c3RlclRydXN0UmVxdWVzdBIfCgpjbHVzdGVyX2lkGAEgASgJQgvgQQK6SAVyA7ABARI8CgV0cnVzdBgCIAEoCzIiLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNsdXN0ZXJUcnVzdEIJ4EECukgDyAEBIkkKF1NldENsdXN0ZXJUcnVzdFJlc3BvbnNlEi4KB2NsdXN0ZXIYASABKAsyHS5hZG1pcmFsLmFwaS5hZ2VudC52MS5DbHVzdGVyIjcKFERlbGV0ZUNsdXN0ZXJSZXF1ZXN0Eh8KCmNsdXN0ZXJfaWQYASABKAlCC+BBArpIBXIDsAEBIhcKFURlbGV0ZUNsdXN0ZXJSZXNwb25zZSKUAwoSQ3JlYXRlQWdlbnRSZXF1ZXN0Eh8KCmNsdXN0ZXJfaWQYASABKAlCC+BBArpIBXIDsAEBEj0KBG5hbWUYAiABKAlCL+BBArpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEkUKCW5hbWVzcGFjZRgDIAEoCUIy4EECukgscioQARg/MiReW2EtejAtOV0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSTgoPc2VydmljZV9hY2NvdW50GAQgASgJQjXgQQK6SC9yLRABGP0BMiZeW2EtejAtOV0oW2EtejAtOS4tXXswLDI1MX1bYS16MC05XSk/JBIzCgdjZWlsaW5nGAUgASgLMiIuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRDZWlsaW5nEjoKBmdyYW50cxgGIAMoCzIgLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50R3JhbnRCCLpIBZIBAhBAEhYKDmVucm9sbG1lbnRfa2V5GAcgASgIIrABChNDcmVhdGVBZ2VudFJlc3BvbnNlEioKBWFnZW50GAEgASgLMhsuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnQSMAoGZ3JhbnRzGAIgAygLMiAuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnRHcmFudBI7Cg5lbnJvbGxtZW50X2tleRgDIAEoCzIjLmFkbWlyYWwuYXBpLmFnZW50LnYxLkVucm9sbG1lbnRLZXkiUQoNRW5yb2xsbWVudEtleRIQCgNrZXkYASABKAlCA4ABARIuCgpleHBpcmVzX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCIwCg9HZXRBZ2VudFJlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBIj4KEEdldEFnZW50UmVzcG9uc2USKgoFYWdlbnQYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudCKxAQoRTGlzdEFnZW50c1JlcXVlc3QSIQoKY2x1c3Rlcl9pZBgBIAEoCUIIukgFcgOwAQFIAIgBARIlCg5hcHBsaWNhdGlvbl9pZBgCIAEoCUIIukgFcgOwAQFIAYgBARIcCglwYWdlX3NpemUYAyABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAQgASgJQg0KC19jbHVzdGVyX2lkQhEKD19hcHBsaWNhdGlvbl9pZCJaChJMaXN0QWdlbnRzUmVzcG9uc2USKwoGYWdlbnRzGAEgAygLMhsuYWRtaXJhbC5hcGkuYWdlbnQudjEuQWdlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIrABChJVcGRhdGVBZ2VudFJlcXVlc3QSHQoIYWdlbnRfaWQYASABKAlCC+BBArpIBXIDsAEBEj0KBG5hbWUYAiABKAlCKrpIJ3IlGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JEgAiAEBEjMKB2NlaWxpbmcYAyABKAsyIi5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudENlaWxpbmdCBwoFX25hbWUiQQoTVXBkYXRlQWdlbnRSZXNwb25zZRIqCgVhZ2VudBgBIAEoCzIbLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50IjMKEkRlbGV0ZUFnZW50UmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQEiFQoTRGVsZXRlQWdlbnRSZXNwb25zZSI7ChpDcmVhdGVFbnJvbGxtZW50S2V5UmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQEiWgobQ3JlYXRlRW5yb2xsbWVudEtleVJlc3BvbnNlEjsKDmVucm9sbG1lbnRfa2V5GAEgASgLMiMuYWRtaXJhbC5hcGkuYWdlbnQudjEuRW5yb2xsbWVudEtleSJxChRHcmFudEFnZW50VXNlUmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQESOgoFZ3JhbnQYAiABKAsyIC5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudEdyYW50QgngQQK6SAPIAQEiFwoVR3JhbnRBZ2VudFVzZVJlc3BvbnNlInIKFVJldm9rZUFnZW50VXNlUmVxdWVzdBIdCghhZ2VudF9pZBgBIAEoCUIL4EECukgFcgOwAQESOgoFZ3JhbnQYAiABKAsyIC5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudEdyYW50QgngQQK6SAPIAQEiGAoWUmV2b2tlQWdlbnRVc2VSZXNwb25zZSI3ChZMaXN0QWdlbnRHcmFudHNSZXF1ZXN0Eh0KCGFnZW50X2lkGAEgASgJQgvgQQK6SAVyA7ABASJLChdMaXN0QWdlbnRHcmFudHNSZXNwb25zZRIwCgZncmFudHMYASADKAsyIC5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudEdyYW50IiwKDUdldEpvYlJlcXVlc3QSGwoGam9iX2lkGAEgASgJQgvgQQK6SAVyA7ABASI4Cg5HZXRKb2JSZXNwb25zZRImCgNqb2IYASABKAsyGS5hZG1pcmFsLmFwaS5hZ2VudC52MS5Kb2IizwIKD0xpc3RKb2JzUmVxdWVzdBIfCghhZ2VudF9pZBgBIAEoCUIIukgFcgOwAQFIAIgBARIlCg5lbnZpcm9ubWVudF9pZBgCIAEoCUIIukgFcgOwAQFIAYgBARI5CgZzdGF0dXMYAyABKA4yHy5hZG1pcmFsLmFwaS5hZ2VudC52MS5Kb2JTdGF0dXNCCLpIBYIBAhABEhwKCXBhZ2Vfc2l6ZRgEIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YBSABKAk6Z7pIZBpiCg9saXN0X2pvYnMuc2NvcGUSH25hbWUgYW4gYWdlbnQgb3IgYW4gZW52aXJvbm1lbnQaLmhhcyh0aGlzLmFnZW50X2lkKSB8fCBoYXModGhpcy5lbnZpcm9ubWVudF9pZClCCwoJX2FnZW50X2lkQhEKD19lbnZpcm9ubWVudF9pZCJUChBMaXN0Sm9ic1Jlc3BvbnNlEicKBGpvYnMYASADKAsyGS5hZG1pcmFsLmFwaS5hZ2VudC52MS5Kb2ISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIi8KEENhbmNlbEpvYlJlcXVlc3QSGwoGam9iX2lkGAEgASgJQgvgQQK6SAVyA7ABASI7ChFDYW5jZWxKb2JSZXNwb25zZRImCgNqb2IYASABKAsyGS5hZG1pcmFsLmFwaS5hZ2VudC52MS5Kb2IiZAoHQXR0ZW1wdBIbCgZqb2JfaWQYASABKAlCC+BBArpIBXIDsAEBEhgKB2F0dGVtcHQYAiABKAVCB7pIBBoCKAESIgoLbGVhc2VfdG9rZW4YAyABKAlCDYABAbpIB3IFEBAYgAEifAoNRW5yb2xsUmVxdWVzdBIeCglqd2tzX2pzb24YASABKAlCC7pICHIGEAIYgIAEEi0KFXNlcnZpY2VfYWNjb3VudF90b2tlbhgCIAEoCUIOgAEBukgIcgYQEBiAgAESHAoLY2x1c3Rlcl91aWQYAyABKAlCB7pIBHICGEAibAoORW5yb2xsUmVzcG9uc2USLgoHY2x1c3RlchgBIAEoCzIdLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNsdXN0ZXISKgoFYWdlbnQYAiABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5BZ2VudCKTAgoTUmVwb3J0U3RhdHVzUmVxdWVzdBIeCg1hZ2VudF92ZXJzaW9uGAEgASgJQge6SARyAhhAEiEKEHByb3RvY29sX3ZlcnNpb24YAiABKAVCB7pIBBoCKAESHQoMa3ViZV92ZXJzaW9uGAMgASgJQge6SARyAhhAEh8KDGFwaV92ZXJzaW9ucxgEIAMoCUIJukgGkgEDEIAQEj0KDGNhcGFiaWxpdGllcxgFIAEoCzInLmFkbWlyYWwuYXBpLmFnZW50LnYxLkFnZW50Q2FwYWJpbGl0aWVzEhwKCWp3a3NfanNvbhgGIAEoCUIJukgGcgQYgIAEEhwKC2NsdXN0ZXJfdWlkGAcgASgJQge6SARyAhhAIkoKFFJlcG9ydFN0YXR1c1Jlc3BvbnNlEhsKE25leHRfcmVwb3J0X3NlY29uZHMYASABKAUSFQoNa2V5c19hY2NlcHRlZBgCIAEoCCJ2CgVTbG90cxI3CgRraW5kGAEgASgOMh0uYWRtaXJhbC5hcGkuYWdlbnQudjEuSm9iS2luZEIKukgHggEEEAEgABIXCgRmcmVlGAIgASgFQgm6SAYaBBhAKAASGwoIY2FwYWNpdHkYAyABKAVCCbpIBhoEGEAoACLXAQoPQ2xhaW1Kb2JSZXF1ZXN0EiYKEGNsYWltX3JlcXVlc3RfaWQYASABKAlCDIABAbpIBnIEEBYYQBIhChBwcm90b2NvbF92ZXJzaW9uGAIgASgFQge6SAQaAigBEiAKD2FydGlmYWN0X3NjaGVtYRgDIAEoBUIHukgEGgIoARI2CgVzbG90cxgEIAMoCzIbLmFkbWlyYWwuYXBpLmFnZW50LnYxLlNsb3RzQgq6SAeSAQQIARAIEh8KDHdhaXRfc2Vjb25kcxgFIAEoBUIJukgGGgQYFCgAIj4KEENsYWltSm9iUmVzcG9uc2USKgoFb2ZmZXIYASABKAsyGy5hZG1pcmFsLmFwaS5hZ2VudC52MS5PZmZlciJMCg9TdGFydEpvYlJlcXVlc3QSOQoHYXR0ZW1wdBgBIAEoCzIdLmFkbWlyYWwuYXBpLmFnZW50LnYxLkF0dGVtcHRCCeBBArpIA8gBASJGChBTdGFydEpvYlJlc3BvbnNlEhkKEWxlYXNlX3R0bF9zZWNvbmRzGAEgASgFEhcKD21heF9ydW5fc2Vjb25kcxgCIAEoBSJcCghQcm9ncmVzcxIXCg9jb21wbGV0ZWRfc3RlcHMYASABKAUSEwoLdG90YWxfc3RlcHMYAiABKAUSIgoRY3VycmVudF9jb21wb25lbnQYAyABKAlCB7pIBHICGD8igAEKEVJlbmV3TGVhc2VSZXF1ZXN0EjkKB2F0dGVtcHQYASABKAsyHS5hZG1pcmFsLmFwaS5hZ2VudC52MS5BdHRlbXB0QgngQQK6SAPIAQESMAoIcHJvZ3Jlc3MYAiABKAsyHi5hZG1pcmFsLmFwaS5hZ2VudC52MS5Qcm9ncmVzcyJJChJSZW5ld0xlYXNlUmVzcG9uc2USGQoRbGVhc2VfdHRsX3NlY29uZHMYASABKAUSGAoQY2FuY2VsX3JlcXVlc3RlZBgCIAEoCCJSChVHZXRKb2JBcnRpZmFjdFJlcXVlc3QSOQoHYXR0ZW1wdBgBIAEoCzIdLmFkbWlyYWwuYXBpLmFnZW50LnYxLkF0dGVtcHRCCeBBArpIA8gBASJDChZHZXRKb2JBcnRpZmFjdFJlc3BvbnNlEhcKD2FydGlmYWN0X2RpZ2VzdBgBIAEoCRIQCghhcnRpZmFjdBgCIAEoDCKtAQoWUmVwb3J0Sm9iUmVzdWx0UmVxdWVzdBI5CgdhdHRlbXB0GAEgASgLMh0uYWRtaXJhbC5hcGkuYWdlbnQudjEuQXR0ZW1wdEIJ4EECukgDyAEBEhwKCXJlcG9ydF9pZBgCIAEoCUIJukgGcgQQCBhAEjoKBnJlc3VsdBgDIAEoCzIfLmFkbWlyYWwuYXBpLmFnZW50LnYxLkpvYlJlc3VsdEIJ4EECukgDyAEBIk8KF1JlcG9ydEpvYlJlc3VsdFJlc3BvbnNlEjQKB291dGNvbWUYASABKA4yIy5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZXBvcnRPdXRjb21lKkkKDUNsdXN0ZXJTdGF0dXMSHgoaQ0xVU1RFUl9TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAESCwoHVFJVU1RFRBACKk0KC0FnZW50SGVhbHRoEhwKGEFHRU5UX0hFQUxUSF9VTlNQRUNJRklFRBAAEgcKA05FVxABEgoKBk9OTElORRACEgsKB09GRkxJTkUQAypDCgdKb2JLaW5kEhgKFEpPQl9LSU5EX1VOU1BFQ0lGSUVEEAASCQoFUFJPQkUQARIICgRQTEFOEAISCQoFQVBQTFkQAyp3CglKb2JTdGF0dXMSGgoWSk9CX1NUQVRVU19VTlNQRUNJRklFRBAAEgoKBlFVRVVFRBABEgsKB09GRkVSRUQQAhILCgdSVU5OSU5HEAMSDQoJU1VDQ0VFREVEEAQSCgoGRkFJTEVEEAUSDQoJQ0FOQ0VMTEVEEAYqzAEKCldhaXRSZWFzb24SGwoXV0FJVF9SRUFTT05fVU5TUEVDSUZJRUQQABIVChFOT19BR0VOVF9TRUxFQ1RFRBABEhUKEUFHRU5UX05PVF9HUkFOVEVEEAISEQoNQUdFTlRfT0ZGTElORRADEhUKEUFHRU5UX0FUX0NBUEFDSVRZEAQSEQoNQUdFTlRfVE9PX09MRBAFEhQKEEVOVklST05NRU5UX0JVU1kQBhILCgdCQUNLT0ZGEAcSEwoPQ0xVU1RFUl9QRU5ESU5HEAgqVgoNUmVwb3J0T3V0Y29tZRIeChpSRVBPUlRfT1VUQ09NRV9VTlNQRUNJRklFRBAAEgwKCEFDQ0VQVEVEEAESDQoJRFVQTElDQVRFEAISCAoETEFURRADMq0YCghBZ2VudEFQSRKyAQoNQ3JlYXRlQ2x1c3RlchIqLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNyZWF0ZUNsdXN0ZXJSZXF1ZXN0GisuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQ2x1c3RlclJlc3BvbnNlIki6Rx0KCENsdXN0ZXJzEhFDb25uZWN0IGEgY2x1c3RlcqKXJA0KC2FnZW50OndyaXRlgtPkkwIROgEqIgwvdjEvY2x1c3RlcnMSswEKCkdldENsdXN0ZXISJy5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRDbHVzdGVyUmVxdWVzdBooLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldENsdXN0ZXJSZXNwb25zZSJSukceCghDbHVzdGVycxISUmV0cmlldmUgYSBjbHVzdGVyopckDAoKYWdlbnQ6cmVhZILT5JMCGxIZL3YxL2NsdXN0ZXJzL3tjbHVzdGVyX2lkfRKnAQoMTGlzdENsdXN0ZXJzEikuYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdENsdXN0ZXJzUmVxdWVzdBoqLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RDbHVzdGVyc1Jlc3BvbnNlIkC6RxkKCENsdXN0ZXJzEg1MaXN0IGNsdXN0ZXJzopckDAoKYWdlbnQ6cmVhZILT5JMCDhIML3YxL2NsdXN0ZXJzEtYBCg9TZXRDbHVzdGVyVHJ1c3QSLC5hZG1pcmFsLmFwaS5hZ2VudC52MS5TZXRDbHVzdGVyVHJ1c3RSZXF1ZXN0Gi0uYWRtaXJhbC5hcGkuYWdlbnQudjEuU2V0Q2x1c3RlclRydXN0UmVzcG9uc2UiZrpHKAoIQ2x1c3RlcnMSHFNldCBob3cgYSBjbHVzdGVyIGlzIHRydXN0ZWSilyQNCgthZ2VudDp3cml0ZYLT5JMCJDoBKiIfL3YxL2NsdXN0ZXJzL3tjbHVzdGVyX2lkfS90cnVzdBK7AQoNRGVsZXRlQ2x1c3RlchIqLmFkbWlyYWwuYXBpLmFnZW50LnYxLkRlbGV0ZUNsdXN0ZXJSZXF1ZXN0GisuYWRtaXJhbC5hcGkuYWdlbnQudjEuRGVsZXRlQ2x1c3RlclJlc3BvbnNlIlG6RxwKCENsdXN0ZXJzEhBEZWxldGUgYSBjbHVzdGVyopckDQoLYWdlbnQ6d3JpdGWC0+STAhsqGS92MS9jbHVzdGVycy97Y2x1c3Rlcl9pZH0SpgEKC0NyZWF0ZUFnZW50EiguYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQWdlbnRSZXF1ZXN0GikuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlQWdlbnRSZXNwb25zZSJCukcZCgZBZ2VudHMSD0NyZWF0ZSBhbiBhZ2VudKKXJA0KC2FnZW50OndyaXRlgtPkkwIPOgEqIgovdjEvYWdlbnRzEqYBCghHZXRBZ2VudBIlLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEFnZW50UmVxdWVzdBomLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEFnZW50UmVzcG9uc2UiS7pHGwoGQWdlbnRzEhFSZXRyaWV2ZSBhbiBhZ2VudKKXJAwKCmFnZW50OnJlYWSC0+STAhcSFS92MS9hZ2VudHMve2FnZW50X2lkfRKbAQoKTGlzdEFnZW50cxInLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RBZ2VudHNSZXF1ZXN0GiguYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdEFnZW50c1Jlc3BvbnNlIjq6RxUKBkFnZW50cxILTGlzdCBhZ2VudHOilyQMCgphZ2VudDpyZWFkgtPkkwIMEgovdjEvYWdlbnRzErEBCgtVcGRhdGVBZ2VudBIoLmFkbWlyYWwuYXBpLmFnZW50LnYxLlVwZGF0ZUFnZW50UmVxdWVzdBopLmFkbWlyYWwuYXBpLmFnZW50LnYxLlVwZGF0ZUFnZW50UmVzcG9uc2UiTbpHGQoGQWdlbnRzEg9VcGRhdGUgYW4gYWdlbnSilyQNCgthZ2VudDp3cml0ZYLT5JMCGjoBKjIVL3YxL2FnZW50cy97YWdlbnRfaWR9Eq4BCgtEZWxldGVBZ2VudBIoLmFkbWlyYWwuYXBpLmFnZW50LnYxLkRlbGV0ZUFnZW50UmVxdWVzdBopLmFkbWlyYWwuYXBpLmFnZW50LnYxLkRlbGV0ZUFnZW50UmVzcG9uc2UiSrpHGQoGQWdlbnRzEg9EZWxldGUgYW4gYWdlbnSilyQNCgthZ2VudDp3cml0ZYLT5JMCFyoVL3YxL2FnZW50cy97YWdlbnRfaWR9EuEBChNDcmVhdGVFbnJvbGxtZW50S2V5EjAuYWRtaXJhbC5hcGkuYWdlbnQudjEuQ3JlYXRlRW5yb2xsbWVudEtleVJlcXVlc3QaMS5hZG1pcmFsLmFwaS5hZ2VudC52MS5DcmVhdGVFbnJvbGxtZW50S2V5UmVzcG9uc2UiZbpHIQoGQWdlbnRzEhdJc3N1ZSBhbiBlbnJvbGxtZW50IGtleaKXJA0KC2FnZW50OndyaXRlgtPkkwIqOgEqIiUvdjEvYWdlbnRzL3thZ2VudF9pZH0vZW5yb2xsbWVudC1rZXlzEsQBCg1HcmFudEFnZW50VXNlEiouYWRtaXJhbC5hcGkuYWdlbnQudjEuR3JhbnRBZ2VudFVzZVJlcXVlc3QaKy5hZG1pcmFsLmFwaS5hZ2VudC52MS5HcmFudEFnZW50VXNlUmVzcG9uc2UiWrpHHwoGQWdlbnRzEhVHcmFudCB1c2Ugb2YgYW4gYWdlbnSilyQNCgthZ2VudDp3cml0ZYLT5JMCIToBKiIcL3YxL2FnZW50cy97YWdlbnRfaWR9L2dyYW50cxLPAQoOUmV2b2tlQWdlbnRVc2USKy5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZXZva2VBZ2VudFVzZVJlcXVlc3QaLC5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZXZva2VBZ2VudFVzZVJlc3BvbnNlImK6RyAKBkFnZW50cxIWUmV2b2tlIHVzZSBvZiBhbiBhZ2VudKKXJA0KC2FnZW50OndyaXRlgtPkkwIoOgEqIiMvdjEvYWdlbnRzL3thZ2VudF9pZH0vZ3JhbnRzL3Jldm9rZRLKAQoPTGlzdEFnZW50R3JhbnRzEiwuYWRtaXJhbC5hcGkuYWdlbnQudjEuTGlzdEFnZW50R3JhbnRzUmVxdWVzdBotLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RBZ2VudEdyYW50c1Jlc3BvbnNlIlq6RyMKBkFnZW50cxIZTGlzdCB3aG8gbWF5IHVzZSBhbiBhZ2VudKKXJAwKCmFnZW50OnJlYWSC0+STAh4SHC92MS9hZ2VudHMve2FnZW50X2lkfS9ncmFudHMSlwEKBkdldEpvYhIjLmFkbWlyYWwuYXBpLmFnZW50LnYxLkdldEpvYlJlcXVlc3QaJC5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRKb2JSZXNwb25zZSJCukcWCgRKb2JzEg5SZXRyaWV2ZSBhIGpvYqKXJAwKCmFnZW50OnJlYWSC0+STAhMSES92MS9qb2JzL3tqb2JfaWR9Eo8BCghMaXN0Sm9icxIlLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RKb2JzUmVxdWVzdBomLmFkbWlyYWwuYXBpLmFnZW50LnYxLkxpc3RKb2JzUmVzcG9uc2UiNLpHEQoESm9icxIJTGlzdCBqb2JzopckDAoKYWdlbnQ6cmVhZILT5JMCChIIL3YxL2pvYnMSqQEKCUNhbmNlbEpvYhImLmFkbWlyYWwuYXBpLmFnZW50LnYxLkNhbmNlbEpvYlJlcXVlc3QaJy5hZG1pcmFsLmFwaS5hZ2VudC52MS5DYW5jZWxKb2JSZXNwb25zZSJLukcUCgRKb2JzEgxDYW5jZWwgYSBqb2KilyQNCgthZ2VudDp3cml0ZYLT5JMCHToBKiIYL3YxL2pvYnMve2pvYl9pZH0vY2FuY2VsMpwKCg9BZ2VudFJ1bnRpbWVBUEkSpgEKBkVucm9sbBIjLmFkbWlyYWwuYXBpLmFnZW50LnYxLkVucm9sbFJlcXVlc3QaJC5hZG1pcmFsLmFwaS5hZ2VudC52MS5FbnJvbGxSZXNwb25zZSJRukchCg1BZ2VudCBSdW50aW1lEhBFbnJvbGwgYSBjbHVzdGVyopckDgoMYWdlbnQ6ZW5yb2xsgtPkkwIVOgEqIhAvdjEvYWdlbnQvZW5yb2xsErsBCgxSZXBvcnRTdGF0dXMSKS5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZXBvcnRTdGF0dXNSZXF1ZXN0GiouYWRtaXJhbC5hcGkuYWdlbnQudjEuUmVwb3J0U3RhdHVzUmVzcG9uc2UiVLpHJAoNQWdlbnQgUnVudGltZRITUmVwb3J0IGFnZW50IHN0YXR1c6KXJA4KDGFnZW50OnN0YXR1c4LT5JMCFToBKiIQL3YxL2FnZW50L3N0YXR1cxKpAQoIQ2xhaW1Kb2ISJS5hZG1pcmFsLmFwaS5hZ2VudC52MS5DbGFpbUpvYlJlcXVlc3QaJi5hZG1pcmFsLmFwaS5hZ2VudC52MS5DbGFpbUpvYlJlc3BvbnNlIk66RxwKDUFnZW50IFJ1bnRpbWUSC0NsYWltIGEgam9iopckDAoKYWdlbnQ6ZXhlY4LT5JMCGToBKiIUL3YxL2FnZW50L2pvYnMvY2xhaW0SqQEKCFN0YXJ0Sm9iEiUuYWRtaXJhbC5hcGkuYWdlbnQudjEuU3RhcnRKb2JSZXF1ZXN0GiYuYWRtaXJhbC5hcGkuYWdlbnQudjEuU3RhcnRKb2JSZXNwb25zZSJOukccCg1BZ2VudCBSdW50aW1lEgtTdGFydCBhIGpvYqKXJAwKCmFnZW50OmV4ZWOC0+STAhk6ASoiFC92MS9hZ2VudC9qb2JzL3N0YXJ0ErUBCgpSZW5ld0xlYXNlEicuYWRtaXJhbC5hcGkuYWdlbnQudjEuUmVuZXdMZWFzZVJlcXVlc3QaKC5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZW5ld0xlYXNlUmVzcG9uc2UiVLpHIgoNQWdlbnQgUnVudGltZRIRUmVuZXcgYSBqb2IgbGVhc2WilyQMCgphZ2VudDpleGVjgtPkkwIZOgEqIhQvdjEvYWdlbnQvam9icy9yZW5ldxLHAQoOR2V0Sm9iQXJ0aWZhY3QSKy5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRKb2JBcnRpZmFjdFJlcXVlc3QaLC5hZG1pcmFsLmFwaS5hZ2VudC52MS5HZXRKb2JBcnRpZmFjdFJlc3BvbnNlIlq6RyUKDUFnZW50IFJ1bnRpbWUSFEZldGNoIGEgam9iIGFydGlmYWN0opckDAoKYWdlbnQ6ZXhlY4LT5JMCHDoBKiIXL3YxL2FnZW50L2pvYnMvYXJ0aWZhY3QSxwEKD1JlcG9ydEpvYlJlc3VsdBIsLmFkbWlyYWwuYXBpLmFnZW50LnYxLlJlcG9ydEpvYlJlc3VsdFJlcXVlc3QaLS5hZG1pcmFsLmFwaS5hZ2VudC52MS5SZXBvcnRKb2JSZXN1bHRSZXNwb25zZSJXukckCg1BZ2VudCBSdW50aW1lEhNSZXBvcnQgYSBqb2IgcmVzdWx0opckDAoKYWdlbnQ6ZXhlY4LT5JMCGjoBKiIVL3YxL2FnZW50L2pvYnMvcmVzdWx0Qs8BChhjb20uYWRtaXJhbC5hcGkuYWdlbnQudjFCCkFnZW50UHJvdG9QAVo0Z28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvYWdlbnQvdjE7YWdlbnR2MaICA0FBQaoCFEFkbWlyYWwuQXBpLkFnZW50LlYxygIUQWRtaXJhbFxBcGlcQWdlbnRcVjHiAiBBZG1pcmFsXEFwaVxBZ2VudFxWMVxHUEJNZXRhZGF0YeoCF0FkbWlyYWw6OkFwaTo6QWdlbnQ6OlYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_buf_validate_validate, file_google_api_field_behavior, file_google_protobuf_timestamp]);
 
 /**
- * Agent represents a registered execution agent within a tenant. The `kind`
- * selects its execution plane: TERRAFORM agents claim and execute infrastructure
- * jobs; KUBERNETES agents report Kubernetes telemetry and apply manifest revisions.
- *
- * @generated from message admiral.api.agent.v1.Agent
+ * @generated from message admiral.api.agent.v1.Cluster
  */
-export type Agent = Message<"admiral.api.agent.v1.Agent"> & {
+export type Cluster = Message<"admiral.api.agent.v1.Cluster"> & {
   /**
-   * Unique identifier for the agent (UUID).
-   *
    * @generated from field: string id = 1;
    */
   id: string;
 
   /**
-   * The execution plane this agent serves. Set at creation and immutable
-   * (CreateAgentRequest.kind carries the not_in:[0] requirement). Not validated
-   * here so a partial Agent in UpdateAgentRequest (which omits kind) passes.
-   *
-   * @generated from field: admiral.api.agent.v1.AgentKind kind = 2;
+   * @generated from field: string name = 2;
    */
-  kind: AgentKind;
+  name: string;
 
   /**
-   * URL-safe, human-readable identifier (e.g., "prod-terraform" or "prod-us-east-1").
-   * Unique within the tenant. Lowercase alphanumeric and hyphens only, must start
-   * with a letter and end with an alphanumeric character (1-63 chars).
+   * @generated from field: admiral.api.agent.v1.ClusterStatus status = 3;
+   */
+  status: ClusterStatus;
+
+  /**
+   * Set when the cluster's issuer is public; keys are fetched from it.
    *
+   * @generated from field: string issuer_url = 4;
+   */
+  issuerUrl: string;
+
+  /**
+   * The key ids trusted now.
+   *
+   * @generated from field: repeated string key_ids = 5;
+   */
+  keyIds: string[];
+
+  /**
+   * @generated from field: google.protobuf.Timestamp keys_updated_at = 6;
+   */
+  keysUpdatedAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: admiral.common.v1.ActorRef created_by = 7;
+   */
+  createdBy?: ActorRef | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 8;
+   */
+  createdAt?: Timestamp | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.Cluster.
+ * Use `create(ClusterSchema)` to create a new message.
+ */
+export const ClusterSchema: GenMessage<Cluster> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 0);
+
+/**
+ * ClusterTrust is how a cluster's tokens are verified.
+ *
+ * @generated from message admiral.api.agent.v1.ClusterTrust
+ */
+export type ClusterTrust = Message<"admiral.api.agent.v1.ClusterTrust"> & {
+  /**
+   * @generated from oneof admiral.api.agent.v1.ClusterTrust.trust
+   */
+  trust: {
+    /**
+     * An https URL whose /.well-known/openid-configuration names the keys.
+     *
+     * @generated from field: string issuer_url = 1;
+     */
+    value: string;
+    case: "issuerUrl";
+  } | {
+    /**
+     * A JSON Web Key Set, as the cluster serves it at /openid/v1/jwks.
+     *
+     * @generated from field: string jwks_json = 2;
+     */
+    value: string;
+    case: "jwksJson";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ClusterTrust.
+ * Use `create(ClusterTrustSchema)` to create a new message.
+ */
+export const ClusterTrustSchema: GenMessage<ClusterTrust> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 1);
+
+/**
+ * @generated from message admiral.api.agent.v1.Agent
+ */
+export type Agent = Message<"admiral.api.agent.v1.Agent"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: string cluster_id = 2;
+   */
+  clusterId: string;
+
+  /**
    * @generated from field: string name = 3;
    */
   name: string;
 
   /**
-   * Optional longer-form description of the agent's purpose.
-   *
-   * @generated from field: string description = 4;
+   * @generated from field: string namespace = 4;
    */
-  description: string;
+  namespace: string;
 
   /**
-   * Arbitrary key-value labels for organizing and filtering agents
-   * (e.g., `{"cloud": "aws", "team": "platform"}`).
-   *
-   * @generated from field: map<string, string> labels = 5;
+   * @generated from field: string service_account = 5;
    */
-  labels: { [key: string]: string };
+  serviceAccount: string;
 
   /**
-   * Derived health status based on reporting recency and kind-specific signals.
-   *
-   * @generated from field: admiral.api.agent.v1.AgentHealthStatus health_status = 6;
+   * @generated from field: admiral.api.agent.v1.AgentCeiling ceiling = 6;
    */
-  healthStatus: AgentHealthStatus;
+  ceiling?: AgentCeiling | undefined;
 
   /**
-   * (KUBERNETES only) The Kubernetes kube-system namespace UID, bound at agent
-   * registration using a first-write-wins strategy. Used to detect when a key
-   * is accidentally deployed to a different physical cluster. Empty for TERRAFORM
-   * agents.
-   *
-   * @generated from field: string cluster_uid = 7;
+   * @generated from field: admiral.api.agent.v1.AgentHealth health = 7;
    */
-  clusterUid: string;
+  health: AgentHealth;
 
   /**
-   * The user or agent who created this agent (server-populated from key).
+   * What the agent last reported. Absent until it does.
    *
-   * @generated from field: admiral.common.v1.ActorRef created_by = 8;
+   * @generated from field: admiral.api.agent.v1.AgentReport report = 8;
+   */
+  report?: AgentReport | undefined;
+
+  /**
+   * @generated from field: admiral.common.v1.ActorRef created_by = 9;
    */
   createdBy?: ActorRef | undefined;
 
   /**
-   * When the agent record was created.
-   *
-   * @generated from field: google.protobuf.Timestamp created_at = 9;
+   * @generated from field: google.protobuf.Timestamp created_at = 10;
    */
   createdAt?: Timestamp | undefined;
-
-  /**
-   * When the agent record was last updated via UpdateAgent. Reports/heartbeats
-   * do not bump this field; liveness is exposed separately via GetAgentStatus
-   * and health_status.
-   *
-   * @generated from field: google.protobuf.Timestamp updated_at = 10;
-   */
-  updatedAt?: Timestamp | undefined;
 };
 
 /**
@@ -121,44 +174,579 @@ export type Agent = Message<"admiral.api.agent.v1.Agent"> & {
  * Use `create(AgentSchema)` to create a new message.
  */
 export const AgentSchema: GenMessage<Agent> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 0);
+  messageDesc(file_admiral_api_agent_v1_agent, 2);
 
 /**
- * CreateAgentRequest contains the parameters for creating a new agent.
+ * AgentCeiling is what the agent's owner allows it, whatever its RBAC allows.
+ * The plan refuses what falls outside it.
  *
+ * @generated from message admiral.api.agent.v1.AgentCeiling
+ */
+export type AgentCeiling = Message<"admiral.api.agent.v1.AgentCeiling"> & {
+  /**
+   * @generated from field: bool allow_namespace_creation = 1;
+   */
+  allowNamespaceCreation: boolean;
+
+  /**
+   * Glob patterns; empty allows every namespace.
+   *
+   * @generated from field: repeated string allowed_namespaces = 2;
+   */
+  allowedNamespaces: string[];
+
+  /**
+   * @generated from field: repeated string denied_namespaces = 3;
+   */
+  deniedNamespaces: string[];
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.AgentCeiling.
+ * Use `create(AgentCeilingSchema)` to create a new message.
+ */
+export const AgentCeilingSchema: GenMessage<AgentCeiling> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 3);
+
+/**
+ * @generated from message admiral.api.agent.v1.AgentReport
+ */
+export type AgentReport = Message<"admiral.api.agent.v1.AgentReport"> & {
+  /**
+   * @generated from field: string agent_version = 1;
+   */
+  agentVersion: string;
+
+  /**
+   * @generated from field: int32 protocol_version = 2;
+   */
+  protocolVersion: number;
+
+  /**
+   * @generated from field: string kube_version = 3;
+   */
+  kubeVersion: string;
+
+  /**
+   * @generated from field: repeated string api_versions = 4;
+   */
+  apiVersions: string[];
+
+  /**
+   * @generated from field: admiral.api.agent.v1.AgentCapabilities capabilities = 5;
+   */
+  capabilities?: AgentCapabilities | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp reported_at = 6;
+   */
+  reportedAt?: Timestamp | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.AgentReport.
+ * Use `create(AgentReportSchema)` to create a new message.
+ */
+export const AgentReportSchema: GenMessage<AgentReport> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 4);
+
+/**
+ * AgentCapabilities is what the agent's own RBAC lets it do, as it measured.
+ *
+ * @generated from message admiral.api.agent.v1.AgentCapabilities
+ */
+export type AgentCapabilities = Message<"admiral.api.agent.v1.AgentCapabilities"> & {
+  /**
+   * @generated from field: bool can_create_namespaces = 1;
+   */
+  canCreateNamespaces: boolean;
+
+  /**
+   * Namespaces it may write; empty with `all_namespaces` means everywhere.
+   *
+   * @generated from field: repeated string writable_namespaces = 2;
+   */
+  writableNamespaces: string[];
+
+  /**
+   * @generated from field: bool all_namespaces = 3;
+   */
+  allNamespaces: boolean;
+
+  /**
+   * @generated from field: bool can_write_cluster_scoped = 4;
+   */
+  canWriteClusterScoped: boolean;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.AgentCapabilities.
+ * Use `create(AgentCapabilitiesSchema)` to create a new message.
+ */
+export const AgentCapabilitiesSchema: GenMessage<AgentCapabilities> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 5);
+
+/**
+ * AgentGrant is who may select an agent.
+ *
+ * @generated from message admiral.api.agent.v1.AgentGrant
+ */
+export type AgentGrant = Message<"admiral.api.agent.v1.AgentGrant"> & {
+  /**
+   * @generated from oneof admiral.api.agent.v1.AgentGrant.target
+   */
+  target: {
+    /**
+     * Every environment in the tenant. Only `true` means anything.
+     *
+     * @generated from field: bool tenant = 1;
+     */
+    value: boolean;
+    case: "tenant";
+  } | {
+    /**
+     * @generated from field: string group_id = 2;
+     */
+    value: string;
+    case: "groupId";
+  } | {
+    /**
+     * @generated from field: string application_id = 3;
+     */
+    value: string;
+    case: "applicationId";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.AgentGrant.
+ * Use `create(AgentGrantSchema)` to create a new message.
+ */
+export const AgentGrantSchema: GenMessage<AgentGrant> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 6);
+
+/**
+ * @generated from message admiral.api.agent.v1.Job
+ */
+export type Job = Message<"admiral.api.agent.v1.Job"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.JobKind kind = 2;
+   */
+  kind: JobKind;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.JobStatus status = 3;
+   */
+  status: JobStatus;
+
+  /**
+   * @generated from field: string agent_id = 4;
+   */
+  agentId: string;
+
+  /**
+   * @generated from field: string environment_id = 5;
+   */
+  environmentId: string;
+
+  /**
+   * `cs-` id; empty for a PROBE.
+   *
+   * @generated from field: string change_set_id = 6;
+   */
+  changeSetId: string;
+
+  /**
+   * @generated from field: int32 revision = 7;
+   */
+  revision: number;
+
+  /**
+   * `sha256:<hex>` of the run artifact the job runs.
+   *
+   * @generated from field: string artifact_digest = 8;
+   */
+  artifactDigest: string;
+
+  /**
+   * @generated from field: int32 attempt = 9;
+   */
+  attempt: number;
+
+  /**
+   * Set while QUEUED.
+   *
+   * @generated from field: admiral.api.agent.v1.WaitReason wait_reason = 10;
+   */
+  waitReason: WaitReason;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.JobResult result = 11;
+   */
+  result?: JobResult | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp created_at = 12;
+   */
+  createdAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp started_at = 13;
+   */
+  startedAt?: Timestamp | undefined;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp finished_at = 14;
+   */
+  finishedAt?: Timestamp | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.Job.
+ * Use `create(JobSchema)` to create a new message.
+ */
+export const JobSchema: GenMessage<Job> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 7);
+
+/**
+ * @generated from message admiral.api.agent.v1.JobResult
+ */
+export type JobResult = Message<"admiral.api.agent.v1.JobResult"> & {
+  /**
+   * SUCCEEDED, FAILED or CANCELLED.
+   *
+   * @generated from field: admiral.api.agent.v1.JobStatus status = 1;
+   */
+  status: JobStatus;
+
+  /**
+   * @generated from field: string message = 2;
+   */
+  message: string;
+
+  /**
+   * @generated from field: repeated admiral.api.agent.v1.Step steps = 3;
+   */
+  steps: Step[];
+
+  /**
+   * Kind-specific output as JSON text, e.g. a plan.
+   *
+   * @generated from field: string output_json = 4;
+   */
+  outputJson: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.JobResult.
+ * Use `create(JobResultSchema)` to create a new message.
+ */
+export const JobResultSchema: GenMessage<JobResult> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 8);
+
+/**
+ * Step is one component's part of a job.
+ *
+ * @generated from message admiral.api.agent.v1.Step
+ */
+export type Step = Message<"admiral.api.agent.v1.Step"> & {
+  /**
+   * @generated from field: string component = 1;
+   */
+  component: string;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.JobStatus status = 2;
+   */
+  status: JobStatus;
+
+  /**
+   * @generated from field: string message = 3;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.Step.
+ * Use `create(StepSchema)` to create a new message.
+ */
+export const StepSchema: GenMessage<Step> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 9);
+
+/**
+ * Offer is work claimed for an agent, not yet started.
+ *
+ * @generated from message admiral.api.agent.v1.Offer
+ */
+export type Offer = Message<"admiral.api.agent.v1.Offer"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Job job = 1;
+   */
+  job?: Job | undefined;
+
+  /**
+   * @generated from field: int32 attempt = 2;
+   */
+  attempt: number;
+
+  /**
+   * Presented on every later call for this attempt. Shown once.
+   *
+   * @generated from field: string lease_token = 3;
+   */
+  leaseToken: string;
+
+  /**
+   * @generated from field: int32 offer_ttl_seconds = 4;
+   */
+  offerTtlSeconds: number;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.Offer.
+ * Use `create(OfferSchema)` to create a new message.
+ */
+export const OfferSchema: GenMessage<Offer> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 10);
+
+/**
+ * @generated from message admiral.api.agent.v1.CreateClusterRequest
+ */
+export type CreateClusterRequest = Message<"admiral.api.agent.v1.CreateClusterRequest"> & {
+  /**
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * Absent leaves the cluster PENDING for an agent to enroll.
+   *
+   * @generated from field: admiral.api.agent.v1.ClusterTrust trust = 2;
+   */
+  trust?: ClusterTrust | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.CreateClusterRequest.
+ * Use `create(CreateClusterRequestSchema)` to create a new message.
+ */
+export const CreateClusterRequestSchema: GenMessage<CreateClusterRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 11);
+
+/**
+ * @generated from message admiral.api.agent.v1.CreateClusterResponse
+ */
+export type CreateClusterResponse = Message<"admiral.api.agent.v1.CreateClusterResponse"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Cluster cluster = 1;
+   */
+  cluster?: Cluster | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.CreateClusterResponse.
+ * Use `create(CreateClusterResponseSchema)` to create a new message.
+ */
+export const CreateClusterResponseSchema: GenMessage<CreateClusterResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 12);
+
+/**
+ * @generated from message admiral.api.agent.v1.GetClusterRequest
+ */
+export type GetClusterRequest = Message<"admiral.api.agent.v1.GetClusterRequest"> & {
+  /**
+   * @generated from field: string cluster_id = 1;
+   */
+  clusterId: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.GetClusterRequest.
+ * Use `create(GetClusterRequestSchema)` to create a new message.
+ */
+export const GetClusterRequestSchema: GenMessage<GetClusterRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 13);
+
+/**
+ * @generated from message admiral.api.agent.v1.GetClusterResponse
+ */
+export type GetClusterResponse = Message<"admiral.api.agent.v1.GetClusterResponse"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Cluster cluster = 1;
+   */
+  cluster?: Cluster | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.GetClusterResponse.
+ * Use `create(GetClusterResponseSchema)` to create a new message.
+ */
+export const GetClusterResponseSchema: GenMessage<GetClusterResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 14);
+
+/**
+ * @generated from message admiral.api.agent.v1.ListClustersRequest
+ */
+export type ListClustersRequest = Message<"admiral.api.agent.v1.ListClustersRequest"> & {
+  /**
+   * @generated from field: int32 page_size = 1;
+   */
+  pageSize: number;
+
+  /**
+   * @generated from field: string page_token = 2;
+   */
+  pageToken: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ListClustersRequest.
+ * Use `create(ListClustersRequestSchema)` to create a new message.
+ */
+export const ListClustersRequestSchema: GenMessage<ListClustersRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 15);
+
+/**
+ * @generated from message admiral.api.agent.v1.ListClustersResponse
+ */
+export type ListClustersResponse = Message<"admiral.api.agent.v1.ListClustersResponse"> & {
+  /**
+   * @generated from field: repeated admiral.api.agent.v1.Cluster clusters = 1;
+   */
+  clusters: Cluster[];
+
+  /**
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ListClustersResponse.
+ * Use `create(ListClustersResponseSchema)` to create a new message.
+ */
+export const ListClustersResponseSchema: GenMessage<ListClustersResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 16);
+
+/**
+ * @generated from message admiral.api.agent.v1.SetClusterTrustRequest
+ */
+export type SetClusterTrustRequest = Message<"admiral.api.agent.v1.SetClusterTrustRequest"> & {
+  /**
+   * @generated from field: string cluster_id = 1;
+   */
+  clusterId: string;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.ClusterTrust trust = 2;
+   */
+  trust?: ClusterTrust | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.SetClusterTrustRequest.
+ * Use `create(SetClusterTrustRequestSchema)` to create a new message.
+ */
+export const SetClusterTrustRequestSchema: GenMessage<SetClusterTrustRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 17);
+
+/**
+ * @generated from message admiral.api.agent.v1.SetClusterTrustResponse
+ */
+export type SetClusterTrustResponse = Message<"admiral.api.agent.v1.SetClusterTrustResponse"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Cluster cluster = 1;
+   */
+  cluster?: Cluster | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.SetClusterTrustResponse.
+ * Use `create(SetClusterTrustResponseSchema)` to create a new message.
+ */
+export const SetClusterTrustResponseSchema: GenMessage<SetClusterTrustResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 18);
+
+/**
+ * @generated from message admiral.api.agent.v1.DeleteClusterRequest
+ */
+export type DeleteClusterRequest = Message<"admiral.api.agent.v1.DeleteClusterRequest"> & {
+  /**
+   * @generated from field: string cluster_id = 1;
+   */
+  clusterId: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.DeleteClusterRequest.
+ * Use `create(DeleteClusterRequestSchema)` to create a new message.
+ */
+export const DeleteClusterRequestSchema: GenMessage<DeleteClusterRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 19);
+
+/**
+ * @generated from message admiral.api.agent.v1.DeleteClusterResponse
+ */
+export type DeleteClusterResponse = Message<"admiral.api.agent.v1.DeleteClusterResponse"> & {
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.DeleteClusterResponse.
+ * Use `create(DeleteClusterResponseSchema)` to create a new message.
+ */
+export const DeleteClusterResponseSchema: GenMessage<DeleteClusterResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 20);
+
+/**
  * @generated from message admiral.api.agent.v1.CreateAgentRequest
  */
 export type CreateAgentRequest = Message<"admiral.api.agent.v1.CreateAgentRequest"> & {
   /**
-   * The execution plane this agent serves (TERRAFORM or KUBERNETES). Selects the
-   * key's auto-assigned scopes and is immutable.
-   *
-   * @generated from field: admiral.api.agent.v1.AgentKind kind = 1;
+   * @generated from field: string cluster_id = 1;
    */
-  kind: AgentKind;
+  clusterId: string;
 
   /**
-   * URL-safe, human-readable identifier (e.g., "prod-terraform"). Unique within
-   * the tenant. Lowercase alphanumeric and hyphens only, must start with a
-   * letter and end with an alphanumeric character (1-63 chars).
-   *
    * @generated from field: string name = 2;
    */
   name: string;
 
   /**
-   * Optional longer-form description of the agent's purpose.
+   * The namespace and service account the agent runs as.
    *
-   * @generated from field: string description = 3;
+   * @generated from field: string namespace = 3;
    */
-  description: string;
+  namespace: string;
 
   /**
-   * Arbitrary key-value labels for organizing and filtering agents.
-   *
-   * @generated from field: map<string, string> labels = 4;
+   * @generated from field: string service_account = 4;
    */
-  labels: { [key: string]: string };
+  serviceAccount: string;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.AgentCeiling ceiling = 5;
+   */
+  ceiling?: AgentCeiling | undefined;
+
+  /**
+   * Who may use it. Absent grants the whole tenant when this is the tenant's
+   * first agent, and nobody otherwise.
+   *
+   * @generated from field: repeated admiral.api.agent.v1.AgentGrant grants = 6;
+   */
+  grants: AgentGrant[];
+
+  /**
+   * Issue a single-use enrollment key with the agent.
+   *
+   * @generated from field: bool enrollment_key = 7;
+   */
+  enrollmentKey: boolean;
 };
 
 /**
@@ -166,29 +754,28 @@ export type CreateAgentRequest = Message<"admiral.api.agent.v1.CreateAgentReques
  * Use `create(CreateAgentRequestSchema)` to create a new message.
  */
 export const CreateAgentRequestSchema: GenMessage<CreateAgentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 1);
+  messageDesc(file_admiral_api_agent_v1_agent, 21);
 
 /**
- * CreateAgentResponse contains the newly created agent and its initial API key.
- *
  * @generated from message admiral.api.agent.v1.CreateAgentResponse
  */
 export type CreateAgentResponse = Message<"admiral.api.agent.v1.CreateAgentResponse"> & {
   /**
-   * The created agent. Health status will be PENDING until it begins reporting.
-   *
    * @generated from field: admiral.api.agent.v1.Agent agent = 1;
    */
   agent?: Agent | undefined;
 
   /**
-   * The raw API key secret (e.g., "adms_pL2mN5oQ8rS1..."). Shown exactly once
-   * and cannot be retrieved again. Deploy this key to the agent binary for
-   * authentication. For additional keys, use CreateApiKey.
-   *
-   * @generated from field: string plain_text_key = 2;
+   * @generated from field: repeated admiral.api.agent.v1.AgentGrant grants = 2;
    */
-  plainTextKey: string;
+  grants: AgentGrant[];
+
+  /**
+   * Set when asked for. Shown once.
+   *
+   * @generated from field: admiral.api.agent.v1.EnrollmentKey enrollment_key = 3;
+   */
+  enrollmentKey?: EnrollmentKey | undefined;
 };
 
 /**
@@ -196,17 +783,35 @@ export type CreateAgentResponse = Message<"admiral.api.agent.v1.CreateAgentRespo
  * Use `create(CreateAgentResponseSchema)` to create a new message.
  */
 export const CreateAgentResponseSchema: GenMessage<CreateAgentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 2);
+  messageDesc(file_admiral_api_agent_v1_agent, 22);
 
 /**
- * GetAgentRequest identifies an agent to retrieve.
- *
+ * @generated from message admiral.api.agent.v1.EnrollmentKey
+ */
+export type EnrollmentKey = Message<"admiral.api.agent.v1.EnrollmentKey"> & {
+  /**
+   * @generated from field: string key = 1;
+   */
+  key: string;
+
+  /**
+   * @generated from field: google.protobuf.Timestamp expires_at = 2;
+   */
+  expiresAt?: Timestamp | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.EnrollmentKey.
+ * Use `create(EnrollmentKeySchema)` to create a new message.
+ */
+export const EnrollmentKeySchema: GenMessage<EnrollmentKey> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 23);
+
+/**
  * @generated from message admiral.api.agent.v1.GetAgentRequest
  */
 export type GetAgentRequest = Message<"admiral.api.agent.v1.GetAgentRequest"> & {
   /**
-   * The unique identifier of the agent (UUID).
-   *
    * @generated from field: string agent_id = 1;
    */
   agentId: string;
@@ -217,17 +822,13 @@ export type GetAgentRequest = Message<"admiral.api.agent.v1.GetAgentRequest"> & 
  * Use `create(GetAgentRequestSchema)` to create a new message.
  */
 export const GetAgentRequestSchema: GenMessage<GetAgentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 3);
+  messageDesc(file_admiral_api_agent_v1_agent, 24);
 
 /**
- * GetAgentResponse contains the agent record.
- *
  * @generated from message admiral.api.agent.v1.GetAgentResponse
  */
 export type GetAgentResponse = Message<"admiral.api.agent.v1.GetAgentResponse"> & {
   /**
-   * The retrieved agent, including its server-derived health_status.
-   *
    * @generated from field: admiral.api.agent.v1.Agent agent = 1;
    */
   agent?: Agent | undefined;
@@ -238,42 +839,31 @@ export type GetAgentResponse = Message<"admiral.api.agent.v1.GetAgentResponse"> 
  * Use `create(GetAgentResponseSchema)` to create a new message.
  */
 export const GetAgentResponseSchema: GenMessage<GetAgentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 4);
+  messageDesc(file_admiral_api_agent_v1_agent, 25);
 
 /**
- * ListAgentsRequest contains pagination and filter parameters.
- *
  * @generated from message admiral.api.agent.v1.ListAgentsRequest
  */
 export type ListAgentsRequest = Message<"admiral.api.agent.v1.ListAgentsRequest"> & {
   /**
-   * Filter expression to narrow results. Uses the Admiral filter DSL (see the
-   * API documentation for the full operator and predicate reference).
-   *
-   * Filterable fields:
-   *   - `kind`: filter by agent kind (TERRAFORM, KUBERNETES).
-   *   - `name`: filter by agent name.
-   *   - `health_status`: filter by health status.
-   *   - `labels.key`: filter by label key.
-   *
-   * Example: `field['kind'] = 'KUBERNETES' AND field['health_status'] = 'HEALTHY'`
-   *
-   * @generated from field: string filter = 1;
+   * @generated from field: optional string cluster_id = 1;
    */
-  filter: string;
+  clusterId?: string | undefined;
 
   /**
-   * Maximum number of agents to return per page. Defaults to 50 when omitted or
-   * 0; must not exceed 100.
+   * Only agents this application's environments may select.
    *
-   * @generated from field: int32 page_size = 2;
+   * @generated from field: optional string application_id = 2;
+   */
+  applicationId?: string | undefined;
+
+  /**
+   * @generated from field: int32 page_size = 3;
    */
   pageSize: number;
 
   /**
-   * Opaque pagination token from a previous response.
-   *
-   * @generated from field: string page_token = 3;
+   * @generated from field: string page_token = 4;
    */
   pageToken: string;
 };
@@ -283,24 +873,18 @@ export type ListAgentsRequest = Message<"admiral.api.agent.v1.ListAgentsRequest"
  * Use `create(ListAgentsRequestSchema)` to create a new message.
  */
 export const ListAgentsRequestSchema: GenMessage<ListAgentsRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 5);
+  messageDesc(file_admiral_api_agent_v1_agent, 26);
 
 /**
- * ListAgentsResponse contains a page of agents.
- *
  * @generated from message admiral.api.agent.v1.ListAgentsResponse
  */
 export type ListAgentsResponse = Message<"admiral.api.agent.v1.ListAgentsResponse"> & {
   /**
-   * The list of agents.
-   *
    * @generated from field: repeated admiral.api.agent.v1.Agent agents = 1;
    */
   agents: Agent[];
 
   /**
-   * Pagination token for the next page. Empty when there are no more results.
-   *
    * @generated from field: string next_page_token = 2;
    */
   nextPageToken: string;
@@ -311,30 +895,28 @@ export type ListAgentsResponse = Message<"admiral.api.agent.v1.ListAgentsRespons
  * Use `create(ListAgentsResponseSchema)` to create a new message.
  */
 export const ListAgentsResponseSchema: GenMessage<ListAgentsResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 6);
+  messageDesc(file_admiral_api_agent_v1_agent, 27);
 
 /**
- * UpdateAgentRequest contains the agent fields to update.
- *
  * @generated from message admiral.api.agent.v1.UpdateAgentRequest
  */
 export type UpdateAgentRequest = Message<"admiral.api.agent.v1.UpdateAgentRequest"> & {
   /**
-   * The agent with updated fields. The `id` field is required. Only fields named
-   * in `update_mask` are updated. `kind` is immutable and cannot be updated.
-   *
-   * @generated from field: admiral.api.agent.v1.Agent agent = 1;
+   * @generated from field: string agent_id = 1;
    */
-  agent?: Agent | undefined;
+  agentId: string;
 
   /**
-   * The set of fields to update. Optional; if omitted, all populated fields
-   * are updated. Pass `*` for full replacement. Supported fields: `name`,
-   * `description`, `labels`.
-   *
-   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   * @generated from field: optional string name = 2;
    */
-  updateMask?: FieldMask | undefined;
+  name?: string | undefined;
+
+  /**
+   * Replaces the ceiling when set.
+   *
+   * @generated from field: admiral.api.agent.v1.AgentCeiling ceiling = 3;
+   */
+  ceiling?: AgentCeiling | undefined;
 };
 
 /**
@@ -342,17 +924,13 @@ export type UpdateAgentRequest = Message<"admiral.api.agent.v1.UpdateAgentReques
  * Use `create(UpdateAgentRequestSchema)` to create a new message.
  */
 export const UpdateAgentRequestSchema: GenMessage<UpdateAgentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 7);
+  messageDesc(file_admiral_api_agent_v1_agent, 28);
 
 /**
- * UpdateAgentResponse contains the updated agent.
- *
  * @generated from message admiral.api.agent.v1.UpdateAgentResponse
  */
 export type UpdateAgentResponse = Message<"admiral.api.agent.v1.UpdateAgentResponse"> & {
   /**
-   * The updated agent.
-   *
    * @generated from field: admiral.api.agent.v1.Agent agent = 1;
    */
   agent?: Agent | undefined;
@@ -363,18 +941,13 @@ export type UpdateAgentResponse = Message<"admiral.api.agent.v1.UpdateAgentRespo
  * Use `create(UpdateAgentResponseSchema)` to create a new message.
  */
 export const UpdateAgentResponseSchema: GenMessage<UpdateAgentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 8);
+  messageDesc(file_admiral_api_agent_v1_agent, 29);
 
 /**
- * DeleteAgentRequest identifies an agent to delete.
- *
  * @generated from message admiral.api.agent.v1.DeleteAgentRequest
  */
 export type DeleteAgentRequest = Message<"admiral.api.agent.v1.DeleteAgentRequest"> & {
   /**
-   * The unique identifier of the agent to delete (UUID). All API keys bound to
-   * its service account are revoked.
-   *
    * @generated from field: string agent_id = 1;
    */
   agentId: string;
@@ -385,11 +958,9 @@ export type DeleteAgentRequest = Message<"admiral.api.agent.v1.DeleteAgentReques
  * Use `create(DeleteAgentRequestSchema)` to create a new message.
  */
 export const DeleteAgentRequestSchema: GenMessage<DeleteAgentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 9);
+  messageDesc(file_admiral_api_agent_v1_agent, 30);
 
 /**
- * DeleteAgentResponse is empty on success.
- *
  * @generated from message admiral.api.agent.v1.DeleteAgentResponse
  */
 export type DeleteAgentResponse = Message<"admiral.api.agent.v1.DeleteAgentResponse"> & {
@@ -400,527 +971,1061 @@ export type DeleteAgentResponse = Message<"admiral.api.agent.v1.DeleteAgentRespo
  * Use `create(DeleteAgentResponseSchema)` to create a new message.
  */
 export const DeleteAgentResponseSchema: GenMessage<DeleteAgentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 10);
+  messageDesc(file_admiral_api_agent_v1_agent, 31);
 
 /**
- * ClearAgentIdentityBindingRequest opens a rebind grace window for a KUBERNETES
- * agent.
- *
- * @generated from message admiral.api.agent.v1.ClearAgentIdentityBindingRequest
+ * @generated from message admiral.api.agent.v1.CreateEnrollmentKeyRequest
  */
-export type ClearAgentIdentityBindingRequest = Message<"admiral.api.agent.v1.ClearAgentIdentityBindingRequest"> & {
+export type CreateEnrollmentKeyRequest = Message<"admiral.api.agent.v1.CreateEnrollmentKeyRequest"> & {
   /**
-   * The Admiral agent record ID (UUID), not the kube-system UID.
-   *
-   * @generated from field: string agent_id = 1;
-   */
-  agentId: string;
-
-  /**
-   * Free-text audit reason for the rebind (e.g. "DR rebuild 2026-05-30").
-   *
-   * @generated from field: string reason = 2;
-   */
-  reason: string;
-
-  /**
-   * How long the grace window stays open. Defaults to 1h server-side if unset.
-   *
-   * @generated from field: google.protobuf.Duration grace_window = 3;
-   */
-  graceWindow?: Duration | undefined;
-};
-
-/**
- * Describes the message admiral.api.agent.v1.ClearAgentIdentityBindingRequest.
- * Use `create(ClearAgentIdentityBindingRequestSchema)` to create a new message.
- */
-export const ClearAgentIdentityBindingRequestSchema: GenMessage<ClearAgentIdentityBindingRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 11);
-
-/**
- * ClearAgentIdentityBindingResponse acknowledges the rebind window.
- *
- * @generated from message admiral.api.agent.v1.ClearAgentIdentityBindingResponse
- */
-export type ClearAgentIdentityBindingResponse = Message<"admiral.api.agent.v1.ClearAgentIdentityBindingResponse"> & {
-  /**
-   * Whether the rebind grace window was opened.
-   *
-   * @generated from field: bool accepted = 1;
-   */
-  accepted: boolean;
-
-  /**
-   * When the grace window expires.
-   *
-   * @generated from field: google.protobuf.Timestamp expires_at = 2;
-   */
-  expiresAt?: Timestamp | undefined;
-};
-
-/**
- * Describes the message admiral.api.agent.v1.ClearAgentIdentityBindingResponse.
- * Use `create(ClearAgentIdentityBindingResponseSchema)` to create a new message.
- */
-export const ClearAgentIdentityBindingResponseSchema: GenMessage<ClearAgentIdentityBindingResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 12);
-
-/**
- * GetAgentStatusRequest identifies an agent whose status to retrieve.
- *
- * @generated from message admiral.api.agent.v1.GetAgentStatusRequest
- */
-export type GetAgentStatusRequest = Message<"admiral.api.agent.v1.GetAgentStatusRequest"> & {
-  /**
-   * The unique identifier of the agent (UUID).
-   *
    * @generated from field: string agent_id = 1;
    */
   agentId: string;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.GetAgentStatusRequest.
- * Use `create(GetAgentStatusRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.CreateEnrollmentKeyRequest.
+ * Use `create(CreateEnrollmentKeyRequestSchema)` to create a new message.
  */
-export const GetAgentStatusRequestSchema: GenMessage<GetAgentStatusRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 13);
+export const CreateEnrollmentKeyRequestSchema: GenMessage<CreateEnrollmentKeyRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 32);
 
 /**
- * GetAgentStatusResponse contains the server-derived health status and the latest
- * kind-specific status snapshot. If the agent has not reported yet, health_status
- * will be PENDING and status will be absent.
- *
- * @generated from message admiral.api.agent.v1.GetAgentStatusResponse
+ * @generated from message admiral.api.agent.v1.CreateEnrollmentKeyResponse
  */
-export type GetAgentStatusResponse = Message<"admiral.api.agent.v1.GetAgentStatusResponse"> & {
+export type CreateEnrollmentKeyResponse = Message<"admiral.api.agent.v1.CreateEnrollmentKeyResponse"> & {
   /**
-   * Server-derived health status based on reporting recency and kind signals.
-   *
-   * @generated from field: admiral.api.agent.v1.AgentHealthStatus health_status = 1;
+   * @generated from field: admiral.api.agent.v1.EnrollmentKey enrollment_key = 1;
    */
-  healthStatus: AgentHealthStatus;
-
-  /**
-   * The latest kind-specific status snapshot. Exactly one is populated, matching
-   * the agent's kind. Absent entirely if no report has been received yet.
-   *
-   * @generated from oneof admiral.api.agent.v1.GetAgentStatusResponse.status
-   */
-  status: {
-    /**
-     * Capacity snapshot for a TERRAFORM agent.
-     *
-     * @generated from field: admiral.api.agent.v1.TerraformAgentStatus terraform = 2;
-     */
-    value: TerraformAgentStatus;
-    case: "terraform";
-  } | {
-    /**
-     * Cluster telemetry snapshot for a KUBERNETES agent.
-     *
-     * @generated from field: admiral.api.agent.v1.KubernetesAgentStatus kubernetes = 3;
-     */
-    value: KubernetesAgentStatus;
-    case: "kubernetes";
-  } | { case: undefined; value?: undefined };
-
-  /**
-   * When the latest report was received.
-   *
-   * @generated from field: google.protobuf.Timestamp reported_at = 4;
-   */
-  reportedAt?: Timestamp | undefined;
+  enrollmentKey?: EnrollmentKey | undefined;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.GetAgentStatusResponse.
- * Use `create(GetAgentStatusResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.CreateEnrollmentKeyResponse.
+ * Use `create(CreateEnrollmentKeyResponseSchema)` to create a new message.
  */
-export const GetAgentStatusResponseSchema: GenMessage<GetAgentStatusResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 14);
+export const CreateEnrollmentKeyResponseSchema: GenMessage<CreateEnrollmentKeyResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 33);
 
 /**
- * CreateApiKeyRequest contains the parameters for creating a new API key bound to
- * an agent.
- *
- * @generated from message admiral.api.agent.v1.CreateApiKeyRequest
+ * @generated from message admiral.api.agent.v1.GrantAgentUseRequest
  */
-export type CreateApiKeyRequest = Message<"admiral.api.agent.v1.CreateApiKeyRequest"> & {
+export type GrantAgentUseRequest = Message<"admiral.api.agent.v1.GrantAgentUseRequest"> & {
   /**
-   * The agent to bind this key to (UUID).
-   *
    * @generated from field: string agent_id = 1;
    */
   agentId: string;
 
   /**
-   * URL-safe, human-readable identifier for the key (e.g., "prod-agent-key").
-   * Unique within the agent's keys. Lowercase alphanumeric and hyphens only,
-   * must start with a letter and end with an alphanumeric character (1-63 chars).
-   *
-   * @generated from field: string name = 2;
+   * @generated from field: admiral.api.agent.v1.AgentGrant grant = 2;
    */
-  name: string;
-
-  /**
-   * Optional expiration time. If unset, the key does not expire.
-   *
-   * @generated from field: google.protobuf.Timestamp expires_at = 3;
-   */
-  expiresAt?: Timestamp | undefined;
+  grant?: AgentGrant | undefined;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.CreateApiKeyRequest.
- * Use `create(CreateApiKeyRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.GrantAgentUseRequest.
+ * Use `create(GrantAgentUseRequestSchema)` to create a new message.
  */
-export const CreateApiKeyRequestSchema: GenMessage<CreateApiKeyRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 15);
+export const GrantAgentUseRequestSchema: GenMessage<GrantAgentUseRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 34);
 
 /**
- * CreateApiKeyResponse contains the newly created API key.
- *
- * @generated from message admiral.api.agent.v1.CreateApiKeyResponse
+ * @generated from message admiral.api.agent.v1.GrantAgentUseResponse
  */
-export type CreateApiKeyResponse = Message<"admiral.api.agent.v1.CreateApiKeyResponse"> & {
-  /**
-   * The created key metadata. Scopes are auto-assigned from the agent's kind.
-   *
-   * @generated from field: admiral.common.v1.ApiKey api_key = 1;
-   */
-  apiKey?: ApiKey | undefined;
-
-  /**
-   * The raw secret. Shown exactly once and cannot be retrieved again.
-   *
-   * @generated from field: string plain_text_key = 2;
-   */
-  plainTextKey: string;
+export type GrantAgentUseResponse = Message<"admiral.api.agent.v1.GrantAgentUseResponse"> & {
 };
 
 /**
- * Describes the message admiral.api.agent.v1.CreateApiKeyResponse.
- * Use `create(CreateApiKeyResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.GrantAgentUseResponse.
+ * Use `create(GrantAgentUseResponseSchema)` to create a new message.
  */
-export const CreateApiKeyResponseSchema: GenMessage<CreateApiKeyResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 16);
+export const GrantAgentUseResponseSchema: GenMessage<GrantAgentUseResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 35);
 
 /**
- * ListApiKeysRequest contains pagination and filter parameters.
- *
- * @generated from message admiral.api.agent.v1.ListApiKeysRequest
+ * @generated from message admiral.api.agent.v1.RevokeAgentUseRequest
  */
-export type ListApiKeysRequest = Message<"admiral.api.agent.v1.ListApiKeysRequest"> & {
+export type RevokeAgentUseRequest = Message<"admiral.api.agent.v1.RevokeAgentUseRequest"> & {
   /**
-   * The agent to list keys for (UUID).
-   *
    * @generated from field: string agent_id = 1;
    */
   agentId: string;
 
   /**
-   * Filter expression to narrow results. Uses the Admiral filter DSL (see the
-   * API documentation for the full operator and predicate reference).
-   *
-   * Filterable fields:
-   *   - `name`: filter by key name.
-   *   - `status`: filter by key status (ACTIVE, REVOKED).
-   *
-   * @generated from field: string filter = 2;
+   * @generated from field: admiral.api.agent.v1.AgentGrant grant = 2;
    */
-  filter: string;
+  grant?: AgentGrant | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.RevokeAgentUseRequest.
+ * Use `create(RevokeAgentUseRequestSchema)` to create a new message.
+ */
+export const RevokeAgentUseRequestSchema: GenMessage<RevokeAgentUseRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 36);
+
+/**
+ * @generated from message admiral.api.agent.v1.RevokeAgentUseResponse
+ */
+export type RevokeAgentUseResponse = Message<"admiral.api.agent.v1.RevokeAgentUseResponse"> & {
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.RevokeAgentUseResponse.
+ * Use `create(RevokeAgentUseResponseSchema)` to create a new message.
+ */
+export const RevokeAgentUseResponseSchema: GenMessage<RevokeAgentUseResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 37);
+
+/**
+ * @generated from message admiral.api.agent.v1.ListAgentGrantsRequest
+ */
+export type ListAgentGrantsRequest = Message<"admiral.api.agent.v1.ListAgentGrantsRequest"> & {
+  /**
+   * @generated from field: string agent_id = 1;
+   */
+  agentId: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ListAgentGrantsRequest.
+ * Use `create(ListAgentGrantsRequestSchema)` to create a new message.
+ */
+export const ListAgentGrantsRequestSchema: GenMessage<ListAgentGrantsRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 38);
+
+/**
+ * @generated from message admiral.api.agent.v1.ListAgentGrantsResponse
+ */
+export type ListAgentGrantsResponse = Message<"admiral.api.agent.v1.ListAgentGrantsResponse"> & {
+  /**
+   * @generated from field: repeated admiral.api.agent.v1.AgentGrant grants = 1;
+   */
+  grants: AgentGrant[];
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ListAgentGrantsResponse.
+ * Use `create(ListAgentGrantsResponseSchema)` to create a new message.
+ */
+export const ListAgentGrantsResponseSchema: GenMessage<ListAgentGrantsResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 39);
+
+/**
+ * @generated from message admiral.api.agent.v1.GetJobRequest
+ */
+export type GetJobRequest = Message<"admiral.api.agent.v1.GetJobRequest"> & {
+  /**
+   * @generated from field: string job_id = 1;
+   */
+  jobId: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.GetJobRequest.
+ * Use `create(GetJobRequestSchema)` to create a new message.
+ */
+export const GetJobRequestSchema: GenMessage<GetJobRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 40);
+
+/**
+ * @generated from message admiral.api.agent.v1.GetJobResponse
+ */
+export type GetJobResponse = Message<"admiral.api.agent.v1.GetJobResponse"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Job job = 1;
+   */
+  job?: Job | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.GetJobResponse.
+ * Use `create(GetJobResponseSchema)` to create a new message.
+ */
+export const GetJobResponseSchema: GenMessage<GetJobResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 41);
+
+/**
+ * @generated from message admiral.api.agent.v1.ListJobsRequest
+ */
+export type ListJobsRequest = Message<"admiral.api.agent.v1.ListJobsRequest"> & {
+  /**
+   * @generated from field: optional string agent_id = 1;
+   */
+  agentId?: string | undefined;
 
   /**
-   * Maximum number of keys to return per page. Defaults to 50 when omitted or
-   * 0; must not exceed 100.
+   * @generated from field: optional string environment_id = 2;
+   */
+  environmentId?: string | undefined;
+
+  /**
+   * UNSPECIFIED lists every status.
    *
-   * @generated from field: int32 page_size = 3;
+   * @generated from field: admiral.api.agent.v1.JobStatus status = 3;
+   */
+  status: JobStatus;
+
+  /**
+   * @generated from field: int32 page_size = 4;
    */
   pageSize: number;
 
   /**
-   * Opaque pagination token from a previous response.
-   *
-   * @generated from field: string page_token = 4;
+   * @generated from field: string page_token = 5;
    */
   pageToken: string;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.ListApiKeysRequest.
- * Use `create(ListApiKeysRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.ListJobsRequest.
+ * Use `create(ListJobsRequestSchema)` to create a new message.
  */
-export const ListApiKeysRequestSchema: GenMessage<ListApiKeysRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 17);
+export const ListJobsRequestSchema: GenMessage<ListJobsRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 42);
 
 /**
- * ListApiKeysResponse contains a page of agent API key metadata.
- *
- * @generated from message admiral.api.agent.v1.ListApiKeysResponse
+ * @generated from message admiral.api.agent.v1.ListJobsResponse
  */
-export type ListApiKeysResponse = Message<"admiral.api.agent.v1.ListApiKeysResponse"> & {
+export type ListJobsResponse = Message<"admiral.api.agent.v1.ListJobsResponse"> & {
   /**
-   * The list of keys. Secrets are never included.
-   *
-   * @generated from field: repeated admiral.common.v1.ApiKey api_keys = 1;
+   * @generated from field: repeated admiral.api.agent.v1.Job jobs = 1;
    */
-  apiKeys: ApiKey[];
+  jobs: Job[];
 
   /**
-   * Pagination token for the next page. Empty when there are no more results.
-   *
    * @generated from field: string next_page_token = 2;
    */
   nextPageToken: string;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.ListApiKeysResponse.
- * Use `create(ListApiKeysResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.ListJobsResponse.
+ * Use `create(ListJobsResponseSchema)` to create a new message.
  */
-export const ListApiKeysResponseSchema: GenMessage<ListApiKeysResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 18);
+export const ListJobsResponseSchema: GenMessage<ListJobsResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 43);
 
 /**
- * GetApiKeyRequest identifies an agent API key to retrieve. Key IDs are globally
- * unique; the server resolves the parent agent from the key ID.
- *
- * @generated from message admiral.api.agent.v1.GetApiKeyRequest
+ * @generated from message admiral.api.agent.v1.CancelJobRequest
  */
-export type GetApiKeyRequest = Message<"admiral.api.agent.v1.GetApiKeyRequest"> & {
+export type CancelJobRequest = Message<"admiral.api.agent.v1.CancelJobRequest"> & {
   /**
-   * The unique identifier of the key (UUID).
-   *
-   * @generated from field: string token_id = 1;
+   * @generated from field: string job_id = 1;
    */
-  tokenId: string;
+  jobId: string;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.GetApiKeyRequest.
- * Use `create(GetApiKeyRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.CancelJobRequest.
+ * Use `create(CancelJobRequestSchema)` to create a new message.
  */
-export const GetApiKeyRequestSchema: GenMessage<GetApiKeyRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 19);
+export const CancelJobRequestSchema: GenMessage<CancelJobRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 44);
 
 /**
- * GetApiKeyResponse contains the requested agent API key metadata.
- *
- * @generated from message admiral.api.agent.v1.GetApiKeyResponse
+ * @generated from message admiral.api.agent.v1.CancelJobResponse
  */
-export type GetApiKeyResponse = Message<"admiral.api.agent.v1.GetApiKeyResponse"> & {
+export type CancelJobResponse = Message<"admiral.api.agent.v1.CancelJobResponse"> & {
   /**
-   * The key metadata. The key secret is never included.
-   *
-   * @generated from field: admiral.common.v1.ApiKey api_key = 1;
+   * @generated from field: admiral.api.agent.v1.Job job = 1;
    */
-  apiKey?: ApiKey | undefined;
+  job?: Job | undefined;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.GetApiKeyResponse.
- * Use `create(GetApiKeyResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.CancelJobResponse.
+ * Use `create(CancelJobResponseSchema)` to create a new message.
  */
-export const GetApiKeyResponseSchema: GenMessage<GetApiKeyResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 20);
+export const CancelJobResponseSchema: GenMessage<CancelJobResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 45);
 
 /**
- * RevokeApiKeyRequest identifies an agent API key to revoke. Key IDs are
- * globally unique; the server resolves the parent agent from the key ID.
+ * Attempt names the attempt a call belongs to.
  *
- * @generated from message admiral.api.agent.v1.RevokeApiKeyRequest
+ * @generated from message admiral.api.agent.v1.Attempt
  */
-export type RevokeApiKeyRequest = Message<"admiral.api.agent.v1.RevokeApiKeyRequest"> & {
+export type Attempt = Message<"admiral.api.agent.v1.Attempt"> & {
   /**
-   * The unique identifier of the key to revoke (UUID).
-   *
-   * @generated from field: string token_id = 1;
+   * @generated from field: string job_id = 1;
    */
-  tokenId: string;
+  jobId: string;
+
+  /**
+   * @generated from field: int32 attempt = 2;
+   */
+  attempt: number;
+
+  /**
+   * @generated from field: string lease_token = 3;
+   */
+  leaseToken: string;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.RevokeApiKeyRequest.
- * Use `create(RevokeApiKeyRequestSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.Attempt.
+ * Use `create(AttemptSchema)` to create a new message.
  */
-export const RevokeApiKeyRequestSchema: GenMessage<RevokeApiKeyRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 21);
+export const AttemptSchema: GenMessage<Attempt> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 46);
 
 /**
- * RevokeApiKeyResponse contains the revoked agent API key metadata.
- *
- * @generated from message admiral.api.agent.v1.RevokeApiKeyResponse
+ * @generated from message admiral.api.agent.v1.EnrollRequest
  */
-export type RevokeApiKeyResponse = Message<"admiral.api.agent.v1.RevokeApiKeyResponse"> & {
+export type EnrollRequest = Message<"admiral.api.agent.v1.EnrollRequest"> & {
   /**
-   * The key metadata with updated status.
+   * The cluster's keys, as served at /openid/v1/jwks.
    *
-   * @generated from field: admiral.common.v1.ApiKey api_key = 1;
+   * @generated from field: string jwks_json = 1;
    */
-  apiKey?: ApiKey | undefined;
+  jwksJson: string;
+
+  /**
+   * A token the cluster issued this agent, audience Admiral. It must verify
+   * against `jwks_json` and name the agent's namespace and service account.
+   *
+   * @generated from field: string service_account_token = 2;
+   */
+  serviceAccountToken: string;
+
+  /**
+   * The kube-system namespace UID: an accident detector, not a proof.
+   *
+   * @generated from field: string cluster_uid = 3;
+   */
+  clusterUid: string;
 };
 
 /**
- * Describes the message admiral.api.agent.v1.RevokeApiKeyResponse.
- * Use `create(RevokeApiKeyResponseSchema)` to create a new message.
+ * Describes the message admiral.api.agent.v1.EnrollRequest.
+ * Use `create(EnrollRequestSchema)` to create a new message.
  */
-export const RevokeApiKeyResponseSchema: GenMessage<RevokeApiKeyResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_agent_v1_agent, 22);
+export const EnrollRequestSchema: GenMessage<EnrollRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 47);
 
 /**
- * AgentKind names the execution contract an agent serves, by its canonical tool.
- * The engine is a sub-axis within a kind (TERRAFORM runs terraform/tofu;
- * KUBERNETES runs helm/kustomize/raw), so a new tool is a new value, not a refactor.
+ * @generated from message admiral.api.agent.v1.EnrollResponse
+ */
+export type EnrollResponse = Message<"admiral.api.agent.v1.EnrollResponse"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Cluster cluster = 1;
+   */
+  cluster?: Cluster | undefined;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.Agent agent = 2;
+   */
+  agent?: Agent | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.EnrollResponse.
+ * Use `create(EnrollResponseSchema)` to create a new message.
+ */
+export const EnrollResponseSchema: GenMessage<EnrollResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 48);
+
+/**
+ * @generated from message admiral.api.agent.v1.ReportStatusRequest
+ */
+export type ReportStatusRequest = Message<"admiral.api.agent.v1.ReportStatusRequest"> & {
+  /**
+   * @generated from field: string agent_version = 1;
+   */
+  agentVersion: string;
+
+  /**
+   * @generated from field: int32 protocol_version = 2;
+   */
+  protocolVersion: number;
+
+  /**
+   * @generated from field: string kube_version = 3;
+   */
+  kubeVersion: string;
+
+  /**
+   * @generated from field: repeated string api_versions = 4;
+   */
+  apiVersions: string[];
+
+  /**
+   * @generated from field: admiral.api.agent.v1.AgentCapabilities capabilities = 5;
+   */
+  capabilities?: AgentCapabilities | undefined;
+
+  /**
+   * The cluster's current keys, when the agent can read them. Accepted only
+   * when they still hold the key this call's token was verified with.
+   *
+   * @generated from field: string jwks_json = 6;
+   */
+  jwksJson: string;
+
+  /**
+   * @generated from field: string cluster_uid = 7;
+   */
+  clusterUid: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ReportStatusRequest.
+ * Use `create(ReportStatusRequestSchema)` to create a new message.
+ */
+export const ReportStatusRequestSchema: GenMessage<ReportStatusRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 49);
+
+/**
+ * @generated from message admiral.api.agent.v1.ReportStatusResponse
+ */
+export type ReportStatusResponse = Message<"admiral.api.agent.v1.ReportStatusResponse"> & {
+  /**
+   * @generated from field: int32 next_report_seconds = 1;
+   */
+  nextReportSeconds: number;
+
+  /**
+   * False when the reported key set was not taken as the cluster's keys. The
+   * rest of the report is still stored.
+   *
+   * @generated from field: bool keys_accepted = 2;
+   */
+  keysAccepted: boolean;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ReportStatusResponse.
+ * Use `create(ReportStatusResponseSchema)` to create a new message.
+ */
+export const ReportStatusResponseSchema: GenMessage<ReportStatusResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 50);
+
+/**
+ * Slots is how many more jobs of a kind the agent will take now.
  *
- * @generated from enum admiral.api.agent.v1.AgentKind
+ * @generated from message admiral.api.agent.v1.Slots
  */
-export enum AgentKind {
+export type Slots = Message<"admiral.api.agent.v1.Slots"> & {
   /**
-   * Default value. Must not be used.
-   *
-   * @generated from enum value: AGENT_KIND_UNSPECIFIED = 0;
+   * @generated from field: admiral.api.agent.v1.JobKind kind = 1;
    */
-  UNSPECIFIED = 0,
+  kind: JobKind;
 
   /**
-   * Terraform-semantic infrastructure agent (plan/apply/destroy jobs; engines:
-   * terraform, tofu). Managed-service deploys (Lambda/ECS/Cloud Run) also run here
-   * as terraform components.
-   *
-   * @generated from enum value: AGENT_KIND_TERRAFORM = 1;
+   * @generated from field: int32 free = 2;
    */
-  TERRAFORM = 1,
+  free: number;
 
   /**
-   * Kubernetes agent (cluster telemetry + manifest revision delivery/reconcile).
+   * The most of this kind the agent runs at once. The server offers no more
+   * than this, whatever `free` says.
    *
-   * @generated from enum value: AGENT_KIND_KUBERNETES = 2;
+   * @generated from field: int32 capacity = 3;
    */
-  KUBERNETES = 2,
-}
+  capacity: number;
+};
 
 /**
- * Describes the enum admiral.api.agent.v1.AgentKind.
+ * Describes the message admiral.api.agent.v1.Slots.
+ * Use `create(SlotsSchema)` to create a new message.
  */
-export const AgentKindSchema: GenEnum<AgentKind> = /*@__PURE__*/
-  enumDesc(file_admiral_api_agent_v1_agent, 0);
+export const SlotsSchema: GenMessage<Slots> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 51);
 
 /**
- * AgentHealthStatus represents the derived health state of an agent. The status
- * is computed from reporting recency and kind-specific signals (capacity for
- * TERRAFORM; node readiness and workload health for KUBERNETES). The ERROR state is
- * only emitted by KUBERNETES agents.
- *
- * @generated from enum admiral.api.agent.v1.AgentHealthStatus
+ * @generated from message admiral.api.agent.v1.ClaimJobRequest
  */
-export enum AgentHealthStatus {
+export type ClaimJobRequest = Message<"admiral.api.agent.v1.ClaimJobRequest"> & {
   /**
-   * Default value. Must not be used.
+   * Chosen by the agent per claim, with at least 128 random bits (22
+   * base64url characters); a retry with the same id returns the same offer.
+   * The lease token derives from it, so it is as secret as the token.
    *
-   * @generated from enum value: AGENT_HEALTH_STATUS_UNSPECIFIED = 0;
+   * @generated from field: string claim_request_id = 1;
    */
-  UNSPECIFIED = 0,
+  claimRequestId: string;
 
   /**
-   * Agent record exists but no report has been received yet.
+   * @generated from field: int32 protocol_version = 2;
+   */
+  protocolVersion: number;
+
+  /**
+   * The newest run artifact schema the agent reads.
    *
-   * @generated from enum value: AGENT_HEALTH_STATUS_PENDING = 1;
+   * @generated from field: int32 artifact_schema = 3;
+   */
+  artifactSchema: number;
+
+  /**
+   * @generated from field: repeated admiral.api.agent.v1.Slots slots = 4;
+   */
+  slots: Slots[];
+
+  /**
+   * How long to wait for work. At most 20; the server may answer sooner.
+   *
+   * @generated from field: int32 wait_seconds = 5;
+   */
+  waitSeconds: number;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ClaimJobRequest.
+ * Use `create(ClaimJobRequestSchema)` to create a new message.
+ */
+export const ClaimJobRequestSchema: GenMessage<ClaimJobRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 52);
+
+/**
+ * @generated from message admiral.api.agent.v1.ClaimJobResponse
+ */
+export type ClaimJobResponse = Message<"admiral.api.agent.v1.ClaimJobResponse"> & {
+  /**
+   * Absent when there was nothing to offer.
+   *
+   * @generated from field: admiral.api.agent.v1.Offer offer = 1;
+   */
+  offer?: Offer | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ClaimJobResponse.
+ * Use `create(ClaimJobResponseSchema)` to create a new message.
+ */
+export const ClaimJobResponseSchema: GenMessage<ClaimJobResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 53);
+
+/**
+ * @generated from message admiral.api.agent.v1.StartJobRequest
+ */
+export type StartJobRequest = Message<"admiral.api.agent.v1.StartJobRequest"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Attempt attempt = 1;
+   */
+  attempt?: Attempt | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.StartJobRequest.
+ * Use `create(StartJobRequestSchema)` to create a new message.
+ */
+export const StartJobRequestSchema: GenMessage<StartJobRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 54);
+
+/**
+ * @generated from message admiral.api.agent.v1.StartJobResponse
+ */
+export type StartJobResponse = Message<"admiral.api.agent.v1.StartJobResponse"> & {
+  /**
+   * Renew before this passes, measured from when the request was sent.
+   *
+   * @generated from field: int32 lease_ttl_seconds = 1;
+   */
+  leaseTtlSeconds: number;
+
+  /**
+   * The job is failed once it has run this long, renewed or not.
+   *
+   * @generated from field: int32 max_run_seconds = 2;
+   */
+  maxRunSeconds: number;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.StartJobResponse.
+ * Use `create(StartJobResponseSchema)` to create a new message.
+ */
+export const StartJobResponseSchema: GenMessage<StartJobResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 55);
+
+/**
+ * @generated from message admiral.api.agent.v1.Progress
+ */
+export type Progress = Message<"admiral.api.agent.v1.Progress"> & {
+  /**
+   * @generated from field: int32 completed_steps = 1;
+   */
+  completedSteps: number;
+
+  /**
+   * @generated from field: int32 total_steps = 2;
+   */
+  totalSteps: number;
+
+  /**
+   * @generated from field: string current_component = 3;
+   */
+  currentComponent: string;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.Progress.
+ * Use `create(ProgressSchema)` to create a new message.
+ */
+export const ProgressSchema: GenMessage<Progress> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 56);
+
+/**
+ * @generated from message admiral.api.agent.v1.RenewLeaseRequest
+ */
+export type RenewLeaseRequest = Message<"admiral.api.agent.v1.RenewLeaseRequest"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Attempt attempt = 1;
+   */
+  attempt?: Attempt | undefined;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.Progress progress = 2;
+   */
+  progress?: Progress | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.RenewLeaseRequest.
+ * Use `create(RenewLeaseRequestSchema)` to create a new message.
+ */
+export const RenewLeaseRequestSchema: GenMessage<RenewLeaseRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 57);
+
+/**
+ * @generated from message admiral.api.agent.v1.RenewLeaseResponse
+ */
+export type RenewLeaseResponse = Message<"admiral.api.agent.v1.RenewLeaseResponse"> & {
+  /**
+   * @generated from field: int32 lease_ttl_seconds = 1;
+   */
+  leaseTtlSeconds: number;
+
+  /**
+   * Stop, clean up, and report CANCELLED. The lease stays valid meanwhile.
+   *
+   * @generated from field: bool cancel_requested = 2;
+   */
+  cancelRequested: boolean;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.RenewLeaseResponse.
+ * Use `create(RenewLeaseResponseSchema)` to create a new message.
+ */
+export const RenewLeaseResponseSchema: GenMessage<RenewLeaseResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 58);
+
+/**
+ * @generated from message admiral.api.agent.v1.GetJobArtifactRequest
+ */
+export type GetJobArtifactRequest = Message<"admiral.api.agent.v1.GetJobArtifactRequest"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Attempt attempt = 1;
+   */
+  attempt?: Attempt | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.GetJobArtifactRequest.
+ * Use `create(GetJobArtifactRequestSchema)` to create a new message.
+ */
+export const GetJobArtifactRequestSchema: GenMessage<GetJobArtifactRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 59);
+
+/**
+ * @generated from message admiral.api.agent.v1.GetJobArtifactResponse
+ */
+export type GetJobArtifactResponse = Message<"admiral.api.agent.v1.GetJobArtifactResponse"> & {
+  /**
+   * @generated from field: string artifact_digest = 1;
+   */
+  artifactDigest: string;
+
+  /**
+   * @generated from field: bytes artifact = 2;
+   */
+  artifact: Uint8Array;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.GetJobArtifactResponse.
+ * Use `create(GetJobArtifactResponseSchema)` to create a new message.
+ */
+export const GetJobArtifactResponseSchema: GenMessage<GetJobArtifactResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 60);
+
+/**
+ * @generated from message admiral.api.agent.v1.ReportJobResultRequest
+ */
+export type ReportJobResultRequest = Message<"admiral.api.agent.v1.ReportJobResultRequest"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.Attempt attempt = 1;
+   */
+  attempt?: Attempt | undefined;
+
+  /**
+   * Chosen by the agent; a retry with the same id returns the first answer.
+   *
+   * @generated from field: string report_id = 2;
+   */
+  reportId: string;
+
+  /**
+   * @generated from field: admiral.api.agent.v1.JobResult result = 3;
+   */
+  result?: JobResult | undefined;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ReportJobResultRequest.
+ * Use `create(ReportJobResultRequestSchema)` to create a new message.
+ */
+export const ReportJobResultRequestSchema: GenMessage<ReportJobResultRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 61);
+
+/**
+ * @generated from message admiral.api.agent.v1.ReportJobResultResponse
+ */
+export type ReportJobResultResponse = Message<"admiral.api.agent.v1.ReportJobResultResponse"> & {
+  /**
+   * @generated from field: admiral.api.agent.v1.ReportOutcome outcome = 1;
+   */
+  outcome: ReportOutcome;
+};
+
+/**
+ * Describes the message admiral.api.agent.v1.ReportJobResultResponse.
+ * Use `create(ReportJobResultResponseSchema)` to create a new message.
+ */
+export const ReportJobResultResponseSchema: GenMessage<ReportJobResultResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_agent_v1_agent, 62);
+
+/**
+ * @generated from enum admiral.api.agent.v1.ClusterStatus
+ */
+export enum ClusterStatus {
+  /**
+   * @generated from enum value: CLUSTER_STATUS_UNSPECIFIED = 0;
+   */
+  CLUSTER_STATUS_UNSPECIFIED = 0,
+
+  /**
+   * No keys yet: an agent may enroll it.
+   *
+   * @generated from enum value: PENDING = 1;
    */
   PENDING = 1,
 
   /**
-   * Reporting within the expected interval; agent operational.
-   *
-   * @generated from enum value: AGENT_HEALTH_STATUS_HEALTHY = 2;
+   * @generated from enum value: TRUSTED = 2;
    */
-  HEALTHY = 2,
-
-  /**
-   * Operational but reporting constraints: capacity near limits (TERRAFORM), or some
-   * nodes not ready / workloads degraded (KUBERNETES).
-   *
-   * @generated from enum value: AGENT_HEALTH_STATUS_DEGRADED = 3;
-   */
-  DEGRADED = 3,
-
-  /**
-   * (KUBERNETES only) More than 25% nodes not ready or workloads in error state.
-   *
-   * @generated from enum value: AGENT_HEALTH_STATUS_ERROR = 4;
-   */
-  ERROR = 4,
-
-  /**
-   * No report received within 3x the expected interval.
-   *
-   * @generated from enum value: AGENT_HEALTH_STATUS_UNREACHABLE = 5;
-   */
-  UNREACHABLE = 5,
+  TRUSTED = 2,
 }
 
 /**
- * Describes the enum admiral.api.agent.v1.AgentHealthStatus.
+ * Describes the enum admiral.api.agent.v1.ClusterStatus.
  */
-export const AgentHealthStatusSchema: GenEnum<AgentHealthStatus> = /*@__PURE__*/
+export const ClusterStatusSchema: GenEnum<ClusterStatus> = /*@__PURE__*/
+  enumDesc(file_admiral_api_agent_v1_agent, 0);
+
+/**
+ * @generated from enum admiral.api.agent.v1.AgentHealth
+ */
+export enum AgentHealth {
+  /**
+   * @generated from enum value: AGENT_HEALTH_UNSPECIFIED = 0;
+   */
+  AGENT_HEALTH_UNSPECIFIED = 0,
+
+  /**
+   * Never reported.
+   *
+   * @generated from enum value: NEW = 1;
+   */
+  NEW = 1,
+
+  /**
+   * @generated from enum value: ONLINE = 2;
+   */
+  ONLINE = 2,
+
+  /**
+   * Has not reported for longer than twice its reporting interval.
+   *
+   * @generated from enum value: OFFLINE = 3;
+   */
+  OFFLINE = 3,
+}
+
+/**
+ * Describes the enum admiral.api.agent.v1.AgentHealth.
+ */
+export const AgentHealthSchema: GenEnum<AgentHealth> = /*@__PURE__*/
   enumDesc(file_admiral_api_agent_v1_agent, 1);
 
 /**
- * AgentAPI is the management surface for execution agents: their lifecycle,
- * their API keys, and read-only visibility into the work they have done. It is
- * the human-facing half of the agent contract, called with a user's own API key
- * from the CLI, Terraform provider, or web app.
+ * @generated from enum admiral.api.agent.v1.JobKind
+ */
+export enum JobKind {
+  /**
+   * @generated from enum value: JOB_KIND_UNSPECIFIED = 0;
+   */
+  JOB_KIND_UNSPECIFIED = 0,
+
+  /**
+   * Proves an agent can claim, start, renew, fetch and report. Queued when an
+   * agent first reports, and on request.
+   *
+   * @generated from enum value: PROBE = 1;
+   */
+  PROBE = 1,
+
+  /**
+   * @generated from enum value: PLAN = 2;
+   */
+  PLAN = 2,
+
+  /**
+   * @generated from enum value: APPLY = 3;
+   */
+  APPLY = 3,
+}
+
+/**
+ * Describes the enum admiral.api.agent.v1.JobKind.
+ */
+export const JobKindSchema: GenEnum<JobKind> = /*@__PURE__*/
+  enumDesc(file_admiral_api_agent_v1_agent, 2);
+
+/**
+ * @generated from enum admiral.api.agent.v1.JobStatus
+ */
+export enum JobStatus {
+  /**
+   * @generated from enum value: JOB_STATUS_UNSPECIFIED = 0;
+   */
+  JOB_STATUS_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: QUEUED = 1;
+   */
+  QUEUED = 1,
+
+  /**
+   * Offered to an agent, not yet started.
+   *
+   * @generated from enum value: OFFERED = 2;
+   */
+  OFFERED = 2,
+
+  /**
+   * @generated from enum value: RUNNING = 3;
+   */
+  RUNNING = 3,
+
+  /**
+   * @generated from enum value: SUCCEEDED = 4;
+   */
+  SUCCEEDED = 4,
+
+  /**
+   * @generated from enum value: FAILED = 5;
+   */
+  FAILED = 5,
+
+  /**
+   * @generated from enum value: CANCELLED = 6;
+   */
+  CANCELLED = 6,
+}
+
+/**
+ * Describes the enum admiral.api.agent.v1.JobStatus.
+ */
+export const JobStatusSchema: GenEnum<JobStatus> = /*@__PURE__*/
+  enumDesc(file_admiral_api_agent_v1_agent, 3);
+
+/**
+ * WaitReason says why a queued job is not running.
  *
- * An agent's key is bound to the agent's service account
- * (BINDING_TYPE_SERVICE_ACCOUNT), not to the agent record: an agent HAS a
- * service account rather than being one, so its credential rotates without
- * touching the agent.
+ * @generated from enum admiral.api.agent.v1.WaitReason
+ */
+export enum WaitReason {
+  /**
+   * @generated from enum value: WAIT_REASON_UNSPECIFIED = 0;
+   */
+  WAIT_REASON_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: NO_AGENT_SELECTED = 1;
+   */
+  NO_AGENT_SELECTED = 1,
+
+  /**
+   * @generated from enum value: AGENT_NOT_GRANTED = 2;
+   */
+  AGENT_NOT_GRANTED = 2,
+
+  /**
+   * @generated from enum value: AGENT_OFFLINE = 3;
+   */
+  AGENT_OFFLINE = 3,
+
+  /**
+   * @generated from enum value: AGENT_AT_CAPACITY = 4;
+   */
+  AGENT_AT_CAPACITY = 4,
+
+  /**
+   * @generated from enum value: AGENT_TOO_OLD = 5;
+   */
+  AGENT_TOO_OLD = 5,
+
+  /**
+   * Another APPLY holds the environment.
+   *
+   * @generated from enum value: ENVIRONMENT_BUSY = 6;
+   */
+  ENVIRONMENT_BUSY = 6,
+
+  /**
+   * Retrying after a failed attempt.
+   *
+   * @generated from enum value: BACKOFF = 7;
+   */
+  BACKOFF = 7,
+
+  /**
+   * @generated from enum value: CLUSTER_PENDING = 8;
+   */
+  CLUSTER_PENDING = 8,
+}
+
+/**
+ * Describes the enum admiral.api.agent.v1.WaitReason.
+ */
+export const WaitReasonSchema: GenEnum<WaitReason> = /*@__PURE__*/
+  enumDesc(file_admiral_api_agent_v1_agent, 4);
+
+/**
+ * @generated from enum admiral.api.agent.v1.ReportOutcome
+ */
+export enum ReportOutcome {
+  /**
+   * @generated from enum value: REPORT_OUTCOME_UNSPECIFIED = 0;
+   */
+  REPORT_OUTCOME_UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: ACCEPTED = 1;
+   */
+  ACCEPTED = 1,
+
+  /**
+   * The same report_id was already accepted.
+   *
+   * @generated from enum value: DUPLICATE = 2;
+   */
+  DUPLICATE = 2,
+
+  /**
+   * The attempt had lost its lease: kept as evidence, no state change.
+   *
+   * @generated from enum value: LATE = 3;
+   */
+  LATE = 3,
+}
+
+/**
+ * Describes the enum admiral.api.agent.v1.ReportOutcome.
+ */
+export const ReportOutcomeSchema: GenEnum<ReportOutcome> = /*@__PURE__*/
+  enumDesc(file_admiral_api_agent_v1_agent, 5);
+
+/**
+ * AgentAPI manages what runs work in a customer's cluster: the clusters
+ * Admiral trusts, the agents in them, who may use each agent, and the jobs the
+ * platform hands them.
  *
- * The execution protocol the agents themselves speak lives in AgentRuntimeAPI
- * (runtime.proto). That half is reachable only with a service-account-bound
- * key, excluded from the public OpenAPI
- * surface, and changes with the agent binaries. Keeping the two apart means the
- * documented management contract is not versioned against the churn of job
- * bundles, hooks, and engines.
+ * A cluster is trusted, not a token. Admiral holds its service-account token
+ * issuer (a public URL it fetches keys from) or its public keys (uploaded), and
+ * an agent is one namespace and service account in it. The agent proves who it
+ * is with the short-lived token its own cluster issues; no long-lived secret
+ * exists. A cluster without keys yet is PENDING until a person sets them or an
+ * agent enrolls it with a single-use enrollment key.
  *
- * Both agent kinds are managed here and share one identity, lifecycle, and
- * key model:
- *
- *   - TERRAFORM agents are the execution plane for infrastructure operations
- *     (plan, apply, destroy) run by a terraform-semantic engine (Terraform or
- *     OpenTofu, selected per job via JobBundle.engine).
- *
- *   - KUBERNETES agents are the control plane for Kubernetes clusters,
- *     reporting workload telemetry and applying rendered manifest revisions.
- *
- * Administrators create an agent via CreateAgent (passing the kind), which
- * returns an API key for deploying the agent binary. Once the
- * agent boots and begins reporting through AgentRuntimeAPI, the server
- * transitions its health from PENDING to HEALTHY.
- *
- * Management routes follow /v1/agents/... (plural, with IDs); the runtime
- * protocol uses /v1/agent/... (singular, no ID; derived from the key's binding).
- *
- * Message definitions live in companion files: jobs.proto (TERRAFORM execution)
- * and workloads.proto (KUBERNETES telemetry and revision delivery).
+ * An environment deploys through the agent it selects, and may select only an
+ * agent whose owner granted use to the whole tenant, one of its teams, or its
+ * application.
  *
  * @generated from service admiral.api.agent.v1.AgentAPI
  */
 export const AgentAPI: GenService<{
   /**
-   * ---------------------------------------------------------------------------
-   * Admin CRUD
-   * ---------------------------------------------------------------------------
-   * CreateAgent creates a new agent record within the caller's tenant and
-   * generates an initial API key. The agent starts in PENDING
-   * health status until it begins reporting.
+   * CreateCluster records a cluster to trust. Give its issuer URL when the
+   * issuer is public (GKE, EKS), its keys when not (kind, on-prem), or neither
+   * to leave it PENDING for an agent to enroll.
    *
-   * The request's `kind` selects the agent's execution plane (TERRAFORM or KUBERNETES)
-   * and determines the key's auto-assigned scopes. The kind is immutable.
+   * Scope: `agent:write`
    *
-   * The response includes a `plain_text_key`: the raw API key secret shown
-   * exactly once. Deploy this key to the agent binary for authentication.
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.CreateCluster
+   */
+  createCluster: {
+    methodKind: "unary";
+    input: typeof CreateClusterRequestSchema;
+    output: typeof CreateClusterResponseSchema;
+  },
+  /**
+   * GetCluster returns a cluster and the key ids it trusts.
+   *
+   * Scope: `agent:read`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.GetCluster
+   */
+  getCluster: {
+    methodKind: "unary";
+    input: typeof GetClusterRequestSchema;
+    output: typeof GetClusterResponseSchema;
+  },
+  /**
+   * ListClusters lists the tenant's clusters.
+   *
+   * Scope: `agent:read`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListClusters
+   */
+  listClusters: {
+    methodKind: "unary";
+    input: typeof ListClustersRequestSchema;
+    output: typeof ListClustersResponseSchema;
+  },
+  /**
+   * SetClusterTrust replaces how a cluster is trusted: an issuer URL, or keys.
+   * It is how a person rotates the keys of a cluster whose key was replaced
+   * outright.
+   *
+   * Scope: `agent:write`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.SetClusterTrust
+   */
+  setClusterTrust: {
+    methodKind: "unary";
+    input: typeof SetClusterTrustRequestSchema;
+    output: typeof SetClusterTrustResponseSchema;
+  },
+  /**
+   * DeleteCluster removes a cluster and its agents. Their leases end at once.
+   *
+   * Scope: `agent:write`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.DeleteCluster
+   */
+  deleteCluster: {
+    methodKind: "unary";
+    input: typeof DeleteClusterRequestSchema;
+    output: typeof DeleteClusterResponseSchema;
+  },
+  /**
+   * CreateAgent records an agent: a namespace and service account in a
+   * cluster. With `enrollment_key` set, the response carries a single-use key
+   * the agent enrolls the cluster with.
    *
    * Scope: `agent:write`
    *
@@ -932,10 +2037,7 @@ export const AgentAPI: GenService<{
     output: typeof CreateAgentResponseSchema;
   },
   /**
-   * GetAgent retrieves an agent by ID.
-   *
-   * Returns the Agent record with its server-derived health_status. For detailed
-   * telemetry (capacity, node/workload counts), use GetAgentStatus instead.
+   * GetAgent returns an agent, what it last reported, and its ceiling.
    *
    * Scope: `agent:read`
    *
@@ -947,8 +2049,8 @@ export const AgentAPI: GenService<{
     output: typeof GetAgentResponseSchema;
   },
   /**
-   * ListAgents returns a paginated list of agents within the caller's tenant.
-   * Filter by `kind` to list only TERRAFORM or KUBERNETES agents.
+   * ListAgents lists agents, optionally in one cluster or usable by one
+   * application.
    *
    * Scope: `agent:read`
    *
@@ -960,9 +2062,8 @@ export const AgentAPI: GenService<{
     output: typeof ListAgentsResponseSchema;
   },
   /**
-   * UpdateAgent updates an agent's mutable fields.
-   * Use `update_mask` to specify which fields to update.
-   * The `kind` is immutable and cannot be updated.
+   * UpdateAgent changes an agent's name and ceiling. The ceiling is set here
+   * and only here; an agent never reports it.
    *
    * Scope: `agent:write`
    *
@@ -974,9 +2075,8 @@ export const AgentAPI: GenService<{
     output: typeof UpdateAgentResponseSchema;
   },
   /**
-   * DeleteAgent permanently deletes an agent record and revokes all associated
-   * API keys. For TERRAFORM agents, any not-yet-completed jobs assigned
-   * to this agent will be failed. This action cannot be undone.
+   * DeleteAgent removes an agent. Its leases end in the same transaction, and
+   * environments that selected it select none.
    *
    * Scope: `agent:write`
    *
@@ -988,162 +2088,213 @@ export const AgentAPI: GenService<{
     output: typeof DeleteAgentResponseSchema;
   },
   /**
-   * GetAgentStatus retrieves the current telemetry snapshot for an agent.
-   * Returns the server-derived health status plus the latest kind-specific
-   * status: capacity metrics for TERRAFORM agents, cluster telemetry for KUBERNETES
-   * agents.
-   *
-   * Returns NOT_FOUND if the agent does not exist. If the agent exists but has
-   * not reported yet, health_status will be PENDING and status will be absent.
-   *
-   * Scope: `agent:read`
-   *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.GetAgentStatus
-   */
-  getAgentStatus: {
-    methodKind: "unary";
-    input: typeof GetAgentStatusRequestSchema;
-    output: typeof GetAgentStatusResponseSchema;
-  },
-  /**
-   * ClearAgentIdentityBinding opens a bounded grace window during which the next
-   * KUBERNETES agent telemetry push that reports a different kube-system UID will
-   * re-pin the agent's identity. Use for DR, cluster rebuilds, or a mistaken
-   * initial binding. The existing pin is left intact, so if no agent reconnects
-   * before the window expires the original binding stands. Audit-logged.
-   *
-   * Only valid for KUBERNETES agents; TERRAFORM agents have no identity binding.
+   * CreateEnrollmentKey issues a single-use key an agent enrolls its cluster
+   * with. It can do nothing else, expires within an hour, and is revoked the
+   * moment it is used.
    *
    * Scope: `agent:write`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.ClearAgentIdentityBinding
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.CreateEnrollmentKey
    */
-  clearAgentIdentityBinding: {
+  createEnrollmentKey: {
     methodKind: "unary";
-    input: typeof ClearAgentIdentityBindingRequestSchema;
-    output: typeof ClearAgentIdentityBindingResponseSchema;
+    input: typeof CreateEnrollmentKeyRequestSchema;
+    output: typeof CreateEnrollmentKeyResponseSchema;
   },
   /**
-   * ---------------------------------------------------------------------------
-   * API keys
-   * ---------------------------------------------------------------------------
-   * CreateApiKey creates a new API key bound to the specified agent's service
-   * account. Scopes are auto-assigned from the agent's kind and cannot be
-   * overridden. The response includes the raw secret, shown exactly once.
-   *
-   * Use this to create additional API keys for an existing agent (e.g., for
-   * zero-downtime key rotation). The initial key is created automatically by
-   * CreateAgent.
+   * GrantAgentUse lets the whole tenant, a team, or an application's
+   * environments select an agent. Only the agent's owner or a tenant admin may.
    *
    * Scope: `agent:write`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.CreateApiKey
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.GrantAgentUse
    */
-  createApiKey: {
+  grantAgentUse: {
     methodKind: "unary";
-    input: typeof CreateApiKeyRequestSchema;
-    output: typeof CreateApiKeyResponseSchema;
+    input: typeof GrantAgentUseRequestSchema;
+    output: typeof GrantAgentUseResponseSchema;
   },
   /**
-   * ListApiKeys returns a paginated list of API keys bound to the specified
-   * agent. Secrets are never included.
-   *
-   * Scope: `agent:read`
-   *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListApiKeys
-   */
-  listApiKeys: {
-    methodKind: "unary";
-    input: typeof ListApiKeysRequestSchema;
-    output: typeof ListApiKeysResponseSchema;
-  },
-  /**
-   * GetApiKey retrieves a single API key by ID. Returns metadata only; the key
-   * secret is never included. Key IDs are globally unique, so no agent scoping
-   * is required in the path; the server resolves the parent agent from the key
-   * ID. Authorization is enforced via the `agent:read` scope, not by path prefix.
-   *
-   * Scope: `agent:read`
-   *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.GetApiKey
-   */
-  getApiKey: {
-    methodKind: "unary";
-    input: typeof GetApiKeyRequestSchema;
-    output: typeof GetApiKeyResponseSchema;
-  },
-  /**
-   * RevokeApiKey permanently revokes an API key bound to this agent. The agent
-   * will receive a 401 on its next request. If this is the only active key for
-   * the agent, the agent will become disconnected. Key IDs are globally unique,
-   * so no agent scoping is required in the path; authorization is enforced via
-   * the `agent:write` scope, not by path prefix.
+   * RevokeAgentUse withdraws a grant. Environments that selected the agent
+   * under it keep the selection until they change it, but claim nothing new.
    *
    * Scope: `agent:write`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.RevokeApiKey
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.RevokeAgentUse
    */
-  revokeApiKey: {
+  revokeAgentUse: {
     methodKind: "unary";
-    input: typeof RevokeApiKeyRequestSchema;
-    output: typeof RevokeApiKeyResponseSchema;
+    input: typeof RevokeAgentUseRequestSchema;
+    output: typeof RevokeAgentUseResponseSchema;
   },
   /**
-   * ---------------------------------------------------------------------------
-   * Read-only observability. Messages: jobs.proto, workloads.proto.
-   * ---------------------------------------------------------------------------
-   * ListAgentJobs returns a paginated list of jobs assigned to a TERRAFORM agent.
-   * Provides admin read-only visibility into agent workload.
+   * ListAgentGrants lists who may use an agent.
    *
    * Scope: `agent:read`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListAgentJobs
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListAgentGrants
    */
-  listAgentJobs: {
+  listAgentGrants: {
     methodKind: "unary";
-    input: typeof ListAgentJobsRequestSchema;
-    output: typeof ListAgentJobsResponseSchema;
+    input: typeof ListAgentGrantsRequestSchema;
+    output: typeof ListAgentGrantsResponseSchema;
   },
   /**
-   * ListWorkloads returns a paginated list of workloads running on a KUBERNETES
-   * agent's cluster.
+   * GetJob returns a job, with why it is waiting when it is.
    *
    * Scope: `agent:read`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListWorkloads
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.GetJob
    */
-  listWorkloads: {
+  getJob: {
     methodKind: "unary";
-    input: typeof ListWorkloadsRequestSchema;
-    output: typeof ListWorkloadsResponseSchema;
+    input: typeof GetJobRequestSchema;
+    output: typeof GetJobResponseSchema;
   },
   /**
-   * GetWorkload returns a single workload with its full detail: the rich snapshot
-   * (sync, per-resource inventory with field owners, conditions) that ListWorkloads
-   * omits.
+   * ListJobs lists jobs for an agent or an environment, newest first.
    *
    * Scope: `agent:read`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.GetWorkload
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListJobs
    */
-  getWorkload: {
+  listJobs: {
     methodKind: "unary";
-    input: typeof GetWorkloadRequestSchema;
-    output: typeof GetWorkloadResponseSchema;
+    input: typeof ListJobsRequestSchema;
+    output: typeof ListJobsResponseSchema;
   },
   /**
-   * ListWorkloadEvents returns a paginated list of Kubernetes events observed for
-   * a KUBERNETES agent's managed resources, deduplicated by event UID.
+   * CancelJob asks for a job to stop. A queued job is cancelled at once; a
+   * running one learns it on its next lease renewal.
    *
-   * Scope: `agent:read`
+   * Scope: `agent:write`
    *
-   * @generated from rpc admiral.api.agent.v1.AgentAPI.ListWorkloadEvents
+   * @generated from rpc admiral.api.agent.v1.AgentAPI.CancelJob
    */
-  listWorkloadEvents: {
+  cancelJob: {
     methodKind: "unary";
-    input: typeof ListWorkloadEventsRequestSchema;
-    output: typeof ListWorkloadEventsResponseSchema;
+    input: typeof CancelJobRequestSchema;
+    output: typeof CancelJobResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_admiral_api_agent_v1_agent, 0);
+
+/**
+ * AgentRuntimeAPI is what an agent calls while it works. Its routes live
+ * under /v1/agent (singular: the caller is the agent) and are excluded from
+ * the public OpenAPI document. The caller is always
+ * an agent, identified by its token; no request names an agent.
+ *
+ * Work is claimed as an offer, started before anything touches the cluster,
+ * held by renewing a lease, and reported once per attempt. Every call after
+ * the claim carries the attempt and its lease token; a call from an attempt
+ * that is not the current one, or whose lease lapsed, changes nothing.
+ *
+ * @generated from service admiral.api.agent.v1.AgentRuntimeAPI
+ */
+export const AgentRuntimeAPI: GenService<{
+  /**
+   * Enroll sets a PENDING cluster's keys from inside it: the keys the cluster
+   * serves at /openid/v1/jwks, and a service-account token they verify. The
+   * caller authenticates with an enrollment key, which this spends.
+   *
+   * Scope: `agent:enroll`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentRuntimeAPI.Enroll
+   */
+  enroll: {
+    methodKind: "unary";
+    input: typeof EnrollRequestSchema;
+    output: typeof EnrollResponseSchema;
+  },
+  /**
+   * ReportStatus records what the agent runs and what its cluster is: version,
+   * Kubernetes version and API groups (which prepare renders against), what its
+   * RBAC allows, and the cluster's current keys. A changed key set is accepted
+   * only when it still holds the key this call was verified with.
+   *
+   * Scope: `agent:status`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentRuntimeAPI.ReportStatus
+   */
+  reportStatus: {
+    methodKind: "unary";
+    input: typeof ReportStatusRequestSchema;
+    output: typeof ReportStatusResponseSchema;
+  },
+  /**
+   * ClaimJob waits up to `wait_seconds` for work and returns an offer, or none.
+   * A retry with the same `claim_request_id` returns the same offer, so a lost
+   * response costs nothing. An offer not started within its TTL goes back to
+   * the queue.
+   *
+   * Scope: `agent:exec`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentRuntimeAPI.ClaimJob
+   */
+  claimJob: {
+    methodKind: "unary";
+    input: typeof ClaimJobRequestSchema;
+    output: typeof ClaimJobResponseSchema;
+  },
+  /**
+   * StartJob turns an offer into a lease. Call it before touching the
+   * cluster: an attempt that expires after starting is treated as having
+   * changed it.
+   *
+   * FAILED_PRECONDITION when the offer lapsed or is not this attempt's.
+   *
+   * Scope: `agent:exec`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentRuntimeAPI.StartJob
+   */
+  startJob: {
+    methodKind: "unary";
+    input: typeof StartJobRequestSchema;
+    output: typeof StartJobResponseSchema;
+  },
+  /**
+   * RenewLease extends a started attempt's lease and says whether to cancel.
+   * A refusal means the lease is gone: stop.
+   *
+   * FAILED_PRECONDITION when the lease lapsed or is not this attempt's.
+   *
+   * Scope: `agent:exec`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentRuntimeAPI.RenewLease
+   */
+  renewLease: {
+    methodKind: "unary";
+    input: typeof RenewLeaseRequestSchema;
+    output: typeof RenewLeaseResponseSchema;
+  },
+  /**
+   * GetJobArtifact returns the job's run artifact, unmasked, to the attempt
+   * holding the lease.
+   *
+   * Scope: `agent:exec`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentRuntimeAPI.GetJobArtifact
+   */
+  getJobArtifact: {
+    methodKind: "unary";
+    input: typeof GetJobArtifactRequestSchema;
+    output: typeof GetJobArtifactResponseSchema;
+  },
+  /**
+   * ReportJobResult ends an attempt. Repeating a report with the same
+   * `report_id` returns the first answer. A report from an attempt that lost
+   * its lease is kept as evidence and changes no state.
+   *
+   * Scope: `agent:exec`
+   *
+   * @generated from rpc admiral.api.agent.v1.AgentRuntimeAPI.ReportJobResult
+   */
+  reportJobResult: {
+    methodKind: "unary";
+    input: typeof ReportJobResultRequestSchema;
+    output: typeof ReportJobResultResponseSchema;
+  },
+}> = /*@__PURE__*/
+  serviceDesc(file_admiral_api_agent_v1_agent, 1);
 

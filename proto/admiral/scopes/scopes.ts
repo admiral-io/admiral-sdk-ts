@@ -35,7 +35,7 @@ export type Kind = (typeof Kind)[keyof typeof Kind];
 
 /** Scope names, so a client never spells one by hand. */
 export const Scopes = {
-  AgentDeploy: "agent:deploy",
+  AgentEnroll: "agent:enroll",
   AgentExec: "agent:exec",
   AgentRead: "agent:read",
   AgentStatus: "agent:status",
@@ -71,7 +71,7 @@ export interface Group {
 
 /** Every group, in catalog order. Every scope's prefix has one. */
 export const GROUPS: readonly Group[] = [
-  { name: "agent", description: "Execution agents, their tokens, and the jobs and workloads they run." },
+  { name: "agent", description: "Clusters, the agents in them, who may use each, and the jobs they run." },
   { name: "app", description: "Applications." },
   { name: "changeset", description: "Change sets, their revisions, and the component values they propose." },
   { name: "component", description: "The component registry, where published Terraform modules, Helm charts and manifests live." },
@@ -113,32 +113,32 @@ export interface Scope {
 /** Every scope, in catalog order. */
 export const SCOPES: readonly Scope[] = [
   {
-    name: "agent:deploy",
-    description: "Fetch revision bundles and report revision results.",
+    name: "agent:enroll",
+    description: "Enroll a cluster, once, from inside it. Held only by a single-use enrollment key.",
     implies: [],
     assignableTo: ["sat"],
   },
   {
     name: "agent:exec",
-    description: "Agent runtime job execution — heartbeat, claim jobs, fetch job bundles, and report job results.",
+    description: "Agent runtime work — claim, start, renew, fetch the artifact of, and report jobs.",
     implies: [],
     assignableTo: ["sat"],
   },
   {
     name: "agent:read",
-    description: "Read agents, agent tokens, jobs, workloads, and workload events.",
+    description: "Read clusters, agents, who may use them, and their jobs.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
     name: "agent:status",
-    description: "Report agent status, workload status, and workload metrics.",
+    description: "Report an agent's status, its cluster's capabilities, and its cluster's keys.",
     implies: [],
     assignableTo: ["sat"],
   },
   {
     name: "agent:write",
-    description: "Create, update, and delete agents; manage agent tokens and identity bindings.",
+    description: "Connect clusters; create, update and delete agents; issue enrollment keys; grant use; cancel jobs.",
     implies: ["agent:read"],
     assignableTo: ["pat"],
   },

@@ -1,7 +1,7 @@
 import type { Transport, Client as ConnectClient } from "@connectrpc/connect";
 import { createClient as createConnectClient } from "@connectrpc/connect";
 import { AgentAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
-import { AgentRuntimeAPI } from "../proto/admiral/api/agent/v1/runtime_pb.js";
+import { AgentRuntimeAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { ApplicationAPI } from "../proto/admiral/api/application/v1/application_pb.js";
 import { ChangeSetAPI } from "../proto/admiral/api/changeset/v1/changeset_pb.js";
 import { CredentialAPI } from "../proto/admiral/api/credential/v1/credential_pb.js";
