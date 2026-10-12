@@ -1,7 +1,10 @@
 import type { Transport, Client as ConnectClient } from "@connectrpc/connect";
 import { createClient as createConnectClient } from "@connectrpc/connect";
 import { AgentAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
+import { WorkloadIdentityProviderAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
+import { JobAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { AgentRuntimeAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
+import { ApiKeyAPI } from "../proto/admiral/api/apikey/v1/apikey_pb.js";
 import { ApplicationAPI } from "../proto/admiral/api/application/v1/application_pb.js";
 import { ChangeSetAPI } from "../proto/admiral/api/changeset/v1/changeset_pb.js";
 import { CredentialAPI } from "../proto/admiral/api/credential/v1/credential_pb.js";
@@ -15,7 +18,10 @@ import { UserAPI } from "../proto/admiral/api/user/v1/user_pb.js";
 
 // Service client types
 type AgentClient = ConnectClient<typeof AgentAPI>;
+type WorkloadIdentityProviderClient = ConnectClient<typeof WorkloadIdentityProviderAPI>;
+type JobClient = ConnectClient<typeof JobAPI>;
 type AgentRuntimeClient = ConnectClient<typeof AgentRuntimeAPI>;
+type ApiKeyClient = ConnectClient<typeof ApiKeyAPI>;
 type ApplicationClient = ConnectClient<typeof ApplicationAPI>;
 type ChangeSetClient = ConnectClient<typeof ChangeSetAPI>;
 type CredentialClient = ConnectClient<typeof CredentialAPI>;
@@ -39,8 +45,17 @@ export interface Client {
   /** Agent service client */
   readonly agent: AgentClient;
 
+  /** WorkloadIdentityProvider service client */
+  readonly workloadIdentityProvider: WorkloadIdentityProviderClient;
+
+  /** Job service client */
+  readonly job: JobClient;
+
   /** AgentRuntime service client */
   readonly agentRuntime: AgentRuntimeClient;
+
+  /** ApiKey service client */
+  readonly apiKey: ApiKeyClient;
 
   /** Application service client */
   readonly application: ApplicationClient;
@@ -110,7 +125,10 @@ export interface Client {
 export function createClient(transport: Transport): Client {
   // Lazily initialized service clients
   let _agent: AgentClient | undefined;
+  let _workloadIdentityProvider: WorkloadIdentityProviderClient | undefined;
+  let _job: JobClient | undefined;
   let _agentRuntime: AgentRuntimeClient | undefined;
+  let _apiKey: ApiKeyClient | undefined;
   let _application: ApplicationClient | undefined;
   let _changeSet: ChangeSetClient | undefined;
   let _credential: CredentialClient | undefined;
@@ -132,11 +150,32 @@ export function createClient(transport: Transport): Client {
       return _agent;
     },
 
+    get workloadIdentityProvider() {
+      if (!_workloadIdentityProvider) {
+        _workloadIdentityProvider = createConnectClient(WorkloadIdentityProviderAPI, transport);
+      }
+      return _workloadIdentityProvider;
+    },
+
+    get job() {
+      if (!_job) {
+        _job = createConnectClient(JobAPI, transport);
+      }
+      return _job;
+    },
+
     get agentRuntime() {
       if (!_agentRuntime) {
         _agentRuntime = createConnectClient(AgentRuntimeAPI, transport);
       }
       return _agentRuntime;
+    },
+
+    get apiKey() {
+      if (!_apiKey) {
+        _apiKey = createConnectClient(ApiKeyAPI, transport);
+      }
+      return _apiKey;
     },
 
     get application() {

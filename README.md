@@ -37,7 +37,10 @@ const transport = createConnectTransport({
 
 const client = createClient(transport);
 // await client.agent.methodName({ ... });
+// await client.workloadIdentityProvider.methodName({ ... });
+// await client.job.methodName({ ... });
 // await client.agentRuntime.methodName({ ... });
+// await client.apiKey.methodName({ ... });
 // await client.application.methodName({ ... });
 // await client.changeSet.methodName({ ... });
 // await client.credential.methodName({ ... });
@@ -68,7 +71,10 @@ const client = createClient(transport);
 | Service | Property | Description |
 |---------|----------|-------------|
 | AgentAPI | `client.agent` | Agent service |
+| WorkloadIdentityProviderAPI | `client.workloadIdentityProvider` | WorkloadIdentityProvider service |
+| JobAPI | `client.job` | Job service |
 | AgentRuntimeAPI | `client.agentRuntime` | AgentRuntime service |
+| ApiKeyAPI | `client.apiKey` | ApiKey service |
 | ApplicationAPI | `client.application` | Application service |
 | ChangeSetAPI | `client.changeSet` | ChangeSet service |
 | CredentialAPI | `client.credential` | Credential service |

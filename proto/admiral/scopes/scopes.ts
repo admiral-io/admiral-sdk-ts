@@ -37,9 +37,11 @@ export type Kind = (typeof Kind)[keyof typeof Kind];
 export const Scopes = {
   AgentEnroll: "agent:enroll",
   AgentExec: "agent:exec",
+  AgentHeartbeat: "agent:heartbeat",
   AgentRead: "agent:read",
-  AgentStatus: "agent:status",
   AgentWrite: "agent:write",
+  ApikeyRead: "apikey:read",
+  ApikeyWrite: "apikey:write",
   AppRead: "app:read",
   AppWrite: "app:write",
   ChangesetRead: "changeset:read",
@@ -55,11 +57,8 @@ export const Scopes = {
   RunWrite: "run:write",
   TenantRead: "tenant:read",
   TenantWrite: "tenant:write",
-  TokenRead: "token:read",
-  TokenWrite: "token:write",
   UserRead: "user:read",
   UserWrite: "user:write",
-  VarRead: "var:read",
 } as const;
 export type ScopeName = (typeof Scopes)[keyof typeof Scopes];
 
@@ -71,17 +70,16 @@ export interface Group {
 
 /** Every group, in catalog order. Every scope's prefix has one. */
 export const GROUPS: readonly Group[] = [
-  { name: "agent", description: "Clusters, the agents in them, who may use each, and the jobs they run." },
+  { name: "agent", description: "Workload identity providers, the agents that authenticate through them, who may use each, and the jobs they run." },
+  { name: "apikey", description: "Your own API keys." },
   { name: "app", description: "Applications." },
   { name: "changeset", description: "Change sets, their revisions, and the component values they propose." },
   { name: "component", description: "The component registry, where published Terraform modules, Helm charts and manifests live." },
   { name: "credential", description: "Credentials for external systems." },
   { name: "env", description: "Deployment environments and the components in them." },
-  { name: "run", description: "Runs of change sets, plan through apply." },
+  { name: "run", description: "Runs of change sets and drift checks, plan through apply." },
   { name: "tenant", description: "Your tenant." },
-  { name: "token", description: "Your own API keys." },
   { name: "user", description: "Members of your tenant." },
-  { name: "var", description: "Configuration variables." },
 ];
 
 /** Group name to its definition. */
@@ -120,26 +118,38 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "agent:exec",
-    description: "Agent runtime work — claim, start, renew, fetch the artifact of, and report jobs.",
+    description: "Agent runtime work: claim, start, renew, append the log of, fetch the artifact of, upload the plan diff of, check the plan of, and finish jobs.",
+    implies: [],
+    assignableTo: ["sat"],
+  },
+  {
+    name: "agent:heartbeat",
+    description: "Send an agent's heartbeat: its version, what it runs against, its profiles, and its issuer's current keys.",
     implies: [],
     assignableTo: ["sat"],
   },
   {
     name: "agent:read",
-    description: "Read clusters, agents, who may use them, and their jobs.",
+    description: "Read workload identity providers, agents, who may use them, and their jobs.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
-    name: "agent:status",
-    description: "Report an agent's status, its cluster's capabilities, and its cluster's keys.",
-    implies: [],
-    assignableTo: ["sat"],
+    name: "agent:write",
+    description: "Register workload identity providers; create, update and delete agents; issue enrollment keys; grant use; cancel jobs.",
+    implies: ["agent:read"],
+    assignableTo: ["pat"],
   },
   {
-    name: "agent:write",
-    description: "Connect clusters; create, update and delete agents; issue enrollment keys; grant use; cancel jobs.",
-    implies: ["agent:read"],
+    name: "apikey:read",
+    description: "Read your own API keys.",
+    implies: [],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "apikey:write",
+    description: "Create, update, and revoke your own API keys.",
+    implies: ["apikey:read"],
     assignableTo: ["pat"],
   },
   {
@@ -168,19 +178,19 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "component:publish",
-    description: "Publish revisions and set tags. Adds to the registry and removes nothing from it, which is what a CI publish key holds.",
+    description: "Publish versions and set tags. Adds to the registry and removes nothing from it, which is what a CI publish key holds.",
     implies: ["component:read"],
     assignableTo: ["pat"],
   },
   {
     name: "component:read",
-    description: "Read components, their revisions and tags, and the contract and findings each revision carries.",
+    description: "Read components, their versions and tags, and the contract and findings each version carries.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
     name: "component:write",
-    description: "Edit a component's metadata, retire components, deprecate revisions, and delete floating tags, in addition to everything a publisher can do.",
+    description: "Edit a component's metadata, deprecate or delete components, set a version's status, and delete floating tags, in addition to everything a publisher can do.",
     implies: ["component:publish"],
     assignableTo: ["pat"],
   },
@@ -210,38 +220,26 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "run:read",
-    description: "Read runs and revisions.",
+    description: "Read runs, their plans, applies and approvals.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
     name: "run:write",
-    description: "Create, apply, and cancel runs; retry revisions.",
+    description: "Start, approve, apply, accept and cancel runs.",
     implies: ["run:read"],
     assignableTo: ["pat"],
   },
   {
     name: "tenant:read",
-    description: "Read the caller's own tenant -- name, slug, and status.",
+    description: "Read the caller's own tenant -- name, slug, status and logo.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
     name: "tenant:write",
-    description: "Update the caller's own tenant's settings, and close it -- suspending or deleting the tenant you own. Which of those you may actually do is decided per tenant, not by holding this.",
+    description: "Update the caller's own tenant's settings. Whether you may is decided per tenant, not by holding this.",
     implies: ["tenant:read"],
-    assignableTo: ["pat"],
-  },
-  {
-    name: "token:read",
-    description: "Read your own API keys.",
-    implies: [],
-    assignableTo: ["pat"],
-  },
-  {
-    name: "token:write",
-    description: "Create, update, and revoke your own API keys.",
-    implies: ["token:read"],
     assignableTo: ["pat"],
   },
   {
@@ -256,12 +254,6 @@ export const SCOPES: readonly Scope[] = [
     implies: ["user:read"],
     assignableTo: ["pat"],
   },
-  {
-    name: "var:read",
-    description: "Read resolved environment variables, including secret values.",
-    implies: [],
-    assignableTo: ["pat"],
-  },
 ];
 
 /** Scope name to its definition. */
@@ -271,6 +263,7 @@ export const CATALOG: Readonly<Record<string, Scope>> = Object.fromEntries(
 
 const impliesClosure: Readonly<Record<string, readonly string[]>> = {
   "agent:write": ["agent:read"],
+  "apikey:write": ["apikey:read"],
   "app:write": ["app:read"],
   "changeset:write": ["changeset:read"],
   "component:publish": ["component:read"],
@@ -279,7 +272,6 @@ const impliesClosure: Readonly<Record<string, readonly string[]>> = {
   "env:write": ["env:read"],
   "run:write": ["run:read"],
   "tenant:write": ["tenant:read"],
-  "token:write": ["token:read"],
   "user:write": ["user:read"],
 };
 
