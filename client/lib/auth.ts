@@ -1,9 +1,9 @@
 /** Prefix for Personal Access Tokens. */
 export const TOKEN_PREFIX_PAT = "admp_";
-/** Prefix for Service/Agent Tokens. */
+/** Prefix for a service account's API key. */
 export const TOKEN_PREFIX_SAT = "adms_";
-/** Prefix for Session Tokens. */
-export const TOKEN_PREFIX_SESSION = "adme_";
+/** Prefix for an agent's single-use enrollment key. */
+export const TOKEN_PREFIX_ENROLLMENT = "adme_";
 
 /** Total length of an Admiral opaque token. */
 export const TOKEN_LENGTH = 54;
@@ -15,7 +15,7 @@ const CHECKSUM_LEN = 6;
 const BASE62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 /** All valid Admiral token prefixes. */
-const VALID_PREFIXES = [TOKEN_PREFIX_PAT, TOKEN_PREFIX_SAT, TOKEN_PREFIX_SESSION] as const;
+const VALID_PREFIXES = [TOKEN_PREFIX_PAT, TOKEN_PREFIX_SAT, TOKEN_PREFIX_ENROLLMENT] as const;
 
 /**
  * Token validation result.

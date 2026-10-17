@@ -55,6 +55,8 @@ export const Scopes = {
   EnvWrite: "env:write",
   RunRead: "run:read",
   RunWrite: "run:write",
+  ServiceaccountRead: "serviceaccount:read",
+  ServiceaccountWrite: "serviceaccount:write",
   TenantRead: "tenant:read",
   TenantWrite: "tenant:write",
   UserRead: "user:read",
@@ -70,7 +72,7 @@ export interface Group {
 
 /** Every group, in catalog order. Every scope's prefix has one. */
 export const GROUPS: readonly Group[] = [
-  { name: "agent", description: "Workload identity providers, the agents that authenticate through them, who may use each, and the jobs they run." },
+  { name: "agent", description: "Agents, who may use each, and the jobs they run." },
   { name: "apikey", description: "Your own API keys." },
   { name: "app", description: "Applications." },
   { name: "changeset", description: "Change sets, their revisions, and the component values they propose." },
@@ -78,6 +80,7 @@ export const GROUPS: readonly Group[] = [
   { name: "credential", description: "Credentials for external systems." },
   { name: "env", description: "Deployment environments and the components in them." },
   { name: "run", description: "Runs of change sets and drift checks, plan through apply." },
+  { name: "serviceaccount", description: "Service accounts, and the issuers they accept tokens from." },
   { name: "tenant", description: "Your tenant." },
   { name: "user", description: "Members of your tenant." },
 ];
@@ -112,7 +115,7 @@ export interface Scope {
 export const SCOPES: readonly Scope[] = [
   {
     name: "agent:enroll",
-    description: "Enroll a cluster, once, from inside it. Held only by a single-use enrollment key.",
+    description: "Enroll an agent, once, from where it runs. Held only by a single-use enrollment key.",
     implies: [],
     assignableTo: ["sat"],
   },
@@ -130,13 +133,13 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "agent:read",
-    description: "Read workload identity providers, agents, who may use them, and their jobs.",
+    description: "Read agents, who may use them, and their jobs.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
     name: "agent:write",
-    description: "Register workload identity providers; create, update and delete agents; issue enrollment keys; grant use; cancel jobs.",
+    description: "Create, update and delete agents; issue enrollment keys; grant use; cancel jobs.",
     implies: ["agent:read"],
     assignableTo: ["pat"],
   },
@@ -231,6 +234,18 @@ export const SCOPES: readonly Scope[] = [
     assignableTo: ["pat"],
   },
   {
+    name: "serviceaccount:read",
+    description: "Read service accounts and issuers.",
+    implies: [],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "serviceaccount:write",
+    description: "Register issuers, change their keys, and delete them.",
+    implies: ["serviceaccount:read"],
+    assignableTo: ["pat"],
+  },
+  {
     name: "tenant:read",
     description: "Read the caller's own tenant -- name, slug, status and logo.",
     implies: [],
@@ -271,6 +286,7 @@ const impliesClosure: Readonly<Record<string, readonly string[]>> = {
   "credential:write": ["credential:read"],
   "env:write": ["env:read"],
   "run:write": ["run:read"],
+  "serviceaccount:write": ["serviceaccount:read"],
   "tenant:write": ["tenant:read"],
   "user:write": ["user:read"],
 };

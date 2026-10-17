@@ -1,7 +1,6 @@
 import type { Transport, Client as ConnectClient } from "@connectrpc/connect";
 import { createClient as createConnectClient } from "@connectrpc/connect";
 import { AgentAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
-import { WorkloadIdentityProviderAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { JobAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { AgentRuntimeAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { ApiKeyAPI } from "../proto/admiral/api/apikey/v1/apikey_pb.js";
@@ -13,12 +12,13 @@ import { HealthcheckAPI } from "../proto/admiral/api/healthcheck/v1/healthcheck_
 import { InvitationAPI } from "../proto/admiral/api/invitation/v1/invitation_pb.js";
 import { RegistryAPI } from "../proto/admiral/api/registry/v1/registry_pb.js";
 import { RunAPI } from "../proto/admiral/api/run/v1/run_pb.js";
+import { ServiceAccountAPI } from "../proto/admiral/api/serviceaccount/v1/serviceaccount_pb.js";
+import { IssuerAPI } from "../proto/admiral/api/serviceaccount/v1/serviceaccount_pb.js";
 import { TenantAPI } from "../proto/admiral/api/tenant/v1/tenant_pb.js";
 import { UserAPI } from "../proto/admiral/api/user/v1/user_pb.js";
 
 // Service client types
 type AgentClient = ConnectClient<typeof AgentAPI>;
-type WorkloadIdentityProviderClient = ConnectClient<typeof WorkloadIdentityProviderAPI>;
 type JobClient = ConnectClient<typeof JobAPI>;
 type AgentRuntimeClient = ConnectClient<typeof AgentRuntimeAPI>;
 type ApiKeyClient = ConnectClient<typeof ApiKeyAPI>;
@@ -30,6 +30,8 @@ type HealthcheckClient = ConnectClient<typeof HealthcheckAPI>;
 type InvitationClient = ConnectClient<typeof InvitationAPI>;
 type RegistryClient = ConnectClient<typeof RegistryAPI>;
 type RunClient = ConnectClient<typeof RunAPI>;
+type ServiceAccountClient = ConnectClient<typeof ServiceAccountAPI>;
+type IssuerClient = ConnectClient<typeof IssuerAPI>;
 type TenantClient = ConnectClient<typeof TenantAPI>;
 type UserClient = ConnectClient<typeof UserAPI>;
 
@@ -44,9 +46,6 @@ export interface Client {
 
   /** Agent service client */
   readonly agent: AgentClient;
-
-  /** WorkloadIdentityProvider service client */
-  readonly workloadIdentityProvider: WorkloadIdentityProviderClient;
 
   /** Job service client */
   readonly job: JobClient;
@@ -80,6 +79,12 @@ export interface Client {
 
   /** Run service client */
   readonly run: RunClient;
+
+  /** ServiceAccount service client */
+  readonly serviceAccount: ServiceAccountClient;
+
+  /** Issuer service client */
+  readonly issuer: IssuerClient;
 
   /** Tenant service client */
   readonly tenant: TenantClient;
@@ -125,7 +130,6 @@ export interface Client {
 export function createClient(transport: Transport): Client {
   // Lazily initialized service clients
   let _agent: AgentClient | undefined;
-  let _workloadIdentityProvider: WorkloadIdentityProviderClient | undefined;
   let _job: JobClient | undefined;
   let _agentRuntime: AgentRuntimeClient | undefined;
   let _apiKey: ApiKeyClient | undefined;
@@ -137,6 +141,8 @@ export function createClient(transport: Transport): Client {
   let _invitation: InvitationClient | undefined;
   let _registry: RegistryClient | undefined;
   let _run: RunClient | undefined;
+  let _serviceAccount: ServiceAccountClient | undefined;
+  let _issuer: IssuerClient | undefined;
   let _tenant: TenantClient | undefined;
   let _user: UserClient | undefined;
 
@@ -148,13 +154,6 @@ export function createClient(transport: Transport): Client {
         _agent = createConnectClient(AgentAPI, transport);
       }
       return _agent;
-    },
-
-    get workloadIdentityProvider() {
-      if (!_workloadIdentityProvider) {
-        _workloadIdentityProvider = createConnectClient(WorkloadIdentityProviderAPI, transport);
-      }
-      return _workloadIdentityProvider;
     },
 
     get job() {
@@ -232,6 +231,20 @@ export function createClient(transport: Transport): Client {
         _run = createConnectClient(RunAPI, transport);
       }
       return _run;
+    },
+
+    get serviceAccount() {
+      if (!_serviceAccount) {
+        _serviceAccount = createConnectClient(ServiceAccountAPI, transport);
+      }
+      return _serviceAccount;
+    },
+
+    get issuer() {
+      if (!_issuer) {
+        _issuer = createConnectClient(IssuerAPI, transport);
+      }
+      return _issuer;
     },
 
     get tenant() {

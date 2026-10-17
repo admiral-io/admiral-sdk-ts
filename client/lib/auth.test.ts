@@ -5,7 +5,7 @@ import {
   encodeBase62CRC32,
   TOKEN_PREFIX_PAT,
   TOKEN_PREFIX_SAT,
-  TOKEN_PREFIX_SESSION,
+  TOKEN_PREFIX_ENROLLMENT,
   TOKEN_LENGTH,
 } from "./auth.js";
 
@@ -42,8 +42,8 @@ describe("validateAuthToken", () => {
     expect(result.valid).toBe(true);
   });
 
-  it("accepts valid session token", () => {
-    const result = validateAuthToken(createTestToken(TOKEN_PREFIX_SESSION));
+  it("accepts valid enrollment key", () => {
+    const result = validateAuthToken(createTestToken(TOKEN_PREFIX_ENROLLMENT));
     expect(result.valid).toBe(true);
   });
 
@@ -121,7 +121,7 @@ describe("token constants", () => {
   it("has correct prefix lengths", () => {
     expect(TOKEN_PREFIX_PAT).toHaveLength(PREFIX_LEN);
     expect(TOKEN_PREFIX_SAT).toHaveLength(PREFIX_LEN);
-    expect(TOKEN_PREFIX_SESSION).toHaveLength(PREFIX_LEN);
+    expect(TOKEN_PREFIX_ENROLLMENT).toHaveLength(PREFIX_LEN);
   });
 
   it("token length is 54", () => {

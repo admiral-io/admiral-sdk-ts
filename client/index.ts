@@ -10,6 +10,6 @@ export {
   encodeBase62CRC32,
   TOKEN_PREFIX_PAT,
   TOKEN_PREFIX_SAT,
-  TOKEN_PREFIX_SESSION,
+  TOKEN_PREFIX_ENROLLMENT,
   TOKEN_LENGTH,
 } from "./lib/auth.js";
