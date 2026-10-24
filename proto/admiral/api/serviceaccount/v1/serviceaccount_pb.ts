@@ -19,7 +19,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/serviceaccount/v1/serviceaccount.proto.
  */
 export const file_admiral_api_serviceaccount_v1_serviceaccount: GenFile = /*@__PURE__*/
-  fileDesc("CjJhZG1pcmFsL2FwaS9zZXJ2aWNlYWNjb3VudC92MS9zZXJ2aWNlYWNjb3VudC5wcm90bxIdYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEinwIKDlNlcnZpY2VBY2NvdW50EicKAmlkGAEgASgJQhvgQQO6SBXYAQFyEDIOXnNhLVswLTlhLXpdKyQSFQoIYWdlbnRfaWQYAiABKAlCA+BBAxIWCglpc3N1ZXJfaWQYAyABKAlCA+BBAxIUCgdzdWJqZWN0GAQgASgJQgPgQQMSNAoLZW5yb2xsZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoKY3JlYXRlZF9ieRgGIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyLcAwoGSXNzdWVyEigKAmlkGAEgASgJQhzgQQO6SBbYAQFyETIPXmlzcy1bMC05YS16XSskEjgKBG5hbWUYAiABKAlCKrpIJ3IlGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIaCgNpc3MYAyABKAlCDeBBBbpIB3IFEAEYgBASPwoEa2V5cxgEIAEoCzIpLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLklzc3VlcktleXNCBrpIA8gBARIUCgdrZXlfaWRzGAUgAygJQgPgQQMSOAoPa2V5c191cGRhdGVkX2F0GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhwKD3BlbmRpbmdfa2V5X2lkcxgHIAMoCUID4EEDEjgKD3BlbmRpbmdfa2V5c19hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgpjcmVhdGVkX2J5GAkgASgLMhsuYWRtaXJhbC5jb21tb24udjEuQWN0b3JSZWZCA+BBAxIzCgpjcmVhdGVkX2F0GAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIrkBCgpJc3N1ZXJLZXlzEikKCGp3a3NfdXJpGAEgASgJQhW6SBJyEBiAEDoIaHR0cHM6Ly+IAQFIABIbCgRqd2tzGAIgASgJQgu6SAhyBhACGICABEgAEkYKCHJlcG9ydGVkGAMgASgLMjIuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuSXNzdWVyS2V5cy5SZXBvcnRlZEgAGgoKCFJlcG9ydGVkQg8KBnNvdXJjZRIFukgCCAEiUAoYR2V0U2VydmljZUFjY291bnRSZXF1ZXN0EjQKEnNlcnZpY2VfYWNjb3VudF9pZBgBIAEoCUIY4EECukgSchAyDl5zYS1bMC05YS16XSskImMKGUdldFNlcnZpY2VBY2NvdW50UmVzcG9uc2USRgoPc2VydmljZV9hY2NvdW50GAEgASgLMi0uYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuU2VydmljZUFjY291bnQiaAoaTGlzdFNlcnZpY2VBY2NvdW50c1JlcXVlc3QSGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJIn8KG0xpc3RTZXJ2aWNlQWNjb3VudHNSZXNwb25zZRJHChBzZXJ2aWNlX2FjY291bnRzGAEgAygLMi0uYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuU2VydmljZUFjY291bnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIuIBChNDcmVhdGVJc3N1ZXJSZXF1ZXN0EkAKBmlzc3VlchgBIAEoCzIlLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLklzc3VlckIJ4EECukgDyAEBOogBukiEARqBAQoSY3JlYXRlX2lzc3Vlci5rZXlzEkprZXlzIG11c3QgYmUgYSBqd2tzX3VyaSBvciBhIGp3a3M7IHJlcG9ydGVkIGtleXMgY29tZSBvbmx5IGZyb20gZW5yb2xsbWVudBofIWhhcyh0aGlzLmlzc3Vlci5rZXlzLnJlcG9ydGVkKSJNChRDcmVhdGVJc3N1ZXJSZXNwb25zZRI1CgZpc3N1ZXIYASABKAsyJS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5Jc3N1ZXIiQAoQR2V0SXNzdWVyUmVxdWVzdBIsCglpc3N1ZXJfaWQYASABKAlCGeBBArpIE3IRMg9eaXNzLVswLTlhLXpdKyQiSgoRR2V0SXNzdWVyUmVzcG9uc2USNQoGaXNzdWVyGAEgASgLMiUuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuSXNzdWVyImAKEkxpc3RJc3N1ZXJzUmVxdWVzdBIYCgZmaWx0ZXIYASABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgCIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YAyABKAkiZgoTTGlzdElzc3VlcnNSZXNwb25zZRI2Cgdpc3N1ZXJzGAEgAygLMiUuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuSXNzdWVyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSL+AQoUU2V0SXNzdWVyS2V5c1JlcXVlc3QSLAoJaXNzdWVyX2lkGAEgASgJQhngQQK6SBNyETIPXmlzcy1bMC05YS16XSskEjkKBGtleXMYAiABKAsyKS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5Jc3N1ZXJLZXlzSAASWwoOYWNjZXB0X3BlbmRpbmcYAyABKAsyQS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5TZXRJc3N1ZXJLZXlzUmVxdWVzdC5BY2NlcHRQZW5kaW5nSAAaDwoNQWNjZXB0UGVuZGluZ0IPCgZjaGFuZ2USBbpIAggBIk4KFVNldElzc3VlcktleXNSZXNwb25zZRI1CgZpc3N1ZXIYASABKAsyJS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5Jc3N1ZXIiQwoTRGVsZXRlSXNzdWVyUmVxdWVzdBIsCglpc3N1ZXJfaWQYASABKAlCGeBBArpIE3IRMg9eaXNzLVswLTlhLXpdKyQiFgoURGVsZXRlSXNzdWVyUmVzcG9uc2UyiwQKEVNlcnZpY2VBY2NvdW50QVBJEoMCChFHZXRTZXJ2aWNlQWNjb3VudBI3LmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkdldFNlcnZpY2VBY2NvdW50UmVxdWVzdBo4LmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkdldFNlcnZpY2VBY2NvdW50UmVzcG9uc2Uie7pHLgoQU2VydmljZSBBY2NvdW50cxIaUmV0cmlldmUgYSBzZXJ2aWNlIGFjY291bnSilyQVChNzZXJ2aWNlYWNjb3VudDpyZWFkgtPkkwIrEikvdjEvc2VydmljZS1hY2NvdW50cy97c2VydmljZV9hY2NvdW50X2lkfRLvAQoTTGlzdFNlcnZpY2VBY2NvdW50cxI5LmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkxpc3RTZXJ2aWNlQWNjb3VudHNSZXF1ZXN0GjouYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuTGlzdFNlcnZpY2VBY2NvdW50c1Jlc3BvbnNlImG6RykKEFNlcnZpY2UgQWNjb3VudHMSFUxpc3Qgc2VydmljZSBhY2NvdW50c6KXJBUKE3NlcnZpY2VhY2NvdW50OnJlYWSC0+STAhYSFC92MS9zZXJ2aWNlLWFjY291bnRzMpYICglJc3N1ZXJBUEkSyQEKDENyZWF0ZUlzc3VlchIyLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkNyZWF0ZUlzc3VlclJlcXVlc3QaMy5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5DcmVhdGVJc3N1ZXJSZXNwb25zZSJQukcdCgdJc3N1ZXJzEhJSZWdpc3RlciBhbiBpc3N1ZXKilyQWChRzZXJ2aWNlYWNjb3VudDp3cml0ZYLT5JMCEDoBKiILL3YxL2lzc3VlcnMSyAEKCUdldElzc3VlchIvLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkdldElzc3VlclJlcXVlc3QaMC5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5HZXRJc3N1ZXJSZXNwb25zZSJYukcdCgdJc3N1ZXJzEhJSZXRyaWV2ZSBhbiBpc3N1ZXKilyQVChNzZXJ2aWNlYWNjb3VudDpyZWFkgtPkkwIZEhcvdjEvaXNzdWVycy97aXNzdWVyX2lkfRK8AQoLTGlzdElzc3VlcnMSMS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5MaXN0SXNzdWVyc1JlcXVlc3QaMi5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5MaXN0SXNzdWVyc1Jlc3BvbnNlIka6RxcKB0lzc3VlcnMSDExpc3QgaXNzdWVyc6KXJBUKE3NlcnZpY2VhY2NvdW50OnJlYWSC0+STAg0SCy92MS9pc3N1ZXJzEt8BCg1TZXRJc3N1ZXJLZXlzEjMuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuU2V0SXNzdWVyS2V5c1JlcXVlc3QaNC5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5TZXRJc3N1ZXJLZXlzUmVzcG9uc2UiY7pHHwoHSXNzdWVycxIUU2V0IGFuIGlzc3VlcidzIGtleXOilyQWChRzZXJ2aWNlYWNjb3VudDp3cml0ZYLT5JMCIToBKiIcL3YxL2lzc3VlcnMve2lzc3Vlcl9pZH0va2V5cxLQAQoMRGVsZXRlSXNzdWVyEjIuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuRGVsZXRlSXNzdWVyUmVxdWVzdBozLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkRlbGV0ZUlzc3VlclJlc3BvbnNlIle6RxsKB0lzc3VlcnMSEERlbGV0ZSBhbiBpc3N1ZXKilyQWChRzZXJ2aWNlYWNjb3VudDp3cml0ZYLT5JMCGSoXL3YxL2lzc3VlcnMve2lzc3Vlcl9pZH1ClwIKIWNvbS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MUITU2VydmljZWFjY291bnRQcm90b1ABWkZnby5hZG1pcmFsLmlvL3Nkay9wcm90by9hZG1pcmFsL2FwaS9zZXJ2aWNlYWNjb3VudC92MTtzZXJ2aWNlYWNjb3VudHYxogIDQUFTqgIdQWRtaXJhbC5BcGkuU2VydmljZWFjY291bnQuVjHKAh1BZG1pcmFsXEFwaVxTZXJ2aWNlYWNjb3VudFxWMeICKUFkbWlyYWxcQXBpXFNlcnZpY2VhY2NvdW50XFYxXEdQQk1ldGFkYXRh6gIgQWRtaXJhbDo6QXBpOjpTZXJ2aWNlYWNjb3VudDo6VjFiBnByb3RvMw", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_timestamp]);
+  fileDesc("CjJhZG1pcmFsL2FwaS9zZXJ2aWNlYWNjb3VudC92MS9zZXJ2aWNlYWNjb3VudC5wcm90bxIdYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEi/QIKDlNlcnZpY2VBY2NvdW50EicKAmlkGAEgASgJQhvgQQO6SBXYAQFyEDIOXnNhLVswLTlhLXpdKyQSFQoIYWdlbnRfaWQYAiABKAlCA+BBAxIvCglpc3N1ZXJfaWQYAyABKAlCHOBBBbpIFtgBAXIRMg9eaXNzLVswLTlhLXpdKyQSHAoHc3ViamVjdBgEIAEoCUIL4EEFukgFcgMYgAQSNAoLZW5yb2xsZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoKY3JlYXRlZF9ieRgGIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI7CgRuYW1lGAggASgJQi3gQQW6SCdyJRg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQi3AMKBklzc3VlchIoCgJpZBgBIAEoCUIc4EEDukgW2AEBchEyD15pc3MtWzAtOWEtel0rJBI4CgRuYW1lGAIgASgJQiq6SCdyJRg/MiFeW2Etel0oW2EtejAtOS1dezAsNjF9W2EtejAtOV0pPyQSGgoDaXNzGAMgASgJQg3gQQW6SAdyBRABGIAQEj8KBGtleXMYBCABKAsyKS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5Jc3N1ZXJLZXlzQga6SAPIAQESFAoHa2V5X2lkcxgFIAMoCUID4EEDEjgKD2tleXNfdXBkYXRlZF9hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIcCg9wZW5kaW5nX2tleV9pZHMYByADKAlCA+BBAxI4Cg9wZW5kaW5nX2tleXNfYXQYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoKY3JlYXRlZF9ieRgJIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyK5AQoKSXNzdWVyS2V5cxIpCghqd2tzX3VyaRgBIAEoCUIVukgSchAYgBA6CGh0dHBzOi8viAEBSAASGwoEandrcxgCIAEoCUILukgIcgYQAhiAgARIABJGCghyZXBvcnRlZBgDIAEoCzIyLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLklzc3VlcktleXMuUmVwb3J0ZWRIABoKCghSZXBvcnRlZEIPCgZzb3VyY2USBbpIAggBIoECChtDcmVhdGVTZXJ2aWNlQWNjb3VudFJlcXVlc3QS4QEKD3NlcnZpY2VfYWNjb3VudBgBIAEoCzItLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLlNlcnZpY2VBY2NvdW50QpgB4EECukiRAboBigEKH2NyZWF0ZV9zZXJ2aWNlX2FjY291bnQuaWRlbnRpdHkSKG5hbWUsIGlzc3Vlcl9pZCBhbmQgc3ViamVjdCBhcmUgcmVxdWlyZWQaPXRoaXMubmFtZSAhPSAnJyAmJiB0aGlzLmlzc3Vlcl9pZCAhPSAnJyAmJiB0aGlzLnN1YmplY3QgIT0gJyfIAQEiZgocQ3JlYXRlU2VydmljZUFjY291bnRSZXNwb25zZRJGCg9zZXJ2aWNlX2FjY291bnQYASABKAsyLS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5TZXJ2aWNlQWNjb3VudCJQChhHZXRTZXJ2aWNlQWNjb3VudFJlcXVlc3QSNAoSc2VydmljZV9hY2NvdW50X2lkGAEgASgJQhjgQQK6SBJyEDIOXnNhLVswLTlhLXpdKyQiYwoZR2V0U2VydmljZUFjY291bnRSZXNwb25zZRJGCg9zZXJ2aWNlX2FjY291bnQYASABKAsyLS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5TZXJ2aWNlQWNjb3VudCJoChpMaXN0U2VydmljZUFjY291bnRzUmVxdWVzdBIYCgZmaWx0ZXIYASABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgCIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YAyABKAkifwobTGlzdFNlcnZpY2VBY2NvdW50c1Jlc3BvbnNlEkcKEHNlcnZpY2VfYWNjb3VudHMYASADKAsyLS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5TZXJ2aWNlQWNjb3VudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiUwobRGVsZXRlU2VydmljZUFjY291bnRSZXF1ZXN0EjQKEnNlcnZpY2VfYWNjb3VudF9pZBgBIAEoCUIY4EECukgSchAyDl5zYS1bMC05YS16XSskIh4KHERlbGV0ZVNlcnZpY2VBY2NvdW50UmVzcG9uc2Ui4gEKE0NyZWF0ZUlzc3VlclJlcXVlc3QSQAoGaXNzdWVyGAEgASgLMiUuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuSXNzdWVyQgngQQK6SAPIAQE6iAG6SIQBGoEBChJjcmVhdGVfaXNzdWVyLmtleXMSSmtleXMgbXVzdCBiZSBhIGp3a3NfdXJpIG9yIGEgandrczsgcmVwb3J0ZWQga2V5cyBjb21lIG9ubHkgZnJvbSBlbnJvbGxtZW50Gh8haGFzKHRoaXMuaXNzdWVyLmtleXMucmVwb3J0ZWQpIk0KFENyZWF0ZUlzc3VlclJlc3BvbnNlEjUKBmlzc3VlchgBIAEoCzIlLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLklzc3VlciJAChBHZXRJc3N1ZXJSZXF1ZXN0EiwKCWlzc3Vlcl9pZBgBIAEoCUIZ4EECukgTchEyD15pc3MtWzAtOWEtel0rJCJKChFHZXRJc3N1ZXJSZXNwb25zZRI1CgZpc3N1ZXIYASABKAsyJS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5Jc3N1ZXIiYAoSTGlzdElzc3VlcnNSZXF1ZXN0EhgKBmZpbHRlchgBIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAIgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgDIAEoCSJmChNMaXN0SXNzdWVyc1Jlc3BvbnNlEjYKB2lzc3VlcnMYASADKAsyJS5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5Jc3N1ZXISFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIv4BChRTZXRJc3N1ZXJLZXlzUmVxdWVzdBIsCglpc3N1ZXJfaWQYASABKAlCGeBBArpIE3IRMg9eaXNzLVswLTlhLXpdKyQSOQoEa2V5cxgCIAEoCzIpLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLklzc3VlcktleXNIABJbCg5hY2NlcHRfcGVuZGluZxgDIAEoCzJBLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLlNldElzc3VlcktleXNSZXF1ZXN0LkFjY2VwdFBlbmRpbmdIABoPCg1BY2NlcHRQZW5kaW5nQg8KBmNoYW5nZRIFukgCCAEiTgoVU2V0SXNzdWVyS2V5c1Jlc3BvbnNlEjUKBmlzc3VlchgBIAEoCzIlLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLklzc3VlciJDChNEZWxldGVJc3N1ZXJSZXF1ZXN0EiwKCWlzc3Vlcl9pZBgBIAEoCUIZ4EECukgTchEyD15pc3MtWzAtOWEtel0rJCIWChREZWxldGVJc3N1ZXJSZXNwb25zZTKVCAoRU2VydmljZUFjY291bnRBUEkS+QEKFENyZWF0ZVNlcnZpY2VBY2NvdW50EjouYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuQ3JlYXRlU2VydmljZUFjY291bnRSZXF1ZXN0GjsuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuQ3JlYXRlU2VydmljZUFjY291bnRSZXNwb25zZSJoukcsChBTZXJ2aWNlIEFjY291bnRzEhhDcmVhdGUgYSBzZXJ2aWNlIGFjY291bnSilyQWChRzZXJ2aWNlYWNjb3VudDp3cml0ZYLT5JMCGToBKiIUL3YxL3NlcnZpY2UtYWNjb3VudHMSgwIKEUdldFNlcnZpY2VBY2NvdW50EjcuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuR2V0U2VydmljZUFjY291bnRSZXF1ZXN0GjguYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuR2V0U2VydmljZUFjY291bnRSZXNwb25zZSJ7ukcuChBTZXJ2aWNlIEFjY291bnRzEhpSZXRyaWV2ZSBhIHNlcnZpY2UgYWNjb3VudKKXJBUKE3NlcnZpY2VhY2NvdW50OnJlYWSC0+STAisSKS92MS9zZXJ2aWNlLWFjY291bnRzL3tzZXJ2aWNlX2FjY291bnRfaWR9Eu8BChNMaXN0U2VydmljZUFjY291bnRzEjkuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuTGlzdFNlcnZpY2VBY2NvdW50c1JlcXVlc3QaOi5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5MaXN0U2VydmljZUFjY291bnRzUmVzcG9uc2UiYbpHKQoQU2VydmljZSBBY2NvdW50cxIVTGlzdCBzZXJ2aWNlIGFjY291bnRzopckFQoTc2VydmljZWFjY291bnQ6cmVhZILT5JMCFhIUL3YxL3NlcnZpY2UtYWNjb3VudHMSiwIKFERlbGV0ZVNlcnZpY2VBY2NvdW50EjouYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuRGVsZXRlU2VydmljZUFjY291bnRSZXF1ZXN0GjsuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuRGVsZXRlU2VydmljZUFjY291bnRSZXNwb25zZSJ6ukcsChBTZXJ2aWNlIEFjY291bnRzEhhEZWxldGUgYSBzZXJ2aWNlIGFjY291bnSilyQWChRzZXJ2aWNlYWNjb3VudDp3cml0ZYLT5JMCKyopL3YxL3NlcnZpY2UtYWNjb3VudHMve3NlcnZpY2VfYWNjb3VudF9pZH0ylggKCUlzc3VlckFQSRLJAQoMQ3JlYXRlSXNzdWVyEjIuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuQ3JlYXRlSXNzdWVyUmVxdWVzdBozLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkNyZWF0ZUlzc3VlclJlc3BvbnNlIlC6Rx0KB0lzc3VlcnMSElJlZ2lzdGVyIGFuIGlzc3VlcqKXJBYKFHNlcnZpY2VhY2NvdW50OndyaXRlgtPkkwIQOgEqIgsvdjEvaXNzdWVycxLIAQoJR2V0SXNzdWVyEi8uYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuR2V0SXNzdWVyUmVxdWVzdBowLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkdldElzc3VlclJlc3BvbnNlIli6Rx0KB0lzc3VlcnMSElJldHJpZXZlIGFuIGlzc3VlcqKXJBUKE3NlcnZpY2VhY2NvdW50OnJlYWSC0+STAhkSFy92MS9pc3N1ZXJzL3tpc3N1ZXJfaWR9ErwBCgtMaXN0SXNzdWVycxIxLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkxpc3RJc3N1ZXJzUmVxdWVzdBoyLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLkxpc3RJc3N1ZXJzUmVzcG9uc2UiRrpHFwoHSXNzdWVycxIMTGlzdCBpc3N1ZXJzopckFQoTc2VydmljZWFjY291bnQ6cmVhZILT5JMCDRILL3YxL2lzc3VlcnMS3wEKDVNldElzc3VlcktleXMSMy5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5TZXRJc3N1ZXJLZXlzUmVxdWVzdBo0LmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxLlNldElzc3VlcktleXNSZXNwb25zZSJjukcfCgdJc3N1ZXJzEhRTZXQgYW4gaXNzdWVyJ3Mga2V5c6KXJBYKFHNlcnZpY2VhY2NvdW50OndyaXRlgtPkkwIhOgEqIhwvdjEvaXNzdWVycy97aXNzdWVyX2lkfS9rZXlzEtABCgxEZWxldGVJc3N1ZXISMi5hZG1pcmFsLmFwaS5zZXJ2aWNlYWNjb3VudC52MS5EZWxldGVJc3N1ZXJSZXF1ZXN0GjMuYWRtaXJhbC5hcGkuc2VydmljZWFjY291bnQudjEuRGVsZXRlSXNzdWVyUmVzcG9uc2UiV7pHGwoHSXNzdWVycxIQRGVsZXRlIGFuIGlzc3VlcqKXJBYKFHNlcnZpY2VhY2NvdW50OndyaXRlgtPkkwIZKhcvdjEvaXNzdWVycy97aXNzdWVyX2lkfUKXAgohY29tLmFkbWlyYWwuYXBpLnNlcnZpY2VhY2NvdW50LnYxQhNTZXJ2aWNlYWNjb3VudFByb3RvUAFaRmdvLmFkbWlyYWwuaW8vc2RrL3Byb3RvL2FkbWlyYWwvYXBpL3NlcnZpY2VhY2NvdW50L3YxO3NlcnZpY2VhY2NvdW50djGiAgNBQVOqAh1BZG1pcmFsLkFwaS5TZXJ2aWNlYWNjb3VudC5WMcoCHUFkbWlyYWxcQXBpXFNlcnZpY2VhY2NvdW50XFYx4gIpQWRtaXJhbFxBcGlcU2VydmljZWFjY291bnRcVjFcR1BCTWV0YWRhdGHqAiBBZG1pcmFsOjpBcGk6OlNlcnZpY2VhY2NvdW50OjpWMWIGcHJvdG8z", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_timestamp]);
 
 /**
  * ServiceAccount is a non-human principal. With `issuer_id` and `subject` set
@@ -45,7 +45,7 @@ export type ServiceAccount = Message<"admiral.api.serviceaccount.v1.ServiceAccou
 
   /**
    * `iss-`: the issuer whose tokens it accepts. For an agent's, set when the
-   * agent enrolls; empty before.
+   * agent enrolls; empty before. For one that runs no agent, set on create.
    *
    * @generated from field: string issuer_id = 3;
    */
@@ -53,8 +53,10 @@ export type ServiceAccount = Message<"admiral.api.serviceaccount.v1.ServiceAccou
 
   /**
    * The `sub` a token must carry. For a Kubernetes service account,
-   * `system:serviceaccount:<namespace>:<name>`. For an agent's, recorded from
-   * its verified token when it enrolls and fixed from then on; empty before.
+   * `system:serviceaccount:<namespace>:<name>`; for GitHub Actions,
+   * `repo:<owner>/<repo>:ref:refs/heads/<branch>` or
+   * `repo:<owner>/<repo>:environment:<name>`. For an agent's, recorded from
+   * its verified token when it enrolls; empty before. Fixed once set.
    *
    * @generated from field: string subject = 4;
    */
@@ -74,6 +76,13 @@ export type ServiceAccount = Message<"admiral.api.serviceaccount.v1.ServiceAccou
    * @generated from field: google.protobuf.Timestamp created_at = 7;
    */
   createdAt?: Timestamp | undefined;
+
+  /**
+   * An agent's takes the agent's name. Unique in the organization.
+   *
+   * @generated from field: string name = 8;
+   */
+  name: string;
 };
 
 /**
@@ -225,6 +234,42 @@ export const IssuerKeys_ReportedSchema: GenMessage<IssuerKeys_Reported> = /*@__P
   messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 2, 0);
 
 /**
+ * @generated from message admiral.api.serviceaccount.v1.CreateServiceAccountRequest
+ */
+export type CreateServiceAccountRequest = Message<"admiral.api.serviceaccount.v1.CreateServiceAccountRequest"> & {
+  /**
+   * The service account to create: `name`, `issuer_id` and `subject`.
+   *
+   * @generated from field: admiral.api.serviceaccount.v1.ServiceAccount service_account = 1;
+   */
+  serviceAccount?: ServiceAccount | undefined;
+};
+
+/**
+ * Describes the message admiral.api.serviceaccount.v1.CreateServiceAccountRequest.
+ * Use `create(CreateServiceAccountRequestSchema)` to create a new message.
+ */
+export const CreateServiceAccountRequestSchema: GenMessage<CreateServiceAccountRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 3);
+
+/**
+ * @generated from message admiral.api.serviceaccount.v1.CreateServiceAccountResponse
+ */
+export type CreateServiceAccountResponse = Message<"admiral.api.serviceaccount.v1.CreateServiceAccountResponse"> & {
+  /**
+   * @generated from field: admiral.api.serviceaccount.v1.ServiceAccount service_account = 1;
+   */
+  serviceAccount?: ServiceAccount | undefined;
+};
+
+/**
+ * Describes the message admiral.api.serviceaccount.v1.CreateServiceAccountResponse.
+ * Use `create(CreateServiceAccountResponseSchema)` to create a new message.
+ */
+export const CreateServiceAccountResponseSchema: GenMessage<CreateServiceAccountResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 4);
+
+/**
  * @generated from message admiral.api.serviceaccount.v1.GetServiceAccountRequest
  */
 export type GetServiceAccountRequest = Message<"admiral.api.serviceaccount.v1.GetServiceAccountRequest"> & {
@@ -239,7 +284,7 @@ export type GetServiceAccountRequest = Message<"admiral.api.serviceaccount.v1.Ge
  * Use `create(GetServiceAccountRequestSchema)` to create a new message.
  */
 export const GetServiceAccountRequestSchema: GenMessage<GetServiceAccountRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 3);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 5);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.GetServiceAccountResponse
@@ -256,7 +301,7 @@ export type GetServiceAccountResponse = Message<"admiral.api.serviceaccount.v1.G
  * Use `create(GetServiceAccountResponseSchema)` to create a new message.
  */
 export const GetServiceAccountResponseSchema: GenMessage<GetServiceAccountResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 4);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 6);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.ListServiceAccountsRequest
@@ -291,7 +336,7 @@ export type ListServiceAccountsRequest = Message<"admiral.api.serviceaccount.v1.
  * Use `create(ListServiceAccountsRequestSchema)` to create a new message.
  */
 export const ListServiceAccountsRequestSchema: GenMessage<ListServiceAccountsRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 5);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 7);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.ListServiceAccountsResponse
@@ -313,7 +358,37 @@ export type ListServiceAccountsResponse = Message<"admiral.api.serviceaccount.v1
  * Use `create(ListServiceAccountsResponseSchema)` to create a new message.
  */
 export const ListServiceAccountsResponseSchema: GenMessage<ListServiceAccountsResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 6);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 8);
+
+/**
+ * @generated from message admiral.api.serviceaccount.v1.DeleteServiceAccountRequest
+ */
+export type DeleteServiceAccountRequest = Message<"admiral.api.serviceaccount.v1.DeleteServiceAccountRequest"> & {
+  /**
+   * @generated from field: string service_account_id = 1;
+   */
+  serviceAccountId: string;
+};
+
+/**
+ * Describes the message admiral.api.serviceaccount.v1.DeleteServiceAccountRequest.
+ * Use `create(DeleteServiceAccountRequestSchema)` to create a new message.
+ */
+export const DeleteServiceAccountRequestSchema: GenMessage<DeleteServiceAccountRequest> = /*@__PURE__*/
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 9);
+
+/**
+ * @generated from message admiral.api.serviceaccount.v1.DeleteServiceAccountResponse
+ */
+export type DeleteServiceAccountResponse = Message<"admiral.api.serviceaccount.v1.DeleteServiceAccountResponse"> & {
+};
+
+/**
+ * Describes the message admiral.api.serviceaccount.v1.DeleteServiceAccountResponse.
+ * Use `create(DeleteServiceAccountResponseSchema)` to create a new message.
+ */
+export const DeleteServiceAccountResponseSchema: GenMessage<DeleteServiceAccountResponse> = /*@__PURE__*/
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 10);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.CreateIssuerRequest
@@ -332,7 +407,7 @@ export type CreateIssuerRequest = Message<"admiral.api.serviceaccount.v1.CreateI
  * Use `create(CreateIssuerRequestSchema)` to create a new message.
  */
 export const CreateIssuerRequestSchema: GenMessage<CreateIssuerRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 7);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 11);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.CreateIssuerResponse
@@ -349,7 +424,7 @@ export type CreateIssuerResponse = Message<"admiral.api.serviceaccount.v1.Create
  * Use `create(CreateIssuerResponseSchema)` to create a new message.
  */
 export const CreateIssuerResponseSchema: GenMessage<CreateIssuerResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 8);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 12);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.GetIssuerRequest
@@ -366,7 +441,7 @@ export type GetIssuerRequest = Message<"admiral.api.serviceaccount.v1.GetIssuerR
  * Use `create(GetIssuerRequestSchema)` to create a new message.
  */
 export const GetIssuerRequestSchema: GenMessage<GetIssuerRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 9);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 13);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.GetIssuerResponse
@@ -383,7 +458,7 @@ export type GetIssuerResponse = Message<"admiral.api.serviceaccount.v1.GetIssuer
  * Use `create(GetIssuerResponseSchema)` to create a new message.
  */
 export const GetIssuerResponseSchema: GenMessage<GetIssuerResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 10);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 14);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.ListIssuersRequest
@@ -417,7 +492,7 @@ export type ListIssuersRequest = Message<"admiral.api.serviceaccount.v1.ListIssu
  * Use `create(ListIssuersRequestSchema)` to create a new message.
  */
 export const ListIssuersRequestSchema: GenMessage<ListIssuersRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 11);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 15);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.ListIssuersResponse
@@ -439,7 +514,7 @@ export type ListIssuersResponse = Message<"admiral.api.serviceaccount.v1.ListIss
  * Use `create(ListIssuersResponseSchema)` to create a new message.
  */
 export const ListIssuersResponseSchema: GenMessage<ListIssuersResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 12);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 16);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.SetIssuerKeysRequest
@@ -478,7 +553,7 @@ export type SetIssuerKeysRequest = Message<"admiral.api.serviceaccount.v1.SetIss
  * Use `create(SetIssuerKeysRequestSchema)` to create a new message.
  */
 export const SetIssuerKeysRequestSchema: GenMessage<SetIssuerKeysRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 13);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 17);
 
 /**
  * AcceptPending marks accepting the keys in `pending_key_ids`.
@@ -493,7 +568,7 @@ export type SetIssuerKeysRequest_AcceptPending = Message<"admiral.api.serviceacc
  * Use `create(SetIssuerKeysRequest_AcceptPendingSchema)` to create a new message.
  */
 export const SetIssuerKeysRequest_AcceptPendingSchema: GenMessage<SetIssuerKeysRequest_AcceptPending> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 13, 0);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 17, 0);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.SetIssuerKeysResponse
@@ -510,7 +585,7 @@ export type SetIssuerKeysResponse = Message<"admiral.api.serviceaccount.v1.SetIs
  * Use `create(SetIssuerKeysResponseSchema)` to create a new message.
  */
 export const SetIssuerKeysResponseSchema: GenMessage<SetIssuerKeysResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 14);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 18);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.DeleteIssuerRequest
@@ -527,7 +602,7 @@ export type DeleteIssuerRequest = Message<"admiral.api.serviceaccount.v1.DeleteI
  * Use `create(DeleteIssuerRequestSchema)` to create a new message.
  */
 export const DeleteIssuerRequestSchema: GenMessage<DeleteIssuerRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 15);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 19);
 
 /**
  * @generated from message admiral.api.serviceaccount.v1.DeleteIssuerResponse
@@ -540,17 +615,35 @@ export type DeleteIssuerResponse = Message<"admiral.api.serviceaccount.v1.Delete
  * Use `create(DeleteIssuerResponseSchema)` to create a new message.
  */
 export const DeleteIssuerResponseSchema: GenMessage<DeleteIssuerResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 16);
+  messageDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 20);
 
 /**
  * ServiceAccountAPI reads the organization's service accounts. A service
  * account is a non-human principal: it holds roles, and signs in with an
  * `adms_` key or with a token from an issuer it trusts. Every agent runs as
- * one, made with the agent.
+ * one, made with the agent; one that runs no agent, such as CI's, is made
+ * with CreateServiceAccount.
  *
  * @generated from service admiral.api.serviceaccount.v1.ServiceAccountAPI
  */
 export const ServiceAccountAPI: GenService<{
+  /**
+   * CreateServiceAccount makes a service account that runs no agent, which
+   * signs in with a token from `issuer_id` carrying `subject`. For GitHub
+   * Actions the subject names the repository and the ref or environment, so
+   * a run from anywhere else cannot sign in as it. ALREADY_EXISTS when
+   * another service account has the name, or trusts the same issuer and
+   * subject.
+   *
+   * Scope: `serviceaccount:write`
+   *
+   * @generated from rpc admiral.api.serviceaccount.v1.ServiceAccountAPI.CreateServiceAccount
+   */
+  createServiceAccount: {
+    methodKind: "unary";
+    input: typeof CreateServiceAccountRequestSchema;
+    output: typeof CreateServiceAccountResponseSchema;
+  },
   /**
    * GetServiceAccount returns a service account, and the issuer and subject
    * it signs in with once known.
@@ -576,6 +669,20 @@ export const ServiceAccountAPI: GenService<{
     methodKind: "unary";
     input: typeof ListServiceAccountsRequestSchema;
     output: typeof ListServiceAccountsResponseSchema;
+  },
+  /**
+   * DeleteServiceAccount removes a service account that runs no agent, and
+   * the roles it holds. FAILED_PRECONDITION for an agent's, which goes with
+   * its agent.
+   *
+   * Scope: `serviceaccount:write`
+   *
+   * @generated from rpc admiral.api.serviceaccount.v1.ServiceAccountAPI.DeleteServiceAccount
+   */
+  deleteServiceAccount: {
+    methodKind: "unary";
+    input: typeof DeleteServiceAccountRequestSchema;
+    output: typeof DeleteServiceAccountResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_admiral_api_serviceaccount_v1_serviceaccount, 0);

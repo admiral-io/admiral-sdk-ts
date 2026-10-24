@@ -121,13 +121,13 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "agent:exec",
-    description: "Agent runtime work: claim, start, renew, append the log of, fetch the artifact of, upload the plan diff of, check the plan of, and finish jobs.",
+    description: "Agent runtime work: claim, start, renew, append the log of, fetch the artifact of, upload the plan diff and plan file of, fetch the plan file of, check the plan of, and finish jobs.",
     implies: [],
     assignableTo: ["sat"],
   },
   {
     name: "agent:heartbeat",
-    description: "Send an agent's heartbeat: its version, what it runs against, its profiles, and its issuer's current keys.",
+    description: "Send an agent's heartbeat: its version, where it runs, what it can deploy, the credentials it found, and its issuer's current keys.",
     implies: [],
     assignableTo: ["sat"],
   },

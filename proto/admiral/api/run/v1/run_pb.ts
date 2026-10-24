@@ -1095,7 +1095,10 @@ export const RunAPI: GenService<{
   },
   /**
    * ApplyRun applies a run's plan. It takes the environment's lock. The agent
-   * checks the plan is still current before it changes anything.
+   * checks the plan is still current before it changes anything. For
+   * Kubernetes it plans again. For Terraform it applies the saved plan file,
+   * checked by digest, and the engine refuses a saved plan once the state has
+   * moved.
    *
    * FAILED_PRECONDITION when the run is not PLANNED, an approval in
    * `required_approval` is missing, the change set is behind, the environment is held, or the run is a
@@ -1139,9 +1142,12 @@ export const RunAPI: GenService<{
     output: typeof CancelRunResponseSchema;
   },
   /**
-   * GetRunPlanDiff returns a finished plan's full diffs, with every value
-   * the component marks sensitive masked: a Kubernetes Secret's `data` and
-   * `stringData`, a Terraform value declared `sensitive`. FAILED_PRECONDITION until the plan has succeeded.
+   * GetRunPlanDiff returns a finished plan's full diffs, output changes,
+   * drift and errors. The agent redacts every value the component marks
+   * sensitive before it uploads: a Kubernetes Secret's `data` and
+   * `stringData`, a Terraform value declared `sensitive`. A failed plan's
+   * diff holds its errors, every one it found. FAILED_PRECONDITION until the
+   * plan has finished.
    *
    * Scope: `run:read`
    *
