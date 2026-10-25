@@ -57,6 +57,8 @@ export const Scopes = {
   RunWrite: "run:write",
   ServiceaccountRead: "serviceaccount:read",
   ServiceaccountWrite: "serviceaccount:write",
+  StateRead: "state:read",
+  StateWrite: "state:write",
   TenantRead: "tenant:read",
   TenantWrite: "tenant:write",
   UserRead: "user:read",
@@ -81,6 +83,7 @@ export const GROUPS: readonly Group[] = [
   { name: "env", description: "Deployment environments and the components in them." },
   { name: "run", description: "Runs of change sets and drift checks, plan through apply." },
   { name: "serviceaccount", description: "Service accounts, and the issuers they accept tokens from." },
+  { name: "state", description: "Hosted Terraform state and its versions." },
   { name: "tenant", description: "Your tenant." },
   { name: "user", description: "Members of your tenant." },
 ];
@@ -246,6 +249,18 @@ export const SCOPES: readonly Scope[] = [
     assignableTo: ["pat"],
   },
   {
+    name: "state:read",
+    description: "Read hosted Terraform state, its outputs and its versions.",
+    implies: [],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "state:write",
+    description: "Lock, write and force-unlock hosted Terraform state. Whether you may is decided per environment, not by holding this.",
+    implies: ["state:read"],
+    assignableTo: ["pat"],
+  },
+  {
     name: "tenant:read",
     description: "Read the caller's own tenant -- name, slug, status and logo.",
     implies: [],
@@ -287,6 +302,7 @@ const impliesClosure: Readonly<Record<string, readonly string[]>> = {
   "env:write": ["env:read"],
   "run:write": ["run:read"],
   "serviceaccount:write": ["serviceaccount:read"],
+  "state:write": ["state:read"],
   "tenant:write": ["tenant:read"],
   "user:write": ["user:read"],
 };
