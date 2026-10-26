@@ -250,13 +250,13 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "state:read",
-    description: "Read hosted Terraform state, its outputs and its versions.",
+    description: "Read hosted Terraform state, its outputs and its versions. Enforced by admiral-state.",
     implies: [],
     assignableTo: ["pat"],
   },
   {
     name: "state:write",
-    description: "Lock, write and force-unlock hosted Terraform state. Whether you may is decided per environment, not by holding this.",
+    description: "Lock, write and force-unlock hosted Terraform state. Whether you may is decided per environment, not by holding this. Enforced by admiral-state.",
     implies: ["state:read"],
     assignableTo: ["pat"],
   },
