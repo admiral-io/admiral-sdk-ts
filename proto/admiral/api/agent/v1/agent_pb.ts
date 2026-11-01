@@ -1009,8 +1009,11 @@ export type ResourceChange = Message<"admiral.api.agent.v1.ResourceChange"> & {
   action: ResourceChange_Action;
 
   /**
-   * `sha256:<hex>` of this resource's ResourceDiff in the PlanDiff,
-   * deterministically marshaled. Empty for ACTION_NO_OP.
+   * `sha256:<hex>` of what the apply changes in this Kubernetes object: the
+   * action and each changed path with its before and after value, so a field
+   * the apply does not touch, such as replicas an autoscaler moved, leaves it
+   * unchanged. Empty for a Terraform resource, whose saved plan file pins what
+   * the apply changes, and for ACTION_NO_OP.
    *
    * @generated from field: string diff_digest = 3;
    */
