@@ -2,8 +2,8 @@
 // @generated from file admiral/api/environment/v1/environment.proto (package admiral.api.environment.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
-import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import type { ActorRef } from "../../../common/v1/actor_pb.js";
 import { file_admiral_common_v1_actor } from "../../../common/v1/actor_pb.js";
 import { file_admiral_common_v1_annotations } from "../../../common/v1/annotations_pb.js";
@@ -23,7 +23,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/environment/v1/environment.proto.
  */
 export const file_admiral_api_environment_v1_environment: GenFile = /*@__PURE__*/
-  fileDesc("CixhZG1pcmFsL2FwaS9lbnZpcm9ubWVudC92MS9lbnZpcm9ubWVudC5wcm90bxIaYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEihggKC0Vudmlyb25tZW50EigKAmlkGAEgASgJQhzgQQO6SBbYAQFyETIPXmVudi1bMC05YS16XSskEjQKDmFwcGxpY2F0aW9uX2lkGAIgASgJQhzgQQO6SBbYAQFyETIPXmFwcC1bMC05YS16XSskEjoKBG5hbWUYAyABKAlCLLpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEh0KC2Rlc2NyaXB0aW9uGAQgASgJQgi6SAVyAxiACBJcCgZsYWJlbHMYByADKAsyMy5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5FbnZpcm9ubWVudC5MYWJlbHNFbnRyeUIXukgUmgEREEAiBnIEEAEYPyoFcgMYgAISNAoKY3JlYXRlZF9ieRgKIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgp1cGRhdGVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjsKBmFnZW50cxgSIAMoCzIrLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkFnZW50QXNzaWdubWVudBI6CghhcHByb3ZhbBgTIAEoCzIoLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkFwcHJvdmFsUnVsZRIXCgpnZW5lcmF0aW9uGA8gASgDQgPgQQMSMwoEaG9sZBgUIAEoCzIgLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkhvbGRCA+BBAxI+CgpsYXN0X2FwcGx5GBUgASgLMiUuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuTGFzdEFwcGx5QgPgQQMSPQoNaW5mcmFfYmFja2VuZBgWIAEoCzImLmFkbWlyYWwuYXBpLmNoYW5nZXNldC52MS5JbmZyYUJhY2tlbmQSQQoMaW5mcmFfZW5naW5lGBcgASgLMisuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuSW5mcmFFbmdpbmVWZXJzaW9uGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFKBAgIEAlKBAgJEApKBAgNEA5KBAgOEA9KBAgQEBFKBAgREBJSE2hhc19wZW5kaW5nX2NoYW5nZXNSEGxhc3RfZGVwbG95ZWRfYXRSCmt1YmVybmV0ZXNSEWFwcHJvdmFsX3JlcXVpcmVkUhVoZWxkX2J5X2NoYW5nZV9zZXRfaWRSBXBydW5lIoYCCg9BZ2VudEFzc2lnbm1lbnQSKwoIYWdlbnRfaWQYASABKAlCGeBBArpIE3IRMg9eYWd0LVswLTlhLXpdKyQSJQoCaWQYAyABKAlCGbpIFtgBAXIRMg9eYXNnLVswLTlhLXpdKyQSRAoKa3ViZXJuZXRlcxgCIAEoCzIuLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkt1YmVybmV0ZXNTZXR0aW5nc0gAQgoKCHNldHRpbmdzSgQIBBAFSgQIBRAGSgQIBhAHSgQIBxAIUgZ0YXJnZXRSEGNsb3VkX2lkZW50aXRpZXNSDHBsYW5fcHJvZmlsZVINYXBwbHlfcHJvZmlsZSK1AQoSS3ViZXJuZXRlc1NldHRpbmdzEksKEWRlZmF1bHRfbmFtZXNwYWNlGAEgASgJQjC6SC1yKxg/MideKFthLXowLTldKFthLXowLTktXXswLDYxfVthLXowLTldKT8pPyQSHgoRY3JlYXRlX25hbWVzcGFjZXMYAiABKAhIAIgBARISCgVwcnVuZRgDIAEoCEgBiAEBQhQKEl9jcmVhdGVfbmFtZXNwYWNlc0IICgZfcHJ1bmUiwAIKDEFwcHJvdmFsUnVsZRIjChJyZXF1aXJlZF9hcHByb3ZhbHMYASABKAVCB7pIBBoCKAASsAEKBmdyb3VwcxgCIAMoCzI2LmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkFwcHJvdmFsUnVsZS5Hcm91cEFwcHJvdmFsQmi6SGW6AV0KG2FwcHJvdmFsX3J1bGUudW5pcXVlX2dyb3VwcxIcYSBncm91cCBhcHBlYXJzIGF0IG1vc3Qgb25jZRogdGhpcy5tYXAoZywgZy5ncm91cF9pZCkudW5pcXVlKCmSAQIQEBpYCg1Hcm91cEFwcHJvdmFsEisKCGdyb3VwX2lkGAEgASgJQhngQQK6SBNyETIPXmdycC1bMC05YS16XSskEhoKCWFwcHJvdmFscxgCIAEoBUIHukgEGgIoASJkCgRIb2xkEi8KDWNoYW5nZV9zZXRfaWQYASABKAlCGLpIFdgBAXIQMg5eY3MtWzAtOWEtel0rJBIrCgdoZWxkX2F0GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKcAQoJTGFzdEFwcGx5Ei8KDWNoYW5nZV9zZXRfaWQYASABKAlCGLpIFdgBAXIQMg5eY3MtWzAtOWEtel0rJBIuCgtyZXZpc2lvbl9pZBgCIAEoCUIZukgW2AEBchEyD15yZXYtWzAtOWEtel0rJBIuCgphcHBsaWVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKWAQoYQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0EjEKDmFwcGxpY2F0aW9uX2lkGAEgASgJQhngQQK6SBNyETIPXmFwcC1bMC05YS16XSskEkcKC2Vudmlyb25tZW50GAIgASgLMicuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRW52aXJvbm1lbnRCCeBBArpIA8gBASJZChlDcmVhdGVFbnZpcm9ubWVudFJlc3BvbnNlEjwKC2Vudmlyb25tZW50GAEgASgLMicuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRW52aXJvbm1lbnQiSgoVR2V0RW52aXJvbm1lbnRSZXF1ZXN0EjEKDmVudmlyb25tZW50X2lkGAEgASgJQhngQQK6SBNyETIPXmVudi1bMC05YS16XSskIlYKFkdldEVudmlyb25tZW50UmVzcG9uc2USPAoLZW52aXJvbm1lbnQYASABKAsyJy5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5FbnZpcm9ubWVudCKtAQoXTGlzdEVudmlyb25tZW50c1JlcXVlc3QSMwoOYXBwbGljYXRpb25faWQYBCABKAlCFrpIE3IRMg9eYXBwLVswLTlhLXpdKyRIAIgBARIYCgZmaWx0ZXIYASABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgCIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YAyABKAlCEQoPX2FwcGxpY2F0aW9uX2lkInIKGExpc3RFbnZpcm9ubWVudHNSZXNwb25zZRI9CgxlbnZpcm9ubWVudHMYASADKAsyJy5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5FbnZpcm9ubWVudBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkilAEKGFVwZGF0ZUVudmlyb25tZW50UmVxdWVzdBJHCgtlbnZpcm9ubWVudBgBIAEoCzInLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkVudmlyb25tZW50QgngQQK6SAPIAQESLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIlkKGVVwZGF0ZUVudmlyb25tZW50UmVzcG9uc2USPAoLZW52aXJvbm1lbnQYASABKAsyJy5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5FbnZpcm9ubWVudCJaChhEZWxldGVFbnZpcm9ubWVudFJlcXVlc3QSMQoOZW52aXJvbm1lbnRfaWQYASABKAlCGeBBArpIE3IRMg9eZW52LVswLTlhLXpdKyRKBAgCEANSBWZvcmNlIhsKGURlbGV0ZUVudmlyb25tZW50UmVzcG9uc2UiZAoaRW52aXJvbm1lbnRDb21wb25lbnRPdXRwdXQSDAoEbmFtZRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIRCglzZW5zaXRpdmUYAyABKAgi5wMKFEVudmlyb25tZW50Q29tcG9uZW50EgwKBG5hbWUYASABKAkSNAoOZW52aXJvbm1lbnRfaWQYDCABKAlCHOBBA7pIFtgBAXIRMg9eZW52LVswLTlhLXpdKyQSNAoEa2luZBgFIAEoDjImLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkNvbXBvbmVudEtpbmQSNQoHdmVyc2lvbhgKIAEoCzIkLmFkbWlyYWwuYXBpLmNoYW5nZXNldC52MS5WZXJzaW9uUmVmEjkKCmxhc3RfYXBwbHkYCyABKAsyJS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5MYXN0QXBwbHkSRwoHb3V0cHV0cxgNIAMoCzI2LmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkVudmlyb25tZW50Q29tcG9uZW50T3V0cHV0EkMKDmFwcGxpZWRfZW5naW5lGA4gASgLMisuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuSW5mcmFFbmdpbmVWZXJzaW9uSgQIBhAHSgQIBxAISgQICBAJSgQICRAKUgNyZWZSEGxhc3RfcmV2aXNpb25faWRSFGxhc3RfcmV2aXNpb25fc3RhdHVzUhBsYXN0X2RlcGxveWVkX2F0IrwBCiBMaXN0RW52aXJvbm1lbnRDb21wb25lbnRzUmVxdWVzdBIzCg5lbnZpcm9ubWVudF9pZBgFIAEoCUIWukgTchEyD15lbnYtWzAtOWEtel0rJEgAiAEBEhgKBmZpbHRlchgCIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAMgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgEIAEoCUIRCg9fZW52aXJvbm1lbnRfaWRKBAgBEAIiowEKIUxpc3RFbnZpcm9ubWVudENvbXBvbmVudHNSZXNwb25zZRJECgpjb21wb25lbnRzGAEgAygLMjAuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRW52aXJvbm1lbnRDb21wb25lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEh8KF3VucmVhZGFibGVfZW52aXJvbm1lbnRzGAMgASgFIrABCiRHZXRFbnZpcm9ubWVudENvbXBvbmVudFZhbHVlc1JlcXVlc3QSMQoOZW52aXJvbm1lbnRfaWQYASABKAlCGeBBArpIE3IRMg9eZW52LVswLTlhLXpdKyQSQgoJY29tcG9uZW50GAIgASgJQi/gQQK6SClyJxABGDUyIV5bYS16XShbYS16MC05LV17MCw1MX1bYS16MC05XSk/JBIRCgllZmZlY3RpdmUYAyABKAgirQEKJUdldEVudmlyb25tZW50Q29tcG9uZW50VmFsdWVzUmVzcG9uc2USEQoJdHJlZV9qc29uGAEgASgJEjYKB3NvdXJjZXMYAiADKAsyJS5hZG1pcmFsLmFwaS5jaGFuZ2VzZXQudjEuVmFsdWVTb3VyY2USOQoKbGFzdF9hcHBseRgDIAEoCzIlLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkxhc3RBcHBseTKmDQoORW52aXJvbm1lbnRBUEkS1AEKEUNyZWF0ZUVudmlyb25tZW50EjQuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuQ3JlYXRlRW52aXJvbm1lbnRSZXF1ZXN0GjUuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuQ3JlYXRlRW52aXJvbm1lbnRSZXNwb25zZSJSukclCgxFbnZpcm9ubWVudHMSFUNyZWF0ZSBhbiBlbnZpcm9ubWVudKKXJAsKCWVudjp3cml0ZYLT5JMCFToBKiIQL3YxL2Vudmlyb25tZW50cxLaAQoOR2V0RW52aXJvbm1lbnQSMS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5HZXRFbnZpcm9ubWVudFJlcXVlc3QaMi5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5HZXRFbnZpcm9ubWVudFJlc3BvbnNlImG6RycKDEVudmlyb25tZW50cxIXUmV0cmlldmUgYW4gZW52aXJvbm1lbnSilyQKCghlbnY6cmVhZILT5JMCIxIhL3YxL2Vudmlyb25tZW50cy97ZW52aXJvbm1lbnRfaWR9EskBChBMaXN0RW52aXJvbm1lbnRzEjMuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuTGlzdEVudmlyb25tZW50c1JlcXVlc3QaNC5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5MaXN0RW52aXJvbm1lbnRzUmVzcG9uc2UiSrpHIQoMRW52aXJvbm1lbnRzEhFMaXN0IGVudmlyb25tZW50c6KXJAoKCGVudjpyZWFkgtPkkwISEhAvdjEvZW52aXJvbm1lbnRzEuUBChFVcGRhdGVFbnZpcm9ubWVudBI0LmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLlVwZGF0ZUVudmlyb25tZW50UmVxdWVzdBo1LmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLlVwZGF0ZUVudmlyb25tZW50UmVzcG9uc2UiY7pHJQoMRW52aXJvbm1lbnRzEhVVcGRhdGUgYW4gZW52aXJvbm1lbnSilyQLCgllbnY6d3JpdGWC0+STAiY6ASoyIS92MS9lbnZpcm9ubWVudHMve2Vudmlyb25tZW50LmlkfRLiAQoRRGVsZXRlRW52aXJvbm1lbnQSNC5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5EZWxldGVFbnZpcm9ubWVudFJlcXVlc3QaNS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5EZWxldGVFbnZpcm9ubWVudFJlc3BvbnNlImC6RyUKDEVudmlyb25tZW50cxIVRGVsZXRlIGFuIGVudmlyb25tZW50opckCwoJZW52OndyaXRlgtPkkwIjKiEvdjEvZW52aXJvbm1lbnRzL3tlbnZpcm9ubWVudF9pZH0SkgIKGUxpc3RFbnZpcm9ubWVudENvbXBvbmVudHMSPC5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5MaXN0RW52aXJvbm1lbnRDb21wb25lbnRzUmVxdWVzdBo9LmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkxpc3RFbnZpcm9ubWVudENvbXBvbmVudHNSZXNwb25zZSJ4ukdFCgxFbnZpcm9ubWVudHMSNUxpc3QgbGl2ZSBjb21wb25lbnRzIGluIG9uZSBlbnZpcm9ubWVudCBvciBhY3Jvc3MgYWxsopckCgoIZW52OnJlYWSC0+STAhwSGi92MS9lbnZpcm9ubWVudC1jb21wb25lbnRzErECCh1HZXRFbnZpcm9ubWVudENvbXBvbmVudFZhbHVlcxJALmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkdldEVudmlyb25tZW50Q29tcG9uZW50VmFsdWVzUmVxdWVzdBpBLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkdldEVudmlyb25tZW50Q29tcG9uZW50VmFsdWVzUmVzcG9uc2UiigG6RzIKDEVudmlyb25tZW50cxIiUmV0cmlldmUgYSBsaXZlIGNvbXBvbmVudCdzIHZhbHVlc6KXJAoKCGVudjpyZWFkgtPkkwJBEj8vdjEvZW52aXJvbm1lbnRzL3tlbnZpcm9ubWVudF9pZH0vY29tcG9uZW50cy97Y29tcG9uZW50fS92YWx1ZXNC/wEKHmNvbS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MUIQRW52aXJvbm1lbnRQcm90b1ABWkBnby5hZG1pcmFsLmlvL3Nkay9wcm90by9hZG1pcmFsL2FwaS9lbnZpcm9ubWVudC92MTtlbnZpcm9ubWVudHYxogIDQUFFqgIaQWRtaXJhbC5BcGkuRW52aXJvbm1lbnQuVjHKAhpBZG1pcmFsXEFwaVxFbnZpcm9ubWVudFxWMeICJkFkbWlyYWxcQXBpXEVudmlyb25tZW50XFYxXEdQQk1ldGFkYXRh6gIdQWRtaXJhbDo6QXBpOjpFbnZpcm9ubWVudDo6VjFiBnByb3RvMw", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_admiral_api_registry_v1_registry, file_admiral_api_changeset_v1_changeset, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_struct, file_google_protobuf_timestamp]);
+  fileDesc("CixhZG1pcmFsL2FwaS9lbnZpcm9ubWVudC92MS9lbnZpcm9ubWVudC5wcm90bxIaYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEivggKC0Vudmlyb25tZW50EigKAmlkGAEgASgJQhzgQQO6SBbYAQFyETIPXmVudi1bMC05YS16XSskEjQKDmFwcGxpY2F0aW9uX2lkGAIgASgJQhzgQQO6SBbYAQFyETIPXmFwcC1bMC05YS16XSskEjoKBG5hbWUYAyABKAlCLLpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEh0KC2Rlc2NyaXB0aW9uGAQgASgJQgi6SAVyAxiACBJcCgZsYWJlbHMYByADKAsyMy5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5FbnZpcm9ubWVudC5MYWJlbHNFbnRyeUIXukgUmgEREEAiBnIEEAEYPyoFcgMYgAISNAoKY3JlYXRlZF9ieRgKIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgp1cGRhdGVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjsKBmFnZW50cxgSIAMoCzIrLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkFnZW50QXNzaWdubWVudBI6CghhcHByb3ZhbBgTIAEoCzIoLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkFwcHJvdmFsUnVsZRIXCgpnZW5lcmF0aW9uGA8gASgDQgPgQQMSMwoEaG9sZBgUIAEoCzIgLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkhvbGRCA+BBAxI+CgpsYXN0X2FwcGx5GBUgASgLMiUuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuTGFzdEFwcGx5QgPgQQMSPQoNaW5mcmFfYmFja2VuZBgWIAEoCzImLmFkbWlyYWwuYXBpLmNoYW5nZXNldC52MS5JbmZyYUJhY2tlbmQSQQoMaW5mcmFfZW5naW5lGBcgASgLMisuYWRtaXJhbC5hcGkucmVnaXN0cnkudjEuSW5mcmFFbmdpbmVWZXJzaW9uEjYKCHRyYWNraW5nGBggASgLMiQuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuVHJhY2tpbmcaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUoECAgQCUoECAkQCkoECA0QDkoECA4QD0oECBAQEUoECBEQElITaGFzX3BlbmRpbmdfY2hhbmdlc1IQbGFzdF9kZXBsb3llZF9hdFIKa3ViZXJuZXRlc1IRYXBwcm92YWxfcmVxdWlyZWRSFWhlbGRfYnlfY2hhbmdlX3NldF9pZFIFcHJ1bmUivwEKCFRyYWNraW5nEkYKBGtpbmQYASABKA4yKS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5UcmFja2luZy5LaW5kQg3gQQK6SAeCAQQQASAAEh4KB3BhdHRlcm4YAiABKAlCDeBBArpIB3IFEAEYgAEiSwoES2luZBIUChBLSU5EX1VOU1BFQ0lGSUVEEAASDwoLS0lORF9CUkFOQ0gQARIMCghLSU5EX1RBRxACEg4KCktJTkRfUkFOR0UQAyKGAgoPQWdlbnRBc3NpZ25tZW50EisKCGFnZW50X2lkGAEgASgJQhngQQK6SBNyETIPXmFndC1bMC05YS16XSskEiUKAmlkGAMgASgJQhm6SBbYAQFyETIPXmFzZy1bMC05YS16XSskEkQKCmt1YmVybmV0ZXMYAiABKAsyLi5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5LdWJlcm5ldGVzU2V0dGluZ3NIAEIKCghzZXR0aW5nc0oECAQQBUoECAUQBkoECAYQB0oECAcQCFIGdGFyZ2V0UhBjbG91ZF9pZGVudGl0aWVzUgxwbGFuX3Byb2ZpbGVSDWFwcGx5X3Byb2ZpbGUitQEKEkt1YmVybmV0ZXNTZXR0aW5ncxJLChFkZWZhdWx0X25hbWVzcGFjZRgBIAEoCUIwukgtcisYPzInXihbYS16MC05XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/KT8kEh4KEWNyZWF0ZV9uYW1lc3BhY2VzGAIgASgISACIAQESEgoFcHJ1bmUYAyABKAhIAYgBAUIUChJfY3JlYXRlX25hbWVzcGFjZXNCCAoGX3BydW5lIsACCgxBcHByb3ZhbFJ1bGUSIwoScmVxdWlyZWRfYXBwcm92YWxzGAEgASgFQge6SAQaAigAErABCgZncm91cHMYAiADKAsyNi5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5BcHByb3ZhbFJ1bGUuR3JvdXBBcHByb3ZhbEJoukhlugFdChthcHByb3ZhbF9ydWxlLnVuaXF1ZV9ncm91cHMSHGEgZ3JvdXAgYXBwZWFycyBhdCBtb3N0IG9uY2UaIHRoaXMubWFwKGcsIGcuZ3JvdXBfaWQpLnVuaXF1ZSgpkgECEBAaWAoNR3JvdXBBcHByb3ZhbBIrCghncm91cF9pZBgBIAEoCUIZ4EECukgTchEyD15ncnAtWzAtOWEtel0rJBIaCglhcHByb3ZhbHMYAiABKAVCB7pIBBoCKAEiZAoESG9sZBIvCg1jaGFuZ2Vfc2V0X2lkGAEgASgJQhi6SBXYAQFyEDIOXmNzLVswLTlhLXpdKyQSKwoHaGVsZF9hdBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAinAEKCUxhc3RBcHBseRIvCg1jaGFuZ2Vfc2V0X2lkGAEgASgJQhi6SBXYAQFyEDIOXmNzLVswLTlhLXpdKyQSLgoLcmV2aXNpb25faWQYAiABKAlCGbpIFtgBAXIRMg9ecmV2LVswLTlhLXpdKyQSLgoKYXBwbGllZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAilgEKGENyZWF0ZUVudmlyb25tZW50UmVxdWVzdBIxCg5hcHBsaWNhdGlvbl9pZBgBIAEoCUIZ4EECukgTchEyD15hcHAtWzAtOWEtel0rJBJHCgtlbnZpcm9ubWVudBgCIAEoCzInLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkVudmlyb25tZW50QgngQQK6SAPIAQEiWQoZQ3JlYXRlRW52aXJvbm1lbnRSZXNwb25zZRI8CgtlbnZpcm9ubWVudBgBIAEoCzInLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkVudmlyb25tZW50IkoKFUdldEVudmlyb25tZW50UmVxdWVzdBIxCg5lbnZpcm9ubWVudF9pZBgBIAEoCUIZ4EECukgTchEyD15lbnYtWzAtOWEtel0rJCJWChZHZXRFbnZpcm9ubWVudFJlc3BvbnNlEjwKC2Vudmlyb25tZW50GAEgASgLMicuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRW52aXJvbm1lbnQirQEKF0xpc3RFbnZpcm9ubWVudHNSZXF1ZXN0EjMKDmFwcGxpY2F0aW9uX2lkGAQgASgJQha6SBNyETIPXmFwcC1bMC05YS16XSskSACIAQESGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJQhEKD19hcHBsaWNhdGlvbl9pZCJyChhMaXN0RW52aXJvbm1lbnRzUmVzcG9uc2USPQoMZW52aXJvbm1lbnRzGAEgAygLMicuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRW52aXJvbm1lbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpQBChhVcGRhdGVFbnZpcm9ubWVudFJlcXVlc3QSRwoLZW52aXJvbm1lbnQYASABKAsyJy5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5FbnZpcm9ubWVudEIJ4EECukgDyAEBEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJZChlVcGRhdGVFbnZpcm9ubWVudFJlc3BvbnNlEjwKC2Vudmlyb25tZW50GAEgASgLMicuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRW52aXJvbm1lbnQiWgoYRGVsZXRlRW52aXJvbm1lbnRSZXF1ZXN0EjEKDmVudmlyb25tZW50X2lkGAEgASgJQhngQQK6SBNyETIPXmVudi1bMC05YS16XSskSgQIAhADUgVmb3JjZSIbChlEZWxldGVFbnZpcm9ubWVudFJlc3BvbnNlImQKGkVudmlyb25tZW50Q29tcG9uZW50T3V0cHV0EgwKBG5hbWUYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSEQoJc2Vuc2l0aXZlGAMgASgIIqYEChRFbnZpcm9ubWVudENvbXBvbmVudBIMCgRuYW1lGAEgASgJEjQKDmVudmlyb25tZW50X2lkGAwgASgJQhzgQQO6SBbYAQFyETIPXmVudi1bMC05YS16XSskEjQKBGtpbmQYBSABKA4yJi5hZG1pcmFsLmFwaS5yZWdpc3RyeS52MS5Db21wb25lbnRLaW5kEjUKB3ZlcnNpb24YCiABKAsyJC5hZG1pcmFsLmFwaS5jaGFuZ2VzZXQudjEuVmVyc2lvblJlZhI5CgpsYXN0X2FwcGx5GAsgASgLMiUuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuTGFzdEFwcGx5EkcKB291dHB1dHMYDSADKAsyNi5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5FbnZpcm9ubWVudENvbXBvbmVudE91dHB1dBJDCg5hcHBsaWVkX2VuZ2luZRgOIAEoCzIrLmFkbWlyYWwuYXBpLnJlZ2lzdHJ5LnYxLkluZnJhRW5naW5lVmVyc2lvbhI9Cg9uZXdlc3RfbWF0Y2hpbmcYDyABKAsyJC5hZG1pcmFsLmFwaS5jaGFuZ2VzZXQudjEuVmVyc2lvblJlZkoECAYQB0oECAcQCEoECAgQCUoECAkQClIDcmVmUhBsYXN0X3JldmlzaW9uX2lkUhRsYXN0X3JldmlzaW9uX3N0YXR1c1IQbGFzdF9kZXBsb3llZF9hdCK8AQogTGlzdEVudmlyb25tZW50Q29tcG9uZW50c1JlcXVlc3QSMwoOZW52aXJvbm1lbnRfaWQYBSABKAlCFrpIE3IRMg9eZW52LVswLTlhLXpdKyRIAIgBARIYCgZmaWx0ZXIYAiABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgDIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YBCABKAlCEQoPX2Vudmlyb25tZW50X2lkSgQIARACIqMBCiFMaXN0RW52aXJvbm1lbnRDb21wb25lbnRzUmVzcG9uc2USRAoKY29tcG9uZW50cxgBIAMoCzIwLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkVudmlyb25tZW50Q29tcG9uZW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIfChd1bnJlYWRhYmxlX2Vudmlyb25tZW50cxgDIAEoBSKwAQokR2V0RW52aXJvbm1lbnRDb21wb25lbnRWYWx1ZXNSZXF1ZXN0EjEKDmVudmlyb25tZW50X2lkGAEgASgJQhngQQK6SBNyETIPXmVudi1bMC05YS16XSskEkIKCWNvbXBvbmVudBgCIAEoCUIv4EECukgpcicQARg1MiFeW2Etel0oW2EtejAtOS1dezAsNTF9W2EtejAtOV0pPyQSEQoJZWZmZWN0aXZlGAMgASgIIq0BCiVHZXRFbnZpcm9ubWVudENvbXBvbmVudFZhbHVlc1Jlc3BvbnNlEhEKCXRyZWVfanNvbhgBIAEoCRI2Cgdzb3VyY2VzGAIgAygLMiUuYWRtaXJhbC5hcGkuY2hhbmdlc2V0LnYxLlZhbHVlU291cmNlEjkKCmxhc3RfYXBwbHkYAyABKAsyJS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5MYXN0QXBwbHkypg0KDkVudmlyb25tZW50QVBJEtQBChFDcmVhdGVFbnZpcm9ubWVudBI0LmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkNyZWF0ZUVudmlyb25tZW50UmVxdWVzdBo1LmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkNyZWF0ZUVudmlyb25tZW50UmVzcG9uc2UiUrpHJQoMRW52aXJvbm1lbnRzEhVDcmVhdGUgYW4gZW52aXJvbm1lbnSilyQLCgllbnY6d3JpdGWC0+STAhU6ASoiEC92MS9lbnZpcm9ubWVudHMS2gEKDkdldEVudmlyb25tZW50EjEuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuR2V0RW52aXJvbm1lbnRSZXF1ZXN0GjIuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuR2V0RW52aXJvbm1lbnRSZXNwb25zZSJhukcnCgxFbnZpcm9ubWVudHMSF1JldHJpZXZlIGFuIGVudmlyb25tZW50opckCgoIZW52OnJlYWSC0+STAiMSIS92MS9lbnZpcm9ubWVudHMve2Vudmlyb25tZW50X2lkfRLJAQoQTGlzdEVudmlyb25tZW50cxIzLmFkbWlyYWwuYXBpLmVudmlyb25tZW50LnYxLkxpc3RFbnZpcm9ubWVudHNSZXF1ZXN0GjQuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuTGlzdEVudmlyb25tZW50c1Jlc3BvbnNlIkq6RyEKDEVudmlyb25tZW50cxIRTGlzdCBlbnZpcm9ubWVudHOilyQKCghlbnY6cmVhZILT5JMCEhIQL3YxL2Vudmlyb25tZW50cxLlAQoRVXBkYXRlRW52aXJvbm1lbnQSNC5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5VcGRhdGVFbnZpcm9ubWVudFJlcXVlc3QaNS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5VcGRhdGVFbnZpcm9ubWVudFJlc3BvbnNlImO6RyUKDEVudmlyb25tZW50cxIVVXBkYXRlIGFuIGVudmlyb25tZW50opckCwoJZW52OndyaXRlgtPkkwImOgEqMiEvdjEvZW52aXJvbm1lbnRzL3tlbnZpcm9ubWVudC5pZH0S4gEKEURlbGV0ZUVudmlyb25tZW50EjQuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRGVsZXRlRW52aXJvbm1lbnRSZXF1ZXN0GjUuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuRGVsZXRlRW52aXJvbm1lbnRSZXNwb25zZSJgukclCgxFbnZpcm9ubWVudHMSFURlbGV0ZSBhbiBlbnZpcm9ubWVudKKXJAsKCWVudjp3cml0ZYLT5JMCIyohL3YxL2Vudmlyb25tZW50cy97ZW52aXJvbm1lbnRfaWR9EpICChlMaXN0RW52aXJvbm1lbnRDb21wb25lbnRzEjwuYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjEuTGlzdEVudmlyb25tZW50Q29tcG9uZW50c1JlcXVlc3QaPS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5MaXN0RW52aXJvbm1lbnRDb21wb25lbnRzUmVzcG9uc2UieLpHRQoMRW52aXJvbm1lbnRzEjVMaXN0IGxpdmUgY29tcG9uZW50cyBpbiBvbmUgZW52aXJvbm1lbnQgb3IgYWNyb3NzIGFsbKKXJAoKCGVudjpyZWFkgtPkkwIcEhovdjEvZW52aXJvbm1lbnQtY29tcG9uZW50cxKxAgodR2V0RW52aXJvbm1lbnRDb21wb25lbnRWYWx1ZXMSQC5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5HZXRFbnZpcm9ubWVudENvbXBvbmVudFZhbHVlc1JlcXVlc3QaQS5hZG1pcmFsLmFwaS5lbnZpcm9ubWVudC52MS5HZXRFbnZpcm9ubWVudENvbXBvbmVudFZhbHVlc1Jlc3BvbnNlIooBukcyCgxFbnZpcm9ubWVudHMSIlJldHJpZXZlIGEgbGl2ZSBjb21wb25lbnQncyB2YWx1ZXOilyQKCghlbnY6cmVhZILT5JMCQRI/L3YxL2Vudmlyb25tZW50cy97ZW52aXJvbm1lbnRfaWR9L2NvbXBvbmVudHMve2NvbXBvbmVudH0vdmFsdWVzQv8BCh5jb20uYWRtaXJhbC5hcGkuZW52aXJvbm1lbnQudjFCEEVudmlyb25tZW50UHJvdG9QAVpAZ28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvZW52aXJvbm1lbnQvdjE7ZW52aXJvbm1lbnR2MaICA0FBRaoCGkFkbWlyYWwuQXBpLkVudmlyb25tZW50LlYxygIaQWRtaXJhbFxBcGlcRW52aXJvbm1lbnRcVjHiAiZBZG1pcmFsXEFwaVxFbnZpcm9ubWVudFxWMVxHUEJNZXRhZGF0YeoCHUFkbWlyYWw6OkFwaTo6RW52aXJvbm1lbnQ6OlYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_admiral_api_registry_v1_registry, file_admiral_api_changeset_v1_changeset, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_struct, file_google_protobuf_timestamp]);
 
 /**
  * Environment is a named place an application deploys to (dev, staging,
@@ -157,6 +157,15 @@ export type Environment = Message<"admiral.api.environment.v1.Environment"> & {
    * @generated from field: admiral.api.registry.v1.InfraEngineVersion infra_engine = 23;
    */
   infraEngine?: InfraEngineVersion | undefined;
+
+  /**
+   * How the environment takes newly published versions of the components it
+   * runs. Unset, the environment is pinned: a publish changes nothing here,
+   * and it moves only by a change set someone writes.
+   *
+   * @generated from field: admiral.api.environment.v1.Tracking tracking = 24;
+   */
+  tracking?: Tracking | undefined;
 };
 
 /**
@@ -165,6 +174,77 @@ export type Environment = Message<"admiral.api.environment.v1.Environment"> & {
  */
 export const EnvironmentSchema: GenMessage<Environment> = /*@__PURE__*/
   messageDesc(file_admiral_api_environment_v1_environment, 0);
+
+/**
+ * Tracking is an environment's policy for following publishes. When a newly
+ * published version of a component the environment runs matches, the
+ * environment's draft change set for that component opens or is updated to
+ * that version and plans. Tracking never applies; an apply comes from a
+ * person, a deploy or a promotion.
+ *
+ * @generated from message admiral.api.environment.v1.Tracking
+ */
+export type Tracking = Message<"admiral.api.environment.v1.Tracking"> & {
+  /**
+   * @generated from field: admiral.api.environment.v1.Tracking.Kind kind = 1;
+   */
+  kind: Tracking_Kind;
+
+  /**
+   * @generated from field: string pattern = 2;
+   */
+  pattern: string;
+};
+
+/**
+ * Describes the message admiral.api.environment.v1.Tracking.
+ * Use `create(TrackingSchema)` to create a new message.
+ */
+export const TrackingSchema: GenMessage<Tracking> = /*@__PURE__*/
+  messageDesc(file_admiral_api_environment_v1_environment, 1);
+
+/**
+ * @generated from enum admiral.api.environment.v1.Tracking.Kind
+ */
+export enum Tracking_Kind {
+  /**
+   * @generated from enum value: KIND_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * The pattern is a branch name or glob (`main`, `release/*`). A branch
+   * is a floating tag the publisher applies, so the match is the version
+   * the tag points at.
+   *
+   * @generated from enum value: KIND_BRANCH = 1;
+   */
+  BRANCH = 1,
+
+  /**
+   * The pattern is a glob over the component's tags (`v*`, `stable-*`).
+   * The newest matching tag by publish time wins.
+   *
+   * @generated from enum value: KIND_TAG = 2;
+   */
+  TAG = 2,
+
+  /**
+   * The pattern is a semver range (`>=1.4.0 <2.0.0`, `~1.4`) over the
+   * component's semantic version tags, which never move. The highest
+   * matching version wins. A pre-release matches only a range that names
+   * one.
+   *
+   * @generated from enum value: KIND_RANGE = 3;
+   */
+  RANGE = 3,
+}
+
+/**
+ * Describes the enum admiral.api.environment.v1.Tracking.Kind.
+ */
+export const Tracking_KindSchema: GenEnum<Tracking_Kind> = /*@__PURE__*/
+  enumDesc(file_admiral_api_environment_v1_environment, 1, 0);
 
 /**
  * AgentAssignment binds an agent to an environment, with the settings for
@@ -210,7 +290,7 @@ export type AgentAssignment = Message<"admiral.api.environment.v1.AgentAssignmen
  * Use `create(AgentAssignmentSchema)` to create a new message.
  */
 export const AgentAssignmentSchema: GenMessage<AgentAssignment> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 1);
+  messageDesc(file_admiral_api_environment_v1_environment, 2);
 
 /**
  * KubernetesSettings is how an environment uses a Kubernetes agent.
@@ -252,7 +332,7 @@ export type KubernetesSettings = Message<"admiral.api.environment.v1.KubernetesS
  * Use `create(KubernetesSettingsSchema)` to create a new message.
  */
 export const KubernetesSettingsSchema: GenMessage<KubernetesSettings> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 2);
+  messageDesc(file_admiral_api_environment_v1_environment, 3);
 
 /**
  * ApprovalRule is what an apply needs from people before it runs. A plan
@@ -287,7 +367,7 @@ export type ApprovalRule = Message<"admiral.api.environment.v1.ApprovalRule"> & 
  * Use `create(ApprovalRuleSchema)` to create a new message.
  */
 export const ApprovalRuleSchema: GenMessage<ApprovalRule> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 3);
+  messageDesc(file_admiral_api_environment_v1_environment, 4);
 
 /**
  * GroupApproval is how many members of one group must approve.
@@ -311,7 +391,7 @@ export type ApprovalRule_GroupApproval = Message<"admiral.api.environment.v1.App
  * Use `create(ApprovalRule_GroupApprovalSchema)` to create a new message.
  */
 export const ApprovalRule_GroupApprovalSchema: GenMessage<ApprovalRule_GroupApproval> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 3, 0);
+  messageDesc(file_admiral_api_environment_v1_environment, 4, 0);
 
 /**
  * Hold is the state a partial apply leaves an environment in.
@@ -339,7 +419,7 @@ export type Hold = Message<"admiral.api.environment.v1.Hold"> & {
  * Use `create(HoldSchema)` to create a new message.
  */
 export const HoldSchema: GenMessage<Hold> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 4);
+  messageDesc(file_admiral_api_environment_v1_environment, 5);
 
 /**
  * LastApply points at the apply that produced an environment's current
@@ -375,7 +455,7 @@ export type LastApply = Message<"admiral.api.environment.v1.LastApply"> & {
  * Use `create(LastApplySchema)` to create a new message.
  */
 export const LastApplySchema: GenMessage<LastApply> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 5);
+  messageDesc(file_admiral_api_environment_v1_environment, 6);
 
 /**
  * CreateEnvironmentRequest creates an environment under an application.
@@ -403,7 +483,7 @@ export type CreateEnvironmentRequest = Message<"admiral.api.environment.v1.Creat
  * Use `create(CreateEnvironmentRequestSchema)` to create a new message.
  */
 export const CreateEnvironmentRequestSchema: GenMessage<CreateEnvironmentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 6);
+  messageDesc(file_admiral_api_environment_v1_environment, 7);
 
 /**
  * CreateEnvironmentResponse contains the newly created environment.
@@ -424,7 +504,7 @@ export type CreateEnvironmentResponse = Message<"admiral.api.environment.v1.Crea
  * Use `create(CreateEnvironmentResponseSchema)` to create a new message.
  */
 export const CreateEnvironmentResponseSchema: GenMessage<CreateEnvironmentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 7);
+  messageDesc(file_admiral_api_environment_v1_environment, 8);
 
 /**
  * GetEnvironmentRequest identifies an environment to retrieve.
@@ -445,7 +525,7 @@ export type GetEnvironmentRequest = Message<"admiral.api.environment.v1.GetEnvir
  * Use `create(GetEnvironmentRequestSchema)` to create a new message.
  */
 export const GetEnvironmentRequestSchema: GenMessage<GetEnvironmentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 8);
+  messageDesc(file_admiral_api_environment_v1_environment, 9);
 
 /**
  * GetEnvironmentResponse contains the environment record.
@@ -466,7 +546,7 @@ export type GetEnvironmentResponse = Message<"admiral.api.environment.v1.GetEnvi
  * Use `create(GetEnvironmentResponseSchema)` to create a new message.
  */
 export const GetEnvironmentResponseSchema: GenMessage<GetEnvironmentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 9);
+  messageDesc(file_admiral_api_environment_v1_environment, 10);
 
 /**
  * ListEnvironmentsRequest contains pagination and filter parameters.
@@ -517,7 +597,7 @@ export type ListEnvironmentsRequest = Message<"admiral.api.environment.v1.ListEn
  * Use `create(ListEnvironmentsRequestSchema)` to create a new message.
  */
 export const ListEnvironmentsRequestSchema: GenMessage<ListEnvironmentsRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 10);
+  messageDesc(file_admiral_api_environment_v1_environment, 11);
 
 /**
  * ListEnvironmentsResponse contains a page of environments.
@@ -545,7 +625,7 @@ export type ListEnvironmentsResponse = Message<"admiral.api.environment.v1.ListE
  * Use `create(ListEnvironmentsResponseSchema)` to create a new message.
  */
 export const ListEnvironmentsResponseSchema: GenMessage<ListEnvironmentsResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 11);
+  messageDesc(file_admiral_api_environment_v1_environment, 12);
 
 /**
  * UpdateEnvironmentRequest contains the environment fields to update.
@@ -565,7 +645,7 @@ export type UpdateEnvironmentRequest = Message<"admiral.api.environment.v1.Updat
    * The set of fields to update. Optional; if omitted, all populated fields
    * are updated. Pass `*` for full replacement. Supported fields: `name`,
    * `description`, `labels`, `agents`, `approval`, `infra_backend`,
-   * `infra_engine`.
+   * `infra_engine`, `tracking`.
    *
    * @generated from field: google.protobuf.FieldMask update_mask = 2;
    */
@@ -577,7 +657,7 @@ export type UpdateEnvironmentRequest = Message<"admiral.api.environment.v1.Updat
  * Use `create(UpdateEnvironmentRequestSchema)` to create a new message.
  */
 export const UpdateEnvironmentRequestSchema: GenMessage<UpdateEnvironmentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 12);
+  messageDesc(file_admiral_api_environment_v1_environment, 13);
 
 /**
  * UpdateEnvironmentResponse contains the updated environment.
@@ -598,7 +678,7 @@ export type UpdateEnvironmentResponse = Message<"admiral.api.environment.v1.Upda
  * Use `create(UpdateEnvironmentResponseSchema)` to create a new message.
  */
 export const UpdateEnvironmentResponseSchema: GenMessage<UpdateEnvironmentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 13);
+  messageDesc(file_admiral_api_environment_v1_environment, 14);
 
 /**
  * DeleteEnvironmentRequest identifies an environment to delete.
@@ -619,7 +699,7 @@ export type DeleteEnvironmentRequest = Message<"admiral.api.environment.v1.Delet
  * Use `create(DeleteEnvironmentRequestSchema)` to create a new message.
  */
 export const DeleteEnvironmentRequestSchema: GenMessage<DeleteEnvironmentRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 14);
+  messageDesc(file_admiral_api_environment_v1_environment, 15);
 
 /**
  * DeleteEnvironmentResponse is empty on success.
@@ -634,7 +714,7 @@ export type DeleteEnvironmentResponse = Message<"admiral.api.environment.v1.Dele
  * Use `create(DeleteEnvironmentResponseSchema)` to create a new message.
  */
 export const DeleteEnvironmentResponseSchema: GenMessage<DeleteEnvironmentResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 15);
+  messageDesc(file_admiral_api_environment_v1_environment, 16);
 
 /**
  * EnvironmentComponentOutput is one output of a live component.
@@ -665,7 +745,7 @@ export type EnvironmentComponentOutput = Message<"admiral.api.environment.v1.Env
  * Use `create(EnvironmentComponentOutputSchema)` to create a new message.
  */
 export const EnvironmentComponentOutputSchema: GenMessage<EnvironmentComponentOutput> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 16);
+  messageDesc(file_admiral_api_environment_v1_environment, 17);
 
 /**
  * EnvironmentComponent is one component live in an environment: the version
@@ -724,6 +804,15 @@ export type EnvironmentComponent = Message<"admiral.api.environment.v1.Environme
    * @generated from field: admiral.api.registry.v1.InfraEngineVersion applied_engine = 14;
    */
   appliedEngine?: InfraEngineVersion | undefined;
+
+  /**
+   * The newest published version the environment's tracking matches, when
+   * it is not the one running. Absent when the environment is pinned or
+   * runs the newest match: how far behind the component is.
+   *
+   * @generated from field: admiral.api.changeset.v1.VersionRef newest_matching = 15;
+   */
+  newestMatching?: VersionRef | undefined;
 };
 
 /**
@@ -731,7 +820,7 @@ export type EnvironmentComponent = Message<"admiral.api.environment.v1.Environme
  * Use `create(EnvironmentComponentSchema)` to create a new message.
  */
 export const EnvironmentComponentSchema: GenMessage<EnvironmentComponent> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 17);
+  messageDesc(file_admiral_api_environment_v1_environment, 18);
 
 /**
  * ListEnvironmentComponentsRequest lists live components in one environment
@@ -783,7 +872,7 @@ export type ListEnvironmentComponentsRequest = Message<"admiral.api.environment.
  * Use `create(ListEnvironmentComponentsRequestSchema)` to create a new message.
  */
 export const ListEnvironmentComponentsRequestSchema: GenMessage<ListEnvironmentComponentsRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 18);
+  messageDesc(file_admiral_api_environment_v1_environment, 19);
 
 /**
  * ListEnvironmentComponentsResponse is a page of live components.
@@ -819,7 +908,7 @@ export type ListEnvironmentComponentsResponse = Message<"admiral.api.environment
  * Use `create(ListEnvironmentComponentsResponseSchema)` to create a new message.
  */
 export const ListEnvironmentComponentsResponseSchema: GenMessage<ListEnvironmentComponentsResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 19);
+  messageDesc(file_admiral_api_environment_v1_environment, 20);
 
 /**
  * GetEnvironmentComponentValuesRequest names one live component.
@@ -850,7 +939,7 @@ export type GetEnvironmentComponentValuesRequest = Message<"admiral.api.environm
  * Use `create(GetEnvironmentComponentValuesRequestSchema)` to create a new message.
  */
 export const GetEnvironmentComponentValuesRequestSchema: GenMessage<GetEnvironmentComponentValuesRequest> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 20);
+  messageDesc(file_admiral_api_environment_v1_environment, 21);
 
 /**
  * GetEnvironmentComponentValuesResponse is the component's values tree.
@@ -885,7 +974,7 @@ export type GetEnvironmentComponentValuesResponse = Message<"admiral.api.environ
  * Use `create(GetEnvironmentComponentValuesResponseSchema)` to create a new message.
  */
 export const GetEnvironmentComponentValuesResponseSchema: GenMessage<GetEnvironmentComponentValuesResponse> = /*@__PURE__*/
-  messageDesc(file_admiral_api_environment_v1_environment, 21);
+  messageDesc(file_admiral_api_environment_v1_environment, 22);
 
 /**
  * EnvironmentAPI manages environments within an application.
