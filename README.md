@@ -51,6 +51,7 @@ const client = createClient(transport);
 // await client.run.methodName({ ... });
 // await client.serviceAccount.methodName({ ... });
 // await client.issuer.methodName({ ... });
+// await client.source.methodName({ ... });
 // await client.tenant.methodName({ ... });
 // await client.user.methodName({ ... });
 ```
@@ -87,6 +88,7 @@ const client = createClient(transport);
 | RunAPI | `client.run` | Run service |
 | ServiceAccountAPI | `client.serviceAccount` | ServiceAccount service |
 | IssuerAPI | `client.issuer` | Issuer service |
+| SourceAPI | `client.source` | Source service |
 | TenantAPI | `client.tenant` | Tenant service |
 | UserAPI | `client.user` | User service |
 

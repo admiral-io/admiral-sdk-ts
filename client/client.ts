@@ -15,6 +15,7 @@ import { RegistryAPI } from "../proto/admiral/api/registry/v1/registry_pb.js";
 import { RunAPI } from "../proto/admiral/api/run/v1/run_pb.js";
 import { ServiceAccountAPI } from "../proto/admiral/api/serviceaccount/v1/serviceaccount_pb.js";
 import { IssuerAPI } from "../proto/admiral/api/serviceaccount/v1/serviceaccount_pb.js";
+import { SourceAPI } from "../proto/admiral/api/source/v1/source_pb.js";
 import { TenantAPI } from "../proto/admiral/api/tenant/v1/tenant_pb.js";
 import { UserAPI } from "../proto/admiral/api/user/v1/user_pb.js";
 
@@ -34,6 +35,7 @@ type RegistryClient = ConnectClient<typeof RegistryAPI>;
 type RunClient = ConnectClient<typeof RunAPI>;
 type ServiceAccountClient = ConnectClient<typeof ServiceAccountAPI>;
 type IssuerClient = ConnectClient<typeof IssuerAPI>;
+type SourceClient = ConnectClient<typeof SourceAPI>;
 type TenantClient = ConnectClient<typeof TenantAPI>;
 type UserClient = ConnectClient<typeof UserAPI>;
 
@@ -90,6 +92,9 @@ export interface Client {
 
   /** Issuer service client */
   readonly issuer: IssuerClient;
+
+  /** Source service client */
+  readonly source: SourceClient;
 
   /** Tenant service client */
   readonly tenant: TenantClient;
@@ -149,6 +154,7 @@ export function createClient(transport: Transport): Client {
   let _run: RunClient | undefined;
   let _serviceAccount: ServiceAccountClient | undefined;
   let _issuer: IssuerClient | undefined;
+  let _source: SourceClient | undefined;
   let _tenant: TenantClient | undefined;
   let _user: UserClient | undefined;
 
@@ -258,6 +264,13 @@ export function createClient(transport: Transport): Client {
         _issuer = createConnectClient(IssuerAPI, transport);
       }
       return _issuer;
+    },
+
+    get source() {
+      if (!_source) {
+        _source = createConnectClient(SourceAPI, transport);
+      }
+      return _source;
     },
 
     get tenant() {
