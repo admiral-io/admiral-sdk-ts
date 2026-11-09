@@ -9,6 +9,7 @@ import { ChangeSetAPI } from "../proto/admiral/api/changeset/v1/changeset_pb.js"
 import { CredentialAPI } from "../proto/admiral/api/credential/v1/credential_pb.js";
 import { EnvironmentAPI } from "../proto/admiral/api/environment/v1/environment_pb.js";
 import { HealthcheckAPI } from "../proto/admiral/api/healthcheck/v1/healthcheck_pb.js";
+import { IntegrationAPI } from "../proto/admiral/api/integration/v1/integration_pb.js";
 import { InvitationAPI } from "../proto/admiral/api/invitation/v1/invitation_pb.js";
 import { RegistryAPI } from "../proto/admiral/api/registry/v1/registry_pb.js";
 import { RunAPI } from "../proto/admiral/api/run/v1/run_pb.js";
@@ -27,6 +28,7 @@ type ChangeSetClient = ConnectClient<typeof ChangeSetAPI>;
 type CredentialClient = ConnectClient<typeof CredentialAPI>;
 type EnvironmentClient = ConnectClient<typeof EnvironmentAPI>;
 type HealthcheckClient = ConnectClient<typeof HealthcheckAPI>;
+type IntegrationClient = ConnectClient<typeof IntegrationAPI>;
 type InvitationClient = ConnectClient<typeof InvitationAPI>;
 type RegistryClient = ConnectClient<typeof RegistryAPI>;
 type RunClient = ConnectClient<typeof RunAPI>;
@@ -70,6 +72,9 @@ export interface Client {
 
   /** Healthcheck service client */
   readonly healthcheck: HealthcheckClient;
+
+  /** Integration service client */
+  readonly integration: IntegrationClient;
 
   /** Invitation service client */
   readonly invitation: InvitationClient;
@@ -138,6 +143,7 @@ export function createClient(transport: Transport): Client {
   let _credential: CredentialClient | undefined;
   let _environment: EnvironmentClient | undefined;
   let _healthcheck: HealthcheckClient | undefined;
+  let _integration: IntegrationClient | undefined;
   let _invitation: InvitationClient | undefined;
   let _registry: RegistryClient | undefined;
   let _run: RunClient | undefined;
@@ -210,6 +216,13 @@ export function createClient(transport: Transport): Client {
         _healthcheck = createConnectClient(HealthcheckAPI, transport);
       }
       return _healthcheck;
+    },
+
+    get integration() {
+      if (!_integration) {
+        _integration = createConnectClient(IntegrationAPI, transport);
+      }
+      return _integration;
     },
 
     get invitation() {
