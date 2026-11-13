@@ -42,8 +42,6 @@ export const Scopes = {
   AgentWrite: "agent:write",
   ApikeyRead: "apikey:read",
   ApikeyWrite: "apikey:write",
-  AppRead: "app:read",
-  AppWrite: "app:write",
   ChangesetRead: "changeset:read",
   ChangesetWrite: "changeset:write",
   ComponentPublish: "component:publish",
@@ -55,6 +53,10 @@ export const Scopes = {
   EnvWrite: "env:write",
   IntegrationRead: "integration:read",
   IntegrationWrite: "integration:write",
+  OrganizationRead: "organization:read",
+  OrganizationWrite: "organization:write",
+  ProjectRead: "project:read",
+  ProjectWrite: "project:write",
   RunRead: "run:read",
   RunWrite: "run:write",
   ServiceaccountRead: "serviceaccount:read",
@@ -63,14 +65,12 @@ export const Scopes = {
   SourceWrite: "source:write",
   StateRead: "state:read",
   StateWrite: "state:write",
-  TenantRead: "tenant:read",
-  TenantWrite: "tenant:write",
   UserRead: "user:read",
   UserWrite: "user:write",
 } as const;
 export type ScopeName = (typeof Scopes)[keyof typeof Scopes];
 
-/** One scope prefix and what it covers: "app" for app:read and app:write. */
+/** One scope prefix and what it covers: "app" for project:read and project:write. */
 export interface Group {
   readonly name: string;
   readonly description: string;
@@ -80,18 +80,18 @@ export interface Group {
 export const GROUPS: readonly Group[] = [
   { name: "agent", description: "Agents, who may use each, and the jobs they run." },
   { name: "apikey", description: "Your own API keys." },
-  { name: "app", description: "Applications." },
   { name: "changeset", description: "Change sets, their revisions, and the component values they propose." },
   { name: "component", description: "The component registry, where published Terraform modules, Helm charts and manifests live." },
   { name: "credential", description: "Credentials for external systems." },
   { name: "env", description: "Deployment environments and the components in them." },
   { name: "integration", description: "Integrations your organization connects, such as the GitHub App." },
+  { name: "organization", description: "Your organization." },
+  { name: "project", description: "Projects." },
   { name: "run", description: "Runs of change sets and drift checks, plan through apply." },
   { name: "serviceaccount", description: "Service accounts, and the issuers they accept tokens from." },
   { name: "source", description: "Sources, the upstream locations components come from and the grants that reach them." },
   { name: "state", description: "Hosted Terraform state and its versions." },
-  { name: "tenant", description: "Your tenant." },
-  { name: "user", description: "Members of your tenant." },
+  { name: "user", description: "Members of your organization." },
 ];
 
 /** Group name to its definition. */
@@ -165,18 +165,6 @@ export const SCOPES: readonly Scope[] = [
     assignableTo: ["pat"],
   },
   {
-    name: "app:read",
-    description: "Read applications.",
-    implies: [],
-    assignableTo: ["pat"],
-  },
-  {
-    name: "app:write",
-    description: "Create, update, and delete applications.",
-    implies: ["app:read"],
-    assignableTo: ["pat"],
-  },
-  {
     name: "changeset:read",
     description: "Read change sets, their revisions and diffs, and the values they propose.",
     implies: [],
@@ -243,6 +231,30 @@ export const SCOPES: readonly Scope[] = [
     assignableTo: ["pat"],
   },
   {
+    name: "organization:read",
+    description: "Read organizations, their name, slug, status and logo.",
+    implies: [],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "organization:write",
+    description: "Update an organization's settings, and register, suspend, reactivate and delete organizations.",
+    implies: ["organization:read"],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "project:read",
+    description: "Read projects.",
+    implies: [],
+    assignableTo: ["pat"],
+  },
+  {
+    name: "project:write",
+    description: "Create, update, and delete projects.",
+    implies: ["project:read"],
+    assignableTo: ["pat"],
+  },
+  {
     name: "run:read",
     description: "Read runs, their plans, applies and approvals.",
     implies: [],
@@ -291,18 +303,6 @@ export const SCOPES: readonly Scope[] = [
     assignableTo: ["pat"],
   },
   {
-    name: "tenant:read",
-    description: "Read tenants, their name, slug, status and logo.",
-    implies: [],
-    assignableTo: ["pat"],
-  },
-  {
-    name: "tenant:write",
-    description: "Update a tenant's settings, and register, suspend, reactivate and delete tenants.",
-    implies: ["tenant:read"],
-    assignableTo: ["pat"],
-  },
-  {
     name: "user:read",
     description: "Read user profiles and invitations.",
     implies: [],
@@ -324,18 +324,18 @@ export const CATALOG: Readonly<Record<string, Scope>> = Object.fromEntries(
 const impliesClosure: Readonly<Record<string, readonly string[]>> = {
   "agent:write": ["agent:read"],
   "apikey:write": ["apikey:read"],
-  "app:write": ["app:read"],
   "changeset:write": ["changeset:read"],
   "component:publish": ["component:read"],
   "component:write": ["component:publish", "component:read"],
   "credential:write": ["credential:read"],
   "env:write": ["env:read"],
   "integration:write": ["integration:read"],
+  "organization:write": ["organization:read"],
+  "project:write": ["project:read"],
   "run:write": ["run:read"],
   "serviceaccount:write": ["serviceaccount:read"],
   "source:write": ["source:read"],
   "state:write": ["state:read"],
-  "tenant:write": ["tenant:read"],
   "user:write": ["user:read"],
 };
 

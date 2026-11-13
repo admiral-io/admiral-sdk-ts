@@ -40,19 +40,19 @@ const client = createClient(transport);
 // await client.job.methodName({ ... });
 // await client.agentRuntime.methodName({ ... });
 // await client.apiKey.methodName({ ... });
-// await client.application.methodName({ ... });
 // await client.changeSet.methodName({ ... });
 // await client.credential.methodName({ ... });
 // await client.environment.methodName({ ... });
 // await client.healthcheck.methodName({ ... });
 // await client.integration.methodName({ ... });
 // await client.invitation.methodName({ ... });
+// await client.organization.methodName({ ... });
+// await client.project.methodName({ ... });
 // await client.registry.methodName({ ... });
 // await client.run.methodName({ ... });
 // await client.serviceAccount.methodName({ ... });
 // await client.issuer.methodName({ ... });
 // await client.source.methodName({ ... });
-// await client.tenant.methodName({ ... });
 // await client.user.methodName({ ... });
 ```
 
@@ -77,19 +77,19 @@ const client = createClient(transport);
 | JobAPI | `client.job` | Job service |
 | AgentRuntimeAPI | `client.agentRuntime` | AgentRuntime service |
 | ApiKeyAPI | `client.apiKey` | ApiKey service |
-| ApplicationAPI | `client.application` | Application service |
 | ChangeSetAPI | `client.changeSet` | ChangeSet service |
 | CredentialAPI | `client.credential` | Credential service |
 | EnvironmentAPI | `client.environment` | Environment service |
 | HealthcheckAPI | `client.healthcheck` | Healthcheck service |
 | IntegrationAPI | `client.integration` | Integration service |
 | InvitationAPI | `client.invitation` | Invitation service |
+| OrganizationAPI | `client.organization` | Organization service |
+| ProjectAPI | `client.project` | Project service |
 | RegistryAPI | `client.registry` | Registry service |
 | RunAPI | `client.run` | Run service |
 | ServiceAccountAPI | `client.serviceAccount` | ServiceAccount service |
 | IssuerAPI | `client.issuer` | Issuer service |
 | SourceAPI | `client.source` | Source service |
-| TenantAPI | `client.tenant` | Tenant service |
 | UserAPI | `client.user` | User service |
 
 ## Example

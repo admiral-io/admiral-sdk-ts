@@ -1,6 +1,6 @@
 {
   "name": "@admiral-io/sdk",
-  "version": "1.37.0",
+  "version": "0.0.1",
   "publishConfig": {
     "access": "public"
   },

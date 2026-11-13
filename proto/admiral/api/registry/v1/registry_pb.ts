@@ -36,7 +36,7 @@ export type Component = Message<"admiral.api.registry.v1.Component"> & {
   id: string;
 
   /**
-   * Unique within the tenant, never changed: `cloud-sql`. Team grouping,
+   * Unique within the organization, never changed: `cloud-sql`. Team grouping,
    * when it lands, is a `team/` segment of the name (`payments/cloud-sql`);
    * moving a component means publishing under the new name and deprecating
    * the old one with it as the successor.
@@ -673,7 +673,7 @@ export enum Provenance_Kind {
   UNSPECIFIED = 0,
 
   /**
-   * The tenant's own code, published because they pushed it. Today that is
+   * The organization's own code, published because they pushed it. Today that is
    * the CLI uploading a directory, from CI or a laptop; the repository,
    * ref and commit are what the publisher reported.
    *
@@ -682,7 +682,7 @@ export enum Provenance_Kind {
   PUSH = 1,
 
   /**
-   * A copy of an artifact the tenant does not own (a chart, a registry
+   * A copy of an artifact the organization does not own (a chart, a registry
    * module, a git tree, an archive), fetched by Admiral. The upstream
    * identity is recorded; the bytes are frozen here.
    *
@@ -1859,7 +1859,7 @@ export const FindingSeveritySchema: GenEnum<FindingSeverity> = /*@__PURE__*/
   enumDesc(file_admiral_api_registry_v1_registry, 2);
 
 /**
- * RegistryAPI is the component registry: what a tenant has published,
+ * RegistryAPI is the component registry: what an organization has published,
  * addressed by digest.
  *
  * A component here is a REGISTRY ENTRY -- the thing `admiral component
@@ -1911,7 +1911,7 @@ export const RegistryAPI: GenService<{
     output: typeof PublishComponentResponseSchema;
   },
   /**
-   * ImportComponent publishes an artifact the tenant does not own: a chart in
+   * ImportComponent publishes an artifact the organization does not own: a chart in
    * an HTTP repository or an OCI registry, a module in a module registry, a
    * git repository at a ref, an archive. Admiral fetches it with the
    * credentials named, closes it over what it reaches, scans it, and

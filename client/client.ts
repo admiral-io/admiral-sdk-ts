@@ -4,19 +4,19 @@ import { AgentAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { JobAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { AgentRuntimeAPI } from "../proto/admiral/api/agent/v1/agent_pb.js";
 import { ApiKeyAPI } from "../proto/admiral/api/apikey/v1/apikey_pb.js";
-import { ApplicationAPI } from "../proto/admiral/api/application/v1/application_pb.js";
 import { ChangeSetAPI } from "../proto/admiral/api/changeset/v1/changeset_pb.js";
 import { CredentialAPI } from "../proto/admiral/api/credential/v1/credential_pb.js";
 import { EnvironmentAPI } from "../proto/admiral/api/environment/v1/environment_pb.js";
 import { HealthcheckAPI } from "../proto/admiral/api/healthcheck/v1/healthcheck_pb.js";
 import { IntegrationAPI } from "../proto/admiral/api/integration/v1/integration_pb.js";
 import { InvitationAPI } from "../proto/admiral/api/invitation/v1/invitation_pb.js";
+import { OrganizationAPI } from "../proto/admiral/api/organization/v1/organization_pb.js";
+import { ProjectAPI } from "../proto/admiral/api/project/v1/project_pb.js";
 import { RegistryAPI } from "../proto/admiral/api/registry/v1/registry_pb.js";
 import { RunAPI } from "../proto/admiral/api/run/v1/run_pb.js";
 import { ServiceAccountAPI } from "../proto/admiral/api/serviceaccount/v1/serviceaccount_pb.js";
 import { IssuerAPI } from "../proto/admiral/api/serviceaccount/v1/serviceaccount_pb.js";
 import { SourceAPI } from "../proto/admiral/api/source/v1/source_pb.js";
-import { TenantAPI } from "../proto/admiral/api/tenant/v1/tenant_pb.js";
 import { UserAPI } from "../proto/admiral/api/user/v1/user_pb.js";
 
 // Service client types
@@ -24,19 +24,19 @@ type AgentClient = ConnectClient<typeof AgentAPI>;
 type JobClient = ConnectClient<typeof JobAPI>;
 type AgentRuntimeClient = ConnectClient<typeof AgentRuntimeAPI>;
 type ApiKeyClient = ConnectClient<typeof ApiKeyAPI>;
-type ApplicationClient = ConnectClient<typeof ApplicationAPI>;
 type ChangeSetClient = ConnectClient<typeof ChangeSetAPI>;
 type CredentialClient = ConnectClient<typeof CredentialAPI>;
 type EnvironmentClient = ConnectClient<typeof EnvironmentAPI>;
 type HealthcheckClient = ConnectClient<typeof HealthcheckAPI>;
 type IntegrationClient = ConnectClient<typeof IntegrationAPI>;
 type InvitationClient = ConnectClient<typeof InvitationAPI>;
+type OrganizationClient = ConnectClient<typeof OrganizationAPI>;
+type ProjectClient = ConnectClient<typeof ProjectAPI>;
 type RegistryClient = ConnectClient<typeof RegistryAPI>;
 type RunClient = ConnectClient<typeof RunAPI>;
 type ServiceAccountClient = ConnectClient<typeof ServiceAccountAPI>;
 type IssuerClient = ConnectClient<typeof IssuerAPI>;
 type SourceClient = ConnectClient<typeof SourceAPI>;
-type TenantClient = ConnectClient<typeof TenantAPI>;
 type UserClient = ConnectClient<typeof UserAPI>;
 
 /**
@@ -60,9 +60,6 @@ export interface Client {
   /** ApiKey service client */
   readonly apiKey: ApiKeyClient;
 
-  /** Application service client */
-  readonly application: ApplicationClient;
-
   /** ChangeSet service client */
   readonly changeSet: ChangeSetClient;
 
@@ -81,6 +78,12 @@ export interface Client {
   /** Invitation service client */
   readonly invitation: InvitationClient;
 
+  /** Organization service client */
+  readonly organization: OrganizationClient;
+
+  /** Project service client */
+  readonly project: ProjectClient;
+
   /** Registry service client */
   readonly registry: RegistryClient;
 
@@ -95,9 +98,6 @@ export interface Client {
 
   /** Source service client */
   readonly source: SourceClient;
-
-  /** Tenant service client */
-  readonly tenant: TenantClient;
 
   /** User service client */
   readonly user: UserClient;
@@ -143,19 +143,19 @@ export function createClient(transport: Transport): Client {
   let _job: JobClient | undefined;
   let _agentRuntime: AgentRuntimeClient | undefined;
   let _apiKey: ApiKeyClient | undefined;
-  let _application: ApplicationClient | undefined;
   let _changeSet: ChangeSetClient | undefined;
   let _credential: CredentialClient | undefined;
   let _environment: EnvironmentClient | undefined;
   let _healthcheck: HealthcheckClient | undefined;
   let _integration: IntegrationClient | undefined;
   let _invitation: InvitationClient | undefined;
+  let _organization: OrganizationClient | undefined;
+  let _project: ProjectClient | undefined;
   let _registry: RegistryClient | undefined;
   let _run: RunClient | undefined;
   let _serviceAccount: ServiceAccountClient | undefined;
   let _issuer: IssuerClient | undefined;
   let _source: SourceClient | undefined;
-  let _tenant: TenantClient | undefined;
   let _user: UserClient | undefined;
 
   return {
@@ -187,13 +187,6 @@ export function createClient(transport: Transport): Client {
         _apiKey = createConnectClient(ApiKeyAPI, transport);
       }
       return _apiKey;
-    },
-
-    get application() {
-      if (!_application) {
-        _application = createConnectClient(ApplicationAPI, transport);
-      }
-      return _application;
     },
 
     get changeSet() {
@@ -238,6 +231,20 @@ export function createClient(transport: Transport): Client {
       return _invitation;
     },
 
+    get organization() {
+      if (!_organization) {
+        _organization = createConnectClient(OrganizationAPI, transport);
+      }
+      return _organization;
+    },
+
+    get project() {
+      if (!_project) {
+        _project = createConnectClient(ProjectAPI, transport);
+      }
+      return _project;
+    },
+
     get registry() {
       if (!_registry) {
         _registry = createConnectClient(RegistryAPI, transport);
@@ -271,13 +278,6 @@ export function createClient(transport: Transport): Client {
         _source = createConnectClient(SourceAPI, transport);
       }
       return _source;
-    },
-
-    get tenant() {
-      if (!_tenant) {
-        _tenant = createConnectClient(TenantAPI, transport);
-      }
-      return _tenant;
     },
 
     get user() {

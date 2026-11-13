@@ -59,7 +59,7 @@ export type ApiKey = Message<"admiral.api.apikey.v1.ApiKey"> & {
   status: ApiKeyStatus;
 
   /**
-   * When the key expires. Unset never expires. Fixed at creation; tenant
+   * When the key expires. Unset never expires. Fixed at creation; organization
    * policy may cap it.
    *
    * @generated from field: google.protobuf.Timestamp expires_at = 6;

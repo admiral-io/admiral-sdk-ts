@@ -25,7 +25,7 @@ export const file_admiral_common_v1_annotations: GenFile = /*@__PURE__*/
  */
 export type AuthRule = Message<"admiral.common.v1.AuthRule"> & {
   /**
-   * The scope required to call this RPC (e.g., "app:read").
+   * The scope required to call this RPC (e.g., "project:read").
    * Empty string means any valid token is sufficient; no specific scope required.
    *
    * @generated from field: string scope = 1;

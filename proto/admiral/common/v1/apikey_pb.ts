@@ -16,14 +16,14 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/common/v1/apikey.proto.
  */
 export const file_admiral_common_v1_apikey: GenFile = /*@__PURE__*/
-  fileDesc("Ch5hZG1pcmFsL2NvbW1vbi92MS9hcGlrZXkucHJvdG8SEWFkbWlyYWwuY29tbW9uLnYxIvUECgZBcGlLZXkSKAoCaWQYASABKAlCHOBBA7pIFtgBAXIRMg9ea2V5LVswLTlhLXpdKyQSLwoJdGVuYW50X2lkGAIgASgJQhzgQQO6SBbYAQFyETIPXnRudC1bMC05YS16XSskEjoKBG5hbWUYAyABKAlCLLpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEg4KBnNjb3BlcxgFIAMoCRI0CgZzdGF0dXMYBiABKA4yHy5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXlTdGF0dXNCA+BBAxI5CgxiaW5kaW5nX3R5cGUYByABKA4yHi5hZG1pcmFsLmNvbW1vbi52MS5CaW5kaW5nVHlwZUID4EEDEjUKCmJpbmRpbmdfaWQYCCABKAlCIeBBA7pIG9gBAXIWMhReKHVzcnxzYSktWzAtOWEtel0rJBIzCgpleHBpcmVzX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEFEjUKDGxhc3RfdXNlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgpyZXZva2VkX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKCmNyZWF0ZWRfYnkYDCABKAsyGy5hZG1pcmFsLmNvbW1vbi52MS5BY3RvclJlZkID4EEDEjMKCmNyZWF0ZWRfYXQYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNKBAgEEAVSCmtleV9wcmVmaXgqZAoLQmluZGluZ1R5cGUSHAoYQklORElOR19UWVBFX1VOU1BFQ0lGSUVEEAASFQoRQklORElOR19UWVBFX1VTRVIQARIgChxCSU5ESU5HX1RZUEVfU0VSVklDRV9BQ0NPVU5UEAIqZQoMQXBpS2V5U3RhdHVzEh4KGkFQSV9LRVlfU1RBVFVTX1VOU1BFQ0lGSUVEEAASGQoVQVBJX0tFWV9TVEFUVVNfQUNUSVZFEAESGgoWQVBJX0tFWV9TVEFUVVNfUkVWT0tFRBACQk9aTWJ1Zi5idWlsZC9nZW4vZ28vYWRtaXJhbC9jb21tb24vcHJvdG9jb2xidWZmZXJzL2dvL2FkbWlyYWwvY29tbW9uL3YxO2NvbW1vbnYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_buf_validate_validate, file_google_api_field_behavior, file_google_protobuf_timestamp]);
+  fileDesc("Ch5hZG1pcmFsL2NvbW1vbi92MS9hcGlrZXkucHJvdG8SEWFkbWlyYWwuY29tbW9uLnYxIvsECgZBcGlLZXkSKAoCaWQYASABKAlCHOBBA7pIFtgBAXIRMg9ea2V5LVswLTlhLXpdKyQSNQoPb3JnYW5pemF0aW9uX2lkGAIgASgJQhzgQQO6SBbYAQFyETIPXm9yZy1bMC05YS16XSskEjoKBG5hbWUYAyABKAlCLLpIKXInEAEYPzIhXlthLXpdKFthLXowLTktXXswLDYxfVthLXowLTldKT8kEg4KBnNjb3BlcxgFIAMoCRI0CgZzdGF0dXMYBiABKA4yHy5hZG1pcmFsLmNvbW1vbi52MS5BcGlLZXlTdGF0dXNCA+BBAxI5CgxiaW5kaW5nX3R5cGUYByABKA4yHi5hZG1pcmFsLmNvbW1vbi52MS5CaW5kaW5nVHlwZUID4EEDEjUKCmJpbmRpbmdfaWQYCCABKAlCIeBBA7pIG9gBAXIWMhReKHVzcnxzYSktWzAtOWEtel0rJBIzCgpleHBpcmVzX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEFEjUKDGxhc3RfdXNlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgpyZXZva2VkX2F0GAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKCmNyZWF0ZWRfYnkYDCABKAsyGy5hZG1pcmFsLmNvbW1vbi52MS5BY3RvclJlZkID4EEDEjMKCmNyZWF0ZWRfYXQYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNKBAgEEAVSCmtleV9wcmVmaXgqZAoLQmluZGluZ1R5cGUSHAoYQklORElOR19UWVBFX1VOU1BFQ0lGSUVEEAASFQoRQklORElOR19UWVBFX1VTRVIQARIgChxCSU5ESU5HX1RZUEVfU0VSVklDRV9BQ0NPVU5UEAIqZQoMQXBpS2V5U3RhdHVzEh4KGkFQSV9LRVlfU1RBVFVTX1VOU1BFQ0lGSUVEEAASGQoVQVBJX0tFWV9TVEFUVVNfQUNUSVZFEAESGgoWQVBJX0tFWV9TVEFUVVNfUkVWT0tFRBACQk9aTWJ1Zi5idWlsZC9nZW4vZ28vYWRtaXJhbC9jb21tb24vcHJvdG9jb2xidWZmZXJzL2dvL2FkbWlyYWwvY29tbW9uL3YxO2NvbW1vbnYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_buf_validate_validate, file_google_api_field_behavior, file_google_protobuf_timestamp]);
 
 /**
  * ApiKey contains metadata for an opaque, long-lived credential issued by
  * Admiral and presented by a caller to authenticate.
  *
  * A key is bound to exactly one subject for its whole life -- see
- * `binding_type` and `binding_id` -- and to exactly one tenant. Presenting one
+ * `binding_type` and `binding_id` -- and to exactly one organization. Presenting one
  * is exchanged for a short-lived access token whose `sub` is the binding and
  * whose scopes are bounded by this key's.
  *
@@ -44,17 +44,17 @@ export type ApiKey = Message<"admiral.common.v1.ApiKey"> & {
   id: string;
 
   /**
-   * The tenant this key belongs to, and the `tid` of every access token
+   * The organization this key belongs to, and the `tid` of every access token
    * minted from it.
    *
    * Load-bearing on the resolve path and an echo everywhere else: resolving a
-   * raw key is the one lookup that has no tenant in hand and must return one,
-   * where every lifecycle call already knows the tenant from the caller. The
-   * key belongs to one tenant for its whole life, so the two can never disagree.
+   * raw key is the one lookup that has no organization in hand and must return one,
+   * where every lifecycle call already knows the organization from the caller. The
+   * key belongs to one organization for its whole life, so the two can never disagree.
    *
-   * @generated from field: string tenant_id = 2;
+   * @generated from field: string organization_id = 2;
    */
-  tenantId: string;
+  organizationId: string;
 
   /**
    * URL-safe, human-readable identifier for the key (e.g., "ci-deploy-key").

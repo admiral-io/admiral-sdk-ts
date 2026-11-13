@@ -197,7 +197,7 @@ export type Credential = Message<"admiral.api.credential.v1.Credential"> & {
   id: string;
 
   /**
-   * Unique within the tenant.
+   * Unique within the organization.
    *
    * @generated from field: string name = 2;
    */
@@ -327,7 +327,7 @@ export const Credential_TypeSchema: GenEnum<Credential_Type> = /*@__PURE__*/
   enumDesc(file_admiral_api_credential_v1_credential, 5, 0);
 
 /**
- * CreateCredentialRequest registers a credential in the caller's tenant.
+ * CreateCredentialRequest registers a credential in the caller's organization.
  *
  * @generated from message admiral.api.credential.v1.CreateCredentialRequest
  */
@@ -531,7 +531,7 @@ export const DeleteCredentialResponseSchema: GenMessage<DeleteCredentialResponse
   messageDesc(file_admiral_api_credential_v1_credential, 15);
 
 /**
- * CredentialAPI manages the credentials a tenant registers for reaching
+ * CredentialAPI manages the credentials an organization registers for reaching
  * external systems at publish time: a git host, a Helm repository, an OCI
  * registry, a module registry.
  *
@@ -550,7 +550,7 @@ export const DeleteCredentialResponseSchema: GenMessage<DeleteCredentialResponse
  */
 export const CredentialAPI: GenService<{
   /**
-   * CreateCredential registers a credential within the caller's tenant.
+   * CreateCredential registers a credential within the caller's organization.
    *
    * The `type` and the populated `auth_config` variant must agree.
    *
@@ -577,7 +577,7 @@ export const CredentialAPI: GenService<{
     output: typeof GetCredentialResponseSchema;
   },
   /**
-   * ListCredentials pages through the caller's tenant's credentials.
+   * ListCredentials pages through the caller's organization's credentials.
    * Secrets are never included.
    *
    * Scope: `credential:read`

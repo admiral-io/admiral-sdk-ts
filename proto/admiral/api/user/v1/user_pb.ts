@@ -17,7 +17,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/user/v1/user.proto.
  */
 export const file_admiral_api_user_v1_user: GenFile = /*@__PURE__*/
-  fileDesc("Ch5hZG1pcmFsL2FwaS91c2VyL3YxL3VzZXIucHJvdG8SE2FkbWlyYWwuYXBpLnVzZXIudjEi1AMKBFVzZXISKAoCaWQYASABKAlCHOBBA7pIFtgBAXIRMg9edXNyLVswLTlhLXpdKyQSDQoFZW1haWwYAiABKAkSGwoOZW1haWxfdmVyaWZpZWQYAyABKAhCA+BBAxIZCgxkaXNwbGF5X25hbWUYBCABKAlIAIgBARIXCgpnaXZlbl9uYW1lGAUgASgJSAGIAQESGAoLZmFtaWx5X25hbWUYBiABKAlIAogBARIXCgphdmF0YXJfdXJsGAcgASgJSAOIAQESMwoKY3JlYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgp1cGRhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjAKBHJvbGUYCiABKA4yHS5hZG1pcmFsLmFwaS51c2VyLnYxLlVzZXJSb2xlQgPgQQMSNAoGc3RhdHVzGAsgASgOMh8uYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyU3RhdHVzQgPgQQNCDwoNX2Rpc3BsYXlfbmFtZUINCgtfZ2l2ZW5fbmFtZUIOCgxfZmFtaWx5X25hbWVCDQoLX2F2YXRhcl91cmwiDgoMR2V0TWVSZXF1ZXN0IjgKDUdldE1lUmVzcG9uc2USJwoEdXNlchgBIAEoCzIZLmFkbWlyYWwuYXBpLnVzZXIudjEuVXNlciI8Cg5HZXRVc2VyUmVxdWVzdBIqCgd1c2VyX2lkGAEgASgJQhngQQK6SBNyETIPXnVzci1bMC05YS16XSskIjoKD0dldFVzZXJSZXNwb25zZRInCgR1c2VyGAEgASgLMhkuYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyIl4KEExpc3RVc2Vyc1JlcXVlc3QSGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJIlYKEUxpc3RVc2Vyc1Jlc3BvbnNlEigKBXVzZXJzGAEgAygLMhkuYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSqCAQoIVXNlclJvbGUSGQoVVVNFUl9ST0xFX1VOU1BFQ0lGSUVEEAASEwoPVVNFUl9ST0xFX09XTkVSEAESEwoPVVNFUl9ST0xFX0FETUlOEAISFAoQVVNFUl9ST0xFX01FTUJFUhADIgQIBBAEKhVVU0VSX1JPTEVfQVBQX0NSRUFUT1IqXAoKVXNlclN0YXR1cxIbChdVU0VSX1NUQVRVU19VTlNQRUNJRklFRBAAEhYKElVTRVJfU1RBVFVTX0FDVElWRRABEhkKFVVTRVJfU1RBVFVTX1NVU1BFTkRFRBACMu4DCgdVc2VyQVBJEo8BCgVHZXRNZRIhLmFkbWlyYWwuYXBpLnVzZXIudjEuR2V0TWVSZXF1ZXN0GiIuYWRtaXJhbC5hcGkudXNlci52MS5HZXRNZVJlc3BvbnNlIj+6RyUKBFVzZXISHVJldHJpZXZlIGN1cnJlbnQgdXNlciBwcm9maWxlopckAILT5JMCDRILL3YxL3VzZXIvbWUSoAEKB0dldFVzZXISIy5hZG1pcmFsLmFwaS51c2VyLnYxLkdldFVzZXJSZXF1ZXN0GiQuYWRtaXJhbC5hcGkudXNlci52MS5HZXRVc2VyUmVzcG9uc2UiSrpHHQoEVXNlchIVUmV0cmlldmUgYSB1c2VyIGJ5IElEopckCwoJdXNlcjpyZWFkgtPkkwIVEhMvdjEvdXNlcnMve3VzZXJfaWR9Eq0BCglMaXN0VXNlcnMSJS5hZG1pcmFsLmFwaS51c2VyLnYxLkxpc3RVc2Vyc1JlcXVlc3QaJi5hZG1pcmFsLmFwaS51c2VyLnYxLkxpc3RVc2Vyc1Jlc3BvbnNlIlG6Ry4KBFVzZXISJkxpc3QgdGhlIG1lbWJlcnMgb2YgdGhlIGN1cnJlbnQgdGVuYW50opckCwoJdXNlcjpyZWFkgtPkkwILEgkvdjEvdXNlcnNCxwEKF2NvbS5hZG1pcmFsLmFwaS51c2VyLnYxQglVc2VyUHJvdG9QAVoyZ28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvdXNlci92MTt1c2VydjGiAgNBQVWqAhNBZG1pcmFsLkFwaS5Vc2VyLlYxygITQWRtaXJhbFxBcGlcVXNlclxWMeICH0FkbWlyYWxcQXBpXFVzZXJcVjFcR1BCTWV0YWRhdGHqAhZBZG1pcmFsOjpBcGk6OlVzZXI6OlYxYgZwcm90bzM", [file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_timestamp]);
+  fileDesc("Ch5hZG1pcmFsL2FwaS91c2VyL3YxL3VzZXIucHJvdG8SE2FkbWlyYWwuYXBpLnVzZXIudjEi1AMKBFVzZXISKAoCaWQYASABKAlCHOBBA7pIFtgBAXIRMg9edXNyLVswLTlhLXpdKyQSDQoFZW1haWwYAiABKAkSGwoOZW1haWxfdmVyaWZpZWQYAyABKAhCA+BBAxIZCgxkaXNwbGF5X25hbWUYBCABKAlIAIgBARIXCgpnaXZlbl9uYW1lGAUgASgJSAGIAQESGAoLZmFtaWx5X25hbWUYBiABKAlIAogBARIXCgphdmF0YXJfdXJsGAcgASgJSAOIAQESMwoKY3JlYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgp1cGRhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjAKBHJvbGUYCiABKA4yHS5hZG1pcmFsLmFwaS51c2VyLnYxLlVzZXJSb2xlQgPgQQMSNAoGc3RhdHVzGAsgASgOMh8uYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyU3RhdHVzQgPgQQNCDwoNX2Rpc3BsYXlfbmFtZUINCgtfZ2l2ZW5fbmFtZUIOCgxfZmFtaWx5X25hbWVCDQoLX2F2YXRhcl91cmwiDgoMR2V0TWVSZXF1ZXN0IjgKDUdldE1lUmVzcG9uc2USJwoEdXNlchgBIAEoCzIZLmFkbWlyYWwuYXBpLnVzZXIudjEuVXNlciI8Cg5HZXRVc2VyUmVxdWVzdBIqCgd1c2VyX2lkGAEgASgJQhngQQK6SBNyETIPXnVzci1bMC05YS16XSskIjoKD0dldFVzZXJSZXNwb25zZRInCgR1c2VyGAEgASgLMhkuYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyIl4KEExpc3RVc2Vyc1JlcXVlc3QSGAoGZmlsdGVyGAEgASgJQgi6SAVyAxiACBIcCglwYWdlX3NpemUYAiABKAVCCbpIBhoEGGQoABISCgpwYWdlX3Rva2VuGAMgASgJIlYKEUxpc3RVc2Vyc1Jlc3BvbnNlEigKBXVzZXJzGAEgAygLMhkuYWRtaXJhbC5hcGkudXNlci52MS5Vc2VyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSqCAQoIVXNlclJvbGUSGQoVVVNFUl9ST0xFX1VOU1BFQ0lGSUVEEAASEwoPVVNFUl9ST0xFX09XTkVSEAESEwoPVVNFUl9ST0xFX0FETUlOEAISFAoQVVNFUl9ST0xFX01FTUJFUhADIgQIBBAEKhVVU0VSX1JPTEVfQVBQX0NSRUFUT1IqXAoKVXNlclN0YXR1cxIbChdVU0VSX1NUQVRVU19VTlNQRUNJRklFRBAAEhYKElVTRVJfU1RBVFVTX0FDVElWRRABEhkKFVVTRVJfU1RBVFVTX1NVU1BFTkRFRBACMvQDCgdVc2VyQVBJEo8BCgVHZXRNZRIhLmFkbWlyYWwuYXBpLnVzZXIudjEuR2V0TWVSZXF1ZXN0GiIuYWRtaXJhbC5hcGkudXNlci52MS5HZXRNZVJlc3BvbnNlIj+6RyUKBFVzZXISHVJldHJpZXZlIGN1cnJlbnQgdXNlciBwcm9maWxlopckAILT5JMCDRILL3YxL3VzZXIvbWUSoAEKB0dldFVzZXISIy5hZG1pcmFsLmFwaS51c2VyLnYxLkdldFVzZXJSZXF1ZXN0GiQuYWRtaXJhbC5hcGkudXNlci52MS5HZXRVc2VyUmVzcG9uc2UiSrpHHQoEVXNlchIVUmV0cmlldmUgYSB1c2VyIGJ5IElEopckCwoJdXNlcjpyZWFkgtPkkwIVEhMvdjEvdXNlcnMve3VzZXJfaWR9ErMBCglMaXN0VXNlcnMSJS5hZG1pcmFsLmFwaS51c2VyLnYxLkxpc3RVc2Vyc1JlcXVlc3QaJi5hZG1pcmFsLmFwaS51c2VyLnYxLkxpc3RVc2Vyc1Jlc3BvbnNlIle6RzQKBFVzZXISLExpc3QgdGhlIG1lbWJlcnMgb2YgdGhlIGN1cnJlbnQgb3JnYW5pemF0aW9uopckCwoJdXNlcjpyZWFkgtPkkwILEgkvdjEvdXNlcnNCxwEKF2NvbS5hZG1pcmFsLmFwaS51c2VyLnYxQglVc2VyUHJvdG9QAVoyZ28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvdXNlci92MTt1c2VydjGiAgNBQVWqAhNBZG1pcmFsLkFwaS5Vc2VyLlYxygITQWRtaXJhbFxBcGlcVXNlclxWMeICH0FkbWlyYWxcQXBpXFVzZXJcVjFcR1BCTWV0YWRhdGHqAhZBZG1pcmFsOjpBcGk6OlVzZXI6OlYxYgZwcm90bzM", [file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_timestamp]);
 
 /**
  * User represents a user's profile information.
@@ -89,7 +89,7 @@ export type User = Message<"admiral.api.user.v1.User"> & {
   updatedAt?: Timestamp | undefined;
 
   /**
-   * The user's standing in the tenant.
+   * The user's standing in the organization.
    *
    * @generated from field: admiral.api.user.v1.UserRole role = 10;
    */
@@ -190,8 +190,8 @@ export const GetUserResponseSchema: GenMessage<GetUserResponse> = /*@__PURE__*/
   messageDesc(file_admiral_api_user_v1_user, 4);
 
 /**
- * ListUsersRequest pages through the members of the caller's tenant. The
- * tenant is never a parameter: it is the caller's own.
+ * ListUsersRequest pages through the members of the caller's organization. The
+ * organization is never a parameter: it is the caller's own.
  *
  * @generated from message admiral.api.user.v1.ListUsersRequest
  */
@@ -260,7 +260,7 @@ export const ListUsersResponseSchema: GenMessage<ListUsersResponse> = /*@__PURE_
   messageDesc(file_admiral_api_user_v1_user, 6);
 
 /**
- * UserRole is a member's standing in the tenant. The tiers imply one another
+ * UserRole is a member's standing in the organization. The tiers imply one another
  * downward: an owner can do everything an administrator can, an administrator
  * everything a member can.
  *
@@ -275,7 +275,7 @@ export enum UserRole {
   UNSPECIFIED = 0,
 
   /**
-   * Owns the tenant. Exactly one per tenant; ownership moves by transfer, never
+   * Owns the organization. Exactly one per organization; ownership moves by transfer, never
    * by invitation.
    *
    * @generated from enum value: USER_ROLE_OWNER = 1;
@@ -283,7 +283,7 @@ export enum UserRole {
   OWNER = 1,
 
   /**
-   * Manages members and tenant settings.
+   * Manages members and organization settings.
    *
    * @generated from enum value: USER_ROLE_ADMIN = 2;
    */
@@ -338,7 +338,7 @@ export const UserStatusSchema: GenEnum<UserStatus> = /*@__PURE__*/
   enumDesc(file_admiral_api_user_v1_user, 1);
 
 /**
- * UserAPI provides user profile retrieval and the list of a tenant's members.
+ * UserAPI provides user profile retrieval and the list of an organization's members.
  * The caller's own API keys are managed through ApiKeyAPI.
  *
  * @generated from service admiral.api.user.v1.UserAPI
@@ -370,7 +370,7 @@ export const UserAPI: GenService<{
     output: typeof GetUserResponseSchema;
   },
   /**
-   * ListUsers returns a page of the caller's tenant's members: everyone who
+   * ListUsers returns a page of the caller's organization's members: everyone who
    * has joined, whatever their role or status. People who have been invited but
    * have not joined are not users yet; they are listed by InvitationAPI.
    *
