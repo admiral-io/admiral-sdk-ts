@@ -2262,9 +2262,11 @@ export type RevertChangeSetRequest = Message<"admiral.api.changeset.v1.RevertCha
   changeSet?: ChangeSet | undefined;
 
   /**
-   * The components to return, by name, for a change set that holds its
-   * environment. Empty returns every component it touched. A change set that
-   * has closed is reverted whole, so naming components is refused.
+   * The components to return to their content from before the change set,
+   * by name. Empty returns every component it touched. For a change set that
+   * holds its environment the revert is a new revision of it; for one that
+   * has closed it opens a new change set, refused once the environment has
+   * moved past it.
    *
    * @generated from field: repeated string components = 4;
    */
@@ -2561,8 +2563,9 @@ export const ChangeSetAPI: GenService<{
    * revision of the same change set, for the components named or every one it
    * touched. When every component is back, it reads REVERTED; when some are
    * kept, it reads APPLIED with what it kept. A change set that has closed is
-   * reverted whole by a new change set, which may apply only while the
-   * environment has not moved past it.
+   * reverted by a new change set, for the components named or every one it
+   * touched, which may apply only while the environment has not moved past
+   * it.
    *
    * Scope: `changeset:write`
    *
