@@ -99,7 +99,7 @@ export const BearerTokenAuthSchema: GenMessage<BearerTokenAuth> = /*@__PURE__*/
 
 /**
  * GitHubAppAuth identifies a GitHub App installation and holds the app's
- * private key, from which the platform mints installation tokens.
+ * private key, from which Admiral mints installation tokens.
  *
  * @generated from message admiral.api.credential.v1.GitHubAppAuth
  */
@@ -243,19 +243,20 @@ export type Credential = Message<"admiral.api.credential.v1.Credential"> & {
   updatedAt?: Timestamp | undefined;
 
   /**
-   * Hosts this credential may be presented to, as a guard: empty means any
-   * host its type fits; set means the platform refuses to present it
-   * anywhere else, whatever it is attached to. Hostnames, optionally with
-   * a port: `github.acme.example`, `harbor.acme.example:8443`. No scheme,
-   * no path.
+   * Hosts this credential may be presented to, as a guard: set means
+   * Admiral refuses to present it anywhere else. Empty, on a credential a
+   * source holds, means that source's host and nothing more. It is checked
+   * on every fetch, redirects and transitive fetches included. Hostnames,
+   * optionally with a port: `github.acme.example`,
+   * `harbor.acme.example:8443`. No scheme, no path.
    *
    * @generated from field: repeated string allowed_hosts = 10;
    */
   allowedHosts: string[];
 
   /**
-   * When a publish last decrypted this credential to present to a host,
-   * whether or not the host accepted it. Updated at most every few minutes.
+   * When Admiral last presented this credential to a host, whether or not
+   * the host accepted it. Updated at most every few minutes.
    * Absent if it has never been used.
    *
    * @generated from field: google.protobuf.Timestamp last_used_at = 11;
@@ -272,9 +273,9 @@ export const CredentialSchema: GenMessage<Credential> = /*@__PURE__*/
 
 /**
  * Type is the protocol family a credential is presented as. Each
- * fetch takes the families its protocol speaks: a module registry, an
- * archive and an OCI token take a bearer token; git over https, a Helm
- * repository and an OCI login take basic auth; git over ssh takes a key.
+ * fetch takes the families its protocol speaks: a module registry and an
+ * OCI token take a bearer token; git over https, a Helm repository and an
+ * OCI login take basic auth; git over ssh takes a key.
  *
  * @generated from enum admiral.api.credential.v1.Credential.Type
  */
@@ -293,7 +294,7 @@ export enum Credential_Type {
 
   /**
    * A username and password: git over https, a Helm repository, an OCI
-   * registry, an authenticated archive.
+   * registry.
    *
    * @generated from enum value: TYPE_BASIC_AUTH = 2;
    */
@@ -301,16 +302,16 @@ export enum Credential_Type {
 
   /**
    * One token. Presented as `Authorization: Bearer` to a module registry,
-   * a Helm repository, an OCI registry or an archive host, and as the
-   * basic-auth password with the `x-access-token` username to git over
-   * https, which is how GitHub and GitLab take a token.
+   * a Helm repository or an OCI registry, and as the basic-auth password
+   * with the `x-access-token` username to git over https, which is how
+   * GitHub and GitLab take a token.
    *
    * @generated from enum value: TYPE_BEARER_TOKEN = 3;
    */
   BEARER_TOKEN = 3,
 
   /**
-   * A GitHub App installation. Not a secret that is presented: the platform
+   * A GitHub App installation. Not a secret that is presented: Admiral
    * mints a short-lived installation token from the app's private key at
    * fetch time and presents that as a bearer token. Works for github.com,
    * GitHub Enterprise Cloud and GitHub Enterprise Server.
@@ -535,12 +536,13 @@ export const DeleteCredentialResponseSchema: GenMessage<DeleteCredentialResponse
  * external systems at publish time: a git host, a Helm repository, an OCI
  * registry, a module registry.
  *
- * A credential is never selected for the caller. A pull-publish names the
- * credentials it may use, chosen by the user from those whose type its
- * protocols can present, and the platform presents each only where it fits.
- * A credential may carry `allowed_hosts`, a guard that restricts where it is
- * ever presented, whatever it is attached to. Credentials exist for publish
- * only; nothing on the deploy path reads one.
+ * A credential is never selected for the caller, and no request names one
+ * for a fetch. An organization admin binds a credential to a source, and
+ * Admiral presents it only for that source's location. A credential may
+ * carry `allowed_hosts`, a guard that restricts where it is ever presented.
+ * Only an organization admin creates, changes or deletes a credential, the
+ * guard included. Credentials exist for publish only; nothing on the deploy
+ * path reads one.
  *
  * Secrets are write-only: accepted on create and update, encrypted at rest,
  * decrypted only inside a publish, and never returned. Get and List return
@@ -553,6 +555,8 @@ export const CredentialAPI: GenService<{
    * CreateCredential registers a credential within the caller's organization.
    *
    * The `type` and the populated `auth_config` variant must agree.
+   *
+   * Needs an organization admin; PERMISSION_DENIED otherwise.
    *
    * Scope: `credential:write`
    *
@@ -595,6 +599,8 @@ export const CredentialAPI: GenService<{
    * replaces the old one whole; a rotation is an update with `auth_config`
    * in the mask.
    *
+   * Needs an organization admin; PERMISSION_DENIED otherwise.
+   *
    * Scope: `credential:write`
    *
    * @generated from rpc admiral.api.credential.v1.CredentialAPI.UpdateCredential
@@ -605,10 +611,12 @@ export const CredentialAPI: GenService<{
     output: typeof UpdateCredentialResponseSchema;
   },
   /**
-   * DeleteCredential removes a credential and destroys its secret. Nothing
-   * stores a reference to it: versions already published are unaffected,
-   * their provenance keeps the credential's id and name as history, and the
-   * next pull that names it fails naming the missing credential.
+   * DeleteCredential removes a credential and destroys its secret. Versions
+   * already published are unaffected, and their provenance keeps the
+   * credential's id and name as history. A source that held it moves to
+   * NEEDS_ATTENTION.
+   *
+   * Needs an organization admin; PERMISSION_DENIED otherwise.
    *
    * Scope: `credential:write`
    *

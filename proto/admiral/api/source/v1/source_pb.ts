@@ -19,7 +19,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/source/v1/source.proto.
  */
 export const file_admiral_api_source_v1_source: GenFile = /*@__PURE__*/
-  fileDesc("CiJhZG1pcmFsL2FwaS9zb3VyY2UvdjEvc291cmNlLnByb3RvEhVhZG1pcmFsLmFwaS5zb3VyY2UudjEipg4KBlNvdXJjZRIoCgJpZBgBIAEoCUIc4EEDukgW2AEBchEyD15zcmMtWzAtOWEtel0rJBI6CgRuYW1lGAMgASgJQiy6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgEIAEoCUIIukgFcgMYgAgSPwoEa2luZBgFIAEoDjIiLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2UuS2luZEIN4EEFukgHggEEEAEgABIfCghsb2NhdGlvbhgGIAEoCUIN4EEFukgHcgUQARiABBIwCg1jcmVkZW50aWFsX2lkGAcgASgJQhe6SBRyEjIQXmNyZWQtWzAtOWEtel0rJEgAEjAKDmludGVncmF0aW9uX2lkGAggASgJQha6SBNyETIPXmludC1bMC05YS16XSskSAASQgoHdHJpZ2dlchgJIAEoDjIlLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2UuVHJpZ2dlckIKukgHggEEEAEgABJNCgZhbGxvd3MYCiADKAlCPbpIOpIBNwgBEEAYASIvci0YgAIyKF4oXCp8W0EtWmEtejAtOS5fLV1bQS1aYS16MC05Ll8vLV0qXCo/KSQSNwoIc2V0dGluZ3MYCyABKAsyJS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlU2V0dGluZ3MSOQoGc3RhdHVzGAwgASgOMiQuYWRtaXJhbC5hcGkuc291cmNlLnYxLlNvdXJjZS5TdGF0dXNCA+BBAxIaCg1zdGF0dXNfcmVhc29uGA0gASgJQgPgQQMSNAoKY3JlYXRlZF9ieRgUIAEoCzIbLmFkbWlyYWwuY29tbW9uLnYxLkFjdG9yUmVmQgPgQQMSMwoKY3JlYXRlZF9hdBgVIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIzCgp1cGRhdGVkX2F0GBYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDInIKBEtpbmQSFAoQS0lORF9VTlNQRUNJRklFRBAAEgwKCEtJTkRfR0lUEAESEgoOS0lORF9IRUxNX1JFUE8QAhIVChFLSU5EX09DSV9SRUdJU1RSWRADEhsKF0tJTkRfVEVSUkFGT1JNX1JFR0lTVFJZEAQiSQoHVHJpZ2dlchIXChNUUklHR0VSX1VOU1BFQ0lGSUVEEAASEwoPVFJJR0dFUl9SRVFVRVNUEAESEAoMVFJJR0dFUl9QVVNIEAIiTgoGU3RhdHVzEhYKElNUQVRVU19VTlNQRUNJRklFRBAAEhAKDFNUQVRVU19SRUFEWRABEhoKFlNUQVRVU19ORUVEU19BVFRFTlRJT04QAjrkBbpI4AUalQEKFHNvdXJjZS5ncmFudF9wcmVzZW50EkJhIHNvdXJjZSBjYXJyaWVzIGV4YWN0bHkgb25lIGdyYW50LCBhIGNyZWRlbnRpYWwgb3IgYW4gaW50ZWdyYXRpb24aOSh0aGlzLmNyZWRlbnRpYWxfaWQgIT0gJycpICE9ICh0aGlzLmludGVncmF0aW9uX2lkICE9ICcnKRqIAQodc291cmNlLnB1c2hfbmVlZHNfaW50ZWdyYXRpb24SN2EgcHVzaCBzb3VyY2UgaXMgcmVhY2hlZCB0aHJvdWdoIHRoZSBHaXRIdWIgaW50ZWdyYXRpb24aLnRoaXMudHJpZ2dlciAhPSAyIHx8IHRoaXMuaW50ZWdyYXRpb25faWQgIT0gJycacQoZc291cmNlLmludGVncmF0aW9uX2lzX2dpdBInYW4gaW50ZWdyYXRpb24gcmVhY2hlcyBhIGdpdCByZXBvc2l0b3J5Git0aGlzLmludGVncmF0aW9uX2lkID09ICcnIHx8IHRoaXMua2luZCA9PSAxGoMBChpzb3VyY2Uuc2V0dGluZ3NfbWF0Y2hfa2luZBIjZ2l0IHNldHRpbmdzIGJlbG9uZyB0byBhIGdpdCBzb3VyY2UaQCFoYXModGhpcy5zZXR0aW5ncykgfHwgIWhhcyh0aGlzLnNldHRpbmdzLmdpdCkgfHwgdGhpcy5raW5kID09IDEawQEKGnNvdXJjZS5wdXNoX25hbWVzX2JyYW5jaGVzEjVhIHB1c2ggc291cmNlIG5hbWVzIHRoZSBicmFuY2hlcyB3aG9zZSBwdXNoZXMgcHVibGlzaBpsdGhpcy50cmlnZ2VyICE9IDIgfHwgKGhhcyh0aGlzLnNldHRpbmdzKSAmJiBoYXModGhpcy5zZXR0aW5ncy5naXQpICYmIHRoaXMuc2V0dGluZ3MuZ2l0LmJyYW5jaGVzLnNpemUoKSA+IDApQgcKBWdyYW50SgQIAhADUgl0ZW5hbnRfaWQiUQoOU291cmNlU2V0dGluZ3MSNwoDZ2l0GAEgASgLMiguYWRtaXJhbC5hcGkuc291cmNlLnYxLkdpdFNvdXJjZVNldHRpbmdzSABCBgoEa2luZCLjAgoRR2l0U291cmNlU2V0dGluZ3MSTQoIYnJhbmNoZXMYASADKAlCO7pIOJIBNRAgGAEiL3ItGIACMiheKFwqfFtBLVphLXowLTkuXy1dW0EtWmEtejAtOS5fLy1dKlwqPykkEmMKFHB1bGxfcmVxdWVzdF9jb21tZW50GAIgASgOMjsuYWRtaXJhbC5hcGkuc291cmNlLnYxLkdpdFNvdXJjZVNldHRpbmdzLlB1bGxSZXF1ZXN0Q29tbWVudEIIukgFggECEAEimQEKElB1bGxSZXF1ZXN0Q29tbWVudBIkCiBQVUxMX1JFUVVFU1RfQ09NTUVOVF9VTlNQRUNJRklFRBAAEiAKHFBVTExfUkVRVUVTVF9DT01NRU5UX1NVTU1BUlkQARIdChlQVUxMX1JFUVVFU1RfQ09NTUVOVF9GVUxMEAISHAoYUFVMTF9SRVFVRVNUX0NPTU1FTlRfT0ZGEAMiSwoOU291cmNlQXJ0aWZhY3QSDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlwdGlvbhgCIAEoCRIWCg5sYXRlc3RfdmVyc2lvbhgDIAEoCSLXAQoNU291cmNlVmVyc2lvbhIMCgRuYW1lGAEgASgJEjcKBGtpbmQYAiABKA4yKS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlVmVyc2lvbi5LaW5kEg4KBmNvbW1pdBgDIAEoCRIuCgpjcmVhdGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI/CgRLaW5kEhQKEEtJTkRfVU5TUEVDSUZJRUQQABIQCgxLSU5EX1ZFUlNJT04QARIPCgtLSU5EX0JSQU5DSBACInEKEkxpc3RTb3VyY2VzUmVxdWVzdBIYCgZmaWx0ZXIYAiABKAlCCLpIBXIDGIAIEhwKCXBhZ2Vfc2l6ZRgDIAEoBUIJukgGGgQYZCgAEhIKCnBhZ2VfdG9rZW4YBCABKAlKBAgBEAJSCXRlbmFudF9pZCJeChNMaXN0U291cmNlc1Jlc3BvbnNlEi4KB3NvdXJjZXMYASADKAsyHS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJRChBHZXRTb3VyY2VSZXF1ZXN0EiwKCXNvdXJjZV9pZBgCIAEoCUIZ4EECukgTchEyD15zcmMtWzAtOWEtel0rJEoECAEQAlIJdGVuYW50X2lkIkIKEUdldFNvdXJjZVJlc3BvbnNlEi0KBnNvdXJjZRgBIAEoCzIdLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2UiYAoTQ3JlYXRlU291cmNlUmVxdWVzdBI4CgZzb3VyY2UYAiABKAsyHS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlQgngQQK6SAPIAQFKBAgBEAJSCXRlbmFudF9pZCJFChRDcmVhdGVTb3VyY2VSZXNwb25zZRItCgZzb3VyY2UYASABKAsyHS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlIpEBChNVcGRhdGVTb3VyY2VSZXF1ZXN0EjgKBnNvdXJjZRgCIAEoCzIdLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2VCCeBBArpIA8gBARIvCgt1cGRhdGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tKBAgBEAJSCXRlbmFudF9pZCJFChRVcGRhdGVTb3VyY2VSZXNwb25zZRItCgZzb3VyY2UYASABKAsyHS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlIlQKE0RlbGV0ZVNvdXJjZVJlcXVlc3QSLAoJc291cmNlX2lkGAIgASgJQhngQQK6SBNyETIPXnNyYy1bMC05YS16XSskSgQIARACUgl0ZW5hbnRfaWQiFgoURGVsZXRlU291cmNlUmVzcG9uc2UijgEKGkxpc3RTb3VyY2VBcnRpZmFjdHNSZXF1ZXN0EiwKCXNvdXJjZV9pZBgCIAEoCUIZ4EECukgTchEyD15zcmMtWzAtOWEtel0rJBIdCglwYWdlX3NpemUYAyABKAVCCrpIBxoFGMgBKAASEgoKcGFnZV90b2tlbhgEIAEoCUoECAEQAlIJdGVuYW50X2lkIrgBChtMaXN0U291cmNlQXJ0aWZhY3RzUmVzcG9uc2USOAoJYXJ0aWZhY3RzGAEgAygLMiUuYWRtaXJhbC5hcGkuc291cmNlLnYxLlNvdXJjZUFydGlmYWN0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIwCgxyZWZyZXNoZWRfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDHN0YWxlX3JlYXNvbhgEIAEoCSKpAQoZTGlzdFNvdXJjZVZlcnNpb25zUmVxdWVzdBIsCglzb3VyY2VfaWQYAiABKAlCGeBBArpIE3IRMg9ec3JjLVswLTlhLXpdKyQSGgoIYXJ0aWZhY3QYAyABKAlCCLpIBXIDGIACEh0KCXBhZ2Vfc2l6ZRgEIAEoBUIKukgHGgUYyAEoABISCgpwYWdlX3Rva2VuGAUgASgJSgQIARACUgl0ZW5hbnRfaWQitQEKGkxpc3RTb3VyY2VWZXJzaW9uc1Jlc3BvbnNlEjYKCHZlcnNpb25zGAEgAygLMiQuYWRtaXJhbC5hcGkuc291cmNlLnYxLlNvdXJjZVZlcnNpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEjAKDHJlZnJlc2hlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMc3RhbGVfcmVhc29uGAQgASgJMtwKCglTb3VyY2VBUEkSpAEKC0xpc3RTb3VyY2VzEikuYWRtaXJhbC5hcGkuc291cmNlLnYxLkxpc3RTb3VyY2VzUmVxdWVzdBoqLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5MaXN0U291cmNlc1Jlc3BvbnNlIj66RxcKB1NvdXJjZXMSDExpc3Qgc291cmNlc6KXJA0KC3NvdXJjZTpyZWFkgtPkkwINEgsvdjEvc291cmNlcxKqAQoJR2V0U291cmNlEicuYWRtaXJhbC5hcGkuc291cmNlLnYxLkdldFNvdXJjZVJlcXVlc3QaKC5hZG1pcmFsLmFwaS5zb3VyY2UudjEuR2V0U291cmNlUmVzcG9uc2UiSrpHFwoHU291cmNlcxIMR2V0IGEgc291cmNlopckDQoLc291cmNlOnJlYWSC0+STAhkSFy92MS9zb3VyY2VzL3tzb3VyY2VfaWR9Eq4BCgxDcmVhdGVTb3VyY2USKi5hZG1pcmFsLmFwaS5zb3VyY2UudjEuQ3JlYXRlU291cmNlUmVxdWVzdBorLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5DcmVhdGVTb3VyY2VSZXNwb25zZSJFukcaCgdTb3VyY2VzEg9DcmVhdGUgYSBzb3VyY2WilyQOCgxzb3VyY2U6d3JpdGWC0+STAhA6ASoiCy92MS9zb3VyY2VzEroBCgxVcGRhdGVTb3VyY2USKi5hZG1pcmFsLmFwaS5zb3VyY2UudjEuVXBkYXRlU291cmNlUmVxdWVzdBorLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5VcGRhdGVTb3VyY2VSZXNwb25zZSJRukcaCgdTb3VyY2VzEg9VcGRhdGUgYSBzb3VyY2WilyQOCgxzb3VyY2U6d3JpdGWC0+STAhw6ASoyFy92MS9zb3VyY2VzL3tzb3VyY2UuaWR9ErcBCgxEZWxldGVTb3VyY2USKi5hZG1pcmFsLmFwaS5zb3VyY2UudjEuRGVsZXRlU291cmNlUmVxdWVzdBorLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5EZWxldGVTb3VyY2VSZXNwb25zZSJOukcaCgdTb3VyY2VzEg9EZWxldGUgYSBzb3VyY2WilyQOCgxzb3VyY2U6d3JpdGWC0+STAhkqFy92MS9zb3VyY2VzL3tzb3VyY2VfaWR9EuEBChNMaXN0U291cmNlQXJ0aWZhY3RzEjEuYWRtaXJhbC5hcGkuc291cmNlLnYxLkxpc3RTb3VyY2VBcnRpZmFjdHNSZXF1ZXN0GjIuYWRtaXJhbC5hcGkuc291cmNlLnYxLkxpc3RTb3VyY2VBcnRpZmFjdHNSZXNwb25zZSJjukcmCgdTb3VyY2VzEhtCcm93c2Ugd2hhdCBhIHNvdXJjZSBvZmZlcnOilyQNCgtzb3VyY2U6cmVhZILT5JMCIxIhL3YxL3NvdXJjZXMve3NvdXJjZV9pZH0vYXJ0aWZhY3RzEu4BChJMaXN0U291cmNlVmVyc2lvbnMSMC5hZG1pcmFsLmFwaS5zb3VyY2UudjEuTGlzdFNvdXJjZVZlcnNpb25zUmVxdWVzdBoxLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5MaXN0U291cmNlVmVyc2lvbnNSZXNwb25zZSJzukc3CgdTb3VyY2VzEixEaXNjb3ZlciB2ZXJzaW9ucyBvZiBhbiBhcnRpZmFjdCBpbiBhIHNvdXJjZaKXJA0KC3NvdXJjZTpyZWFkgtPkkwIiEiAvdjEvc291cmNlcy97c291cmNlX2lkfS92ZXJzaW9uc0LXAQoZY29tLmFkbWlyYWwuYXBpLnNvdXJjZS52MUILU291cmNlUHJvdG9QAVo2Z28uYWRtaXJhbC5pby9zZGsvcHJvdG8vYWRtaXJhbC9hcGkvc291cmNlL3YxO3NvdXJjZXYxogIDQUFTqgIVQWRtaXJhbC5BcGkuU291cmNlLlYxygIVQWRtaXJhbFxBcGlcU291cmNlXFYx4gIhQWRtaXJhbFxBcGlcU291cmNlXFYxXEdQQk1ldGFkYXRh6gIYQWRtaXJhbDo6QXBpOjpTb3VyY2U6OlYxYgZwcm90bzM", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
+  fileDesc("CiJhZG1pcmFsL2FwaS9zb3VyY2UvdjEvc291cmNlLnByb3RvEhVhZG1pcmFsLmFwaS5zb3VyY2UudjEi+A4KBlNvdXJjZRIoCgJpZBgBIAEoCUIc4EEDukgW2AEBchEyD15zcmMtWzAtOWEtel0rJBI6CgRuYW1lGAMgASgJQiy6SClyJxABGD8yIV5bYS16XShbYS16MC05LV17MCw2MX1bYS16MC05XSk/JBIdCgtkZXNjcmlwdGlvbhgEIAEoCUIIukgFcgMYgAgSPwoEa2luZBgFIAEoDjIiLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2UuS2luZEIN4EEFukgHggEEEAEgABIfCghsb2NhdGlvbhgGIAEoCUIN4EEFukgHcgUQARiABBIwCg1jcmVkZW50aWFsX2lkGAcgASgJQhe6SBRyEjIQXmNyZWQtWzAtOWEtel0rJEgAEjAKDmludGVncmF0aW9uX2lkGAggASgJQha6SBNyETIPXmludC1bMC05YS16XSskSAASQgoHdHJpZ2dlchgJIAEoDjIlLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2UuVHJpZ2dlckIKukgHggEEEAEgABJwCgZhbGxvd3MYCiADKAlCYLpIXZIBWggBEEAYASJSclAYgAIyS14oXCp8W0EtWmEtejAtOS5fLV1bQS1aYS16MC05Ll8vLV0qXCo/KShAW0EtWmEtejAtOS5fK15+PD49Kix8IC1dezEsMTI4fSk/JBI3CghzZXR0aW5ncxgLIAEoCzIlLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2VTZXR0aW5ncxI5CgZzdGF0dXMYDCABKA4yJC5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlLlN0YXR1c0ID4EEDEhoKDXN0YXR1c19yZWFzb24YDSABKAlCA+BBAxI0CgpjcmVhdGVkX2J5GBQgASgLMhsuYWRtaXJhbC5jb21tb24udjEuQWN0b3JSZWZCA+BBAxIzCgpjcmVhdGVkX2F0GBUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnVwZGF0ZWRfYXQYFiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMicgoES2luZBIUChBLSU5EX1VOU1BFQ0lGSUVEEAASDAoIS0lORF9HSVQQARISCg5LSU5EX0hFTE1fUkVQTxACEhUKEUtJTkRfT0NJX1JFR0lTVFJZEAMSGwoXS0lORF9URVJSQUZPUk1fUkVHSVNUUlkQBCJJCgdUcmlnZ2VyEhcKE1RSSUdHRVJfVU5TUEVDSUZJRUQQABITCg9UUklHR0VSX1JFUVVFU1QQARIQCgxUUklHR0VSX1BVU0gQAiJOCgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASEAoMU1RBVFVTX1JFQURZEAESGgoWU1RBVFVTX05FRURTX0FUVEVOVElPThACOpMGukiPBhqUAQoUc291cmNlLmdyYW50X3ByZXNlbnQSQmEgc291cmNlIGNhcnJpZXMgYXQgbW9zdCBvbmUgZ3JhbnQsIGEgY3JlZGVudGlhbCBvciBhbiBpbnRlZ3JhdGlvbho4ISh0aGlzLmNyZWRlbnRpYWxfaWQgIT0gJycgJiYgdGhpcy5pbnRlZ3JhdGlvbl9pZCAhPSAnJykaiAEKHXNvdXJjZS5wdXNoX25lZWRzX2ludGVncmF0aW9uEjdhIHB1c2ggc291cmNlIGlzIHJlYWNoZWQgdGhyb3VnaCB0aGUgR2l0SHViIGludGVncmF0aW9uGi50aGlzLnRyaWdnZXIgIT0gMiB8fCB0aGlzLmludGVncmF0aW9uX2lkICE9ICcnGnEKGXNvdXJjZS5pbnRlZ3JhdGlvbl9pc19naXQSJ2FuIGludGVncmF0aW9uIHJlYWNoZXMgYSBnaXQgcmVwb3NpdG9yeRordGhpcy5pbnRlZ3JhdGlvbl9pZCA9PSAnJyB8fCB0aGlzLmtpbmQgPT0gMRqDAQoac291cmNlLnNldHRpbmdzX21hdGNoX2tpbmQSI2dpdCBzZXR0aW5ncyBiZWxvbmcgdG8gYSBnaXQgc291cmNlGkAhaGFzKHRoaXMuc2V0dGluZ3MpIHx8ICFoYXModGhpcy5zZXR0aW5ncy5naXQpIHx8IHRoaXMua2luZCA9PSAxGvEBChpzb3VyY2UucHVzaF9uYW1lc19icmFuY2hlcxI9YSBwdXNoIHNvdXJjZSBuYW1lcyB0aGUgYnJhbmNoZXMgb3IgdGFncyB3aG9zZSBwdXNoZXMgcHVibGlzaBqTAXRoaXMudHJpZ2dlciAhPSAyIHx8IChoYXModGhpcy5zZXR0aW5ncykgJiYgaGFzKHRoaXMuc2V0dGluZ3MuZ2l0KSAmJiAodGhpcy5zZXR0aW5ncy5naXQuYnJhbmNoZXMuc2l6ZSgpID4gMCB8fCB0aGlzLnNldHRpbmdzLmdpdC50YWdzLnNpemUoKSA+IDApKUIHCgVncmFudEoECAIQA1IJdGVuYW50X2lkIlEKDlNvdXJjZVNldHRpbmdzEjcKA2dpdBgBIAEoCzIoLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5HaXRTb3VyY2VTZXR0aW5nc0gAQgYKBGtpbmQi3AMKEUdpdFNvdXJjZVNldHRpbmdzEk0KCGJyYW5jaGVzGAEgAygJQju6SDiSATUQIBgBIi9yLRiAAjIoXihcKnxbQS1aYS16MC05Ll8tXVtBLVphLXowLTkuXy8tXSpcKj8pJBJJCgR0YWdzGAMgAygJQju6SDiSATUQIBgBIi9yLRiAAjIoXihcKnxbQS1aYS16MC05Ll8tXVtBLVphLXowLTkuXy8tXSpcKj8pJBIsCgx0YWdfdGVtcGxhdGUYBCABKAlCFrpIE9gBAXIOGIACSgl7dmVyc2lvbn0SYwoUcHVsbF9yZXF1ZXN0X2NvbW1lbnQYAiABKA4yOy5hZG1pcmFsLmFwaS5zb3VyY2UudjEuR2l0U291cmNlU2V0dGluZ3MuUHVsbFJlcXVlc3RDb21tZW50Qgi6SAWCAQIQASKZAQoSUHVsbFJlcXVlc3RDb21tZW50EiQKIFBVTExfUkVRVUVTVF9DT01NRU5UX1VOU1BFQ0lGSUVEEAASIAocUFVMTF9SRVFVRVNUX0NPTU1FTlRfU1VNTUFSWRABEh0KGVBVTExfUkVRVUVTVF9DT01NRU5UX0ZVTEwQAhIcChhQVUxMX1JFUVVFU1RfQ09NTUVOVF9PRkYQAyJLCg5Tb3VyY2VBcnRpZmFjdBIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhYKDmxhdGVzdF92ZXJzaW9uGAMgASgJItcBCg1Tb3VyY2VWZXJzaW9uEgwKBG5hbWUYASABKAkSNwoEa2luZBgCIAEoDjIpLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2VWZXJzaW9uLktpbmQSDgoGY29tbWl0GAMgASgJEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIj8KBEtpbmQSFAoQS0lORF9VTlNQRUNJRklFRBAAEhAKDEtJTkRfVkVSU0lPThABEg8KC0tJTkRfQlJBTkNIEAIicQoSTGlzdFNvdXJjZXNSZXF1ZXN0EhgKBmZpbHRlchgCIAEoCUIIukgFcgMYgAgSHAoJcGFnZV9zaXplGAMgASgFQgm6SAYaBBhkKAASEgoKcGFnZV90b2tlbhgEIAEoCUoECAEQAlIJdGVuYW50X2lkIl4KE0xpc3RTb3VyY2VzUmVzcG9uc2USLgoHc291cmNlcxgBIAMoCzIdLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlEKEEdldFNvdXJjZVJlcXVlc3QSLAoJc291cmNlX2lkGAIgASgJQhngQQK6SBNyETIPXnNyYy1bMC05YS16XSskSgQIARACUgl0ZW5hbnRfaWQiQgoRR2V0U291cmNlUmVzcG9uc2USLQoGc291cmNlGAEgASgLMh0uYWRtaXJhbC5hcGkuc291cmNlLnYxLlNvdXJjZSJgChNDcmVhdGVTb3VyY2VSZXF1ZXN0EjgKBnNvdXJjZRgCIAEoCzIdLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2VCCeBBArpIA8gBAUoECAEQAlIJdGVuYW50X2lkIkUKFENyZWF0ZVNvdXJjZVJlc3BvbnNlEi0KBnNvdXJjZRgBIAEoCzIdLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2UikQEKE1VwZGF0ZVNvdXJjZVJlcXVlc3QSOAoGc291cmNlGAIgASgLMh0uYWRtaXJhbC5hcGkuc291cmNlLnYxLlNvdXJjZUIJ4EECukgDyAEBEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0oECAEQAlIJdGVuYW50X2lkIkUKFFVwZGF0ZVNvdXJjZVJlc3BvbnNlEi0KBnNvdXJjZRgBIAEoCzIdLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5Tb3VyY2UiVAoTRGVsZXRlU291cmNlUmVxdWVzdBIsCglzb3VyY2VfaWQYAiABKAlCGeBBArpIE3IRMg9ec3JjLVswLTlhLXpdKyRKBAgBEAJSCXRlbmFudF9pZCIWChREZWxldGVTb3VyY2VSZXNwb25zZSKOAQoaTGlzdFNvdXJjZUFydGlmYWN0c1JlcXVlc3QSLAoJc291cmNlX2lkGAIgASgJQhngQQK6SBNyETIPXnNyYy1bMC05YS16XSskEh0KCXBhZ2Vfc2l6ZRgDIAEoBUIKukgHGgUYyAEoABISCgpwYWdlX3Rva2VuGAQgASgJSgQIARACUgl0ZW5hbnRfaWQiuAEKG0xpc3RTb3VyY2VBcnRpZmFjdHNSZXNwb25zZRI4CglhcnRpZmFjdHMYASADKAsyJS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlQXJ0aWZhY3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEjAKDHJlZnJlc2hlZF9hdBgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMc3RhbGVfcmVhc29uGAQgASgJIqkBChlMaXN0U291cmNlVmVyc2lvbnNSZXF1ZXN0EiwKCXNvdXJjZV9pZBgCIAEoCUIZ4EECukgTchEyD15zcmMtWzAtOWEtel0rJBIaCghhcnRpZmFjdBgDIAEoCUIIukgFcgMYgAISHQoJcGFnZV9zaXplGAQgASgFQgq6SAcaBRjIASgAEhIKCnBhZ2VfdG9rZW4YBSABKAlKBAgBEAJSCXRlbmFudF9pZCK1AQoaTGlzdFNvdXJjZVZlcnNpb25zUmVzcG9uc2USNgoIdmVyc2lvbnMYASADKAsyJC5hZG1pcmFsLmFwaS5zb3VyY2UudjEuU291cmNlVmVyc2lvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSMAoMcmVmcmVzaGVkX2F0GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIUCgxzdGFsZV9yZWFzb24YBCABKAky3AoKCVNvdXJjZUFQSRKkAQoLTGlzdFNvdXJjZXMSKS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuTGlzdFNvdXJjZXNSZXF1ZXN0GiouYWRtaXJhbC5hcGkuc291cmNlLnYxLkxpc3RTb3VyY2VzUmVzcG9uc2UiPrpHFwoHU291cmNlcxIMTGlzdCBzb3VyY2VzopckDQoLc291cmNlOnJlYWSC0+STAg0SCy92MS9zb3VyY2VzEqoBCglHZXRTb3VyY2USJy5hZG1pcmFsLmFwaS5zb3VyY2UudjEuR2V0U291cmNlUmVxdWVzdBooLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5HZXRTb3VyY2VSZXNwb25zZSJKukcXCgdTb3VyY2VzEgxHZXQgYSBzb3VyY2WilyQNCgtzb3VyY2U6cmVhZILT5JMCGRIXL3YxL3NvdXJjZXMve3NvdXJjZV9pZH0SrgEKDENyZWF0ZVNvdXJjZRIqLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5DcmVhdGVTb3VyY2VSZXF1ZXN0GisuYWRtaXJhbC5hcGkuc291cmNlLnYxLkNyZWF0ZVNvdXJjZVJlc3BvbnNlIkW6RxoKB1NvdXJjZXMSD0NyZWF0ZSBhIHNvdXJjZaKXJA4KDHNvdXJjZTp3cml0ZYLT5JMCEDoBKiILL3YxL3NvdXJjZXMSugEKDFVwZGF0ZVNvdXJjZRIqLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5VcGRhdGVTb3VyY2VSZXF1ZXN0GisuYWRtaXJhbC5hcGkuc291cmNlLnYxLlVwZGF0ZVNvdXJjZVJlc3BvbnNlIlG6RxoKB1NvdXJjZXMSD1VwZGF0ZSBhIHNvdXJjZaKXJA4KDHNvdXJjZTp3cml0ZYLT5JMCHDoBKjIXL3YxL3NvdXJjZXMve3NvdXJjZS5pZH0StwEKDERlbGV0ZVNvdXJjZRIqLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5EZWxldGVTb3VyY2VSZXF1ZXN0GisuYWRtaXJhbC5hcGkuc291cmNlLnYxLkRlbGV0ZVNvdXJjZVJlc3BvbnNlIk66RxoKB1NvdXJjZXMSD0RlbGV0ZSBhIHNvdXJjZaKXJA4KDHNvdXJjZTp3cml0ZYLT5JMCGSoXL3YxL3NvdXJjZXMve3NvdXJjZV9pZH0S4QEKE0xpc3RTb3VyY2VBcnRpZmFjdHMSMS5hZG1pcmFsLmFwaS5zb3VyY2UudjEuTGlzdFNvdXJjZUFydGlmYWN0c1JlcXVlc3QaMi5hZG1pcmFsLmFwaS5zb3VyY2UudjEuTGlzdFNvdXJjZUFydGlmYWN0c1Jlc3BvbnNlImO6RyYKB1NvdXJjZXMSG0Jyb3dzZSB3aGF0IGEgc291cmNlIG9mZmVyc6KXJA0KC3NvdXJjZTpyZWFkgtPkkwIjEiEvdjEvc291cmNlcy97c291cmNlX2lkfS9hcnRpZmFjdHMS7gEKEkxpc3RTb3VyY2VWZXJzaW9ucxIwLmFkbWlyYWwuYXBpLnNvdXJjZS52MS5MaXN0U291cmNlVmVyc2lvbnNSZXF1ZXN0GjEuYWRtaXJhbC5hcGkuc291cmNlLnYxLkxpc3RTb3VyY2VWZXJzaW9uc1Jlc3BvbnNlInO6RzcKB1NvdXJjZXMSLERpc2NvdmVyIHZlcnNpb25zIG9mIGFuIGFydGlmYWN0IGluIGEgc291cmNlopckDQoLc291cmNlOnJlYWSC0+STAiISIC92MS9zb3VyY2VzL3tzb3VyY2VfaWR9L3ZlcnNpb25zQtcBChljb20uYWRtaXJhbC5hcGkuc291cmNlLnYxQgtTb3VyY2VQcm90b1ABWjZnby5hZG1pcmFsLmlvL3Nkay9wcm90by9hZG1pcmFsL2FwaS9zb3VyY2UvdjE7c291cmNldjGiAgNBQVOqAhVBZG1pcmFsLkFwaS5Tb3VyY2UuVjHKAhVBZG1pcmFsXEFwaVxTb3VyY2VcVjHiAiFBZG1pcmFsXEFwaVxTb3VyY2VcVjFcR1BCTWV0YWRhdGHqAhhBZG1pcmFsOjpBcGk6OlNvdXJjZTo6VjFiBnByb3RvMw", [file_admiral_common_v1_actor, file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
 
 /**
  * @generated from message admiral.api.source.v1.Source
@@ -52,17 +52,22 @@ export type Source = Message<"admiral.api.source.v1.Source"> & {
    * The narrowest thing the protocol addresses: one repository, one Helm
    * repository URL, one registry namespace. Never a bare host, and never a
    * whole GitHub organization. Picking the source is picking the grant, so
-   * the location is what bounds the grant's reach.
+   * the location is what bounds the grant's reach: no source presents its
+   * grant outside its own location. When an artifact depends on another
+   * private location, Admiral fetches the dependency with the grant of the
+   * source whose location covers it, within that source's `allows`, and
+   * with no grant when no source covers it.
    *
    * @generated from field: string location = 6;
    */
   location: string;
 
   /**
-   * The standing grant that reaches the location. Exactly one is set. A
-   * credential from the envelope reaches any kind; the GitHub integration,
-   * Admiral's App installed on the organization, reaches a git repository
-   * under that installation and is the only grant a push source may have.
+   * The standing grant that reaches the location. At most one is set, and
+   * none on a public upstream. A credential reaches any kind. The GitHub
+   * integration, Admiral's App installed on the organization, reaches a git
+   * repository under that installation and is the grant a push source must
+   * have. Setting or changing it needs an organization admin.
    *
    * @generated from oneof admiral.api.source.v1.Source.grant
    */
@@ -86,20 +91,34 @@ export type Source = Message<"admiral.api.source.v1.Source"> & {
   trigger: Source_Trigger;
 
   /**
-   * What may enter through the source: artifact names, exact or with a
-   * trailing `*`. For a git source an artifact is a path in the repository;
-   * for a Helm repository a chart name; for a registry a name under the
-   * namespace. Required and never empty; `*` alone is how a source says
-   * everything. An allow list, enforced on the server at import and at
-   * push, per artifact.
+   * What may enter through the source. Each entry is
+   * `<name pattern>[@<semver range>]`: `argo-rollouts`, `modules/*`, `*`,
+   * `argo-rollouts@>=2.39`, `cert-manager@~1.16`. The name is exact or ends
+   * in `*`. For a git source an artifact is a path in the repository; for a
+   * Helm repository a chart name; for a registry a name under the
+   * namespace.
+   *
+   * Names match by whole path segments, with `*` only as the last segment,
+   * so `modules/*` admits `modules/network` and never `modules-evil`. The
+   * most specific entry that matches a name decides its versions, so `*`
+   * beside `argo-rollouts@>=2.39` still bounds argo-rollouts to 2.39 and
+   * up. An entry with a range admits only ordered versions inside it, so a
+   * branch or a commit needs an entry with no range. A range excludes
+   * pre-releases unless it names one.
+   *
+   * Required and never empty; `*` alone means everything, so no empty list
+   * stands for it. The Admiral CLI sends `*` when it is left off. An allow
+   * list, enforced by Admiral at import and at push, per artifact and
+   * per version: a version outside an entry's range is refused as an
+   * artifact outside `allows` is. Plan and apply do not check it again.
    *
    * @generated from field: repeated string allows = 10;
    */
   allows: string[];
 
   /**
-   * The block for `kind`, where the kind has one. Only git has settings
-   * today, and only a push source needs them.
+   * The block for `kind`, where the kind has one. Only git has settings, and
+   * only a push source needs them.
    *
    * @generated from field: admiral.api.source.v1.SourceSettings settings = 11;
    */
@@ -213,8 +232,9 @@ export enum Source_Trigger {
 
   /**
    * Admiral's GitHub App publishes what the repository's admiral.yaml
-   * declares when the repository is pushed. KIND_GIT through an
-   * integration only.
+   * declares when a branch or a tag the git settings name is pushed. Each
+   * push is checked as an import is. KIND_GIT through an integration
+   * only.
    *
    * @generated from enum value: TRIGGER_PUSH = 2;
    */
@@ -237,7 +257,7 @@ export enum Source_Status {
   UNSPECIFIED = 0,
 
   /**
-   * The grant reaches the location as far as the platform knows.
+   * The grant reaches the location as far as Admiral knows.
    *
    * @generated from enum value: STATUS_READY = 1;
    */
@@ -247,7 +267,7 @@ export enum Source_Status {
    * The grant no longer reaches the location: the integration is not
    * connected or its installation lost the repository, or the credential
    * was deleted. `status_reason` says which. The source stays so what
-   * came through it keeps its lineage.
+   * came through it keeps its provenance.
    *
    * @generated from enum value: STATUS_NEEDS_ATTENTION = 2;
    */
@@ -286,21 +306,55 @@ export const SourceSettingsSchema: GenMessage<SourceSettings> = /*@__PURE__*/
   messageDesc(file_admiral_api_source_v1_source, 1);
 
 /**
- * GitSourceSettings is what a git source adds. Today that is only which
- * branches a push source listens to.
+ * GitSourceSettings is what a git source adds: which branches and tags a
+ * push source publishes on, how a tag names an artifact's version, and what
+ * the App comments on a pull request. A push source names at least one
+ * branch or tag.
  *
  * @generated from message admiral.api.source.v1.GitSourceSettings
  */
 export type GitSourceSettings = Message<"admiral.api.source.v1.GitSourceSettings"> & {
   /**
    * Branches whose pushes publish, exact or with a trailing `*`; `*` alone
-   * is every branch. Required on a push source and ignored on a request
-   * source. Every publish tags the version with the branch name, floating,
-   * and `sha-<short>`.
+   * is every branch. Ignored on a request source. Every publish tags the
+   * version with the branch name, floating, and `sha-<short>`.
    *
    * @generated from field: repeated string branches = 1;
    */
   branches: string[];
+
+  /**
+   * Tags whose pushes publish, exact or with a trailing `*`, such as `v*`.
+   * A push of a matching tag publishes what admiral.yaml declares at the
+   * tagged commit, tags the version `sha-<short>`, floating, and records
+   * the full git tag in the version's provenance `ref`. Without a
+   * `tag_template`, the git tag's own name is also the registry tag when it
+   * is a semver name the registry can hold, such as `v1.4.0`, and then it
+   * is immutable and a range or `latest` can match it. Any other name still
+   * publishes, carrying only `sha-<short>`. With a template, the registry
+   * tag is the version the template extracts. A tag that matches nothing
+   * here is ignored, and empty means no tag push publishes. When the source
+   * also names branches, a tag publishes only if its commit is reachable
+   * from a branch listed there. Ignored on a request source.
+   *
+   * @generated from field: repeated string tags = 3;
+   */
+  tags: string[];
+
+  /**
+   * How a tag names an artifact's version in a repository holding several,
+   * such as `{artifact}/v{version}` or `{name}-v{version}`. With it, an
+   * artifact's versions are the tags that fit, with the template stripped,
+   * and a tag push publishes only the component the tag names. The version
+   * is tagged with what the template extracts, `1.4.0` from
+   * `modules/network/v1.4.0` under `{artifact}/v{version}`, which makes it
+   * a semver tag and immutable; the full git tag stays in the version's
+   * provenance `ref`. Empty means every tag of the repository is a version
+   * of every artifact in it.
+   *
+   * @generated from field: string tag_template = 4;
+   */
+  tagTemplate: string;
 
   /**
    * What the comment on a pull request carries; unset is SUMMARY. Read on
@@ -326,7 +380,7 @@ export const GitSourceSettingsSchema: GenMessage<GitSourceSettings> = /*@__PURE_
  */
 export enum GitSourceSettings_PullRequestComment {
   /**
-   * SUMMARY.
+   * Unset, which means SUMMARY.
    *
    * @generated from enum value: PULL_REQUEST_COMMENT_UNSPECIFIED = 0;
    */
@@ -567,8 +621,9 @@ export const GetSourceResponseSchema: GenMessage<GetSourceResponse> = /*@__PURE_
  */
 export type CreateSourceRequest = Message<"admiral.api.source.v1.CreateSourceRequest"> & {
   /**
-   * The source to create: `name`, `kind`, `location`, one grant, `trigger`,
-   * `allows`, and `settings` where the kind and trigger need them.
+   * The source to create: `name`, `kind`, `location`, at most one grant,
+   * `trigger`, `allows`, and `settings` where the kind and trigger need
+   * them.
    *
    * @generated from field: admiral.api.source.v1.Source source = 2;
    */
@@ -749,8 +804,9 @@ export type ListSourceVersionsRequest = Message<"admiral.api.source.v1.ListSourc
 
   /**
    * The artifact whose versions to list, as `allows` names it: a chart
-   * name, `name/provider`, a name under the namespace. Empty for a git
-   * source, whose versions are the repository's tags and branches.
+   * name, `name/provider`, a name under the namespace, a path in a git
+   * repository. For a git source with no `tag_template`, every artifact's
+   * versions are the repository's tags and branches, so it may be empty.
    *
    * @generated from field: string artifact = 3;
    */
@@ -814,26 +870,23 @@ export const ListSourceVersionsResponseSchema: GenMessage<ListSourceVersionsResp
   messageDesc(file_admiral_api_source_v1_source, 18);
 
 /**
- * SourceAPI is the system-of-record service for an organization's sources: one
- * upstream location each, with the standing grant that reaches it and the
- * bound on what may enter through it (admiral-knowledge, "a source is one
- * upstream location with a standing credential, and a push to a repository
- * publishes through it", and "a GitHub repository source is reached through
- * the integration or through a credential").
+ * SourceAPI manages an organization's sources. A source is one upstream
+ * location, such as a git repository, a Helm repository or a registry
+ * namespace. It holds the grant that reaches the location, when the location
+ * needs one, and `allows`, which bounds what may come in through it. Every
+ * component Admiral copies from outside the organization comes in through a
+ * source.
  *
- * This is the PUBLISHED surface. The organization comes from the token, and
- * the edge forwards each call to the platform plane by field name.
+ * The organization comes from the caller's token, so no request names it.
  *
- * A source's trigger says who causes a version to exist. REQUEST: a person
- * imports through it, choosing a version, and nothing imports on its own.
- * PUSH: Admiral's GitHub App publishes what the repository's admiral.yaml
- * declares when the repository is pushed. The push itself arrives on the
- * App's webhook stream and is consumed by the platform, so there is no RPC
- * for it here; the import through a REQUEST source is the registry's
- * ImportComponent naming a source and a version.
+ * A source's trigger says what causes a version to exist. With REQUEST, a
+ * person imports a version through the source with the registry's
+ * ImportComponent, and nothing imports on its own. With PUSH, Admiral's
+ * GitHub App publishes what the repository's admiral.yaml declares when a
+ * listed branch or tag is pushed. A push needs no call to this API.
  *
  * Nothing on this service returns a credential or a token. A member who
- * imports through a source causes the grant's effects and never sees it.
+ * imports through a source uses its grant and never sees it.
  *
  * @generated from service admiral.api.source.v1.SourceAPI
  */
@@ -863,10 +916,21 @@ export const SourceAPI: GenService<{
     output: typeof GetSourceResponseSchema;
   },
   /**
-   * CreateSource records a source. Creating one is the curated act: it is
-   * where the location, the grant and `allows` are chosen, and no second
-   * endorsement exists. The grant must reach the location, which the
-   * platform checks differently per arm:
+   * CreateSource records a source. Creating a source is the approval: it
+   * chooses the location, the grant and `allows`, and nothing that comes in
+   * through the source is approved a second time.
+   *
+   * Creating a source needs the right the organization's
+   * `source_creation_policy` names: admins by default, or every member.
+   * Setting a grant (`credential_id` or `integration_id`) needs an
+   * organization admin, whoever creates the source. PERMISSION_DENIED names
+   * who can. A source on a public upstream needs no grant.
+   *
+   * Every way a component comes in (creating a source, an import, a GitHub
+   * push, a hand publish) is checked the same way, against the source's
+   * `allows`, revoked versions and the organization's creation policies. A
+   * grant, when set, must reach the location. Admiral checks that
+   * differently for each kind of grant:
    *
    *   - An integration grant is checked here, with no network call. The
    *     integration must be a CONNECTED GitHub integration of this organization
@@ -891,13 +955,18 @@ export const SourceAPI: GenService<{
     output: typeof CreateSourceResponseSchema;
   },
   /**
-   * UpdateSource changes what may change: the description, the grant, the
-   * trigger, `allows` and the settings. The kind and the location are
-   * immutable, because a component records the source and path it came
-   * from, and moving a source would rewrite that lineage; make a new source
-   * instead. A changed grant is checked as CreateSource checks it.
-   * Tightening `allows` never touches a running environment, since applied
-   * bytes are frozen; it blocks new imports and new revisions.
+   * UpdateSource changes the description, the grant, the trigger, `allows`
+   * and the settings. The kind and the location are immutable: a component's
+   * origin and every version's provenance name the source, so a source
+   * always means one location. Another location is another source.
+   *
+   * Updating a source needs the right `source_creation_policy` names, and an
+   * organization admin when the source holds a grant or the update sets one.
+   * PERMISSION_DENIED names who can. A new grant is checked as CreateSource
+   * checks it.
+   *
+   * Tightening `allows` never touches a running environment, which runs its
+   * own stored copy; it bounds new imports and new pushes only.
    *
    * Scope: `source:write`
    *
@@ -909,9 +978,10 @@ export const SourceAPI: GenService<{
     output: typeof UpdateSourceResponseSchema;
   },
   /**
-   * DeleteSource removes a source. Components that came through it keep
-   * their versions and their provenance; they can no longer gain versions
-   * through it. A PUSH source stops publishing at once.
+   * DeleteSource removes a source. FAILED_PRECONDITION while any
+   * component's origin names it, listing those components; move each with
+   * SetComponentOrigin or delete it first. Versions that came through the
+   * source keep their provenance. A PUSH source stops publishing at once.
    *
    * Scope: `source:write`
    *
@@ -928,8 +998,8 @@ export const SourceAPI: GenService<{
    * registry's namespace. A container registry does not list, and a git
    * repository's artifacts are paths, so for KIND_OCI_REGISTRY and KIND_GIT
    * the answer is FAILED_PRECONDITION and the caller names the artifact.
-   * The list is bounded by `allows`; what the upstream has beyond it is
-   * not shown.
+   * The list is bounded by the name patterns in `allows`; what the
+   * upstream has beyond them is not shown.
    *
    * Scope: `source:read`
    *
@@ -947,6 +1017,9 @@ export const SourceAPI: GenService<{
    * when the upstream fails, never refreshed in the background. A version
    * is ordered when the protocol orders it, a tag or a registry version; a
    * branch is a moving head and carries the commit it points at.
+   *
+   * Only the versions `allows` permits are listed: an entry with a version
+   * range hides the artifact's versions outside it.
    *
    * FAILED_PRECONDITION when the artifact is outside `allows` or the grant
    * no longer reaches the source.

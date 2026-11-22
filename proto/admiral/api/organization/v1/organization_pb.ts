@@ -17,7 +17,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file admiral/api/organization/v1/organization.proto.
  */
 export const file_admiral_api_organization_v1_organization: GenFile = /*@__PURE__*/
-  fileDesc("Ci5hZG1pcmFsL2FwaS9vcmdhbml6YXRpb24vdjEvb3JnYW5pemF0aW9uLnByb3RvEhthZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEiuAMKDE9yZ2FuaXphdGlvbhIoCgJpZBgBIAEoCUIc4EEDukgW2AEBchEyD15vcmctWzAtOWEtel0rJBIRCgRzbHVnGAIgASgJQgPgQQMSHgoMZGlzcGxheV9uYW1lGAMgASgJQgi6SAVyAxiAAhJFCgZzdGF0dXMYBCABKA4yMC5hZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEuT3JnYW5pemF0aW9uLlN0YXR1c0ID4EEDEhwKCmF2YXRhcl91cmwYCCABKAlCA+BBA0gAiAEBEjMKCmNyZWF0ZWRfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJfCgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASEQoNU1RBVFVTX0FDVElWRRACEhQKEFNUQVRVU19TVVNQRU5ERUQQAyIECAEQASoOU1RBVFVTX1BFTkRJTkdCDQoLX2F2YXRhcl91cmxKBAgFEAZSBmxhYmVscyIYChZHZXRPcmdhbml6YXRpb25SZXF1ZXN0IloKF0dldE9yZ2FuaXphdGlvblJlc3BvbnNlEj8KDG9yZ2FuaXphdGlvbhgBIAEoCzIpLmFkbWlyYWwuYXBpLm9yZ2FuaXphdGlvbi52MS5Pcmdhbml6YXRpb24iugEKGVVwZGF0ZU9yZ2FuaXphdGlvblJlcXVlc3QSSgoMb3JnYW5pemF0aW9uGAQgASgLMikuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLk9yZ2FuaXphdGlvbkIJ4EECukgDyAEBEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0oECAEQAkoECAIQA1IMZGlzcGxheV9uYW1lUgZsYWJlbHMiXQoaVXBkYXRlT3JnYW5pemF0aW9uUmVzcG9uc2USPwoMb3JnYW5pemF0aW9uGAEgASgLMikuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLk9yZ2FuaXphdGlvbjLfAwoPT3JnYW5pemF0aW9uQVBJEtwBCg9HZXRPcmdhbml6YXRpb24SMy5hZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEuR2V0T3JnYW5pemF0aW9uUmVxdWVzdBo0LmFkbWlyYWwuYXBpLm9yZ2FuaXphdGlvbi52MS5HZXRPcmdhbml6YXRpb25SZXNwb25zZSJeukcsCgxPcmdhbml6YXRpb24SHEdldCB0aGUgY3VycmVudCBvcmdhbml6YXRpb26ilyQTChFvcmdhbml6YXRpb246cmVhZILT5JMCEhIQL3YxL29yZ2FuaXphdGlvbhLsAQoSVXBkYXRlT3JnYW5pemF0aW9uEjYuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLlVwZGF0ZU9yZ2FuaXphdGlvblJlcXVlc3QaNy5hZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEuVXBkYXRlT3JnYW5pemF0aW9uUmVzcG9uc2UiZbpHLwoMT3JnYW5pemF0aW9uEh9VcGRhdGUgdGhlIGN1cnJlbnQgb3JnYW5pemF0aW9uopckFAoSb3JnYW5pemF0aW9uOndyaXRlgtPkkwIVOgEqMhAvdjEvb3JnYW5pemF0aW9uQocCCh9jb20uYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxQhFPcmdhbml6YXRpb25Qcm90b1ABWkJnby5hZG1pcmFsLmlvL3Nkay9wcm90by9hZG1pcmFsL2FwaS9vcmdhbml6YXRpb24vdjE7b3JnYW5pemF0aW9udjGiAgNBQU+qAhtBZG1pcmFsLkFwaS5Pcmdhbml6YXRpb24uVjHKAhtBZG1pcmFsXEFwaVxPcmdhbml6YXRpb25cVjHiAidBZG1pcmFsXEFwaVxPcmdhbml6YXRpb25cVjFcR1BCTWV0YWRhdGHqAh5BZG1pcmFsOjpBcGk6Ok9yZ2FuaXphdGlvbjo6VjFiBnByb3RvMw", [file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
+  fileDesc("Ci5hZG1pcmFsL2FwaS9vcmdhbml6YXRpb24vdjEvb3JnYW5pemF0aW9uLnByb3RvEhthZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEi6QQKDE9yZ2FuaXphdGlvbhIoCgJpZBgBIAEoCUIc4EEDukgW2AEBchEyD15vcmctWzAtOWEtel0rJBIRCgRzbHVnGAIgASgJQgPgQQMSHgoMZGlzcGxheV9uYW1lGAMgASgJQgi6SAVyAxiAAhJVChZzb3VyY2VfY3JlYXRpb25fcG9saWN5GAkgASgOMisuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLkNyZWF0aW9uUG9saWN5Qgi6SAWCAQIQARJYChljb21wb25lbnRfY3JlYXRpb25fcG9saWN5GAogASgOMisuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLkNyZWF0aW9uUG9saWN5Qgi6SAWCAQIQARJFCgZzdGF0dXMYBCABKA4yMC5hZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEuT3JnYW5pemF0aW9uLlN0YXR1c0ID4EEDEhwKCmF2YXRhcl91cmwYCCABKAlCA+BBA0gAiAEBEjMKCmNyZWF0ZWRfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKdXBkYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJfCgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASEQoNU1RBVFVTX0FDVElWRRACEhQKEFNUQVRVU19TVVNQRU5ERUQQAyIECAEQASoOU1RBVFVTX1BFTkRJTkdCDQoLX2F2YXRhcl91cmxKBAgFEAZSBmxhYmVscyIYChZHZXRPcmdhbml6YXRpb25SZXF1ZXN0IloKF0dldE9yZ2FuaXphdGlvblJlc3BvbnNlEj8KDG9yZ2FuaXphdGlvbhgBIAEoCzIpLmFkbWlyYWwuYXBpLm9yZ2FuaXphdGlvbi52MS5Pcmdhbml6YXRpb24iugEKGVVwZGF0ZU9yZ2FuaXphdGlvblJlcXVlc3QSSgoMb3JnYW5pemF0aW9uGAQgASgLMikuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLk9yZ2FuaXphdGlvbkIJ4EECukgDyAEBEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0oECAEQAkoECAIQA1IMZGlzcGxheV9uYW1lUgZsYWJlbHMiXQoaVXBkYXRlT3JnYW5pemF0aW9uUmVzcG9uc2USPwoMb3JnYW5pemF0aW9uGAEgASgLMikuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLk9yZ2FuaXphdGlvbipqCg5DcmVhdGlvblBvbGljeRIfChtDUkVBVElPTl9QT0xJQ1lfVU5TUEVDSUZJRUQQABIaChZDUkVBVElPTl9QT0xJQ1lfQURNSU5TEAESGwoXQ1JFQVRJT05fUE9MSUNZX01FTUJFUlMQAjLfAwoPT3JnYW5pemF0aW9uQVBJEtwBCg9HZXRPcmdhbml6YXRpb24SMy5hZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEuR2V0T3JnYW5pemF0aW9uUmVxdWVzdBo0LmFkbWlyYWwuYXBpLm9yZ2FuaXphdGlvbi52MS5HZXRPcmdhbml6YXRpb25SZXNwb25zZSJeukcsCgxPcmdhbml6YXRpb24SHEdldCB0aGUgY3VycmVudCBvcmdhbml6YXRpb26ilyQTChFvcmdhbml6YXRpb246cmVhZILT5JMCEhIQL3YxL29yZ2FuaXphdGlvbhLsAQoSVXBkYXRlT3JnYW5pemF0aW9uEjYuYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxLlVwZGF0ZU9yZ2FuaXphdGlvblJlcXVlc3QaNy5hZG1pcmFsLmFwaS5vcmdhbml6YXRpb24udjEuVXBkYXRlT3JnYW5pemF0aW9uUmVzcG9uc2UiZbpHLwoMT3JnYW5pemF0aW9uEh9VcGRhdGUgdGhlIGN1cnJlbnQgb3JnYW5pemF0aW9uopckFAoSb3JnYW5pemF0aW9uOndyaXRlgtPkkwIVOgEqMhAvdjEvb3JnYW5pemF0aW9uQocCCh9jb20uYWRtaXJhbC5hcGkub3JnYW5pemF0aW9uLnYxQhFPcmdhbml6YXRpb25Qcm90b1ABWkJnby5hZG1pcmFsLmlvL3Nkay9wcm90by9hZG1pcmFsL2FwaS9vcmdhbml6YXRpb24vdjE7b3JnYW5pemF0aW9udjGiAgNBQU+qAhtBZG1pcmFsLkFwaS5Pcmdhbml6YXRpb24uVjHKAhtBZG1pcmFsXEFwaVxPcmdhbml6YXRpb25cVjHiAidBZG1pcmFsXEFwaVxPcmdhbml6YXRpb25cVjFcR1BCTWV0YWRhdGHqAh5BZG1pcmFsOjpBcGk6Ok9yZ2FuaXphdGlvbjo6VjFiBnByb3RvMw", [file_admiral_common_v1_annotations, file_buf_validate_validate, file_gnostic_openapi_v3_annotations, file_google_api_annotations, file_google_api_field_behavior, file_google_protobuf_field_mask, file_google_protobuf_timestamp]);
 
 /**
  * Organization is the account as its own members see it: its identity, its lifecycle
@@ -47,6 +47,28 @@ export type Organization = Message<"admiral.api.organization.v1.Organization"> &
    * @generated from field: string display_name = 3;
    */
   displayName: string;
+
+  /**
+   * Who may create a source. It gates CreateSource. A read returns the
+   * effective value, ADMINS unless an admin chose MEMBERS, and never
+   * UNSPECIFIED; UNSPECIFIED is accepted on input only and means ADMINS.
+   * Changing it needs an organization admin.
+   *
+   * @generated from field: admiral.api.organization.v1.CreationPolicy source_creation_policy = 9;
+   */
+  sourceCreationPolicy: CreationPolicy;
+
+  /**
+   * Who may create a component by publishing a new name by hand. It gates a
+   * PublishComponent that creates a component, and not an import, which a
+   * source already bounds. A read returns the effective value, MEMBERS
+   * unless an admin chose ADMINS, and never UNSPECIFIED; UNSPECIFIED is
+   * accepted on input only and means MEMBERS. Changing it needs an
+   * organization admin.
+   *
+   * @generated from field: admiral.api.organization.v1.CreationPolicy component_creation_policy = 10;
+   */
+  componentCreationPolicy: CreationPolicy;
 
   /**
    * Lifecycle state.
@@ -164,7 +186,8 @@ export type UpdateOrganizationRequest = Message<"admiral.api.organization.v1.Upd
 
   /**
    * The set of fields to update. Optional; if omitted, all populated fields
-   * are updated. Supported fields: `display_name`.
+   * are updated. Supported fields: `display_name`,
+   * `source_creation_policy`, `component_creation_policy`.
    *
    * @generated from field: google.protobuf.FieldMask update_mask = 3;
    */
@@ -196,6 +219,41 @@ export const UpdateOrganizationResponseSchema: GenMessage<UpdateOrganizationResp
   messageDesc(file_admiral_api_organization_v1_organization, 4);
 
 /**
+ * CreationPolicy is who in an organization may create a kind of resource.
+ *
+ * @generated from enum admiral.api.organization.v1.CreationPolicy
+ */
+export enum CreationPolicy {
+  /**
+   * Accepted on input only, meaning the default of the field that holds
+   * it. Never returned.
+   *
+   * @generated from enum value: CREATION_POLICY_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * Organization admins only.
+   *
+   * @generated from enum value: CREATION_POLICY_ADMINS = 1;
+   */
+  ADMINS = 1,
+
+  /**
+   * Every member.
+   *
+   * @generated from enum value: CREATION_POLICY_MEMBERS = 2;
+   */
+  MEMBERS = 2,
+}
+
+/**
+ * Describes the enum admiral.api.organization.v1.CreationPolicy.
+ */
+export const CreationPolicySchema: GenEnum<CreationPolicy> = /*@__PURE__*/
+  enumDesc(file_admiral_api_organization_v1_organization, 0);
+
+/**
  * OrganizationAPI exposes the caller's OWN organization.
  *
  * Deliberately narrow. An organization is an account boundary, not a resource a caller
@@ -203,9 +261,9 @@ export const UpdateOrganizationResponseSchema: GenMessage<UpdateOrganizationResp
  * suspension, and deletion are administrative operations and are not part of
  * this API.
  *
- * No request names an organization. The caller's organization comes from their token, so
- * there is no id to pass and none to get wrong -- and no shape in which a caller
- * could name someone else's.
+ * No request names an organization. The caller's organization comes from
+ * their token, so there is no id to pass, none to get wrong, and no way to
+ * name another organization.
  *
  * @generated from service admiral.api.organization.v1.OrganizationAPI
  */
@@ -225,9 +283,11 @@ export const OrganizationAPI: GenService<{
   /**
    * UpdateOrganization updates the caller's own organization's mutable settings.
    *
-   * Only `display_name` is mutable. `slug` is part of the account's identity
-   * and `status` is set by lifecycle operations, neither of which an organization
-   * performs on itself. The logo is set in the console.
+   * `display_name`, `source_creation_policy` and `component_creation_policy`
+   * are mutable. `slug` is part of the account's identity and `status` is
+   * set by lifecycle operations, neither of which an organization performs
+   * on itself. The logo is set in the console. Changing either creation
+   * policy needs an organization admin; PERMISSION_DENIED otherwise.
    *
    * Scope: `organization:write`
    *
