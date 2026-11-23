@@ -63,11 +63,12 @@ export type Source = Message<"admiral.api.source.v1.Source"> & {
   location: string;
 
   /**
-   * The standing grant that reaches the location. At most one is set, and
-   * none on a public upstream. A credential reaches any kind. The GitHub
+   * The standing grant that reaches the location. At most one is set, and none
+   * on a public upstream. A credential reaches any kind. The GitHub
    * integration, Admiral's App installed on the organization, reaches a git
    * repository under that installation and is the grant a push source must
-   * have. Setting or changing it needs an organization admin.
+   * have. Setting or changing it needs permission to grant sources, which
+   * organization admins hold.
    *
    * @generated from oneof admiral.api.source.v1.Source.grant
    */
@@ -920,17 +921,18 @@ export const SourceAPI: GenService<{
    * chooses the location, the grant and `allows`, and nothing that comes in
    * through the source is approved a second time.
    *
-   * Creating a source needs the right the organization's
-   * `source_creation_policy` names: admins by default, or every member.
-   * Setting a grant (`credential_id` or `integration_id`) needs an
-   * organization admin, whoever creates the source. PERMISSION_DENIED names
-   * who can. A source on a public upstream needs no grant.
+   * Creating a source needs permission to create sources in the organization,
+   * which organization admins hold unless it is granted further. Setting a
+   * grant (`credential_id` or `integration_id`) needs permission to grant
+   * sources, which organization admins hold, whoever creates the source.
+   * PERMISSION_DENIED otherwise, naming the permission. A source on a public
+   * upstream needs no grant.
    *
    * Every way a component comes in (creating a source, an import, a GitHub
    * push, a hand publish) is checked the same way, against the source's
-   * `allows`, revoked versions and the organization's creation policies. A
-   * grant, when set, must reach the location. Admiral checks that
-   * differently for each kind of grant:
+   * `allows`, revoked versions and the caller's permissions. A grant, when set,
+   * must reach the location. Admiral checks that differently for each kind of
+   * grant:
    *
    *   - An integration grant is checked here, with no network call. The
    *     integration must be a CONNECTED GitHub integration of this organization
@@ -960,10 +962,10 @@ export const SourceAPI: GenService<{
    * origin and every version's provenance name the source, so a source
    * always means one location. Another location is another source.
    *
-   * Updating a source needs the right `source_creation_policy` names, and an
-   * organization admin when the source holds a grant or the update sets one.
-   * PERMISSION_DENIED names who can. A new grant is checked as CreateSource
-   * checks it.
+   * Updating a source needs permission to create sources, and permission to
+   * grant sources when the source holds a grant or the update sets one.
+   * PERMISSION_DENIED otherwise, naming the permission. A new grant is checked
+   * as CreateSource checks it.
    *
    * Tightening `allows` never touches a running environment, which runs its
    * own stored copy; it bounds new imports and new pushes only.

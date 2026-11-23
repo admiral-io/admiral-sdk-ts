@@ -154,10 +154,9 @@ export const Component_StatusSchema: GenEnum<Component_Status> = /*@__PURE__*/
   enumDesc(file_admiral_api_registry_v1_registry, 0, 0);
 
 /**
- * ComponentOrigin is where a component's new versions come from. The
- * publish or import that creates the component sets it, and an organization
- * admin moves it with SetComponentOrigin. Each version keeps its own
- * provenance whatever the origin later becomes.
+ * ComponentOrigin is where a component's new versions come from. The publish or
+ * import that creates the component sets it, and SetComponentOrigin moves it.
+ * Each version keeps its own provenance whatever the origin later becomes.
  *
  * @generated from message admiral.api.registry.v1.ComponentOrigin
  */
@@ -1832,14 +1831,14 @@ export const RegistryAPI: GenService<{
    * Repointing a semver tag is refused with FAILED_PRECONDITION and the whole
    * publish fails; the bytes are not kept.
    *
-   * A publish that creates a component gives it the origin published by
-   * hand, and needs the right the organization's
-   * `component_creation_policy` names; PERMISSION_DENIED otherwise. A
-   * publish to an existing component needs publish rights on it. On a
-   * component whose origin is a source, the publish is refused with
+   * A publish that creates a component gives it the origin published by hand,
+   * and needs permission to create components, which organization admins hold
+   * by default and which may be granted to every member; PERMISSION_DENIED
+   * otherwise. A publish to an existing component needs publish rights on it.
+   * On a component whose origin is a source, the publish is refused with
    * FAILED_PRECONDITION naming the source: its versions arrive through that
-   * source until an admin moves the origin with SetComponentOrigin. A hand
-   * publish is checked the same way as an import.
+   * source until its origin is moved with SetComponentOrigin. A hand publish is
+   * checked the same way as an import.
    *
    * Scope: `component:publish`
    *
@@ -1874,16 +1873,16 @@ export const RegistryAPI: GenService<{
    * `allows` permits. It stores the exact version. A range or a keyword
    * never reaches a changeset or an environment pin.
    *
-   * Any member who can read the source may import a new version of an
-   * existing component through its origin, since the caller chooses only
-   * which allowed version to take. Creating a component by import is bounded
-   * by the source, not by the organization's `component_creation_policy`.
+   * Any member who can read the source may import a new version of an existing
+   * component through its origin, since the caller chooses only which allowed
+   * version to take. Creating a component by import needs no permission to
+   * create components, since the source already bounds it.
    *
    *   - INVALID_ARGUMENT when the import would create the component and
    *     names no `source_id`.
    *   - FAILED_PRECONDITION when the component was published by hand, or
    *     when `source_id` or `artifact` differs from its origin. The message
-   *     names SetComponentOrigin, which is how an admin moves the origin.
+   *     names SetComponentOrigin, which moves the origin.
    *   - FAILED_PRECONDITION when the artifact or the resolved version is
    *     outside the source's `allows`, when the resolved version is
    *     revoked, or when no permitted version matches `version`.
@@ -1955,15 +1954,15 @@ export const RegistryAPI: GenService<{
     output: typeof SetComponentStatusResponseSchema;
   },
   /**
-   * SetComponentOrigin moves where a component's new versions come from: to
-   * a source and an artifact in it, or to published by hand. It needs an
-   * organization admin; PERMISSION_DENIED otherwise. Every existing version
-   * keeps its own provenance, and only the origin of new versions changes.
-   * A source origin must name a source of this organization whose `allows`
-   * permits the artifact; FAILED_PRECONDITION otherwise, naming which.
-   * Admiral records each move with the old and the new origin.
-   * Setting the origin the component already has succeeds and changes
-   * nothing.
+   * SetComponentOrigin moves where a component's new versions come from: to a
+   * source and an artifact in it, or to published by hand. It needs permission
+   * to move a component's origin, which organization admins hold by default;
+   * PERMISSION_DENIED otherwise. Every existing version keeps its own
+   * provenance, and only the origin of new versions changes. A source origin
+   * must name a source of this organization whose `allows` permits the
+   * artifact; FAILED_PRECONDITION otherwise, naming which. Admiral records each
+   * move with the old and the new origin. Setting the origin the component
+   * already has succeeds and changes nothing.
    *
    * Scope: `component:write`
    *
@@ -2019,11 +2018,11 @@ export const RegistryAPI: GenService<{
    * SetVersionStatus moves a version between PUBLISHED, DEPRECATED and
    * REVOKED, recording why. Any move is allowed, including back to PUBLISHED.
    *
-   * Revoking needs the component's owner or an organization admin;
-   * PERMISSION_DENIED otherwise. Plan and apply refuse a changeset that
-   * newly pins a revoked version, and check nothing else again. An
-   * environment already running it keeps running, and a revert to it is
-   * still allowed.
+   * Revoking needs permission to revoke the component's versions, which the
+   * component's owner and organization admins hold by default;
+   * PERMISSION_DENIED otherwise. Plan and apply refuse a changeset that newly
+   * pins a revoked version, and check nothing else again. An environment
+   * already running it keeps running, and a revert to it is still allowed.
    *
    * Scope: `component:write`
    *
