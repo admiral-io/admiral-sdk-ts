@@ -57,6 +57,7 @@ export const Scopes = {
   OrganizationWrite: "organization:write",
   ProjectRead: "project:read",
   ProjectWrite: "project:write",
+  RunApply: "run:apply",
   RunRead: "run:read",
   RunWrite: "run:write",
   ServiceaccountRead: "serviceaccount:read",
@@ -255,6 +256,12 @@ export const SCOPES: readonly Scope[] = [
     assignableTo: ["pat"],
   },
   {
+    name: "run:apply",
+    description: "Apply runs, and accept a run that stopped partway.",
+    implies: ["run:read"],
+    assignableTo: ["pat"],
+  },
+  {
     name: "run:read",
     description: "Read runs, their plans, applies and approvals.",
     implies: [],
@@ -262,7 +269,7 @@ export const SCOPES: readonly Scope[] = [
   },
   {
     name: "run:write",
-    description: "Start, approve, apply, accept and cancel runs.",
+    description: "Start, approve and cancel runs.",
     implies: ["run:read"],
     assignableTo: ["pat"],
   },
@@ -332,6 +339,7 @@ const impliesClosure: Readonly<Record<string, readonly string[]>> = {
   "integration:write": ["integration:read"],
   "organization:write": ["organization:read"],
   "project:write": ["project:read"],
+  "run:apply": ["run:read"],
   "run:write": ["run:read"],
   "serviceaccount:write": ["serviceaccount:read"],
   "source:write": ["source:read"],
