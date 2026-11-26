@@ -995,13 +995,15 @@ export const SourceAPI: GenService<{
     output: typeof DeleteSourceResponseSchema;
   },
   /**
-   * ListSourceArtifacts browses what a source offers, for the kinds whose
-   * protocol serves a catalog: a Helm repository's index and a Terraform
-   * registry's namespace. A container registry does not list, and a git
-   * repository's artifacts are paths, so for KIND_OCI_REGISTRY and KIND_GIT
-   * the answer is FAILED_PRECONDITION and the caller names the artifact.
-   * The list is bounded by the name patterns in `allows`; what the
-   * upstream has beyond them is not shown.
+   * ListSourceArtifacts browses what a source offers. For a Helm repository
+   * and a Terraform registry it reads the upstream's catalog: the
+   * repository's index, the registry's namespace. A container registry does
+   * not list, and a git repository's artifacts are paths, so for
+   * KIND_OCI_REGISTRY and KIND_GIT it shows what is already known instead:
+   * each name `allows` spells out in full, and each artifact already
+   * imported through the source. The upstream is not asked, so
+   * `refreshed_at` is unset. Either way the list is bounded by the name
+   * patterns in `allows`; what the upstream has beyond them is not shown.
    *
    * Scope: `source:read`
    *
